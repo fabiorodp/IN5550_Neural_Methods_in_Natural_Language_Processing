@@ -1,6 +1,6 @@
 # Obligatory Assignment 1:
-* The tasks can be found in [Oblig1/2021_IN5550_1.pdf](Oblig1/2021_IN5550_1.pdf).
-* The database can be found in [Oblig1/data/signal_20_obligatory1_train.tsv.gz](Oblig1/data/signal_20_obligatory1_train.tsv.gz).
+* The tasks can be found in [Oblig1/2021_IN5550_1.pdf](Oblig1/2021_in5550_1.pdf).
+* The database can be found in [Oblig1/data/signal_20_obligatory1_train.tsv.gz](data/signal_20_obligatory1_train.tsv.gz).
 
 ## Dependencies:
 ```
@@ -21,6 +21,7 @@
 |  |  |  └── signal_20_obligatory1_train.tsv.gz
 |  |  └── packages
 |  |  |  └── models.py
+|  |  |  └── pre_processing.py
 |  |  └── eval_on_test.py
 |  |  └── ...
 ```
