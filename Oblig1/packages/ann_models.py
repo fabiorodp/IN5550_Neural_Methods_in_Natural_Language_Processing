@@ -17,6 +17,9 @@ class MLPModel(torch.nn.Module):
         elif af_type == "tanh":
             return torch.nn.Tanh()
 
+        elif af_type == "relu":
+            return torch.nn.ReLU()
+
         elif af_type == "softmax":
             return torch.nn.Softmax(dim=1)
 
