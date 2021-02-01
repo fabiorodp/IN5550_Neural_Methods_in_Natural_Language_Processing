@@ -42,6 +42,7 @@ class MLPModel(torch.nn.Module):
         # seeding
         if random_state is not None:
             torch.manual_seed(random_state)
+            np.random.seed(random_state)
 
         # parameters
         self.epochs = epochs
