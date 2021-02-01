@@ -1,5 +1,5 @@
-# Authors: Fabio Rodrigues Pereira
-# E-mails: fabior@uio.no
+# Author: Fabio Rodrigues Pereira
+# E-mail: fabior@uio.no
 
 import torch.nn.functional
 import numpy as np

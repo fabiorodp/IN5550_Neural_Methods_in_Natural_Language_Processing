@@ -1,5 +1,5 @@
-# Authors: Fabio Rodrigues Pereira
-# E-mails: fabior@uio.no
+# Author: Fabio Rodrigues Pereira
+# E-mail: fabior@uio.no
 
 from sklearn.metrics import accuracy_score, precision_score
 from sklearn.metrics import recall_score, f1_score
