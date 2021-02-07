@@ -1,0 +1,36 @@
+\section{Introduction}
+\label{chap:Introduction}
+
+\quad The purpose of this project was to implement a feed-forward neural network, using bag-of-words model features, to solve a multi-label classification problem, predicting the source of a given news article.
+
+The data provided for the task contained around 75,000 entries (samples) from 20 different sources (classes). The texts included in these data were already lemmatized and part-of-speech tagged, with the stop words and punctuation removed. This scenario makes NLP tasks slightly easier.
+
+A feed-forward neural network has many variables that can be tuned to find the optimal architecture for the task at hand. The order in which these variables are tuned could also affect the final performance of the model.
+
+
+\subsection{Source code}
+\label{chap:Source code}
+
+\quad \, All code made for this project is written in Python v.3.9, and found in the GitHub repository at \href{https://github.uio.no/fabior/IN5550/tree/master/Oblig1}{https://github.uio.no/fabior/IN5550/tree/master/Oblig1}. The repository contains:
+
+\begin{itemize}
+\item \href{https://github.uio.no/fabior/IN5550/tree/master/Oblig1/data}{\texttt{data/}} - Directory containing the data utilized in this project.
+
+\item \href{https://github.uio.no/fabior/IN5550/tree/master/Oblig1/packages}{\texttt{output/}} - Directory containing the collection of tuning results.
+
+\item \href{https://github.uio.no/fabior/IN5550/tree/master/Oblig1/packages}{\texttt{package/}} - Directory containing the collection of Python methods utilized in the project.
+
+\item \href{https://github.uio.no/fabior/IN5550/tree/master/Oblig1/packages/ann_models.py}{\texttt{package/ann\_models.py}} - Python file containing the neural network model.
+
+\item \href{https://github.uio.no/fabior/IN5550/tree/master/Oblig1/packages/studies.py}{\texttt{package/studies.py}} - Python file containing all the studies used for tuning hyper-parameters.
+
+\item \href{https://github.uio.no/fabior/IN5550/tree/master/Oblig1/packages/preprocessing.py}{\texttt{package/preprocessing.py}} - Python file containing classes that load, split, and preprocess the data.
+
+\item \href{https://github.uio.no/fabior/IN5550/tree/master/Oblig1/report}{\texttt{report/}} - Directory containing the written report in latex and pdf.
+
+\item \href{https://github.uio.no/fabior/IN5550/blob/master/Oblig1/eval_on_test.py}{\texttt{eval\_on\_test.py}} - Python file for testing the optimally trained model.
+
+\item \href{https://github.uio.no/fabior/IN5550/blob/master/Oblig1/evaluation.py}{\texttt{evaluation.py}} - Python file used for tuning the hyper-parameters.
+
+\item \href{https://github.uio.no/fabior/IN5550/blob/master/Oblig1/plot.py}{\texttt{plot.py}} - Python file used for plotting the results found in tuning step.
+\end{itemize}

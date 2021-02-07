@@ -1,0 +1,24 @@
+\section{Conclusion and future development}
+\label{chap:Conclusion and future development}
+
+\quad This project introduces the bag-of-words (BOW) features processing technique for predicting multi-label classes using Multi-Layer Perceptron (MLP) artificial neural networks. The MLP model predicts the source (output) of a given transformed text (input). This research utilizes three different types of BoW (counter, binary, and tfidf) for input transformation, and the metrics used for assessing the predictions were accuracy-score, macro precision-, macro recall- and macro F1-score. It is essential to say that the sourcing's balancing is not applied because we want to have a model capable of predicting unbalanced data. Regarding the hyper-parameters tuning's steps, five pairs of parameters were defined and employed iteratively: Hidden-layers activation functions X output-layer activation function, vocabulary size X b.o.w.'s type, epoch X batch size, hidden-layer X units, learning rate X momentum.
+
+Our optimal model's best results were approximately 12\% better than our benchmark scores 0.49 and 0.40, respectively. These results were achieved in the first study (Hidden-layers activation functions X output-layer activation function), confirming that the tuning procedures, especially the vocabulary size X b.o.w.'s type, had a significant impact on the final score.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c|c|c}
+        Score type & \textbf{Run 1}   &  \textbf{Run 2}    &  \textbf{Run 3}  \\
+        \hline
+        F1-score   & 47.39\% & 46.54\% & 47.12\%\\
+        Accuracy   & 55.81\% & 55.42\% & 56.04\%\\
+        Precision  & 46.67\% & 45.61\% & 46.11\%\\
+        Recall     & 49.49\% & 48.87\% & 48.97\%\\
+    \end{tabular}
+    \caption{Scores for three different builds}
+    \label{tab:3runs}
+\end{table}
+
+Table \ref{tab:3runs} shows the optimal model's final performance for 3 different builds, using 3 different random states. For this task, metrics as high as 0.56 (accuracy score) and 0.46 (f1-score), are assumed to be quite good, especially using the vanilla MLP model.
+
+As a future research objective, it would be relevant to explore more Part of Speech (PoS) filtering techniques in the preprocessing stage. Another natural next step could be to map the raw text documents to pre-trained word-embedding space instead of count vectors as the classifier's input features. This mapping would allow the model to retain more contextual meaning of the documents, allowing the network to pick up on even smaller nuances between the different sources. However, such a drastic change would require a new round of optimization and tuning since the input vectors would be entirely new for the model. That would, however,  be outside the scope of this project.

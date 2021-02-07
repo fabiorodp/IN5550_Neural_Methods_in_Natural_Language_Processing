@@ -1,6 +1,7 @@
 # Obligatory Assignment 1:
-* The tasks can be found in [Oblig1/2021_IN5550_1.pdf](Oblig1/2021_in5550_1.pdf).
-* The database can be found in [Oblig1/data/signal_20_obligatory1_train.tsv.gz](data/signal_20_obligatory1_train.tsv.gz).
+* The tasks can be found in [2021_IN5550_1.pdf](2021_in5550_1.pdf).
+* The database can be found in [data/signal_20_obligatory1_train.tsv.gz](data/signal_20_obligatory1_train.tsv.gz).
+* The report in pdf can be found in [report/final_report.pdf](report/final_report.pdf).
 
 ## Dependencies:
 ```
@@ -18,12 +19,21 @@
 ├── IN5550
 |  └── Oblig1
 |  |  └── data
+|  |  |  └── sample.tsv
 |  |  |  └── signal_20_obligatory1_train.tsv.gz
+|  |  |  └── valid.tsv
 |  |  └── packages
-|  |  |  └── models.py
-|  |  |  └── pre_processing.py
+|  |  |  └── ann_models.py
+|  |  |  └── preprocessing.py
+|  |  |  └── studies.py
+|  |  |  
 |  |  └── eval_on_test.py
-|  |  └── ...
+|  |  └── evaluation.py
+|  |  └── final.py
+|  |  └── plot.py
 ```
 
-## How to use the code:
+## How to run the program:
+The program is run from the file **eval_on_test.py**. The script loads our best performing pretrained model and uses it to evaluate the provided test set (arg[1]), and print the metrics accuracy, recall, precision and F1-score.
+
+To run the program, use the command `python3 eval_on_test.py PATH_TO_TEST_SET`. If no argument is provided, the model will evaluate data/valid.tsv. 

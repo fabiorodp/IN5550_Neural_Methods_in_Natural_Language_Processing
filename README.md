@@ -1,6 +1,16 @@
 # UiO: IN5550 - Neural Methods in Natural Language Processing
 Assignments delivered for master's level curse IN5550 at Universitetet i Oslo.
 
+## Contributors:
+Author: Fabio Rodrigues Pereira
+E-mail: fabior@uio.no
+
+Author: Per Morten Halvorsen
+E-mail: pmhalvor@uio.no
+
+Author: Eivind Grønlie Guren
+E-mail: eivindgg@ifi.uio.no
+
 ## Dependencies:
 ```
 - Python        3.7.4
@@ -19,8 +29,13 @@ Assignments delivered for master's level curse IN5550 at Universitetet i Oslo.
 |  |  └── data
 |  |  |  └── signal_20_obligatory1_train.tsv.gz
 |  |  └── packages
-|  |  |  └── models.py
+|  |  |  └── ann_models.py
+|  |  |  └── preprocessing.py
+|  |  |  └── studies.py
 |  |  └── eval_on_test.py
+|  |  └── evaluation.py
+|  |  └── plot.py
+|  |  |
 |  |  └── ...
 |  └── Oblig2
 |  |  └── data
