@@ -1,0 +1,74 @@
+
+Almost_ADV
+Almost_ADV is not present in the model
+
+all_DET
+all_DET is not present in the model
+
+current_ADJ
+=====
+Associate	Cosine
+present_ADJ	0.544
+previous_ADJ	0.531
+exist_VERB	0.507
+new_ADJ	0.460
+currently_ADV	0.447
+=====
+
+dependency_NOUN
+=====
+Associate	Cosine
+dependence_NOUN	0.788
+reliance_NOUN	0.591
+addiction_NOUN	0.578
+dependance_NOUN	0.575
+overdependence_NOUN	0.514
+=====
+
+parsers_NOUN
+parsers_NOUN is not present in the model
+
+classify_VERB
+=====
+Associate	Cosine
+classified_ADJ	0.653
+unclassified_ADJ	0.577
+class_VERB	0.527
+top-secret_ADJ	0.500
+confidential_ADJ	0.493
+=====
+
+based_VERB
+based_VERB is not present in the model
+
+on_ADP
+on_ADP is not present in the model
+
+millions_NOUN
+millions_NOUN is not present in the model
+
+of_ADP
+of_ADP is not present in the model
+
+sparse_ADJ
+=====
+Associate	Cosine
+patchy_ADJ	0.531
+spotty_ADJ	0.512
+sparser_ADJ	0.510
+muted_ADJ	0.494
+sparsely_ADV	0.481
+=====
+
+indicator_NOUN
+=====
+Associate	Cosine
+gauge_NOUN	0.684
+barometer_NOUN	0.668
+predictor_NOUN	0.541
+index_NOUN	0.536
+Westpac-Melbourne::Institute_PROPN	0.518
+=====
+
+features_NOUN
+features_NOUN is not present in the model

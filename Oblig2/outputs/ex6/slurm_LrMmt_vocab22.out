@@ -1,0 +1,1683 @@
+Lr Vs Mmt with lr_scheduler=False...
+bidirectional = True
+freeze = True
+vocab = 22
+pool_type = first
+epochs = 30
+rnn_type = gru
+n_hl = 3
+units = 50
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 2, 'name': 'fastText Skipgram', 'tool': 'fastText', 'url': 'https://github.com/facebookresearch/fastText', 'version': None}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'parameters.bin', 'format': 'binary'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': False, 'case preserved': True, 'description': 'English Wikipedia Dump of February 2017', 'id': 1, 'language': 'eng', 'lemmatized': False, 'public': True, 'stop words removal': 'NLTK', 'tagger': None, 'tagset': None, 'tokens': 2252637050, 'tool': 'Wikipedia Extractor', 'url': 'https://dumps.wikimedia.org/'}, {'NER': False, 'case preserved': True, 'description': 'Gigaword 5th Edition', 'id': 4, 'language': 'eng', 'lemmatized': False, 'public': False, 'stop words removal': 'NLTK', 'tagger': None, 'tagset': None, 'tokens': 4815382730, 'tool': None, 'url': 'https://catalog.ldc.upenn.edu/LDC2011T07'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/22.zip
+id 22
+iterations 5
+vocabulary size 291392
+window 5
+============
+
+
+
+loading data set...
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+tokenizing...
+
+
+
+loading data loader...
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.7102287280766261 - Valid acc: nan
+Epoch: 1 loss: 0.6920411169873497 - Valid acc: nan
+Epoch: 2 loss: 0.6923499910128599 - Valid acc: nan
+Epoch: 3 loss: 0.6918669804672285 - Valid acc: nan
+Epoch: 4 loss: 0.6920564236668493 - Valid acc: nan
+Epoch: 5 loss: 0.6912646645066366 - Valid acc: nan
+Epoch: 6 loss: 0.6894235114830767 - Valid acc: nan
+Epoch: 7 loss: 0.6880724767729037 - Valid acc: nan
+Epoch: 8 loss: 0.6887890665517377 - Valid acc: nan
+Epoch: 9 loss: 0.6804440496973909 - Valid acc: nan
+Epoch: 10 loss: 0.6679077196672473 - Valid acc: nan
+Epoch: 11 loss: 0.6677909748402634 - Valid acc: nan
+Epoch: 12 loss: 0.6612707765805239 - Valid acc: nan
+Epoch: 13 loss: 0.65249369874855 - Valid acc: nan
+Epoch: 14 loss: 0.6412954709433407 - Valid acc: nan
+Epoch: 15 loss: 0.646354270463734 - Valid acc: nan
+Epoch: 16 loss: 0.6435213964109476 - Valid acc: nan
+Epoch: 17 loss: 0.6602966430559324 - Valid acc: nan
+Epoch: 18 loss: 0.63335224245325 - Valid acc: nan
+Epoch: 19 loss: 0.62247537670797 - Valid acc: nan
+Epoch: 20 loss: 0.6148432979004921 - Valid acc: nan
+Epoch: 21 loss: 0.6125564778471269 - Valid acc: nan
+Epoch: 22 loss: 0.6109663975032079 - Valid acc: nan
+Epoch: 23 loss: 0.6066690397400387 - Valid acc: nan
+Epoch: 24 loss: 0.606123730970945 - Valid acc: nan
+Epoch: 25 loss: 0.6049688279284218 - Valid acc: nan
+Epoch: 26 loss: 0.6036410293827167 - Valid acc: nan
+Epoch: 27 loss: 0.5987646052603087 - Valid acc: nan
+Epoch: 28 loss: 0.6001385750109061 - Valid acc: nan
+Epoch: 29 loss: 0.6017619192255714 - Valid acc: nan
+Fitting done in 698.9772412776947s.
+Test Acc: 0.7074756229685807.
+Test F1: 0.6986450454372313.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.7126502139719925 - Valid acc: nan
+Epoch: 1 loss: 0.6912689536293118 - Valid acc: nan
+Epoch: 2 loss: 0.6906608480938597 - Valid acc: nan
+Epoch: 3 loss: 0.6911509691635308 - Valid acc: nan
+Epoch: 4 loss: 0.6914389746726592 - Valid acc: nan
+Epoch: 5 loss: 0.6900741923062098 - Valid acc: nan
+Epoch: 6 loss: 0.6892631911818002 - Valid acc: nan
+Epoch: 7 loss: 0.6884011298934848 - Valid acc: nan
+Epoch: 8 loss: 0.6887288985913889 - Valid acc: nan
+Epoch: 9 loss: 0.6885852696578627 - Valid acc: nan
+Epoch: 10 loss: 0.6884613519459102 - Valid acc: nan
+Epoch: 11 loss: 0.6890878494764339 - Valid acc: nan
+Epoch: 12 loss: 0.6878258854667575 - Valid acc: nan
+Epoch: 13 loss: 0.6877533628072353 - Valid acc: nan
+Epoch: 14 loss: 0.6872697999711671 - Valid acc: nan
+Epoch: 15 loss: 0.6867894909285397 - Valid acc: nan
+Epoch: 16 loss: 0.686878667056905 - Valid acc: nan
+Epoch: 17 loss: 0.6867233866211996 - Valid acc: nan
+Epoch: 18 loss: 0.6857942163599708 - Valid acc: nan
+Epoch: 19 loss: 0.6854569067844766 - Valid acc: nan
+Epoch: 20 loss: 0.683487821176562 - Valid acc: nan
+Epoch: 21 loss: 0.6733659740128269 - Valid acc: nan
+Epoch: 22 loss: 0.6576017461760195 - Valid acc: nan
+Epoch: 23 loss: 0.6220973905800395 - Valid acc: nan
+Epoch: 24 loss: 0.6084083196400218 - Valid acc: nan
+Epoch: 25 loss: 0.5783113596067263 - Valid acc: nan
+Epoch: 26 loss: 0.57369880593581 - Valid acc: nan
+Epoch: 27 loss: 0.5475397542377428 - Valid acc: nan
+Epoch: 28 loss: 0.5411490748038871 - Valid acc: nan
+Epoch: 29 loss: 0.5290090717332212 - Valid acc: nan
+Fitting done in 700.2260937690735s.
+Test Acc: 0.7741061755146262.
+Test F1: 0.7735798776102676.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.7105475092209832 - Valid acc: nan
+Epoch: 1 loss: 0.691367022908492 - Valid acc: nan
+Epoch: 2 loss: 0.6911293406017943 - Valid acc: nan
+Epoch: 3 loss: 0.6920512270376172 - Valid acc: nan
+Epoch: 4 loss: 0.6895216658625299 - Valid acc: nan
+Epoch: 5 loss: 0.6880224801901448 - Valid acc: nan
+Epoch: 6 loss: 0.66215834658959 - Valid acc: nan
+Epoch: 7 loss: 0.5801437428231874 - Valid acc: nan
+Epoch: 8 loss: 0.5423073815128018 - Valid acc: nan
+Epoch: 9 loss: 0.4779587668835083 - Valid acc: nan
+Epoch: 10 loss: 0.45605328937486417 - Valid acc: nan
+Epoch: 11 loss: 0.4371291479106583 - Valid acc: nan
+Epoch: 12 loss: 0.42311607456276185 - Valid acc: nan
+Epoch: 13 loss: 0.4202729142297899 - Valid acc: nan
+Epoch: 14 loss: 0.41148181965929925 - Valid acc: nan
+Epoch: 15 loss: 0.3981280724781786 - Valid acc: nan
+Epoch: 16 loss: 0.39977820079795195 - Valid acc: nan
+Epoch: 17 loss: 0.38926984946851784 - Valid acc: nan
+Epoch: 18 loss: 0.3821375424289979 - Valid acc: nan
+Epoch: 19 loss: 0.3778847679926481 - Valid acc: nan
+Epoch: 20 loss: 0.3816923133038372 - Valid acc: nan
+Epoch: 21 loss: 0.3693860594850744 - Valid acc: nan
+Epoch: 22 loss: 0.36242869220717105 - Valid acc: nan
+Epoch: 23 loss: 0.3670145138839766 - Valid acc: nan
+Epoch: 24 loss: 0.36060008251598114 - Valid acc: nan
+Epoch: 25 loss: 0.3691290580382237 - Valid acc: nan
+Epoch: 26 loss: 0.3622615278800788 - Valid acc: nan
+Epoch: 27 loss: 0.37314818842562636 - Valid acc: nan
+Epoch: 28 loss: 0.34038008112094303 - Valid acc: nan
+Epoch: 29 loss: 0.3178378283288438 - Valid acc: nan
+Fitting done in 698.8814091682434s.
+Test Acc: 0.8087757313109426.
+Test F1: 0.8085932394116319.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.7114818747333019 - Valid acc: nan
+Epoch: 1 loss: 0.6913122186771018 - Valid acc: nan
+Epoch: 2 loss: 0.6912187124263345 - Valid acc: nan
+Epoch: 3 loss: 0.691611646916825 - Valid acc: nan
+Epoch: 4 loss: 0.6905577554868135 - Valid acc: nan
+Epoch: 5 loss: 0.6847645816086345 - Valid acc: nan
+Epoch: 6 loss: 0.6430202701877308 - Valid acc: nan
+Epoch: 7 loss: 0.5718247089427331 - Valid acc: nan
+Epoch: 8 loss: 0.530640673258401 - Valid acc: nan
+Epoch: 9 loss: 0.47820098612005313 - Valid acc: nan
+Epoch: 10 loss: 0.4548756789437608 - Valid acc: nan
+Epoch: 11 loss: 0.4333452106900298 - Valid acc: nan
+Epoch: 12 loss: 0.42078590470586896 - Valid acc: nan
+Epoch: 13 loss: 0.4051763317143986 - Valid acc: nan
+Epoch: 14 loss: 0.39460002299333585 - Valid acc: nan
+Epoch: 15 loss: 0.385518617282024 - Valid acc: nan
+Epoch: 16 loss: 0.3843995378368852 - Valid acc: nan
+Epoch: 17 loss: 0.3701558756518226 - Valid acc: nan
+Epoch: 18 loss: 0.364264713029641 - Valid acc: nan
+Epoch: 19 loss: 0.35462679098107225 - Valid acc: nan
+Epoch: 20 loss: 0.3500035469328737 - Valid acc: nan
+Epoch: 21 loss: 0.3426322073088905 - Valid acc: nan
+Epoch: 22 loss: 0.3318582667263946 - Valid acc: nan
+Epoch: 23 loss: 0.33712382450958206 - Valid acc: nan
+Epoch: 24 loss: 0.3365887176094717 - Valid acc: nan
+Epoch: 25 loss: 0.3218685132747441 - Valid acc: nan
+Epoch: 26 loss: 0.31933873297506676 - Valid acc: nan
+Epoch: 27 loss: 0.31715207882871516 - Valid acc: nan
+Epoch: 28 loss: 0.302137066690908 - Valid acc: nan
+Epoch: 29 loss: 0.3008391027677955 - Valid acc: nan
+Fitting done in 697.2495160102844s.
+Test Acc: 0.7952329360780065.
+Test F1: 0.794304816144608.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.7076535335165917 - Valid acc: nan
+Epoch: 1 loss: 0.6914634618455964 - Valid acc: nan
+Epoch: 2 loss: 0.6894310178784276 - Valid acc: nan
+Epoch: 3 loss: 0.6843523717340018 - Valid acc: nan
+Epoch: 4 loss: 0.6872244270550723 - Valid acc: nan
+Epoch: 5 loss: 0.6863020894499873 - Valid acc: nan
+Epoch: 6 loss: 0.6806104281389644 - Valid acc: nan
+Epoch: 7 loss: 0.6214731952358532 - Valid acc: nan
+Epoch: 8 loss: 0.5519957526915336 - Valid acc: nan
+Epoch: 9 loss: 0.6600963612856893 - Valid acc: nan
+Epoch: 10 loss: 0.6500410795900863 - Valid acc: nan
+Epoch: 11 loss: 0.50503064993489 - Valid acc: nan
+Epoch: 12 loss: 0.4784531758699803 - Valid acc: nan
+Epoch: 13 loss: 0.45015599669059575 - Valid acc: nan
+Epoch: 14 loss: 0.4302223817461488 - Valid acc: nan
+Epoch: 15 loss: 0.42020662706022316 - Valid acc: nan
+Epoch: 16 loss: 0.398338533291927 - Valid acc: nan
+Epoch: 17 loss: 0.39660213758490676 - Valid acc: nan
+Epoch: 18 loss: 0.3822621083845293 - Valid acc: nan
+Epoch: 19 loss: 0.36811168819149104 - Valid acc: nan
+Epoch: 20 loss: 0.3627535859284373 - Valid acc: nan
+Epoch: 21 loss: 0.34570641191191753 - Valid acc: nan
+Epoch: 22 loss: 0.33053975685827997 - Valid acc: nan
+Epoch: 23 loss: 0.33126544995459517 - Valid acc: nan
+Epoch: 24 loss: 0.33246638854114996 - Valid acc: nan
+Epoch: 25 loss: 0.3325900586612652 - Valid acc: nan
+Epoch: 26 loss: 0.2665173189143914 - Valid acc: nan
+Epoch: 27 loss: 0.23857467363163226 - Valid acc: nan
+Epoch: 28 loss: 0.22460425873367773 - Valid acc: nan
+Epoch: 29 loss: 0.2164490896928517 - Valid acc: nan
+Fitting done in 697.8935678005219s.
+Test Acc: 0.8028169014084507.
+Test F1: 0.8023470886123609.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.707627697487098 - Valid acc: nan
+Epoch: 1 loss: 0.6915010003685262 - Valid acc: nan
+Epoch: 2 loss: 0.6898133268935143 - Valid acc: nan
+Epoch: 3 loss: 0.6883876502858421 - Valid acc: nan
+Epoch: 4 loss: 0.6848351262897425 - Valid acc: nan
+Epoch: 5 loss: 0.6653242677966983 - Valid acc: nan
+Epoch: 6 loss: 0.6046160326872257 - Valid acc: nan
+Epoch: 7 loss: 0.5555921381264064 - Valid acc: nan
+Epoch: 8 loss: 0.5174950109740902 - Valid acc: nan
+Epoch: 9 loss: 0.4850990578446085 - Valid acc: nan
+Epoch: 10 loss: 0.4643614256829885 - Valid acc: nan
+Epoch: 11 loss: 0.44122669023240924 - Valid acc: nan
+Epoch: 12 loss: 0.43319963599216044 - Valid acc: nan
+Epoch: 13 loss: 0.40914938344776286 - Valid acc: nan
+Epoch: 14 loss: 0.4011208935280067 - Valid acc: nan
+Epoch: 15 loss: 0.38694320136756566 - Valid acc: nan
+Epoch: 16 loss: 0.37224328827995784 - Valid acc: nan
+Epoch: 17 loss: 0.361502655496487 - Valid acc: nan
+Epoch: 18 loss: 0.3525273316685175 - Valid acc: nan
+Epoch: 19 loss: 0.33846279332748036 - Valid acc: nan
+Epoch: 20 loss: 0.34514863802001655 - Valid acc: nan
+Epoch: 21 loss: 0.31907138943327645 - Valid acc: nan
+Epoch: 22 loss: 0.32271222933868454 - Valid acc: nan
+Epoch: 23 loss: 0.31601002007033785 - Valid acc: nan
+Epoch: 24 loss: 0.31284428288826366 - Valid acc: nan
+Epoch: 25 loss: 0.30544996179769496 - Valid acc: nan
+Epoch: 26 loss: 0.29567480349988606 - Valid acc: nan
+Epoch: 27 loss: 0.2998561279449849 - Valid acc: nan
+Epoch: 28 loss: 0.3030912017374369 - Valid acc: nan
+Epoch: 29 loss: 0.30024401977055337 - Valid acc: nan
+Fitting done in 689.5889253616333s.
+Test Acc: 0.7708559046587216.
+Test F1: 0.7695492998897708.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6999199886542524 - Valid acc: nan
+Epoch: 1 loss: 0.6455462852309894 - Valid acc: nan
+Epoch: 2 loss: 0.5558946757991879 - Valid acc: nan
+Epoch: 3 loss: 0.4926224492188823 - Valid acc: nan
+Epoch: 4 loss: 0.45550322627401074 - Valid acc: nan
+Epoch: 5 loss: 0.44382363523362 - Valid acc: nan
+Epoch: 6 loss: 0.4193106538298502 - Valid acc: nan
+Epoch: 7 loss: 0.402285306009254 - Valid acc: nan
+Epoch: 8 loss: 0.39064607368728327 - Valid acc: nan
+Epoch: 9 loss: 0.385102093994962 - Valid acc: nan
+Epoch: 10 loss: 0.37298874742206123 - Valid acc: nan
+Epoch: 11 loss: 0.36442445890407343 - Valid acc: nan
+Epoch: 12 loss: 0.35436338927015404 - Valid acc: nan
+Epoch: 13 loss: 0.3617934634575265 - Valid acc: nan
+Epoch: 14 loss: 0.33448414332260284 - Valid acc: nan
+Epoch: 15 loss: 0.3229416092868485 - Valid acc: nan
+Epoch: 16 loss: 0.3254994528228148 - Valid acc: nan
+Epoch: 17 loss: 0.3367268698063889 - Valid acc: nan
+Epoch: 18 loss: 0.3024663316635038 - Valid acc: nan
+Epoch: 19 loss: 0.3097641051590787 - Valid acc: nan
+Epoch: 20 loss: 0.32321781359311474 - Valid acc: nan
+Epoch: 21 loss: 0.3197948017905902 - Valid acc: nan
+Epoch: 22 loss: 0.2636233697823017 - Valid acc: nan
+Epoch: 23 loss: 0.22683721145539615 - Valid acc: nan
+Epoch: 24 loss: 0.20876927010585808 - Valid acc: nan
+Epoch: 25 loss: 0.1942858803220567 - Valid acc: nan
+Epoch: 26 loss: 0.1799943250297122 - Valid acc: nan
+Epoch: 27 loss: 0.16939035236749345 - Valid acc: nan
+Epoch: 28 loss: 0.15541392877008875 - Valid acc: nan
+Epoch: 29 loss: 0.15277219438828485 - Valid acc: nan
+Fitting done in 698.1474103927612s.
+Test Acc: 0.8033586132177681.
+Test F1: 0.8033031433137985.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6981262488861304 - Valid acc: nan
+Epoch: 1 loss: 0.6760950920554255 - Valid acc: nan
+Epoch: 2 loss: 0.5896865835768639 - Valid acc: nan
+Epoch: 3 loss: 0.5301835504225912 - Valid acc: nan
+Epoch: 4 loss: 0.4994464132482606 - Valid acc: nan
+Epoch: 5 loss: 0.4557263485958121 - Valid acc: nan
+Epoch: 6 loss: 0.44049816548479775 - Valid acc: nan
+Epoch: 7 loss: 0.43257708270425743 - Valid acc: nan
+Epoch: 8 loss: 0.40474322593281037 - Valid acc: nan
+Epoch: 9 loss: 0.39081735280207813 - Valid acc: nan
+Epoch: 10 loss: 0.3861822604788521 - Valid acc: nan
+Epoch: 11 loss: 0.36947503539523635 - Valid acc: nan
+Epoch: 12 loss: 0.355216583032484 - Valid acc: nan
+Epoch: 13 loss: 0.34365664086589925 - Valid acc: nan
+Epoch: 14 loss: 0.33134411619922327 - Valid acc: nan
+Epoch: 15 loss: 0.32382444921084225 - Valid acc: nan
+Epoch: 16 loss: 0.3053948951809737 - Valid acc: nan
+Epoch: 17 loss: 0.28526848156242013 - Valid acc: nan
+Epoch: 18 loss: 0.2716740677725373 - Valid acc: nan
+Epoch: 19 loss: 0.26865096907050623 - Valid acc: nan
+Epoch: 20 loss: 0.23904718697674013 - Valid acc: nan
+Epoch: 21 loss: 0.23283780753784786 - Valid acc: nan
+Epoch: 22 loss: 0.21283397785888586 - Valid acc: nan
+Epoch: 23 loss: 0.20581555259925438 - Valid acc: nan
+Epoch: 24 loss: 0.21015397269774033 - Valid acc: nan
+Epoch: 25 loss: 0.1811273258631629 - Valid acc: nan
+Epoch: 26 loss: 0.1700237258525856 - Valid acc: nan
+Epoch: 27 loss: 0.16279916127206961 - Valid acc: nan
+Epoch: 28 loss: 0.16384351195369154 - Valid acc: nan
+Epoch: 29 loss: 0.13856386799214548 - Valid acc: nan
+Fitting done in 694.2485485076904s.
+Test Acc: 0.7735644637053087.
+Test F1: 0.7720995731599982.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6955853373329074 - Valid acc: nan
+Epoch: 1 loss: 0.6839983914628883 - Valid acc: nan
+Epoch: 2 loss: 0.6113593240693814 - Valid acc: nan
+Epoch: 3 loss: 0.5579902846689169 - Valid acc: nan
+Epoch: 4 loss: 0.5139800713241445 - Valid acc: nan
+Epoch: 5 loss: 0.47774330909886115 - Valid acc: nan
+Epoch: 6 loss: 0.4603031086439342 - Valid acc: nan
+Epoch: 7 loss: 0.44695093530106406 - Valid acc: nan
+Epoch: 8 loss: 0.4231055518450765 - Valid acc: nan
+Epoch: 9 loss: 0.41446517829950147 - Valid acc: nan
+Epoch: 10 loss: 0.39854843716400895 - Valid acc: nan
+Epoch: 11 loss: 0.3925423039866321 - Valid acc: nan
+Epoch: 12 loss: 0.3772632212652636 - Valid acc: nan
+Epoch: 13 loss: 0.36892394178864585 - Valid acc: nan
+Epoch: 14 loss: 0.35837993421995573 - Valid acc: nan
+Epoch: 15 loss: 0.35120249268292003 - Valid acc: nan
+Epoch: 16 loss: 0.3314954107896441 - Valid acc: nan
+Epoch: 17 loss: 0.3245286993208648 - Valid acc: nan
+Epoch: 18 loss: 0.30723619000243313 - Valid acc: nan
+Epoch: 19 loss: 0.29581974184065196 - Valid acc: nan
+Epoch: 20 loss: 0.28678196190581845 - Valid acc: nan
+Epoch: 21 loss: 0.2680573603407496 - Valid acc: nan
+Epoch: 22 loss: 0.24919510064269765 - Valid acc: nan
+Epoch: 23 loss: 0.23744410715695752 - Valid acc: nan
+Epoch: 24 loss: 0.2387760273810756 - Valid acc: nan
+Epoch: 25 loss: 0.21630498741058946 - Valid acc: nan
+Epoch: 26 loss: 0.20284311348475473 - Valid acc: nan
+Epoch: 27 loss: 0.19771734423763146 - Valid acc: nan
+Epoch: 28 loss: 0.18136159948617048 - Valid acc: nan
+Epoch: 29 loss: 0.16000602777638187 - Valid acc: nan
+Fitting done in 695.3384408950806s.
+Test Acc: 0.7838569880823402.
+Test F1: 0.7834604105571847.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6944627086551203 - Valid acc: nan
+Epoch: 1 loss: 0.6869623344068583 - Valid acc: nan
+Epoch: 2 loss: 0.6392109773062558 - Valid acc: nan
+Epoch: 3 loss: 0.5849189394815809 - Valid acc: nan
+Epoch: 4 loss: 0.5393478469007966 - Valid acc: nan
+Epoch: 5 loss: 0.5100231117251292 - Valid acc: nan
+Epoch: 6 loss: 0.48250385791580114 - Valid acc: nan
+Epoch: 7 loss: 0.464074828204392 - Valid acc: nan
+Epoch: 8 loss: 0.443867137321847 - Valid acc: nan
+Epoch: 9 loss: 0.43690750614411566 - Valid acc: nan
+Epoch: 10 loss: 0.42141104864247275 - Valid acc: nan
+Epoch: 11 loss: 0.41348205894404066 - Valid acc: nan
+Epoch: 12 loss: 0.4024438587571844 - Valid acc: nan
+Epoch: 13 loss: 0.3906467651700698 - Valid acc: nan
+Epoch: 14 loss: 0.3831296554535111 - Valid acc: nan
+Epoch: 15 loss: 0.3779474032579819 - Valid acc: nan
+Epoch: 16 loss: 0.365060850719496 - Valid acc: nan
+Epoch: 17 loss: 0.354690426777553 - Valid acc: nan
+Epoch: 18 loss: 0.3468255168526848 - Valid acc: nan
+Epoch: 19 loss: 0.3349530935890413 - Valid acc: nan
+Epoch: 20 loss: 0.3285832125155223 - Valid acc: nan
+Epoch: 21 loss: 0.32093479764254795 - Valid acc: nan
+Epoch: 22 loss: 0.30421749437820017 - Valid acc: nan
+Epoch: 23 loss: 0.2934824035777522 - Valid acc: nan
+Epoch: 24 loss: 0.2860731289996577 - Valid acc: nan
+Epoch: 25 loss: 0.2755640385123347 - Valid acc: nan
+Epoch: 26 loss: 0.2518354995617632 - Valid acc: nan
+Epoch: 27 loss: 0.24835761729089512 - Valid acc: nan
+Epoch: 28 loss: 0.23364779452195747 - Valid acc: nan
+Epoch: 29 loss: 0.2119815985892894 - Valid acc: nan
+Fitting done in 697.2137312889099s.
+Test Acc: 0.7778981581798483.
+Test F1: 0.7773207644871252.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6938827375456088 - Valid acc: nan
+Epoch: 1 loss: 0.6881158947944641 - Valid acc: nan
+Epoch: 2 loss: 0.6583264452873627 - Valid acc: nan
+Epoch: 3 loss: 0.6072675515116984 - Valid acc: nan
+Epoch: 4 loss: 0.5672878736705449 - Valid acc: nan
+Epoch: 5 loss: 0.5370386086102855 - Valid acc: nan
+Epoch: 6 loss: 0.5063642792274498 - Valid acc: nan
+Epoch: 7 loss: 0.48993551093718907 - Valid acc: nan
+Epoch: 8 loss: 0.46798853197194246 - Valid acc: nan
+Epoch: 9 loss: 0.458310664216907 - Valid acc: nan
+Epoch: 10 loss: 0.444964926452995 - Valid acc: nan
+Epoch: 11 loss: 0.43140227636160877 - Valid acc: nan
+Epoch: 12 loss: 0.4257897907771127 - Valid acc: nan
+Epoch: 13 loss: 0.41023278942686975 - Valid acc: nan
+Epoch: 14 loss: 0.4048182054751181 - Valid acc: nan
+Epoch: 15 loss: 0.3997566629351908 - Valid acc: nan
+Epoch: 16 loss: 0.3889160598116803 - Valid acc: nan
+Epoch: 17 loss: 0.37733150191734294 - Valid acc: nan
+Epoch: 18 loss: 0.3769949733177361 - Valid acc: nan
+Epoch: 19 loss: 0.3643895187818935 - Valid acc: nan
+Epoch: 20 loss: 0.36245134645114746 - Valid acc: nan
+Epoch: 21 loss: 0.3544349649738025 - Valid acc: nan
+Epoch: 22 loss: 0.34455967483492944 - Valid acc: nan
+Epoch: 23 loss: 0.33485824520015994 - Valid acc: nan
+Epoch: 24 loss: 0.33112501331491967 - Valid acc: nan
+Epoch: 25 loss: 0.32161336758233217 - Valid acc: nan
+Epoch: 26 loss: 0.3031019308318982 - Valid acc: nan
+Epoch: 27 loss: 0.2971777477963811 - Valid acc: nan
+Epoch: 28 loss: 0.29025825074297845 - Valid acc: nan
+Epoch: 29 loss: 0.27674330503954364 - Valid acc: nan
+Fitting done in 697.0969367027283s.
+Test Acc: 0.7876489707475623.
+Test F1: 0.7875053003865612.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6937058282036312 - Valid acc: nan
+Epoch: 1 loss: 0.6885124603447886 - Valid acc: nan
+Epoch: 2 loss: 0.6665857864942165 - Valid acc: nan
+Epoch: 3 loss: 0.617468396190963 - Valid acc: nan
+Epoch: 4 loss: 0.5803136689469993 - Valid acc: nan
+Epoch: 5 loss: 0.5461266741931783 - Valid acc: nan
+Epoch: 6 loss: 0.5188213271557252 - Valid acc: nan
+Epoch: 7 loss: 0.5057740352746379 - Valid acc: nan
+Epoch: 8 loss: 0.48117119125548125 - Valid acc: nan
+Epoch: 9 loss: 0.47362446457664403 - Valid acc: nan
+Epoch: 10 loss: 0.4584213457355609 - Valid acc: nan
+Epoch: 11 loss: 0.44250199758593056 - Valid acc: nan
+Epoch: 12 loss: 0.4376275142321008 - Valid acc: nan
+Epoch: 13 loss: 0.4205425034540926 - Valid acc: nan
+Epoch: 14 loss: 0.4153290720861082 - Valid acc: nan
+Epoch: 15 loss: 0.4123200655328056 - Valid acc: nan
+Epoch: 16 loss: 0.3984636302628269 - Valid acc: nan
+Epoch: 17 loss: 0.38816508779980546 - Valid acc: nan
+Epoch: 18 loss: 0.39116486416042195 - Valid acc: nan
+Epoch: 19 loss: 0.37981373200871354 - Valid acc: nan
+Epoch: 20 loss: 0.37572282595786055 - Valid acc: nan
+Epoch: 21 loss: 0.37013094109951417 - Valid acc: nan
+Epoch: 22 loss: 0.3614498219221314 - Valid acc: nan
+Epoch: 23 loss: 0.35485380681263917 - Valid acc: nan
+Epoch: 24 loss: 0.34903261711487193 - Valid acc: nan
+Epoch: 25 loss: 0.33776880344214466 - Valid acc: nan
+Epoch: 26 loss: 0.3209053591496683 - Valid acc: nan
+Epoch: 27 loss: 0.31970048592442035 - Valid acc: nan
+Epoch: 28 loss: 0.31463142932322674 - Valid acc: nan
+Epoch: 29 loss: 0.30217047018467347 - Valid acc: nan
+Fitting done in 696.7715981006622s.
+Test Acc: 0.7973997833152763.
+Test F1: 0.7973227024265945.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6995528829580098 - Valid acc: nan
+Epoch: 1 loss: 0.6186048088735239 - Valid acc: nan
+Epoch: 2 loss: 0.5098924257851749 - Valid acc: nan
+Epoch: 3 loss: 0.4616457194606693 - Valid acc: nan
+Epoch: 4 loss: 0.4413086231044262 - Valid acc: nan
+Epoch: 5 loss: 0.43359384078510926 - Valid acc: nan
+Epoch: 6 loss: 0.41139868840661353 - Valid acc: nan
+Epoch: 7 loss: 0.39578320964567926 - Valid acc: nan
+Epoch: 8 loss: 0.36652172343923867 - Valid acc: nan
+Epoch: 9 loss: 0.3641906352229201 - Valid acc: nan
+Epoch: 10 loss: 0.36135370999230126 - Valid acc: nan
+Epoch: 11 loss: 0.34226246944741706 - Valid acc: nan
+Epoch: 12 loss: 0.33361576221926365 - Valid acc: nan
+Epoch: 13 loss: 0.3274403436249391 - Valid acc: nan
+Epoch: 14 loss: 0.3127646992316825 - Valid acc: nan
+Epoch: 15 loss: 0.2903588214792268 - Valid acc: nan
+Epoch: 16 loss: 0.3039277187317093 - Valid acc: nan
+Epoch: 17 loss: 0.3042598173797475 - Valid acc: nan
+Epoch: 18 loss: 0.3066354452960753 - Valid acc: nan
+Epoch: 19 loss: 0.21222791331954774 - Valid acc: nan
+Epoch: 20 loss: 0.17777000296580997 - Valid acc: nan
+Epoch: 21 loss: 0.16105881800627433 - Valid acc: nan
+Epoch: 22 loss: 0.14652750516213434 - Valid acc: nan
+Epoch: 23 loss: 0.13391450144393596 - Valid acc: nan
+Epoch: 24 loss: 0.12047213764936593 - Valid acc: nan
+Epoch: 25 loss: 0.1117151827266106 - Valid acc: nan
+Epoch: 26 loss: 0.10567232446389736 - Valid acc: nan
+Epoch: 27 loss: 0.0974174070715732 - Valid acc: nan
+Epoch: 28 loss: 0.09746883343366873 - Valid acc: nan
+Epoch: 29 loss: 0.09496362360915697 - Valid acc: nan
+Fitting done in 695.3218557834625s.
+Test Acc: 0.7963163596966414.
+Test F1: 0.7953931504507213.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6975392354706119 - Valid acc: nan
+Epoch: 1 loss: 0.6677679348887736 - Valid acc: nan
+Epoch: 2 loss: 0.6848031649355254 - Valid acc: nan
+Epoch: 3 loss: 0.6913185295342021 - Valid acc: nan
+Epoch: 4 loss: 0.6794352655465892 - Valid acc: nan
+Epoch: 5 loss: 0.5518187518753758 - Valid acc: nan
+Epoch: 6 loss: 0.5230310840069214 - Valid acc: nan
+Epoch: 7 loss: 0.502329784493915 - Valid acc: nan
+Epoch: 8 loss: 0.48266747214890626 - Valid acc: nan
+Epoch: 9 loss: 0.46538468764696506 - Valid acc: nan
+Epoch: 10 loss: 0.46585548156603224 - Valid acc: nan
+Epoch: 11 loss: 0.4559340741420757 - Valid acc: nan
+Epoch: 12 loss: 0.4510797680802428 - Valid acc: nan
+Epoch: 13 loss: 0.44658982228336996 - Valid acc: nan
+Epoch: 14 loss: 0.4423462136115642 - Valid acc: nan
+Epoch: 15 loss: 0.4435757284908625 - Valid acc: nan
+Epoch: 16 loss: 0.42894399510642695 - Valid acc: nan
+Epoch: 17 loss: 0.43217206957367804 - Valid acc: nan
+Epoch: 18 loss: 0.4248051034405052 - Valid acc: nan
+Epoch: 19 loss: 0.4360842934750408 - Valid acc: nan
+Epoch: 20 loss: 0.4243737246432056 - Valid acc: nan
+Epoch: 21 loss: 0.4172253885193367 - Valid acc: nan
+Epoch: 22 loss: 0.41447399212101294 - Valid acc: nan
+Epoch: 23 loss: 0.41050445955957293 - Valid acc: nan
+Epoch: 24 loss: 0.42699275282077015 - Valid acc: nan
+Epoch: 25 loss: 0.41086120472822574 - Valid acc: nan
+Epoch: 26 loss: 0.4116914336047421 - Valid acc: nan
+Epoch: 27 loss: 0.38994662231103533 - Valid acc: nan
+Epoch: 28 loss: 0.38693181481320044 - Valid acc: nan
+Epoch: 29 loss: 0.386636824277095 - Valid acc: nan
+Fitting done in 695.5042178630829s.
+Test Acc: 0.8060671722643553.
+Test F1: 0.8059010808270676.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6953015241319733 - Valid acc: nan
+Epoch: 1 loss: 0.6846131472229269 - Valid acc: nan
+Epoch: 2 loss: 0.6145046182795068 - Valid acc: nan
+Epoch: 3 loss: 0.5619485752086419 - Valid acc: nan
+Epoch: 4 loss: 0.5179378693503451 - Valid acc: nan
+Epoch: 5 loss: 0.4819710772333807 - Valid acc: nan
+Epoch: 6 loss: 0.4635641364692953 - Valid acc: nan
+Epoch: 7 loss: 0.4489261458030326 - Valid acc: nan
+Epoch: 8 loss: 0.42645745134422547 - Valid acc: nan
+Epoch: 9 loss: 0.4172561539046337 - Valid acc: nan
+Epoch: 10 loss: 0.40161374228538116 - Valid acc: nan
+Epoch: 11 loss: 0.3966024298371607 - Valid acc: nan
+Epoch: 12 loss: 0.3810888146389427 - Valid acc: nan
+Epoch: 13 loss: 0.37430373824745244 - Valid acc: nan
+Epoch: 14 loss: 0.3635400951425464 - Valid acc: nan
+Epoch: 15 loss: 0.3592930824598136 - Valid acc: nan
+Epoch: 16 loss: 0.33888377137266834 - Valid acc: nan
+Epoch: 17 loss: 0.3316482276671884 - Valid acc: nan
+Epoch: 18 loss: 0.3166833597886769 - Valid acc: nan
+Epoch: 19 loss: 0.30913184824361967 - Valid acc: nan
+Epoch: 20 loss: 0.2987179572268718 - Valid acc: nan
+Epoch: 21 loss: 0.28233490914450904 - Valid acc: nan
+Epoch: 22 loss: 0.2620161106390071 - Valid acc: nan
+Epoch: 23 loss: 0.2534494982504776 - Valid acc: nan
+Epoch: 24 loss: 0.24769748788262377 - Valid acc: nan
+Epoch: 25 loss: 0.23459066588410063 - Valid acc: nan
+Epoch: 26 loss: 0.20833110436797142 - Valid acc: nan
+Epoch: 27 loss: 0.20692111949054148 - Valid acc: nan
+Epoch: 28 loss: 0.18612185017221924 - Valid acc: nan
+Epoch: 29 loss: 0.17656402787290557 - Valid acc: nan
+Fitting done in 698.2734253406525s.
+Test Acc: 0.7751895991332611.
+Test F1: 0.775174754680203.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6943566895633764 - Valid acc: nan
+Epoch: 1 loss: 0.6876098155286271 - Valid acc: nan
+Epoch: 2 loss: 0.6450217567771845 - Valid acc: nan
+Epoch: 3 loss: 0.5878928753337419 - Valid acc: nan
+Epoch: 4 loss: 0.5427429991305908 - Valid acc: nan
+Epoch: 5 loss: 0.5143541138985254 - Valid acc: nan
+Epoch: 6 loss: 0.487636995453366 - Valid acc: nan
+Epoch: 7 loss: 0.4680836023278319 - Valid acc: nan
+Epoch: 8 loss: 0.44825245440006256 - Valid acc: nan
+Epoch: 9 loss: 0.44017254935868216 - Valid acc: nan
+Epoch: 10 loss: 0.42498122284867174 - Valid acc: nan
+Epoch: 11 loss: 0.4175832573044507 - Valid acc: nan
+Epoch: 12 loss: 0.4074926785478702 - Valid acc: nan
+Epoch: 13 loss: 0.39665830540174696 - Valid acc: nan
+Epoch: 14 loss: 0.3884027208379238 - Valid acc: nan
+Epoch: 15 loss: 0.3839794711742787 - Valid acc: nan
+Epoch: 16 loss: 0.37261338798986005 - Valid acc: nan
+Epoch: 17 loss: 0.3615379212908662 - Valid acc: nan
+Epoch: 18 loss: 0.3552898444192258 - Valid acc: nan
+Epoch: 19 loss: 0.3437479537174192 - Valid acc: nan
+Epoch: 20 loss: 0.3388689976034826 - Valid acc: nan
+Epoch: 21 loss: 0.3324711144487293 - Valid acc: nan
+Epoch: 22 loss: 0.316056882413481 - Valid acc: nan
+Epoch: 23 loss: 0.30659804669763313 - Valid acc: nan
+Epoch: 24 loss: 0.300488008067787 - Valid acc: nan
+Epoch: 25 loss: 0.294300799898674 - Valid acc: nan
+Epoch: 26 loss: 0.2731470544472595 - Valid acc: nan
+Epoch: 27 loss: 0.26762447605243306 - Valid acc: nan
+Epoch: 28 loss: 0.26140863177059703 - Valid acc: nan
+Epoch: 29 loss: 0.23713429638243824 - Valid acc: nan
+Fitting done in 698.0534887313843s.
+Test Acc: 0.7838569880823402.
+Test F1: 0.7836507153689549.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6938241230959148 - Valid acc: nan
+Epoch: 1 loss: 0.6883990616467647 - Valid acc: nan
+Epoch: 2 loss: 0.6635846450838739 - Valid acc: nan
+Epoch: 3 loss: 0.6110357621501636 - Valid acc: nan
+Epoch: 4 loss: 0.5704649574839311 - Valid acc: nan
+Epoch: 5 loss: 0.5403988717952904 - Valid acc: nan
+Epoch: 6 loss: 0.51006489509792 - Valid acc: nan
+Epoch: 7 loss: 0.4957845197247632 - Valid acc: nan
+Epoch: 8 loss: 0.4742714447437683 - Valid acc: nan
+Epoch: 9 loss: 0.4646593111787917 - Valid acc: nan
+Epoch: 10 loss: 0.45043137368094716 - Valid acc: nan
+Epoch: 11 loss: 0.4364609920737371 - Valid acc: nan
+Epoch: 12 loss: 0.4314860285534335 - Valid acc: nan
+Epoch: 13 loss: 0.41560635892297493 - Valid acc: nan
+Epoch: 14 loss: 0.4100850594009278 - Valid acc: nan
+Epoch: 15 loss: 0.40656156045508524 - Valid acc: nan
+Epoch: 16 loss: 0.3957448523340887 - Valid acc: nan
+Epoch: 17 loss: 0.3845207027100414 - Valid acc: nan
+Epoch: 18 loss: 0.3848731205987103 - Valid acc: nan
+Epoch: 19 loss: 0.37330763214240875 - Valid acc: nan
+Epoch: 20 loss: 0.37185006136494564 - Valid acc: nan
+Epoch: 21 loss: 0.36507738265343487 - Valid acc: nan
+Epoch: 22 loss: 0.3556750678602671 - Valid acc: nan
+Epoch: 23 loss: 0.3476439825113798 - Valid acc: nan
+Epoch: 24 loss: 0.34289144324084925 - Valid acc: nan
+Epoch: 25 loss: 0.3332807469057899 - Valid acc: nan
+Epoch: 26 loss: 0.31550502415337317 - Valid acc: nan
+Epoch: 27 loss: 0.31355396830449905 - Valid acc: nan
+Epoch: 28 loss: 0.30874167387023826 - Valid acc: nan
+Epoch: 29 loss: 0.2947212064455699 - Valid acc: nan
+Fitting done in 691.7606256008148s.
+Test Acc: 0.7919826652221018.
+Test F1: 0.7919804676495446.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6936686865856193 - Valid acc: nan
+Epoch: 1 loss: 0.6887333451667962 - Valid acc: nan
+Epoch: 2 loss: 0.6708882592316997 - Valid acc: nan
+Epoch: 3 loss: 0.6230468197020492 - Valid acc: nan
+Epoch: 4 loss: 0.5840652862380695 - Valid acc: nan
+Epoch: 5 loss: 0.5500875780348143 - Valid acc: nan
+Epoch: 6 loss: 0.5229544329505436 - Valid acc: nan
+Epoch: 7 loss: 0.5110453303494206 - Valid acc: nan
+Epoch: 8 loss: 0.4873067147469934 - Valid acc: nan
+Epoch: 9 loss: 0.48048991257744716 - Valid acc: nan
+Epoch: 10 loss: 0.46491526118937254 - Valid acc: nan
+Epoch: 11 loss: 0.44833115113608407 - Valid acc: nan
+Epoch: 12 loss: 0.4439145045817932 - Valid acc: nan
+Epoch: 13 loss: 0.42623362229394085 - Valid acc: nan
+Epoch: 14 loss: 0.4206314671763106 - Valid acc: nan
+Epoch: 15 loss: 0.4185495217239237 - Valid acc: nan
+Epoch: 16 loss: 0.4044498237054472 - Valid acc: nan
+Epoch: 17 loss: 0.39523479084058993 - Valid acc: nan
+Epoch: 18 loss: 0.3988085977431667 - Valid acc: nan
+Epoch: 19 loss: 0.38811341531014854 - Valid acc: nan
+Epoch: 20 loss: 0.38393909893283956 - Valid acc: nan
+Epoch: 21 loss: 0.379428134143697 - Valid acc: nan
+Epoch: 22 loss: 0.37139151154915034 - Valid acc: nan
+Epoch: 23 loss: 0.36636399731815206 - Valid acc: nan
+Epoch: 24 loss: 0.3592171046258397 - Valid acc: nan
+Epoch: 25 loss: 0.34812475611708754 - Valid acc: nan
+Epoch: 26 loss: 0.33296436614039315 - Valid acc: nan
+Epoch: 27 loss: 0.333291781172587 - Valid acc: nan
+Epoch: 28 loss: 0.32857402116921597 - Valid acc: nan
+Epoch: 29 loss: 0.31830731413267943 - Valid acc: nan
+Fitting done in 685.5329930782318s.
+Test Acc: 0.7968580715059588.
+Test F1: 0.7968146048106435.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6961365879615607 - Valid acc: nan
+Epoch: 1 loss: 0.6885554721589723 - Valid acc: nan
+Epoch: 2 loss: 0.6453584460164771 - Valid acc: nan
+Epoch: 3 loss: 0.5423359490198896 - Valid acc: nan
+Epoch: 4 loss: 0.519179761754295 - Valid acc: nan
+Epoch: 5 loss: 0.4814558761312782 - Valid acc: nan
+Epoch: 6 loss: 0.45776493855983535 - Valid acc: nan
+Epoch: 7 loss: 0.4480024167912544 - Valid acc: nan
+Epoch: 8 loss: 0.4368998153361282 - Valid acc: nan
+Epoch: 9 loss: 0.44160818614367114 - Valid acc: nan
+Epoch: 10 loss: 0.4224285975184744 - Valid acc: nan
+Epoch: 11 loss: 0.4103511254050139 - Valid acc: nan
+Epoch: 12 loss: 0.4040214899130639 - Valid acc: nan
+Epoch: 13 loss: 0.39154992429162727 - Valid acc: nan
+Epoch: 14 loss: 0.3900030524055393 - Valid acc: nan
+Epoch: 15 loss: 0.37208009894528143 - Valid acc: nan
+Epoch: 16 loss: 0.3805090429293627 - Valid acc: nan
+Epoch: 17 loss: 0.36427684894875983 - Valid acc: nan
+Epoch: 18 loss: 0.3587691853673472 - Valid acc: nan
+Epoch: 19 loss: 0.33901199293618944 - Valid acc: nan
+Epoch: 20 loss: 0.331369573411914 - Valid acc: nan
+Epoch: 21 loss: 0.3247158747015661 - Valid acc: nan
+Epoch: 22 loss: 0.32176178573183933 - Valid acc: nan
+Epoch: 23 loss: 0.3009411733532917 - Valid acc: nan
+Epoch: 24 loss: 0.30176149024439686 - Valid acc: nan
+Epoch: 25 loss: 0.2830029229897295 - Valid acc: nan
+Epoch: 26 loss: 0.2831362604319705 - Valid acc: nan
+Epoch: 27 loss: 0.25619418146034884 - Valid acc: nan
+Epoch: 28 loss: 0.25273990687090536 - Valid acc: nan
+Epoch: 29 loss: 0.2411263500679435 - Valid acc: nan
+Fitting done in 658.1364920139313s.
+Test Acc: 0.781148429035753.
+Test F1: 0.7811227370751641.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6949501347679623 - Valid acc: nan
+Epoch: 1 loss: 0.6906806861045044 - Valid acc: nan
+Epoch: 2 loss: 0.6870626717633594 - Valid acc: nan
+Epoch: 3 loss: 0.6831883174835602 - Valid acc: nan
+Epoch: 4 loss: 0.6635636342743229 - Valid acc: nan
+Epoch: 5 loss: 0.5814626585541433 - Valid acc: nan
+Epoch: 6 loss: 0.544471636328394 - Valid acc: nan
+Epoch: 7 loss: 0.5179402948803984 - Valid acc: nan
+Epoch: 8 loss: 0.49018473397789664 - Valid acc: nan
+Epoch: 9 loss: 0.4740109185262912 - Valid acc: nan
+Epoch: 10 loss: 0.4675122775955696 - Valid acc: nan
+Epoch: 11 loss: 0.46027108432585107 - Valid acc: nan
+Epoch: 12 loss: 0.45599438086410476 - Valid acc: nan
+Epoch: 13 loss: 0.4497981475440064 - Valid acc: nan
+Epoch: 14 loss: 0.445801675750341 - Valid acc: nan
+Epoch: 15 loss: 0.44175551418279635 - Valid acc: nan
+Epoch: 16 loss: 0.4305697226455446 - Valid acc: nan
+Epoch: 17 loss: 0.4305510050644075 - Valid acc: nan
+Epoch: 18 loss: 0.42454446206203084 - Valid acc: nan
+Epoch: 19 loss: 0.4316269353979585 - Valid acc: nan
+Epoch: 20 loss: 0.42025203503280706 - Valid acc: nan
+Epoch: 21 loss: 0.41077334145245525 - Valid acc: nan
+Epoch: 22 loss: 0.40369690894391497 - Valid acc: nan
+Epoch: 23 loss: 0.4033270666020454 - Valid acc: nan
+Epoch: 24 loss: 0.417821844361421 - Valid acc: nan
+Epoch: 25 loss: 0.40079006526856065 - Valid acc: nan
+Epoch: 26 loss: 0.39959410091356046 - Valid acc: nan
+Epoch: 27 loss: 0.39165253472121464 - Valid acc: nan
+Epoch: 28 loss: 0.3939129922948132 - Valid acc: nan
+Epoch: 29 loss: 0.3860119279753955 - Valid acc: nan
+Fitting done in 687.4026849269867s.
+Test Acc: 0.781148429035753.
+Test F1: 0.7790476506495985.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6944155017764582 - Valid acc: nan
+Epoch: 1 loss: 0.6913676830385461 - Valid acc: nan
+Epoch: 2 loss: 0.6887063452963195 - Valid acc: nan
+Epoch: 3 loss: 0.6876243852466517 - Valid acc: nan
+Epoch: 4 loss: 0.6848656359435505 - Valid acc: nan
+Epoch: 5 loss: 0.6752554901762505 - Valid acc: nan
+Epoch: 6 loss: 0.6483224850858567 - Valid acc: nan
+Epoch: 7 loss: 0.5913389921188354 - Valid acc: nan
+Epoch: 8 loss: 0.5491394534965471 - Valid acc: nan
+Epoch: 9 loss: 0.5223049764343769 - Valid acc: nan
+Epoch: 10 loss: 0.5021296760250378 - Valid acc: nan
+Epoch: 11 loss: 0.4920559410070408 - Valid acc: nan
+Epoch: 12 loss: 0.4844034482977983 - Valid acc: nan
+Epoch: 13 loss: 0.47346393169695244 - Valid acc: nan
+Epoch: 14 loss: 0.46573664420257416 - Valid acc: nan
+Epoch: 15 loss: 0.45898970548128115 - Valid acc: nan
+Epoch: 16 loss: 0.4582194447345127 - Valid acc: nan
+Epoch: 17 loss: 0.45696418900365776 - Valid acc: nan
+Epoch: 18 loss: 0.4453701790357601 - Valid acc: nan
+Epoch: 19 loss: 0.4420745723337107 - Valid acc: nan
+Epoch: 20 loss: 0.4504182795224162 - Valid acc: nan
+Epoch: 21 loss: 0.43657318308863335 - Valid acc: nan
+Epoch: 22 loss: 0.4327888187300952 - Valid acc: nan
+Epoch: 23 loss: 0.42909650452908754 - Valid acc: nan
+Epoch: 24 loss: 0.43999089085297777 - Valid acc: nan
+Epoch: 25 loss: 0.4232492825027146 - Valid acc: nan
+Epoch: 26 loss: 0.42315869989422705 - Valid acc: nan
+Epoch: 27 loss: 0.4202569096935967 - Valid acc: nan
+Epoch: 28 loss: 0.4242606921003044 - Valid acc: nan
+Epoch: 29 loss: 0.4145446308603177 - Valid acc: nan
+Fitting done in 670.966890335083s.
+Test Acc: 0.7838569880823402.
+Test F1: 0.7818054166944388.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6941118147331855 - Valid acc: nan
+Epoch: 1 loss: 0.6916287620632635 - Valid acc: nan
+Epoch: 2 loss: 0.6895255894330196 - Valid acc: nan
+Epoch: 3 loss: 0.6890759578329979 - Valid acc: nan
+Epoch: 4 loss: 0.6874436984172446 - Valid acc: nan
+Epoch: 5 loss: 0.6835874436218614 - Valid acc: nan
+Epoch: 6 loss: 0.6792838035980401 - Valid acc: nan
+Epoch: 7 loss: 0.6682829150574745 - Valid acc: nan
+Epoch: 8 loss: 0.6419258348514579 - Valid acc: nan
+Epoch: 9 loss: 0.5938084647490111 - Valid acc: nan
+Epoch: 10 loss: 0.5522639489587332 - Valid acc: nan
+Epoch: 11 loss: 0.5299217160037487 - Valid acc: nan
+Epoch: 12 loss: 0.5203283351625321 - Valid acc: nan
+Epoch: 13 loss: 0.5016931193756919 - Valid acc: nan
+Epoch: 14 loss: 0.4919156916224198 - Valid acc: nan
+Epoch: 15 loss: 0.4829516267845396 - Valid acc: nan
+Epoch: 16 loss: 0.47920750770610193 - Valid acc: nan
+Epoch: 17 loss: 0.47369116992619686 - Valid acc: nan
+Epoch: 18 loss: 0.469605301501434 - Valid acc: nan
+Epoch: 19 loss: 0.45971990553285347 - Valid acc: nan
+Epoch: 20 loss: 0.4627872359201398 - Valid acc: nan
+Epoch: 21 loss: 0.45163218754564405 - Valid acc: nan
+Epoch: 22 loss: 0.4508188602035445 - Valid acc: nan
+Epoch: 23 loss: 0.4471145580614233 - Valid acc: nan
+Epoch: 24 loss: 0.448168381962473 - Valid acc: nan
+Epoch: 25 loss: 0.44139584485506045 - Valid acc: nan
+Epoch: 26 loss: 0.43478443073054956 - Valid acc: nan
+Epoch: 27 loss: 0.4355992375081674 - Valid acc: nan
+Epoch: 28 loss: 0.4395600207623719 - Valid acc: nan
+Epoch: 29 loss: 0.43165260053783483 - Valid acc: nan
+Fitting done in 658.9382832050323s.
+Test Acc: 0.8001083423618635.
+Test F1: 0.7998122065727699.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6939421051499471 - Valid acc: nan
+Epoch: 1 loss: 0.6918282129861026 - Valid acc: nan
+Epoch: 2 loss: 0.6900746939499254 - Valid acc: nan
+Epoch: 3 loss: 0.6898974555765274 - Valid acc: nan
+Epoch: 4 loss: 0.6885197496827627 - Valid acc: nan
+Epoch: 5 loss: 0.6858125453050425 - Valid acc: nan
+Epoch: 6 loss: 0.6841120616549012 - Valid acc: nan
+Epoch: 7 loss: 0.680171842175412 - Valid acc: nan
+Epoch: 8 loss: 0.6744977390835051 - Valid acc: nan
+Epoch: 9 loss: 0.6616164321844289 - Valid acc: nan
+Epoch: 10 loss: 0.6387182474136353 - Valid acc: nan
+Epoch: 11 loss: 0.5948690944324339 - Valid acc: nan
+Epoch: 12 loss: 0.5656481388676373 - Valid acc: nan
+Epoch: 13 loss: 0.5366275961688488 - Valid acc: nan
+Epoch: 14 loss: 0.525981599368112 - Valid acc: nan
+Epoch: 15 loss: 0.5152250323336938 - Valid acc: nan
+Epoch: 16 loss: 0.4979052535026749 - Valid acc: nan
+Epoch: 17 loss: 0.498107341500376 - Valid acc: nan
+Epoch: 18 loss: 0.4955399489471678 - Valid acc: nan
+Epoch: 19 loss: 0.4818260059880383 - Valid acc: nan
+Epoch: 20 loss: 0.4806262492444474 - Valid acc: nan
+Epoch: 21 loss: 0.4714525625368074 - Valid acc: nan
+Epoch: 22 loss: 0.4695640049573314 - Valid acc: nan
+Epoch: 23 loss: 0.469066790245861 - Valid acc: nan
+Epoch: 24 loss: 0.4614184452274631 - Valid acc: nan
+Epoch: 25 loss: 0.454971477130934 - Valid acc: nan
+Epoch: 26 loss: 0.44716266323031717 - Valid acc: nan
+Epoch: 27 loss: 0.44669381223317517 - Valid acc: nan
+Epoch: 28 loss: 0.4520350553396809 - Valid acc: nan
+Epoch: 29 loss: 0.4479175788818756 - Valid acc: nan
+Fitting done in 663.8154485225677s.
+Test Acc: 0.7979414951245937.
+Test F1: 0.7978916162172078.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6938923748931444 - Valid acc: nan
+Epoch: 1 loss: 0.6919262271395997 - Valid acc: nan
+Epoch: 2 loss: 0.6903033759552619 - Valid acc: nan
+Epoch: 3 loss: 0.6901872726534143 - Valid acc: nan
+Epoch: 4 loss: 0.6888586703063435 - Valid acc: nan
+Epoch: 5 loss: 0.6864413853325596 - Valid acc: nan
+Epoch: 6 loss: 0.6852093624930851 - Valid acc: nan
+Epoch: 7 loss: 0.6821676630505248 - Valid acc: nan
+Epoch: 8 loss: 0.6787930537510469 - Valid acc: nan
+Epoch: 9 loss: 0.6724446739764572 - Valid acc: nan
+Epoch: 10 loss: 0.6614630174085584 - Valid acc: nan
+Epoch: 11 loss: 0.6324609118389946 - Valid acc: nan
+Epoch: 12 loss: 0.6036971967688874 - Valid acc: nan
+Epoch: 13 loss: 0.567059875223678 - Valid acc: nan
+Epoch: 14 loss: 0.5458150206273691 - Valid acc: nan
+Epoch: 15 loss: 0.5333199435575849 - Valid acc: nan
+Epoch: 16 loss: 0.5110031753950726 - Valid acc: nan
+Epoch: 17 loss: 0.5114715628196739 - Valid acc: nan
+Epoch: 18 loss: 0.5096259003429744 - Valid acc: nan
+Epoch: 19 loss: 0.49476141995088213 - Valid acc: nan
+Epoch: 20 loss: 0.48985585828737027 - Valid acc: nan
+Epoch: 21 loss: 0.4841171298068383 - Valid acc: nan
+Epoch: 22 loss: 0.4809111939000256 - Valid acc: nan
+Epoch: 23 loss: 0.48016630707448615 - Valid acc: nan
+Epoch: 24 loss: 0.4714072546517918 - Valid acc: nan
+Epoch: 25 loss: 0.46282458891069267 - Valid acc: nan
+Epoch: 26 loss: 0.4560466932423542 - Valid acc: nan
+Epoch: 27 loss: 0.45267968818631477 - Valid acc: nan
+Epoch: 28 loss: 0.45868688167175115 - Valid acc: nan
+Epoch: 29 loss: 0.45630098017998516 - Valid acc: nan
+Fitting done in 660.0853726863861s.
+Test Acc: 0.8022751895991332.
+Test F1: 0.8019305735485496.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6938572229677542 - Valid acc: nan
+Epoch: 1 loss: 0.6918521778431931 - Valid acc: nan
+Epoch: 2 loss: 0.6898804213959358 - Valid acc: nan
+Epoch: 3 loss: 0.6898441735030598 - Valid acc: nan
+Epoch: 4 loss: 0.6873010930987452 - Valid acc: nan
+Epoch: 5 loss: 0.6853671139375322 - Valid acc: nan
+Epoch: 6 loss: 0.6834973093402179 - Valid acc: nan
+Epoch: 7 loss: 0.6793180507731575 - Valid acc: nan
+Epoch: 8 loss: 0.6746150024364449 - Valid acc: nan
+Epoch: 9 loss: 0.6701398140433207 - Valid acc: nan
+Epoch: 10 loss: 0.6431878198778009 - Valid acc: nan
+Epoch: 11 loss: 0.5972255163454596 - Valid acc: nan
+Epoch: 12 loss: 0.5549085359008326 - Valid acc: nan
+Epoch: 13 loss: 0.522007104289325 - Valid acc: nan
+Epoch: 14 loss: 0.5041883548215634 - Valid acc: nan
+Epoch: 15 loss: 0.493022875634232 - Valid acc: nan
+Epoch: 16 loss: 0.48636381293652375 - Valid acc: nan
+Epoch: 17 loss: 0.47643420548108273 - Valid acc: nan
+Epoch: 18 loss: 0.4768096777055994 - Valid acc: nan
+Epoch: 19 loss: 0.45768284556493594 - Valid acc: nan
+Epoch: 20 loss: 0.45352221827286515 - Valid acc: nan
+Epoch: 21 loss: 0.4553457728527874 - Valid acc: nan
+Epoch: 22 loss: 0.459306457139164 - Valid acc: nan
+Epoch: 23 loss: 0.44816144318938944 - Valid acc: nan
+Epoch: 24 loss: 0.4488963622578307 - Valid acc: nan
+Epoch: 25 loss: 0.4349697015189022 - Valid acc: nan
+Epoch: 26 loss: 0.4484491332762503 - Valid acc: nan
+Epoch: 27 loss: 0.43301631932313733 - Valid acc: nan
+Epoch: 28 loss: 0.4344008237640293 - Valid acc: nan
+Epoch: 29 loss: 0.43659911205658336 - Valid acc: nan
+Fitting done in 662.4895839691162s.
+Test Acc: 0.8076923076923077.
+Test F1: 0.8073571331773564.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6943929312546129 - Valid acc: nan
+Epoch: 1 loss: 0.6930522929037237 - Valid acc: nan
+Epoch: 2 loss: 0.6920085249608652 - Valid acc: nan
+Epoch: 3 loss: 0.6919747432532338 - Valid acc: nan
+Epoch: 4 loss: 0.6908169798768324 - Valid acc: nan
+Epoch: 5 loss: 0.6900140253794675 - Valid acc: nan
+Epoch: 6 loss: 0.6895648148018501 - Valid acc: nan
+Epoch: 7 loss: 0.688758864568148 - Valid acc: nan
+Epoch: 8 loss: 0.6882929209339825 - Valid acc: nan
+Epoch: 9 loss: 0.6885568575362939 - Valid acc: nan
+Epoch: 10 loss: 0.687748044556965 - Valid acc: nan
+Epoch: 11 loss: 0.687232283843046 - Valid acc: nan
+Epoch: 12 loss: 0.687025020577315 - Valid acc: nan
+Epoch: 13 loss: 0.6863586974970867 - Valid acc: nan
+Epoch: 14 loss: 0.6846570010819187 - Valid acc: nan
+Epoch: 15 loss: 0.6837097954198804 - Valid acc: nan
+Epoch: 16 loss: 0.6841389950300227 - Valid acc: nan
+Epoch: 17 loss: 0.6826995373461288 - Valid acc: nan
+Epoch: 18 loss: 0.6816085242811655 - Valid acc: nan
+Epoch: 19 loss: 0.6803581604378761 - Valid acc: nan
+Epoch: 20 loss: 0.6792613364368505 - Valid acc: nan
+Epoch: 21 loss: 0.6771131130312219 - Valid acc: nan
+Epoch: 22 loss: 0.6746307446088405 - Valid acc: nan
+Epoch: 23 loss: 0.6718785084051893 - Valid acc: nan
+Epoch: 24 loss: 0.6685088325098071 - Valid acc: nan
+Epoch: 25 loss: 0.6593226094466413 - Valid acc: nan
+Epoch: 26 loss: 0.652332331748367 - Valid acc: nan
+Epoch: 27 loss: 0.6365394430353463 - Valid acc: nan
+Epoch: 28 loss: 0.6165733418368191 - Valid acc: nan
+Epoch: 29 loss: 0.5968090852216489 - Valid acc: nan
+Fitting done in 664.9496133327484s.
+Test Acc: 0.6663055254604551.
+Test F1: 0.6473485144510893.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6946810442588233 - Valid acc: nan
+Epoch: 1 loss: 0.6934525594545927 - Valid acc: nan
+Epoch: 2 loss: 0.6926642776913725 - Valid acc: nan
+Epoch: 3 loss: 0.6926622687047617 - Valid acc: nan
+Epoch: 4 loss: 0.6918185367060534 - Valid acc: nan
+Epoch: 5 loss: 0.6911938748607745 - Valid acc: nan
+Epoch: 6 loss: 0.6909600330915066 - Valid acc: nan
+Epoch: 7 loss: 0.6904357361655704 - Valid acc: nan
+Epoch: 8 loss: 0.6900293165548689 - Valid acc: nan
+Epoch: 9 loss: 0.6901591027403153 - Valid acc: nan
+Epoch: 10 loss: 0.6897881341118344 - Valid acc: nan
+Epoch: 11 loss: 0.6894125545645036 - Valid acc: nan
+Epoch: 12 loss: 0.6893519101115321 - Valid acc: nan
+Epoch: 13 loss: 0.6890074903565335 - Valid acc: nan
+Epoch: 14 loss: 0.6878179215282374 - Valid acc: nan
+Epoch: 15 loss: 0.6870925519507745 - Valid acc: nan
+Epoch: 16 loss: 0.687847639439423 - Valid acc: nan
+Epoch: 17 loss: 0.6871851999635641 - Valid acc: nan
+Epoch: 18 loss: 0.686617800610603 - Valid acc: nan
+Epoch: 19 loss: 0.6865402935557283 - Valid acc: nan
+Epoch: 20 loss: 0.6863146861853627 - Valid acc: nan
+Epoch: 21 loss: 0.6856400832275434 - Valid acc: nan
+Epoch: 22 loss: 0.6853537263208731 - Valid acc: nan
+Epoch: 23 loss: 0.6852668275722879 - Valid acc: nan
+Epoch: 24 loss: 0.6850298253787046 - Valid acc: nan
+Epoch: 25 loss: 0.6840709275592959 - Valid acc: nan
+Epoch: 26 loss: 0.6835942974669396 - Valid acc: nan
+Epoch: 27 loss: 0.682944828719762 - Valid acc: nan
+Epoch: 28 loss: 0.6819819494478965 - Valid acc: nan
+Epoch: 29 loss: 0.6810579482530583 - Valid acc: nan
+Fitting done in 665.127034664154s.
+Test Acc: 0.5547128927410617.
+Test F1: 0.5366992140985949.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6949491576652307 - Valid acc: nan
+Epoch: 1 loss: 0.6936439186162342 - Valid acc: nan
+Epoch: 2 loss: 0.6929898699584035 - Valid acc: nan
+Epoch: 3 loss: 0.6930399654228563 - Valid acc: nan
+Epoch: 4 loss: 0.692329574527079 - Valid acc: nan
+Epoch: 5 loss: 0.6917859729314815 - Valid acc: nan
+Epoch: 6 loss: 0.6916798487564043 - Valid acc: nan
+Epoch: 7 loss: 0.6912655072405159 - Valid acc: nan
+Epoch: 8 loss: 0.69089738688717 - Valid acc: nan
+Epoch: 9 loss: 0.691001705696128 - Valid acc: nan
+Epoch: 10 loss: 0.6907809635118253 - Valid acc: nan
+Epoch: 11 loss: 0.6904176042948155 - Valid acc: nan
+Epoch: 12 loss: 0.6904005546101256 - Valid acc: nan
+Epoch: 13 loss: 0.6901359161889622 - Valid acc: nan
+Epoch: 14 loss: 0.6891215777810599 - Valid acc: nan
+Epoch: 15 loss: 0.6884376055243387 - Valid acc: nan
+Epoch: 16 loss: 0.6892130257766371 - Valid acc: nan
+Epoch: 17 loss: 0.6887115157408521 - Valid acc: nan
+Epoch: 18 loss: 0.6882083043886748 - Valid acc: nan
+Epoch: 19 loss: 0.6882548211626924 - Valid acc: nan
+Epoch: 20 loss: 0.6880965325873711 - Valid acc: nan
+Epoch: 21 loss: 0.6877275770799273 - Valid acc: nan
+Epoch: 22 loss: 0.6875629659332981 - Valid acc: nan
+Epoch: 23 loss: 0.6874813558049284 - Valid acc: nan
+Epoch: 24 loss: 0.6874016275295632 - Valid acc: nan
+Epoch: 25 loss: 0.6870479983401436 - Valid acc: nan
+Epoch: 26 loss: 0.6866168121381991 - Valid acc: nan
+Epoch: 27 loss: 0.6864387089806485 - Valid acc: nan
+Epoch: 28 loss: 0.6857369717835002 - Valid acc: nan
+Epoch: 29 loss: 0.6852995274383897 - Valid acc: nan
+Fitting done in 668.0819492340088s.
+Test Acc: 0.5395449620801733.
+Test F1: 0.5144083710785327.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6952081856700038 - Valid acc: nan
+Epoch: 1 loss: 0.6937653098492264 - Valid acc: nan
+Epoch: 2 loss: 0.6931861918096598 - Valid acc: nan
+Epoch: 3 loss: 0.6932802148637055 - Valid acc: nan
+Epoch: 4 loss: 0.6926413364493089 - Valid acc: nan
+Epoch: 5 loss: 0.6921506989208949 - Valid acc: nan
+Epoch: 6 loss: 0.6921277490654433 - Valid acc: nan
+Epoch: 7 loss: 0.6917769436891368 - Valid acc: nan
+Epoch: 8 loss: 0.6914325876732093 - Valid acc: nan
+Epoch: 9 loss: 0.6915554104512827 - Valid acc: nan
+Epoch: 10 loss: 0.6913988342174905 - Valid acc: nan
+Epoch: 11 loss: 0.69104460691441 - Valid acc: nan
+Epoch: 12 loss: 0.6910477793974683 - Valid acc: nan
+Epoch: 13 loss: 0.6908216810639883 - Valid acc: nan
+Epoch: 14 loss: 0.6899074233336255 - Valid acc: nan
+Epoch: 15 loss: 0.6892464794864545 - Valid acc: nan
+Epoch: 16 loss: 0.6900375795502194 - Valid acc: nan
+Epoch: 17 loss: 0.689584703459216 - Valid acc: nan
+Epoch: 18 loss: 0.6891260367597458 - Valid acc: nan
+Epoch: 19 loss: 0.6892049298810132 - Valid acc: nan
+Epoch: 20 loss: 0.6890621006144264 - Valid acc: nan
+Epoch: 21 loss: 0.688870169868359 - Valid acc: nan
+Epoch: 22 loss: 0.6886610578250334 - Valid acc: nan
+Epoch: 23 loss: 0.6885951495584036 - Valid acc: nan
+Epoch: 24 loss: 0.6885460890786497 - Valid acc: nan
+Epoch: 25 loss: 0.6884661702751425 - Valid acc: nan
+Epoch: 26 loss: 0.6879585157929128 - Valid acc: nan
+Epoch: 27 loss: 0.6879279076019463 - Valid acc: nan
+Epoch: 28 loss: 0.687283201369247 - Valid acc: nan
+Epoch: 29 loss: 0.6869835805341687 - Valid acc: nan
+Fitting done in 668.0415382385254s.
+Test Acc: 0.5368364030335862.
+Test F1: 0.5015750157501575.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6953332003830486 - Valid acc: nan
+Epoch: 1 loss: 0.6938158742265205 - Valid acc: nan
+Epoch: 2 loss: 0.6932585728650837 - Valid acc: nan
+Epoch: 3 loss: 0.6933696335450762 - Valid acc: nan
+Epoch: 4 loss: 0.6927556647041629 - Valid acc: nan
+Epoch: 5 loss: 0.6922862667568846 - Valid acc: nan
+Epoch: 6 loss: 0.6922943667869348 - Valid acc: nan
+Epoch: 7 loss: 0.6919674153272817 - Valid acc: nan
+Epoch: 8 loss: 0.6916312075763769 - Valid acc: nan
+Epoch: 9 loss: 0.6917687654495239 - Valid acc: nan
+Epoch: 10 loss: 0.6916311579632621 - Valid acc: nan
+Epoch: 11 loss: 0.6912823150612716 - Valid acc: nan
+Epoch: 12 loss: 0.691291195464272 - Valid acc: nan
+Epoch: 13 loss: 0.6910787266113855 - Valid acc: nan
+Epoch: 14 loss: 0.6902009631167947 - Valid acc: nan
+Epoch: 15 loss: 0.6895495704832794 - Valid acc: nan
+Epoch: 16 loss: 0.6903477200882973 - Valid acc: nan
+Epoch: 17 loss: 0.6899045426721517 - Valid acc: nan
+Epoch: 18 loss: 0.6894657570502661 - Valid acc: nan
+Epoch: 19 loss: 0.6895540170586867 - Valid acc: nan
+Epoch: 20 loss: 0.6894126286396401 - Valid acc: nan
+Epoch: 21 loss: 0.6892832958629366 - Valid acc: nan
+Epoch: 22 loss: 0.6890415239196293 - Valid acc: nan
+Epoch: 23 loss: 0.6889918008980723 - Valid acc: nan
+Epoch: 24 loss: 0.6889469540877149 - Valid acc: nan
+Epoch: 25 loss: 0.6889547953715903 - Valid acc: nan
+Epoch: 26 loss: 0.6884124306585059 - Valid acc: nan
+Epoch: 27 loss: 0.6884260298199736 - Valid acc: nan
+Epoch: 28 loss: 0.6877931235842623 - Valid acc: nan
+Epoch: 29 loss: 0.6875293561488907 - Valid acc: nan
+Fitting done in 662.3771593570709s.
+Test Acc: 0.5330444203683641.
+Test F1: 0.49143925147622247.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6954590474939071 - Valid acc: nan
+Epoch: 1 loss: 0.6938360753776021 - Valid acc: nan
+Epoch: 2 loss: 0.6932243349924253 - Valid acc: nan
+Epoch: 3 loss: 0.6932747143541458 - Valid acc: nan
+Epoch: 4 loss: 0.6926695025725171 - Valid acc: nan
+Epoch: 5 loss: 0.692246719936415 - Valid acc: nan
+Epoch: 6 loss: 0.692278149155523 - Valid acc: nan
+Epoch: 7 loss: 0.6920910846291249 - Valid acc: nan
+Epoch: 8 loss: 0.6917059890107612 - Valid acc: nan
+Epoch: 9 loss: 0.6918297006904734 - Valid acc: nan
+Epoch: 10 loss: 0.6916367390941334 - Valid acc: nan
+Epoch: 11 loss: 0.6912847330115434 - Valid acc: nan
+Epoch: 12 loss: 0.691307728001148 - Valid acc: nan
+Epoch: 13 loss: 0.6911205973239304 - Valid acc: nan
+Epoch: 14 loss: 0.6901732379990506 - Valid acc: nan
+Epoch: 15 loss: 0.6894985599324882 - Valid acc: nan
+Epoch: 16 loss: 0.6904097919519236 - Valid acc: nan
+Epoch: 17 loss: 0.6899407154562845 - Valid acc: nan
+Epoch: 18 loss: 0.6894590654814174 - Valid acc: nan
+Epoch: 19 loss: 0.6894911465617274 - Valid acc: nan
+Epoch: 20 loss: 0.689490739320744 - Valid acc: nan
+Epoch: 21 loss: 0.6895821153083977 - Valid acc: nan
+Epoch: 22 loss: 0.6893860515142451 - Valid acc: nan
+Epoch: 23 loss: 0.6894884150841333 - Valid acc: nan
+Epoch: 24 loss: 0.6895868475037503 - Valid acc: nan
+Epoch: 25 loss: 0.6899035111328081 - Valid acc: nan
+Epoch: 26 loss: 0.6894347567778791 - Valid acc: nan
+Epoch: 27 loss: 0.6896835717162645 - Valid acc: nan
+Epoch: 28 loss: 0.6892009460168078 - Valid acc: nan
+Epoch: 29 loss: 0.6890772746477513 - Valid acc: nan
+Fitting done in 665.9393165111542s.
+Test Acc: 0.5368364030335862.
+Test F1: 0.4746764094151056.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6970806214850762 - Valid acc: nan
+Epoch: 1 loss: 0.6948542949781252 - Valid acc: nan
+Epoch: 2 loss: 0.6939113357163578 - Valid acc: nan
+Epoch: 3 loss: 0.6939998034796963 - Valid acc: nan
+Epoch: 4 loss: 0.693497023141453 - Valid acc: nan
+Epoch: 5 loss: 0.6932209761156513 - Valid acc: nan
+Epoch: 6 loss: 0.6934122253704622 - Valid acc: nan
+Epoch: 7 loss: 0.6932728387027807 - Valid acc: nan
+Epoch: 8 loss: 0.693008896587901 - Valid acc: nan
+Epoch: 9 loss: 0.6933164534541224 - Valid acc: nan
+Epoch: 10 loss: 0.6932717523822894 - Valid acc: nan
+Epoch: 11 loss: 0.6930547787274929 - Valid acc: nan
+Epoch: 12 loss: 0.6930370489296885 - Valid acc: nan
+Epoch: 13 loss: 0.693039702886791 - Valid acc: nan
+Epoch: 14 loss: 0.6924821396783597 - Valid acc: nan
+Epoch: 15 loss: 0.6920002164868261 - Valid acc: nan
+Epoch: 16 loss: 0.6930186200693164 - Valid acc: nan
+Epoch: 17 loss: 0.6926275498605188 - Valid acc: nan
+Epoch: 18 loss: 0.6924150593018945 - Valid acc: nan
+Epoch: 19 loss: 0.6927060991353382 - Valid acc: nan
+Epoch: 20 loss: 0.6925716806698397 - Valid acc: nan
+Epoch: 21 loss: 0.6929139953128175 - Valid acc: nan
+Epoch: 22 loss: 0.6923248502560434 - Valid acc: nan
+Epoch: 23 loss: 0.6926471628894696 - Valid acc: nan
+Epoch: 24 loss: 0.6928182978161498 - Valid acc: nan
+Epoch: 25 loss: 0.6933115724194256 - Valid acc: nan
+Epoch: 26 loss: 0.6925906466610859 - Valid acc: nan
+Epoch: 27 loss: 0.6929940987873628 - Valid acc: nan
+Epoch: 28 loss: 0.6922582987415997 - Valid acc: nan
+Epoch: 29 loss: 0.6922265863142951 - Valid acc: nan
+Fitting done in 667.913290977478s.
+Test Acc: 0.52329360780065.
+Test F1: 0.414411881330882.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6977803824264879 - Valid acc: nan
+Epoch: 1 loss: 0.6957902487991863 - Valid acc: nan
+Epoch: 2 loss: 0.6945645158001453 - Valid acc: nan
+Epoch: 3 loss: 0.6944341935174314 - Valid acc: nan
+Epoch: 4 loss: 0.6938196844448244 - Valid acc: nan
+Epoch: 5 loss: 0.6935232981091979 - Valid acc: nan
+Epoch: 6 loss: 0.69370682322221 - Valid acc: nan
+Epoch: 7 loss: 0.6935770249780203 - Valid acc: nan
+Epoch: 8 loss: 0.6933405998814313 - Valid acc: nan
+Epoch: 9 loss: 0.6936753915913533 - Valid acc: nan
+Epoch: 10 loss: 0.6936797420413507 - Valid acc: nan
+Epoch: 11 loss: 0.693502218392543 - Valid acc: nan
+Epoch: 12 loss: 0.6934973776685021 - Valid acc: nan
+Epoch: 13 loss: 0.6935094512266919 - Valid acc: nan
+Epoch: 14 loss: 0.6929736519824563 - Valid acc: nan
+Epoch: 15 loss: 0.6924948099720685 - Valid acc: nan
+Epoch: 16 loss: 0.6935144204624816 - Valid acc: nan
+Epoch: 17 loss: 0.693116855759152 - Valid acc: nan
+Epoch: 18 loss: 0.6929214355573489 - Valid acc: nan
+Epoch: 19 loss: 0.6932146687039061 - Valid acc: nan
+Epoch: 20 loss: 0.6930652309015307 - Valid acc: nan
+Epoch: 21 loss: 0.6934267809625306 - Valid acc: nan
+Epoch: 22 loss: 0.6927867073544188 - Valid acc: nan
+Epoch: 23 loss: 0.6931498315982046 - Valid acc: nan
+Epoch: 24 loss: 0.693330094304388 - Valid acc: nan
+Epoch: 25 loss: 0.6938312615273315 - Valid acc: nan
+Epoch: 26 loss: 0.6930878779102612 - Valid acc: nan
+Epoch: 27 loss: 0.6935061154337977 - Valid acc: nan
+Epoch: 28 loss: 0.6927382529126427 - Valid acc: nan
+Epoch: 29 loss: 0.6927156803235842 - Valid acc: nan
+Fitting done in 663.0454478263855s.
+Test Acc: 0.519501625135428.
+Test F1: 0.43014281214816824.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6981556205391195 - Valid acc: nan
+Epoch: 1 loss: 0.6964543220624758 - Valid acc: nan
+Epoch: 2 loss: 0.6951697286153804 - Valid acc: nan
+Epoch: 3 loss: 0.6949061534308285 - Valid acc: nan
+Epoch: 4 loss: 0.694170274830967 - Valid acc: nan
+Epoch: 5 loss: 0.6938124833079432 - Valid acc: nan
+Epoch: 6 loss: 0.6939303430518663 - Valid acc: nan
+Epoch: 7 loss: 0.6937726939344682 - Valid acc: nan
+Epoch: 8 loss: 0.6935262125351526 - Valid acc: nan
+Epoch: 9 loss: 0.693858629017207 - Valid acc: nan
+Epoch: 10 loss: 0.6938748383797662 - Valid acc: nan
+Epoch: 11 loss: 0.6937139761241186 - Valid acc: nan
+Epoch: 12 loss: 0.6937142810380528 - Valid acc: nan
+Epoch: 13 loss: 0.6937294550713776 - Valid acc: nan
+Epoch: 14 loss: 0.6932040173883383 - Valid acc: nan
+Epoch: 15 loss: 0.6927287640599157 - Valid acc: nan
+Epoch: 16 loss: 0.6937492620738256 - Valid acc: nan
+Epoch: 17 loss: 0.6933472187532855 - Valid acc: nan
+Epoch: 18 loss: 0.6931588501599483 - Valid acc: nan
+Epoch: 19 loss: 0.693452337918254 - Valid acc: nan
+Epoch: 20 loss: 0.6932949120598721 - Valid acc: nan
+Epoch: 21 loss: 0.6936637910804307 - Valid acc: nan
+Epoch: 22 loss: 0.6930082002816172 - Valid acc: nan
+Epoch: 23 loss: 0.6933851304081823 - Valid acc: nan
+Epoch: 24 loss: 0.6935700036886799 - Valid acc: nan
+Epoch: 25 loss: 0.6940718310416778 - Valid acc: nan
+Epoch: 26 loss: 0.6933210140707865 - Valid acc: nan
+Epoch: 27 loss: 0.69374482996891 - Valid acc: nan
+Epoch: 28 loss: 0.6929647395376525 - Valid acc: nan
+Epoch: 29 loss: 0.6929455154893026 - Valid acc: nan
+Fitting done in 664.3961515426636s.
+Test Acc: 0.5178764897074756.
+Test F1: 0.44166911348906.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6983883721980056 - Valid acc: nan
+Epoch: 1 loss: 0.6969275588245061 - Valid acc: nan
+Epoch: 2 loss: 0.6956701447508927 - Valid acc: nan
+Epoch: 3 loss: 0.6953505215617274 - Valid acc: nan
+Epoch: 4 loss: 0.6945341029608181 - Valid acc: nan
+Epoch: 5 loss: 0.6941247289580417 - Valid acc: nan
+Epoch: 6 loss: 0.6941700794793277 - Valid acc: nan
+Epoch: 7 loss: 0.6939718489012966 - Valid acc: nan
+Epoch: 8 loss: 0.6936965615763141 - Valid acc: nan
+Epoch: 9 loss: 0.6940108823638431 - Valid acc: nan
+Epoch: 10 loss: 0.6940174874542766 - Valid acc: nan
+Epoch: 11 loss: 0.693858794394256 - Valid acc: nan
+Epoch: 12 loss: 0.6938569370032734 - Valid acc: nan
+Epoch: 13 loss: 0.6938723060437021 - Valid acc: nan
+Epoch: 14 loss: 0.6933533084185827 - Valid acc: nan
+Epoch: 15 loss: 0.6928822756502669 - Valid acc: nan
+Epoch: 16 loss: 0.6939034262144497 - Valid acc: nan
+Epoch: 17 loss: 0.6934961934999234 - Valid acc: nan
+Epoch: 18 loss: 0.6933105939385519 - Valid acc: nan
+Epoch: 19 loss: 0.6936032675594264 - Valid acc: nan
+Epoch: 20 loss: 0.6934397499685343 - Valid acc: nan
+Epoch: 21 loss: 0.6938120698653205 - Valid acc: nan
+Epoch: 22 loss: 0.6931552208227918 - Valid acc: nan
+Epoch: 23 loss: 0.6935347125709401 - Valid acc: nan
+Epoch: 24 loss: 0.693722592957447 - Valid acc: nan
+Epoch: 25 loss: 0.6942226015074404 - Valid acc: nan
+Epoch: 26 loss: 0.6934699199103207 - Valid acc: nan
+Epoch: 27 loss: 0.6938957485849457 - Valid acc: nan
+Epoch: 28 loss: 0.6931109817730898 - Valid acc: nan
+Epoch: 29 loss: 0.6930929022717338 - Valid acc: nan
+Fitting done in 665.7306671142578s.
+Test Acc: 0.5162513542795233.
+Test F1: 0.4567358567358567.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.698474416498504 - Valid acc: nan
+Epoch: 1 loss: 0.6971147363585544 - Valid acc: nan
+Epoch: 2 loss: 0.6958833133554183 - Valid acc: nan
+Epoch: 3 loss: 0.69555328450451 - Valid acc: nan
+Epoch: 4 loss: 0.6947106777588067 - Valid acc: nan
+Epoch: 5 loss: 0.6942827873836362 - Valid acc: nan
+Epoch: 6 loss: 0.6942958649183284 - Valid acc: nan
+Epoch: 7 loss: 0.6940777039941336 - Valid acc: nan
+Epoch: 8 loss: 0.6937857060074117 - Valid acc: nan
+Epoch: 9 loss: 0.6940883687465866 - Valid acc: nan
+Epoch: 10 loss: 0.6940856758569707 - Valid acc: nan
+Epoch: 11 loss: 0.693924223411979 - Valid acc: nan
+Epoch: 12 loss: 0.6939192745037851 - Valid acc: nan
+Epoch: 13 loss: 0.6939341170939407 - Valid acc: nan
+Epoch: 14 loss: 0.6934175084781096 - Valid acc: nan
+Epoch: 15 loss: 0.6929485815108856 - Valid acc: nan
+Epoch: 16 loss: 0.6939699694600409 - Valid acc: nan
+Epoch: 17 loss: 0.69355984230262 - Valid acc: nan
+Epoch: 18 loss: 0.6933746847803193 - Valid acc: nan
+Epoch: 19 loss: 0.6936666982711395 - Valid acc: nan
+Epoch: 20 loss: 0.6935004419674075 - Valid acc: nan
+Epoch: 21 loss: 0.6938737810002586 - Valid acc: nan
+Epoch: 22 loss: 0.6932190739350512 - Valid acc: nan
+Epoch: 23 loss: 0.6935976302692656 - Valid acc: nan
+Epoch: 24 loss: 0.6937866810429303 - Valid acc: nan
+Epoch: 25 loss: 0.6942853410809027 - Valid acc: nan
+Epoch: 26 loss: 0.6935328128020888 - Valid acc: nan
+Epoch: 27 loss: 0.6939589298529432 - Valid acc: nan
+Epoch: 28 loss: 0.6931732906771533 - Valid acc: nan
+Epoch: 29 loss: 0.6931553486454693 - Valid acc: nan
+Fitting done in 661.8329792022705s.
+Test Acc: 0.5205850487540629.
+Test F1: 0.47332076687018654.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6985527659427224 - Valid acc: nan
+Epoch: 1 loss: 0.6971617409948668 - Valid acc: nan
+Epoch: 2 loss: 0.6959036171780846 - Valid acc: nan
+Epoch: 3 loss: 0.6955509754274621 - Valid acc: nan
+Epoch: 4 loss: 0.694705833244875 - Valid acc: nan
+Epoch: 5 loss: 0.6942767214912899 - Valid acc: nan
+Epoch: 6 loss: 0.6942934159598598 - Valid acc: nan
+Epoch: 7 loss: 0.694086337365167 - Valid acc: nan
+Epoch: 8 loss: 0.6937871313508536 - Valid acc: nan
+Epoch: 9 loss: 0.6940935474599716 - Valid acc: nan
+Epoch: 10 loss: 0.6940842443118894 - Valid acc: nan
+Epoch: 11 loss: 0.6939218102852044 - Valid acc: nan
+Epoch: 12 loss: 0.6939179084204525 - Valid acc: nan
+Epoch: 13 loss: 0.6939332054529576 - Valid acc: nan
+Epoch: 14 loss: 0.6934159856311158 - Valid acc: nan
+Epoch: 15 loss: 0.6929468185226352 - Valid acc: nan
+Epoch: 16 loss: 0.6939687649638666 - Valid acc: nan
+Epoch: 17 loss: 0.6935591587441505 - Valid acc: nan
+Epoch: 18 loss: 0.693373715257369 - Valid acc: nan
+Epoch: 19 loss: 0.6936663213492817 - Valid acc: nan
+Epoch: 20 loss: 0.6935002328343474 - Valid acc: nan
+Epoch: 21 loss: 0.6938737193284007 - Valid acc: nan
+Epoch: 22 loss: 0.6932179917489862 - Valid acc: nan
+Epoch: 23 loss: 0.6935974411192657 - Valid acc: nan
+Epoch: 24 loss: 0.6937865849175205 - Valid acc: nan
+Epoch: 25 loss: 0.6942854261811758 - Valid acc: nan
+Epoch: 26 loss: 0.693532544064384 - Valid acc: nan
+Epoch: 27 loss: 0.6939587076275335 - Valid acc: nan
+Epoch: 28 loss: 0.6931727911006509 - Valid acc: nan
+Epoch: 29 loss: 0.6931549472615898 - Valid acc: nan
+Fitting done in 660.6609125137329s.
+Test Acc: 0.5238353196099675.
+Test F1: 0.4746191586765187.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6990625930659343 - Valid acc: nan
+Epoch: 1 loss: 0.6985424963725095 - Valid acc: nan
+Epoch: 2 loss: 0.6977656411297749 - Valid acc: nan
+Epoch: 3 loss: 0.6976374563454204 - Valid acc: nan
+Epoch: 4 loss: 0.6968270292171853 - Valid acc: nan
+Epoch: 5 loss: 0.6964441820376182 - Valid acc: nan
+Epoch: 6 loss: 0.6962889026355192 - Valid acc: nan
+Epoch: 7 loss: 0.6959669104201256 - Valid acc: nan
+Epoch: 8 loss: 0.6955364119110768 - Valid acc: nan
+Epoch: 9 loss: 0.6957203425423948 - Valid acc: nan
+Epoch: 10 loss: 0.6955704761378337 - Valid acc: nan
+Epoch: 11 loss: 0.6953268674756751 - Valid acc: nan
+Epoch: 12 loss: 0.6951860816492511 - Valid acc: nan
+Epoch: 13 loss: 0.6950627934036916 - Valid acc: nan
+Epoch: 14 loss: 0.6944495305160566 - Valid acc: nan
+Epoch: 15 loss: 0.6939038041699139 - Valid acc: nan
+Epoch: 16 loss: 0.6948369706986267 - Valid acc: nan
+Epoch: 17 loss: 0.6943135519937284 - Valid acc: nan
+Epoch: 18 loss: 0.6940520536692846 - Valid acc: nan
+Epoch: 19 loss: 0.6942942772986572 - Valid acc: nan
+Epoch: 20 loss: 0.6941030869594199 - Valid acc: nan
+Epoch: 21 loss: 0.694473193904568 - Valid acc: nan
+Epoch: 22 loss: 0.6938587968060047 - Valid acc: nan
+Epoch: 23 loss: 0.6942085454918746 - Valid acc: nan
+Epoch: 24 loss: 0.6944027877267386 - Valid acc: nan
+Epoch: 25 loss: 0.6948865155953203 - Valid acc: nan
+Epoch: 26 loss: 0.6941459867995599 - Valid acc: nan
+Epoch: 27 loss: 0.6945665258203628 - Valid acc: nan
+Epoch: 28 loss: 0.6937882049235305 - Valid acc: nan
+Epoch: 29 loss: 0.6937665308831055 - Valid acc: nan
+Fitting done in 644.4618299007416s.
+Test Acc: 0.4859154929577465.
+Test F1: 0.4858054932408019.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6991839825762489 - Valid acc: nan
+Epoch: 1 loss: 0.6988940259624767 - Valid acc: nan
+Epoch: 2 loss: 0.6983033139581625 - Valid acc: nan
+Epoch: 3 loss: 0.6983205545155299 - Valid acc: nan
+Epoch: 4 loss: 0.6976177919806773 - Valid acc: nan
+Epoch: 5 loss: 0.6973455255431247 - Valid acc: nan
+Epoch: 6 loss: 0.6972297147519326 - Valid acc: nan
+Epoch: 7 loss: 0.6969550479354197 - Valid acc: nan
+Epoch: 8 loss: 0.6965489790618764 - Valid acc: nan
+Epoch: 9 loss: 0.6967504861726926 - Valid acc: nan
+Epoch: 10 loss: 0.6965978545260567 - Valid acc: nan
+Epoch: 11 loss: 0.6963595020977748 - Valid acc: nan
+Epoch: 12 loss: 0.696199984219722 - Valid acc: nan
+Epoch: 13 loss: 0.6960553568222619 - Valid acc: nan
+Epoch: 14 loss: 0.6954316586428295 - Valid acc: nan
+Epoch: 15 loss: 0.6948770884144513 - Valid acc: nan
+Epoch: 16 loss: 0.6957896107194051 - Valid acc: nan
+Epoch: 17 loss: 0.6952185162230035 - Valid acc: nan
+Epoch: 18 loss: 0.6949235628106002 - Valid acc: nan
+Epoch: 19 loss: 0.6951447742522796 - Valid acc: nan
+Epoch: 20 loss: 0.6949335605422885 - Valid acc: nan
+Epoch: 21 loss: 0.6953015251655799 - Valid acc: nan
+Epoch: 22 loss: 0.6947354171317437 - Valid acc: nan
+Epoch: 23 loss: 0.6950509100291081 - Valid acc: nan
+Epoch: 24 loss: 0.6952490751453907 - Valid acc: nan
+Epoch: 25 loss: 0.6957191035926686 - Valid acc: nan
+Epoch: 26 loss: 0.6949917432889773 - Valid acc: nan
+Epoch: 27 loss: 0.6954054429351939 - Valid acc: nan
+Epoch: 28 loss: 0.6946388996405408 - Valid acc: nan
+Epoch: 29 loss: 0.6946119211312664 - Valid acc: nan
+Fitting done in 641.8643457889557s.
+Test Acc: 0.4810400866738895.
+Test F1: 0.44135742020917024.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6992382141896066 - Valid acc: nan
+Epoch: 1 loss: 0.6990541471222232 - Valid acc: nan
+Epoch: 2 loss: 0.6985563270618461 - Valid acc: nan
+Epoch: 3 loss: 0.6986529424011363 - Valid acc: nan
+Epoch: 4 loss: 0.6980161246536785 - Valid acc: nan
+Epoch: 5 loss: 0.6978143753343924 - Valid acc: nan
+Epoch: 6 loss: 0.6977374894770584 - Valid acc: nan
+Epoch: 7 loss: 0.6975066003771876 - Valid acc: nan
+Epoch: 8 loss: 0.6971334467044455 - Valid acc: nan
+Epoch: 9 loss: 0.6973649394305456 - Valid acc: nan
+Epoch: 10 loss: 0.6972317523349917 - Valid acc: nan
+Epoch: 11 loss: 0.697015961815167 - Valid acc: nan
+Epoch: 12 loss: 0.6968669371108789 - Valid acc: nan
+Epoch: 13 loss: 0.6967301327369116 - Valid acc: nan
+Epoch: 14 loss: 0.6961180733118443 - Valid acc: nan
+Epoch: 15 loss: 0.6955747625042248 - Valid acc: nan
+Epoch: 16 loss: 0.6964921479280284 - Valid acc: nan
+Epoch: 17 loss: 0.6959087473119614 - Valid acc: nan
+Epoch: 18 loss: 0.6956077707296162 - Valid acc: nan
+Epoch: 19 loss: 0.6958228067166543 - Valid acc: nan
+Epoch: 20 loss: 0.6956009475481992 - Valid acc: nan
+Epoch: 21 loss: 0.6959688615247693 - Valid acc: nan
+Epoch: 22 loss: 0.6954332190441948 - Valid acc: nan
+Epoch: 23 loss: 0.6957276377374726 - Valid acc: nan
+Epoch: 24 loss: 0.6959277315635901 - Valid acc: nan
+Epoch: 25 loss: 0.6963902098595063 - Valid acc: nan
+Epoch: 26 loss: 0.6956715180694713 - Valid acc: nan
+Epoch: 27 loss: 0.6960803559749802 - Valid acc: nan
+Epoch: 28 loss: 0.6953218679207598 - Valid acc: nan
+Epoch: 29 loss: 0.6952910943527442 - Valid acc: nan
+Fitting done in 643.2249219417572s.
+Test Acc: 0.4734561213434453.
+Test F1: 0.37960135426693664.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6992689309092616 - Valid acc: nan
+Epoch: 1 loss: 0.6991457033019535 - Valid acc: nan
+Epoch: 2 loss: 0.6987032349399059 - Valid acc: nan
+Epoch: 3 loss: 0.6988490440941959 - Valid acc: nan
+Epoch: 4 loss: 0.6982549597762223 - Valid acc: nan
+Epoch: 5 loss: 0.6980998788265823 - Valid acc: nan
+Epoch: 6 loss: 0.6980521623798878 - Valid acc: nan
+Epoch: 7 loss: 0.6978539831376489 - Valid acc: nan
+Epoch: 8 loss: 0.6975076040091542 - Valid acc: nan
+Epoch: 9 loss: 0.697764733623218 - Valid acc: nan
+Epoch: 10 loss: 0.6976510610194565 - Valid acc: nan
+Epoch: 11 loss: 0.6974567815747564 - Valid acc: nan
+Epoch: 12 loss: 0.6973825021286231 - Valid acc: nan
+Epoch: 13 loss: 0.6973789568581333 - Valid acc: nan
+Epoch: 14 loss: 0.696899696926161 - Valid acc: nan
+Epoch: 15 loss: 0.6964864641255726 - Valid acc: nan
+Epoch: 16 loss: 0.6975264425222585 - Valid acc: nan
+Epoch: 17 loss: 0.6970392624077769 - Valid acc: nan
+Epoch: 18 loss: 0.6968380019843923 - Valid acc: nan
+Epoch: 19 loss: 0.6971030014787796 - Valid acc: nan
+Epoch: 20 loss: 0.6968750181914753 - Valid acc: nan
+Epoch: 21 loss: 0.6972537822806077 - Valid acc: nan
+Epoch: 22 loss: 0.696771001195632 - Valid acc: nan
+Epoch: 23 loss: 0.6970337560411134 - Valid acc: nan
+Epoch: 24 loss: 0.6972373103819831 - Valid acc: nan
+Epoch: 25 loss: 0.6976896207456644 - Valid acc: nan
+Epoch: 26 loss: 0.6969848185605396 - Valid acc: nan
+Epoch: 27 loss: 0.6973857032081295 - Valid acc: nan
+Epoch: 28 loss: 0.6966401762355959 - Valid acc: nan
+Epoch: 29 loss: 0.6966029825927205 - Valid acc: nan
+Fitting done in 641.9453537464142s.
+Test Acc: 0.4685807150595883.
+Test F1: 0.33022806832618595.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.699279784467179 - Valid acc: nan
+Epoch: 1 loss: 0.6991781947240664 - Valid acc: nan
+Epoch: 2 loss: 0.6987557669595487 - Valid acc: nan
+Epoch: 3 loss: 0.6989196997157411 - Valid acc: nan
+Epoch: 4 loss: 0.6983416752319116 - Valid acc: nan
+Epoch: 5 loss: 0.6982043316598573 - Valid acc: nan
+Epoch: 6 loss: 0.6981682553456697 - Valid acc: nan
+Epoch: 7 loss: 0.697983162940582 - Valid acc: nan
+Epoch: 8 loss: 0.6976478647634473 - Valid acc: nan
+Epoch: 9 loss: 0.6979157807510024 - Valid acc: nan
+Epoch: 10 loss: 0.6978107587450502 - Valid acc: nan
+Epoch: 11 loss: 0.697625895111547 - Valid acc: nan
+Epoch: 12 loss: 0.697555540958581 - Valid acc: nan
+Epoch: 13 loss: 0.6975526799356317 - Valid acc: nan
+Epoch: 14 loss: 0.6970752763610355 - Valid acc: nan
+Epoch: 15 loss: 0.6966643109486971 - Valid acc: nan
+Epoch: 16 loss: 0.6977059854937426 - Valid acc: nan
+Epoch: 17 loss: 0.6972175746983875 - Valid acc: nan
+Epoch: 18 loss: 0.697016826943855 - Valid acc: nan
+Epoch: 19 loss: 0.6972813375423409 - Valid acc: nan
+Epoch: 20 loss: 0.6970515705946553 - Valid acc: nan
+Epoch: 21 loss: 0.697430606522312 - Valid acc: nan
+Epoch: 22 loss: 0.6969535057944369 - Valid acc: nan
+Epoch: 23 loss: 0.6972124331948385 - Valid acc: nan
+Epoch: 24 loss: 0.6974162293996425 - Valid acc: nan
+Epoch: 25 loss: 0.6978673090824502 - Valid acc: nan
+Epoch: 26 loss: 0.697164173071095 - Valid acc: nan
+Epoch: 27 loss: 0.6975639944820735 - Valid acc: nan
+Epoch: 28 loss: 0.6968201009524351 - Valid acc: nan
+Epoch: 29 loss: 0.6967820521724017 - Valid acc: nan
+Fitting done in 638.80424284935s.
+Test Acc: 0.47183098591549294.
+Test F1: 0.33182759269715795.

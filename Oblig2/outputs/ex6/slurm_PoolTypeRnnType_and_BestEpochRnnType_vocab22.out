@@ -1,0 +1,1055 @@
+Pool type Vs RNNTypes...
+bidirectional = True
+freeze = True
+vocab = 22
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 2, 'name': 'fastText Skipgram', 'tool': 'fastText', 'url': 'https://github.com/facebookresearch/fastText', 'version': None}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'parameters.bin', 'format': 'binary'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': False, 'case preserved': True, 'description': 'English Wikipedia Dump of February 2017', 'id': 1, 'language': 'eng', 'lemmatized': False, 'public': True, 'stop words removal': 'NLTK', 'tagger': None, 'tagset': None, 'tokens': 2252637050, 'tool': 'Wikipedia Extractor', 'url': 'https://dumps.wikimedia.org/'}, {'NER': False, 'case preserved': True, 'description': 'Gigaword 5th Edition', 'id': 4, 'language': 'eng', 'lemmatized': False, 'public': False, 'stop words removal': 'NLTK', 'tagger': None, 'tagset': None, 'tokens': 4815382730, 'tool': None, 'url': 'https://catalog.ldc.upenn.edu/LDC2011T07'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/22.zip
+id 22
+iterations 5
+vocabulary size 291392
+window 5
+============
+
+
+
+loading data set...
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+tokenizing...
+
+
+
+loading data loader...
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6936291525129638 - Valid acc: nan
+Epoch: 1 loss: 0.6924963376425595 - Valid acc: nan
+Epoch: 2 loss: 0.6925982936269286 - Valid acc: nan
+Epoch: 3 loss: 0.6921080343985144 - Valid acc: nan
+Epoch: 4 loss: 0.6927168989457146 - Valid acc: nan
+Epoch: 5 loss: 0.6925943745354007 - Valid acc: nan
+Epoch: 6 loss: 0.6923051696981308 - Valid acc: nan
+Epoch: 7 loss: 0.6921332082307408 - Valid acc: nan
+Epoch: 8 loss: 0.6920593684119296 - Valid acc: nan
+Epoch: 9 loss: 0.6924287762945098 - Valid acc: nan
+Epoch: 10 loss: 0.6922992750399375 - Valid acc: nan
+Epoch: 11 loss: 0.6922223612752264 - Valid acc: nan
+Epoch: 12 loss: 0.6922280846992669 - Valid acc: nan
+Epoch: 13 loss: 0.6922047034853456 - Valid acc: nan
+Epoch: 14 loss: 0.6922803989724616 - Valid acc: nan
+Epoch: 15 loss: 0.692131756358064 - Valid acc: nan
+Epoch: 16 loss: 0.6921124162012442 - Valid acc: nan
+Epoch: 17 loss: 0.692140955111884 - Valid acc: nan
+Epoch: 18 loss: 0.6922815858973244 - Valid acc: nan
+Epoch: 19 loss: 0.6921950912889029 - Valid acc: nan
+Epoch: 20 loss: 0.6921863731621318 - Valid acc: nan
+Epoch: 21 loss: 0.6923113792617887 - Valid acc: nan
+Epoch: 22 loss: 0.6922276977858791 - Valid acc: nan
+Epoch: 23 loss: 0.6923429869502955 - Valid acc: nan
+Epoch: 24 loss: 0.6923817599439896 - Valid acc: nan
+Epoch: 25 loss: 0.6922205231782329 - Valid acc: nan
+Epoch: 26 loss: 0.6921446726501332 - Valid acc: nan
+Epoch: 27 loss: 0.6921301301504146 - Valid acc: nan
+Epoch: 28 loss: 0.6922604355508881 - Valid acc: nan
+Epoch: 29 loss: 0.6921826759514781 - Valid acc: nan
+Fitting done in 128.76848793029785s.
+Test Acc: 0.5227518959913326.
+Test F1: 0.3432942013518321.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6955574874933055 - Valid acc: nan
+Epoch: 1 loss: 0.6953450248420583 - Valid acc: nan
+Epoch: 2 loss: 0.6950879841181584 - Valid acc: nan
+Epoch: 3 loss: 0.6946155745859091 - Valid acc: nan
+Epoch: 4 loss: 0.6946893355060864 - Valid acc: nan
+Epoch: 5 loss: 0.6948061912735074 - Valid acc: nan
+Epoch: 6 loss: 0.6947837520196948 - Valid acc: nan
+Epoch: 7 loss: 0.6949829510870696 - Valid acc: nan
+Epoch: 8 loss: 0.6953089578303299 - Valid acc: nan
+Epoch: 9 loss: 0.6952255402686279 - Valid acc: nan
+Epoch: 10 loss: 0.6946751781970779 - Valid acc: nan
+Epoch: 11 loss: 0.6951161764260662 - Valid acc: nan
+Epoch: 12 loss: 0.6944043057502349 - Valid acc: nan
+Epoch: 13 loss: 0.6950311605640919 - Valid acc: nan
+Epoch: 14 loss: 0.6950500462785622 - Valid acc: nan
+Epoch: 15 loss: 0.6948466349199328 - Valid acc: nan
+Epoch: 16 loss: 0.6946416290509219 - Valid acc: nan
+Epoch: 17 loss: 0.6958280619169246 - Valid acc: nan
+Epoch: 18 loss: 0.6949971531856955 - Valid acc: nan
+Epoch: 19 loss: 0.6951013593315389 - Valid acc: nan
+Epoch: 20 loss: 0.694550588296328 - Valid acc: nan
+Epoch: 21 loss: 0.695077758648492 - Valid acc: nan
+Epoch: 22 loss: 0.6949713784835242 - Valid acc: nan
+Epoch: 23 loss: 0.6950585876586121 - Valid acc: nan
+Epoch: 24 loss: 0.6950348967072592 - Valid acc: nan
+Epoch: 25 loss: 0.6945219632518085 - Valid acc: nan
+Epoch: 26 loss: 0.6949642486654954 - Valid acc: nan
+Epoch: 27 loss: 0.6953604314368584 - Valid acc: nan
+Epoch: 28 loss: 0.694977843692537 - Valid acc: nan
+Epoch: 29 loss: 0.6951532112380673 - Valid acc: nan
+Fitting done in 293.51436829566956s.
+Test Acc: 0.47670639219934996.
+Test F1: 0.32281731474688186.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6951470151112947 - Valid acc: nan
+Epoch: 1 loss: 0.6948754821898621 - Valid acc: nan
+Epoch: 2 loss: 0.6949545658392713 - Valid acc: nan
+Epoch: 3 loss: 0.6947124407470571 - Valid acc: nan
+Epoch: 4 loss: 0.694708390732032 - Valid acc: nan
+Epoch: 5 loss: 0.694674398168663 - Valid acc: nan
+Epoch: 6 loss: 0.6950220562130041 - Valid acc: nan
+Epoch: 7 loss: 0.694863178826481 - Valid acc: nan
+Epoch: 8 loss: 0.6945666298700895 - Valid acc: nan
+Epoch: 9 loss: 0.6949898741837871 - Valid acc: nan
+Epoch: 10 loss: 0.6948724406303008 - Valid acc: nan
+Epoch: 11 loss: 0.6945399500731099 - Valid acc: nan
+Epoch: 12 loss: 0.694945433236271 - Valid acc: nan
+Epoch: 13 loss: 0.6946052705621444 - Valid acc: nan
+Epoch: 14 loss: 0.6948662055710148 - Valid acc: nan
+Epoch: 15 loss: 0.6948605496759359 - Valid acc: nan
+Epoch: 16 loss: 0.6949731655892609 - Valid acc: nan
+Epoch: 17 loss: 0.6944801500766953 - Valid acc: nan
+Epoch: 18 loss: 0.6950932351840025 - Valid acc: nan
+Epoch: 19 loss: 0.694683751618931 - Valid acc: nan
+Epoch: 20 loss: 0.6945904810304586 - Valid acc: nan
+Epoch: 21 loss: 0.6945336292244796 - Valid acc: nan
+Epoch: 22 loss: 0.6948280182877028 - Valid acc: nan
+Epoch: 23 loss: 0.6948425425270389 - Valid acc: nan
+Epoch: 24 loss: 0.6945239184908785 - Valid acc: nan
+Epoch: 25 loss: 0.6949959579919804 - Valid acc: nan
+Epoch: 26 loss: 0.6944757841225994 - Valid acc: nan
+Epoch: 27 loss: 0.6944589690665979 - Valid acc: nan
+Epoch: 28 loss: 0.6942436402243686 - Valid acc: nan
+Epoch: 29 loss: 0.6947323666142591 - Valid acc: nan
+Fitting done in 278.70761227607727s.
+Test Acc: 0.47670639219934996.
+Test F1: 0.32281731474688186.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6961163137689491 - Valid acc: nan
+Epoch: 1 loss: 0.6925162142411821 - Valid acc: nan
+Epoch: 2 loss: 0.6894013023789908 - Valid acc: nan
+Epoch: 3 loss: 0.688801381973862 - Valid acc: nan
+Epoch: 4 loss: 0.6869105500292916 - Valid acc: nan
+Epoch: 5 loss: 0.6862488175403176 - Valid acc: nan
+Epoch: 6 loss: 0.685162521511144 - Valid acc: nan
+Epoch: 7 loss: 0.6832126613297215 - Valid acc: nan
+Epoch: 8 loss: 0.6824579197547339 - Valid acc: nan
+Epoch: 9 loss: 0.6777952299641736 - Valid acc: nan
+Epoch: 10 loss: 0.6791748580215984 - Valid acc: nan
+Epoch: 11 loss: 0.6718385739822608 - Valid acc: nan
+Epoch: 12 loss: 0.6751612734932431 - Valid acc: nan
+Epoch: 13 loss: 0.6693899293855435 - Valid acc: nan
+Epoch: 14 loss: 0.6640973787087237 - Valid acc: nan
+Epoch: 15 loss: 0.6769186282433526 - Valid acc: nan
+Epoch: 16 loss: 0.6757095397552314 - Valid acc: nan
+Epoch: 17 loss: 0.664312054311609 - Valid acc: nan
+Epoch: 18 loss: 0.6414864042590809 - Valid acc: nan
+Epoch: 19 loss: 0.6146720990624731 - Valid acc: nan
+Epoch: 20 loss: 0.6101081907060105 - Valid acc: nan
+Epoch: 21 loss: 0.6008284820642086 - Valid acc: nan
+Epoch: 22 loss: 0.6042997582110367 - Valid acc: nan
+Epoch: 23 loss: 0.6036080204682543 - Valid acc: nan
+Epoch: 24 loss: 0.595342536193098 - Valid acc: nan
+Epoch: 25 loss: 0.5954257649493355 - Valid acc: nan
+Epoch: 26 loss: 0.5820879347062524 - Valid acc: nan
+Epoch: 27 loss: 0.6285744371441747 - Valid acc: nan
+Epoch: 28 loss: 0.5930545143998427 - Valid acc: nan
+Epoch: 29 loss: 0.5910682092512274 - Valid acc: nan
+Fitting done in 126.30781197547913s.
+Test Acc: 0.7296858071505958.
+Test F1: 0.7288741918725892.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6947570505169774 - Valid acc: nan
+Epoch: 1 loss: 0.6920322741387207 - Valid acc: nan
+Epoch: 2 loss: 0.6911110533455204 - Valid acc: nan
+Epoch: 3 loss: 0.6903781274150562 - Valid acc: nan
+Epoch: 4 loss: 0.6893966266874633 - Valid acc: nan
+Epoch: 5 loss: 0.6894368074532878 - Valid acc: nan
+Epoch: 6 loss: 0.6887539990375496 - Valid acc: nan
+Epoch: 7 loss: 0.687912979566982 - Valid acc: nan
+Epoch: 8 loss: 0.6870419772374148 - Valid acc: nan
+Epoch: 9 loss: 0.6862698224927649 - Valid acc: nan
+Epoch: 10 loss: 0.6854337402161835 - Valid acc: nan
+Epoch: 11 loss: 0.6846483797696284 - Valid acc: nan
+Epoch: 12 loss: 0.6825480657505851 - Valid acc: nan
+Epoch: 13 loss: 0.681161434319667 - Valid acc: nan
+Epoch: 14 loss: 0.6793654812553714 - Valid acc: nan
+Epoch: 15 loss: 0.6751785133615394 - Valid acc: nan
+Epoch: 16 loss: 0.6692621218675823 - Valid acc: nan
+Epoch: 17 loss: 0.6639311889003467 - Valid acc: nan
+Epoch: 18 loss: 0.6660270559994471 - Valid acc: nan
+Epoch: 19 loss: 0.6594746157613104 - Valid acc: nan
+Epoch: 20 loss: 0.6306811123225041 - Valid acc: nan
+Epoch: 21 loss: 0.6079076848967226 - Valid acc: nan
+Epoch: 22 loss: 0.5822044319844659 - Valid acc: nan
+Epoch: 23 loss: 0.5703515419036667 - Valid acc: nan
+Epoch: 24 loss: 0.561540498554362 - Valid acc: nan
+Epoch: 25 loss: 0.5469784447223465 - Valid acc: nan
+Epoch: 26 loss: 0.5477528387756017 - Valid acc: nan
+Epoch: 27 loss: 0.5320190075849522 - Valid acc: nan
+Epoch: 28 loss: 0.5304746036929202 - Valid acc: nan
+Epoch: 29 loss: 0.5282093315799802 - Valid acc: nan
+Fitting done in 287.40084862709045s.
+Test Acc: 0.7632719393282773.
+Test F1: 0.7625611660287004.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6953280826524503 - Valid acc: nan
+Epoch: 1 loss: 0.6915748463889767 - Valid acc: nan
+Epoch: 2 loss: 0.690210923638647 - Valid acc: nan
+Epoch: 3 loss: 0.6886754945523477 - Valid acc: nan
+Epoch: 4 loss: 0.6873816499820334 - Valid acc: nan
+Epoch: 5 loss: 0.6859948852158695 - Valid acc: nan
+Epoch: 6 loss: 0.6837188150152306 - Valid acc: nan
+Epoch: 7 loss: 0.6822793287348885 - Valid acc: nan
+Epoch: 8 loss: 0.6791381484511271 - Valid acc: nan
+Epoch: 9 loss: 0.6775637417170354 - Valid acc: nan
+Epoch: 10 loss: 0.6739538811534815 - Valid acc: nan
+Epoch: 11 loss: 0.6685459741278191 - Valid acc: nan
+Epoch: 12 loss: 0.6560267833616004 - Valid acc: nan
+Epoch: 13 loss: 0.63122487550526 - Valid acc: nan
+Epoch: 14 loss: 0.6050832385272649 - Valid acc: nan
+Epoch: 15 loss: 0.5758781203989348 - Valid acc: nan
+Epoch: 16 loss: 0.5491218535886334 - Valid acc: nan
+Epoch: 17 loss: 0.5279580886997929 - Valid acc: nan
+Epoch: 18 loss: 0.5142359757699029 - Valid acc: nan
+Epoch: 19 loss: 0.5033149867388554 - Valid acc: nan
+Epoch: 20 loss: 0.49949932132842223 - Valid acc: nan
+Epoch: 21 loss: 0.49915397994091054 - Valid acc: nan
+Epoch: 22 loss: 0.4799864107818273 - Valid acc: nan
+Epoch: 23 loss: 0.47881579037346594 - Valid acc: nan
+Epoch: 24 loss: 0.47413438661939145 - Valid acc: nan
+Epoch: 25 loss: 0.4715537378898246 - Valid acc: nan
+Epoch: 26 loss: 0.4603847251462109 - Valid acc: nan
+Epoch: 27 loss: 0.46697629979580124 - Valid acc: nan
+Epoch: 28 loss: 0.47396282550227437 - Valid acc: nan
+Epoch: 29 loss: 0.45517928459051715 - Valid acc: nan
+Fitting done in 274.6037709712982s.
+Test Acc: 0.7968580715059588.
+Test F1: 0.796850858156559.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6946421527449106 - Valid acc: nan
+Epoch: 1 loss: 0.6916621503113323 - Valid acc: nan
+Epoch: 2 loss: 0.6914154708040932 - Valid acc: nan
+Epoch: 3 loss: 0.6899505481554594 - Valid acc: nan
+Epoch: 4 loss: 0.6896999760859275 - Valid acc: nan
+Epoch: 5 loss: 0.6891601388854098 - Valid acc: nan
+Epoch: 6 loss: 0.6881018094933791 - Valid acc: nan
+Epoch: 7 loss: 0.6877826221416451 - Valid acc: nan
+Epoch: 8 loss: 0.6868149214397276 - Valid acc: nan
+Epoch: 9 loss: 0.6858007105099673 - Valid acc: nan
+Epoch: 10 loss: 0.6847970430561573 - Valid acc: nan
+Epoch: 11 loss: 0.6834854487049786 - Valid acc: nan
+Epoch: 12 loss: 0.6836109068352363 - Valid acc: nan
+Epoch: 13 loss: 0.6824858443585434 - Valid acc: nan
+Epoch: 14 loss: 0.6812803163004748 - Valid acc: nan
+Epoch: 15 loss: 0.6796970408775903 - Valid acc: nan
+Epoch: 16 loss: 0.6732037405058139 - Valid acc: nan
+Epoch: 17 loss: 0.6698904161508372 - Valid acc: nan
+Epoch: 18 loss: 0.662412165906388 - Valid acc: nan
+Epoch: 19 loss: 0.6584648203987606 - Valid acc: nan
+Epoch: 20 loss: 0.6575418786506433 - Valid acc: nan
+Epoch: 21 loss: 0.6470553812953089 - Valid acc: nan
+Epoch: 22 loss: 0.6385249552354647 - Valid acc: nan
+Epoch: 23 loss: 0.6708929046041014 - Valid acc: nan
+Epoch: 24 loss: 0.645510533296993 - Valid acc: nan
+Epoch: 25 loss: 0.6287253850457296 - Valid acc: nan
+Epoch: 26 loss: 0.6403092207936193 - Valid acc: nan
+Epoch: 27 loss: 0.6348334478505085 - Valid acc: nan
+Epoch: 28 loss: 0.6231150317054264 - Valid acc: nan
+Epoch: 29 loss: 0.6206610431905427 - Valid acc: nan
+Fitting done in 130.09853744506836s.
+Test Acc: 0.6321776814734561.
+Test F1: 0.6000768301317057.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.694105017736468 - Valid acc: nan
+Epoch: 1 loss: 0.6922031286134885 - Valid acc: nan
+Epoch: 2 loss: 0.6913385808123329 - Valid acc: nan
+Epoch: 3 loss: 0.6909961824472239 - Valid acc: nan
+Epoch: 4 loss: 0.6903168366134511 - Valid acc: nan
+Epoch: 5 loss: 0.6897029907717181 - Valid acc: nan
+Epoch: 6 loss: 0.68918965731053 - Valid acc: nan
+Epoch: 7 loss: 0.6887606006826279 - Valid acc: nan
+Epoch: 8 loss: 0.6877011346679203 - Valid acc: nan
+Epoch: 9 loss: 0.687536268565007 - Valid acc: nan
+Epoch: 10 loss: 0.6867261901067171 - Valid acc: nan
+Epoch: 11 loss: 0.6861484853518491 - Valid acc: nan
+Epoch: 12 loss: 0.6856645380141418 - Valid acc: nan
+Epoch: 13 loss: 0.6847848254821204 - Valid acc: nan
+Epoch: 14 loss: 0.6836769522270026 - Valid acc: nan
+Epoch: 15 loss: 0.6813977639799174 - Valid acc: nan
+Epoch: 16 loss: 0.6813872170586117 - Valid acc: nan
+Epoch: 17 loss: 0.6799969139126684 - Valid acc: nan
+Epoch: 18 loss: 0.6780316609178665 - Valid acc: nan
+Epoch: 19 loss: 0.6730665357815737 - Valid acc: nan
+Epoch: 20 loss: 0.6798441737373441 - Valid acc: nan
+Epoch: 21 loss: 0.6636840466819057 - Valid acc: nan
+Epoch: 22 loss: 0.6729717468250693 - Valid acc: nan
+Epoch: 23 loss: 0.6418942385326231 - Valid acc: nan
+Epoch: 24 loss: 0.6290279223739756 - Valid acc: nan
+Epoch: 25 loss: 0.6170736530612659 - Valid acc: nan
+Epoch: 26 loss: 0.5930596350589928 - Valid acc: nan
+Epoch: 27 loss: 0.5798555696975289 - Valid acc: nan
+Epoch: 28 loss: 0.5652873440284949 - Valid acc: nan
+Epoch: 29 loss: 0.5650464344575915 - Valid acc: nan
+Fitting done in 290.35301423072815s.
+Test Acc: 0.7150595882990249.
+Test F1: 0.7077471698612952.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6936650258957306 - Valid acc: nan
+Epoch: 1 loss: 0.6904337785147519 - Valid acc: nan
+Epoch: 2 loss: 0.6889817618221217 - Valid acc: nan
+Epoch: 3 loss: 0.6881705732703898 - Valid acc: nan
+Epoch: 4 loss: 0.6866695529463663 - Valid acc: nan
+Epoch: 5 loss: 0.68625181672201 - Valid acc: nan
+Epoch: 6 loss: 0.6854198767959727 - Valid acc: nan
+Epoch: 7 loss: 0.6842306552594797 - Valid acc: nan
+Epoch: 8 loss: 0.6824384386828869 - Valid acc: nan
+Epoch: 9 loss: 0.6811081202043964 - Valid acc: nan
+Epoch: 10 loss: 0.6803358782922602 - Valid acc: nan
+Epoch: 11 loss: 0.6768329146969525 - Valid acc: nan
+Epoch: 12 loss: 0.6737033011596327 - Valid acc: nan
+Epoch: 13 loss: 0.6669608616415476 - Valid acc: nan
+Epoch: 14 loss: 0.6517121809066375 - Valid acc: nan
+Epoch: 15 loss: 0.6393915084056082 - Valid acc: nan
+Epoch: 16 loss: 0.6167713283114351 - Valid acc: nan
+Epoch: 17 loss: 0.5946495079925295 - Valid acc: nan
+Epoch: 18 loss: 0.5633527813963808 - Valid acc: nan
+Epoch: 19 loss: 0.550075646597526 - Valid acc: nan
+Epoch: 20 loss: 0.527202466492019 - Valid acc: nan
+Epoch: 21 loss: 0.52207216947754 - Valid acc: nan
+Epoch: 22 loss: 0.5248665056821239 - Valid acc: nan
+Epoch: 23 loss: 0.5068244014172195 - Valid acc: nan
+Epoch: 24 loss: 0.5045414293087975 - Valid acc: nan
+Epoch: 25 loss: 0.5038037899601666 - Valid acc: nan
+Epoch: 26 loss: 0.491512887567454 - Valid acc: nan
+Epoch: 27 loss: 0.4827235663212793 - Valid acc: nan
+Epoch: 28 loss: 0.48165728418813275 - Valid acc: nan
+Epoch: 29 loss: 0.4839603937085653 - Valid acc: nan
+Fitting done in 278.0977907180786s.
+Test Acc: 0.78602383531961.
+Test F1: 0.7858729662307304.
+
+
+Best Epoch Vs RNNTypes...
+bidirectional = True
+freeze = True
+vocab = 22
+pool_type = first
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 2, 'name': 'fastText Skipgram', 'tool': 'fastText', 'url': 'https://github.com/facebookresearch/fastText', 'version': None}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'parameters.bin', 'format': 'binary'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': False, 'case preserved': True, 'description': 'English Wikipedia Dump of February 2017', 'id': 1, 'language': 'eng', 'lemmatized': False, 'public': True, 'stop words removal': 'NLTK', 'tagger': None, 'tagset': None, 'tokens': 2252637050, 'tool': 'Wikipedia Extractor', 'url': 'https://dumps.wikimedia.org/'}, {'NER': False, 'case preserved': True, 'description': 'Gigaword 5th Edition', 'id': 4, 'language': 'eng', 'lemmatized': False, 'public': False, 'stop words removal': 'NLTK', 'tagger': None, 'tagset': None, 'tokens': 4815382730, 'tool': None, 'url': 'https://catalog.ldc.upenn.edu/LDC2011T07'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/22.zip
+id 22
+iterations 5
+vocabulary size 291392
+window 5
+============
+
+
+
+loading data set...
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+tokenizing...
+
+
+
+loading data loader...
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6967574230508308 - Valid acc: 0.5239918837167067
+Epoch: 1 loss: 0.6921243726173577 - Valid acc: 0.5283600222947289
+Epoch: 2 loss: 0.6892585423640433 - Valid acc: 0.5305738387640204
+Epoch: 3 loss: 0.6885225524792092 - Valid acc: 0.5330381578040945
+Epoch: 4 loss: 0.6871878663239451 - Valid acc: 0.5342624891187946
+Epoch: 5 loss: 0.6857860343304673 - Valid acc: 0.5369303414976295
+Epoch: 6 loss: 0.684436715751714 - Valid acc: 0.5412045416116082
+Epoch: 7 loss: 0.6836347156177366 - Valid acc: 0.5370837743222341
+Epoch: 8 loss: 0.6834297131940809 - Valid acc: 0.5444955191352652
+Epoch: 9 loss: 0.6786411666456674 - Valid acc: 0.5531785644950181
+Epoch: 10 loss: 0.6803567251029042 - Valid acc: 0.5445017816995348
+Epoch: 11 loss: 0.670443485582495 - Valid acc: 0.5635994714395756
+Epoch: 12 loss: 0.6741022405596827 - Valid acc: 0.5572241810131576
+Epoch: 13 loss: 0.6652065598206713 - Valid acc: 0.5795846667376424
+Epoch: 14 loss: 0.6808547101957949 - Valid acc: 0.5631141227086843
+Epoch: 15 loss: 0.6750902840167801 - Valid acc: 0.5738011886346983
+Epoch: 16 loss: 0.6733449304724015 - Valid acc: 0.5720570644856243
+Epoch: 17 loss: 0.6355532800531112 - Valid acc: 0.639924473474909
+Epoch: 18 loss: 0.6283331220549655 - Valid acc: 0.649706598863971
+Epoch: 19 loss: 0.632820999691252 - Valid acc: 0.6419848571195962
+Epoch: 20 loss: 0.6186733214841412 - Valid acc: 0.676328759573895
+Epoch: 21 loss: 0.6214519284364116 - Valid acc: 0.6620407191928807
+Epoch: 22 loss: 0.6095866540263843 - Valid acc: 0.6779288447447692
+Epoch: 23 loss: 0.6098931290510762 - Valid acc: 0.6771397616468039
+Epoch: 24 loss: 0.6174304690319679 - Valid acc: 0.6636063602602722
+Epoch: 25 loss: 0.6115444390415457 - Valid acc: 0.6697781173479292
+Epoch: 26 loss: 0.582482787053709 - Valid acc: 0.7127862774691726
+Epoch: 27 loss: 0.5822886733305936 - Valid acc: 0.715072113427564
+Epoch: 28 loss: 0.5776795717333093 - Valid acc: 0.7217448756567864
+Epoch: 29 loss: 0.5782806108452682 - Valid acc: 0.7186229873684079
+Epoch: 30 loss: 0.6028581723312422 - Valid acc: 0.6755021010903124
+Epoch: 31 loss: 0.5797955231859505 - Valid acc: 0.7136755615954509
+Epoch: 32 loss: 0.5723157409643163 - Valid acc: 0.7238835413548431
+Epoch: 33 loss: 0.5718886151134623 - Valid acc: 0.7233136480063127
+Epoch: 34 loss: 0.571870091850358 - Valid acc: 0.7254460511400997
+Epoch: 35 loss: 0.5719751009362282 - Valid acc: 0.7243093957251735
+Epoch: 36 loss: 0.572040055873077 - Valid acc: 0.7253020121618999
+Epoch: 37 loss: 0.5717929057303192 - Valid acc: 0.7236299075019256
+Epoch: 38 loss: 0.5710574166278619 - Valid acc: 0.7229097126109257
+Epoch: 39 loss: 0.5709361854316182 - Valid acc: 0.7243532336750604
+Epoch: 40 loss: 0.5709697979723098 - Valid acc: 0.723338698263391
+Epoch: 41 loss: 0.5709413884347574 - Valid acc: 0.7251485793372954
+Epoch: 42 loss: 0.5709452484384437 - Valid acc: 0.7240025300759647
+Epoch: 43 loss: 0.5708238794279925 - Valid acc: 0.7242686890574214
+Epoch: 44 loss: 0.570815823326221 - Valid acc: 0.7242686890574214
+Epoch: 45 loss: 0.5708204723162458 - Valid acc: 0.7242686890574214
+Epoch: 46 loss: 0.5708137140797742 - Valid acc: 0.7242686890574214
+Epoch: 47 loss: 0.570806359624587 - Valid acc: 0.7242686890574214
+Epoch: 48 loss: 0.570805918446855 - Valid acc: 0.7242686890574214
+Epoch: 49 loss: 0.5708061026010899 - Valid acc: 0.7242686890574214
+Epoch: 50 loss: 0.5708058209433032 - Valid acc: 0.7242686890574214
+Epoch: 51 loss: 0.570805381315981 - Valid acc: 0.7242686890574214
+Epoch: 52 loss: 0.570806145495762 - Valid acc: 0.7242686890574214
+Epoch: 53 loss: 0.5708053732193963 - Valid acc: 0.7242686890574214
+Epoch: 54 loss: 0.5708054929454892 - Valid acc: 0.7242686890574214
+Epoch: 55 loss: 0.5708055087941231 - Valid acc: 0.7242686890574214
+Epoch: 56 loss: 0.5708054540129756 - Valid acc: 0.7242686890574214
+Epoch: 57 loss: 0.5708053665009537 - Valid acc: 0.7242686890574214
+Epoch: 58 loss: 0.570804903617484 - Valid acc: 0.7242686890574214
+Epoch: 59 loss: 0.5708057318808716 - Valid acc: 0.7242686890574214
+Epoch: 60 loss: 0.5708048586555988 - Valid acc: 0.7242686890574214
+Epoch: 61 loss: 0.5708052285144783 - Valid acc: 0.7242686890574214
+Epoch: 62 loss: 0.5708048865629759 - Valid acc: 0.7242686890574214
+Epoch: 63 loss: 0.5708046953457628 - Valid acc: 0.7242686890574214
+Epoch: 64 loss: 0.5708048660631124 - Valid acc: 0.7242686890574214
+Epoch: 65 loss: 0.5708043954275936 - Valid acc: 0.7242686890574214
+Epoch: 66 loss: 0.5708043907763641 - Valid acc: 0.7242686890574214
+Epoch: 67 loss: 0.5708044898303258 - Valid acc: 0.7242686890574214
+Epoch: 68 loss: 0.5708041914625664 - Valid acc: 0.7242686890574214
+Epoch: 69 loss: 0.5708040286695337 - Valid acc: 0.7242686890574214
+Epoch: 70 loss: 0.5708041003329216 - Valid acc: 0.7242686890574214
+Epoch: 71 loss: 0.5708039852580583 - Valid acc: 0.7242686890574214
+Epoch: 72 loss: 0.5708042341849707 - Valid acc: 0.7242686890574214
+Epoch: 73 loss: 0.5708040517534134 - Valid acc: 0.7242686890574214
+Epoch: 74 loss: 0.5708041361646156 - Valid acc: 0.7242686890574214
+Epoch: 75 loss: 0.5708034731060094 - Valid acc: 0.7242686890574214
+Epoch: 76 loss: 0.5708035961051897 - Valid acc: 0.7242686890574214
+Epoch: 77 loss: 0.5708036903356541 - Valid acc: 0.7242686890574214
+Epoch: 78 loss: 0.5708036710416651 - Valid acc: 0.7242686890574214
+Epoch: 79 loss: 0.5708034986016378 - Valid acc: 0.7242686890574214
+Epoch: 80 loss: 0.5708033897284138 - Valid acc: 0.7242686890574214
+Epoch: 81 loss: 0.5708035220300531 - Valid acc: 0.7242686890574214
+Epoch: 82 loss: 0.5708037284068289 - Valid acc: 0.7242686890574214
+Epoch: 83 loss: 0.5708029628489059 - Valid acc: 0.7242686890574214
+Epoch: 84 loss: 0.5708034155685777 - Valid acc: 0.7242686890574214
+Epoch: 85 loss: 0.5708035652692607 - Valid acc: 0.7242686890574214
+Epoch: 86 loss: 0.5708027528545071 - Valid acc: 0.7242686890574214
+Epoch: 87 loss: 0.5708031161672118 - Valid acc: 0.7242686890574214
+Epoch: 88 loss: 0.5708028169381136 - Valid acc: 0.7242686890574214
+Epoch: 89 loss: 0.5708032010952172 - Valid acc: 0.7242686890574214
+Epoch: 90 loss: 0.5708032246959003 - Valid acc: 0.7242686890574214
+Epoch: 91 loss: 0.5708028486353813 - Valid acc: 0.7242686890574214
+Epoch: 92 loss: 0.5708023637016385 - Valid acc: 0.7242686890574214
+Epoch: 93 loss: 0.5708023947098352 - Valid acc: 0.7242686890574214
+Epoch: 94 loss: 0.5708021307956277 - Valid acc: 0.7242686890574214
+Epoch: 95 loss: 0.5708024355372942 - Valid acc: 0.7242686890574214
+Epoch: 96 loss: 0.5708026896322393 - Valid acc: 0.7242686890574214
+Epoch: 97 loss: 0.5708022265765019 - Valid acc: 0.7242686890574214
+Epoch: 98 loss: 0.5708022749837424 - Valid acc: 0.7242686890574214
+Epoch: 99 loss: 0.5708023173616111 - Valid acc: 0.7242686890574214
+Epoch: 100 loss: 0.5708018694654365 - Valid acc: 0.7242686890574214
+Epoch: 101 loss: 0.5708024505245892 - Valid acc: 0.7242686890574214
+Epoch: 102 loss: 0.5708015874631143 - Valid acc: 0.7242686890574214
+Epoch: 103 loss: 0.5708017679997263 - Valid acc: 0.7242686890574214
+Epoch: 104 loss: 0.5708019978049174 - Valid acc: 0.7242686890574214
+Epoch: 105 loss: 0.5708014170903002 - Valid acc: 0.7242686890574214
+Epoch: 106 loss: 0.5708014524051909 - Valid acc: 0.7242686890574214
+Epoch: 107 loss: 0.5708018231254093 - Valid acc: 0.7242686890574214
+Epoch: 108 loss: 0.570801326994262 - Valid acc: 0.7242686890574214
+Epoch: 109 loss: 0.5708019885024583 - Valid acc: 0.7242686890574214
+Epoch: 110 loss: 0.5708013295782783 - Valid acc: 0.7242686890574214
+Epoch: 111 loss: 0.5708016804877044 - Valid acc: 0.7242686890574214
+Epoch: 112 loss: 0.5708011030461747 - Valid acc: 0.7242686890574214
+Epoch: 113 loss: 0.5708015895303274 - Valid acc: 0.7242686890574214
+Epoch: 114 loss: 0.5708014851360652 - Valid acc: 0.7242686890574214
+Epoch: 115 loss: 0.5708010964999998 - Valid acc: 0.7242686890574214
+Epoch: 116 loss: 0.5708006465366121 - Valid acc: 0.7242686890574214
+Epoch: 117 loss: 0.5708019256247261 - Valid acc: 0.7242686890574214
+Epoch: 118 loss: 0.5708010344836064 - Valid acc: 0.7242686890574214
+Epoch: 119 loss: 0.570801163684426 - Valid acc: 0.7242686890574214
+Epoch: 120 loss: 0.5708006167342897 - Valid acc: 0.7242686890574214
+Epoch: 121 loss: 0.5708007977877049 - Valid acc: 0.7242686890574214
+Epoch: 122 loss: 0.570800826384153 - Valid acc: 0.7242686890574214
+Epoch: 123 loss: 0.5708006704818307 - Valid acc: 0.7242686890574214
+Epoch: 124 loss: 0.5708002861524593 - Valid acc: 0.7242686890574214
+Epoch: 125 loss: 0.5708009288834699 - Valid acc: 0.7242686890574214
+Epoch: 126 loss: 0.5708002653080604 - Valid acc: 0.7242686890574214
+Epoch: 127 loss: 0.57080013386776 - Valid acc: 0.7242686890574214
+Epoch: 128 loss: 0.5708003965760932 - Valid acc: 0.7242686890574214
+Epoch: 129 loss: 0.5708001023427599 - Valid acc: 0.7242686890574214
+Epoch: 130 loss: 0.5707999765872955 - Valid acc: 0.7242686890574214
+Epoch: 131 loss: 0.5708003531646177 - Valid acc: 0.7242686890574214
+Epoch: 132 loss: 0.570800190371585 - Valid acc: 0.7242686890574214
+Epoch: 133 loss: 0.5708002847743172 - Valid acc: 0.7242686890574214
+Epoch: 134 loss: 0.5707999901964486 - Valid acc: 0.7242686890574214
+Epoch: 135 loss: 0.5707996463500007 - Valid acc: 0.7242686890574214
+Epoch: 136 loss: 0.5708004579034155 - Valid acc: 0.7242686890574214
+Epoch: 137 loss: 0.570799707677323 - Valid acc: 0.7242686890574214
+Epoch: 138 loss: 0.5707997193915306 - Valid acc: 0.7242686890574214
+Epoch: 139 loss: 0.5707994492756838 - Valid acc: 0.7242686890574214
+Epoch: 140 loss: 0.5707993898433068 - Valid acc: 0.7242686890574214
+Epoch: 141 loss: 0.5707996666775963 - Valid acc: 0.7242686890574214
+Epoch: 142 loss: 0.5707996959631154 - Valid acc: 0.7242686890574214
+Epoch: 143 loss: 0.5707992218822413 - Valid acc: 0.7242686890574214
+Epoch: 144 loss: 0.5707994189565582 - Valid acc: 0.7242686890574214
+Epoch: 145 loss: 0.5707991546978152 - Valid acc: 0.7242686890574214
+Epoch: 146 loss: 0.5707991584877058 - Valid acc: 0.7242686890574214
+Epoch: 147 loss: 0.5707992396258206 - Valid acc: 0.7242686890574214
+Epoch: 148 loss: 0.5707990880301922 - Valid acc: 0.7242686890574214
+Epoch: 149 loss: 0.570798878380329 - Valid acc: 0.7242686890574214
+Epoch: 150 loss: 0.5707989314387989 - Valid acc: 0.7242686890574214
+Epoch: 151 loss: 0.5707993734778697 - Valid acc: 0.7242686890574214
+Epoch: 152 loss: 0.570799105429236 - Valid acc: 0.7242686890574214
+Epoch: 153 loss: 0.570798684234564 - Valid acc: 0.7242686890574214
+Epoch: 154 loss: 0.5707988592586076 - Valid acc: 0.7242686890574214
+Epoch: 155 loss: 0.570798785183471 - Valid acc: 0.7242686890574214
+Epoch: 156 loss: 0.5707984850930341 - Valid acc: 0.7242686890574214
+Epoch: 157 loss: 0.5707985472816952 - Valid acc: 0.7242686890574214
+Epoch: 158 loss: 0.5707986704531433 - Valid acc: 0.7242686890574214
+Epoch: 159 loss: 0.5707984899165314 - Valid acc: 0.7242686890574214
+Epoch: 160 loss: 0.5707984266942636 - Valid acc: 0.7242686890574214
+Epoch: 161 loss: 0.5707985124836078 - Valid acc: 0.7242686890574214
+Epoch: 162 loss: 0.5707981253979523 - Valid acc: 0.7242686890574214
+Epoch: 163 loss: 0.5707983550308757 - Valid acc: 0.7242686890574214
+Epoch: 164 loss: 0.5707981899983621 - Valid acc: 0.7242686890574214
+Epoch: 165 loss: 0.5707988501284164 - Valid acc: 0.7242686890574214
+Epoch: 166 loss: 0.570798020314619 - Valid acc: 0.7242686890574214
+Epoch: 167 loss: 0.5707980682050562 - Valid acc: 0.7242686890574214
+Epoch: 168 loss: 0.5707979653612038 - Valid acc: 0.7242686890574214
+Epoch: 169 loss: 0.5707981627800561 - Valid acc: 0.7242686890574214
+Epoch: 170 loss: 0.5707978539039634 - Valid acc: 0.7242686890574214
+Epoch: 171 loss: 0.570797809114346 - Valid acc: 0.7242686890574214
+Epoch: 172 loss: 0.5707980749234988 - Valid acc: 0.7242686890574214
+Epoch: 173 loss: 0.5707978027404388 - Valid acc: 0.7242686890574214
+Epoch: 174 loss: 0.5707975464060128 - Valid acc: 0.7242686890574214
+Epoch: 175 loss: 0.5707978099756847 - Valid acc: 0.7242686890574214
+Epoch: 176 loss: 0.570797651489346 - Valid acc: 0.7242686890574214
+Epoch: 177 loss: 0.5707974976542368 - Valid acc: 0.7242686890574214
+Epoch: 178 loss: 0.57079763426257 - Valid acc: 0.7242686890574214
+Epoch: 179 loss: 0.570797546233745 - Valid acc: 0.7242686890574214
+Epoch: 180 loss: 0.5707976197920783 - Valid acc: 0.7242686890574214
+Epoch: 181 loss: 0.5707972799077888 - Valid acc: 0.7242686890574214
+Epoch: 182 loss: 0.5707978418452202 - Valid acc: 0.7242686890574214
+Epoch: 183 loss: 0.5707975565698106 - Valid acc: 0.7242686890574214
+Epoch: 184 loss: 0.5707977217745919 - Valid acc: 0.7242686890574214
+Epoch: 185 loss: 0.5707970867956305 - Valid acc: 0.7242686890574214
+Epoch: 186 loss: 0.570796714008199 - Valid acc: 0.7242686890574214
+Epoch: 187 loss: 0.5707973317603845 - Valid acc: 0.7242686890574214
+Epoch: 188 loss: 0.5707968494106579 - Valid acc: 0.7242686890574214
+Epoch: 189 loss: 0.570796572920904 - Valid acc: 0.7242686890574214
+Epoch: 190 loss: 0.5707971813706304 - Valid acc: 0.7242686890574214
+Epoch: 191 loss: 0.5707974900744553 - Valid acc: 0.7242686890574214
+Epoch: 192 loss: 0.5707971195265048 - Valid acc: 0.7242686890574214
+Epoch: 193 loss: 0.5707965329547838 - Valid acc: 0.7242686890574214
+Epoch: 194 loss: 0.5707968054823793 - Valid acc: 0.7242686890574214
+Epoch: 195 loss: 0.5707965901476799 - Valid acc: 0.7242686890574214
+Epoch: 196 loss: 0.5707967348525979 - Valid acc: 0.7242686890574214
+Epoch: 197 loss: 0.5707970252960404 - Valid acc: 0.7242686890574214
+Epoch: 198 loss: 0.5707963901448112 - Valid acc: 0.7242686890574214
+Epoch: 199 loss: 0.5707965498370242 - Valid acc: 0.7242686890574214
+Fitting done in 7300.1384954452515s.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6944581666433742 - Valid acc: 0.48860213302939026
+Epoch: 1 loss: 0.6920260649195985 - Valid acc: 0.5275803330431679
+Epoch: 2 loss: 0.6912708440957042 - Valid acc: 0.5274582130399114
+Epoch: 3 loss: 0.6904389572281369 - Valid acc: 0.5298129372052682
+Epoch: 4 loss: 0.6895733558373645 - Valid acc: 0.5345411732287904
+Epoch: 5 loss: 0.6889181433385507 - Valid acc: 0.5363792358419078
+Epoch: 6 loss: 0.688503948939329 - Valid acc: 0.5364230737917949
+Epoch: 7 loss: 0.6873462813438018 - Valid acc: 0.5350014717026034
+Epoch: 8 loss: 0.6871258547540345 - Valid acc: 0.5338710788519467
+Epoch: 9 loss: 0.686522045921039 - Valid acc: 0.5383801251260342
+Epoch: 10 loss: 0.685301496803416 - Valid acc: 0.5372935702252645
+Epoch: 11 loss: 0.6845970849770342 - Valid acc: 0.5402557631247691
+Epoch: 12 loss: 0.6827104284584178 - Valid acc: 0.5435154278270781
+Epoch: 13 loss: 0.6816918288352173 - Valid acc: 0.5461363109738914
+Epoch: 14 loss: 0.6787263806155651 - Valid acc: 0.5550698589044271
+Epoch: 15 loss: 0.6770359039995711 - Valid acc: 0.5625630170529624
+Epoch: 16 loss: 0.6691464078908711 - Valid acc: 0.5827660493865818
+Epoch: 17 loss: 0.6549802053870494 - Valid acc: 0.6186849867546766
+Epoch: 18 loss: 0.6462761701186958 - Valid acc: 0.6374664169991043
+Epoch: 19 loss: 0.638911319605877 - Valid acc: 0.6367305656974304
+Epoch: 20 loss: 0.6128795000514543 - Valid acc: 0.6857727064924005
+Epoch: 21 loss: 0.5863131489712379 - Valid acc: 0.7104033717646027
+Epoch: 22 loss: 0.564481423080312 - Valid acc: 0.7306408482017047
+Epoch: 23 loss: 0.5573659348005504 - Valid acc: 0.7308193312833872
+Epoch: 24 loss: 0.5558620524199712 - Valid acc: 0.7288591486670133
+Epoch: 25 loss: 0.569515804334872 - Valid acc: 0.7191615678955905
+Epoch: 26 loss: 0.5400768303113177 - Valid acc: 0.7424520444141057
+Epoch: 27 loss: 0.5299421131955406 - Valid acc: 0.7514951872193587
+Epoch: 28 loss: 0.5289840861896559 - Valid acc: 0.7508125677139763
+Epoch: 29 loss: 0.5155519834488114 - Valid acc: 0.7583871391980159
+Epoch: 30 loss: 0.5128412958169948 - Valid acc: 0.7561263534967028
+Epoch: 31 loss: 0.5075219654278949 - Valid acc: 0.7664345342844082
+Epoch: 32 loss: 0.5414339364264052 - Valid acc: 0.7412558946386189
+Epoch: 33 loss: 0.5046218712894903 - Valid acc: 0.7648814183455558
+Epoch: 34 loss: 0.5020018197553007 - Valid acc: 0.7646246532105037
+Epoch: 35 loss: 0.4955931076769195 - Valid acc: 0.7719643785344347
+Epoch: 36 loss: 0.5015510856416184 - Valid acc: 0.7678592676557342
+Epoch: 37 loss: 0.4886332984604587 - Valid acc: 0.7734047683164348
+Epoch: 38 loss: 0.4918407399874891 - Valid acc: 0.7688237025532474
+Epoch: 39 loss: 0.48149736940516213 - Valid acc: 0.7769932176428962
+Epoch: 40 loss: 0.509250506672556 - Valid acc: 0.764662228596121
+Epoch: 41 loss: 0.4845176594105759 - Valid acc: 0.7731636595920566
+Epoch: 42 loss: 0.47361710822651154 - Valid acc: 0.7797957151535269
+Epoch: 43 loss: 0.4897047901429193 - Valid acc: 0.7743034462891177
+Epoch: 44 loss: 0.46853962420039097 - Valid acc: 0.7824353859931489
+Epoch: 45 loss: 0.4674730876277637 - Valid acc: 0.7858704024950056
+Epoch: 46 loss: 0.4704660390842857 - Valid acc: 0.7824604362502272
+Epoch: 47 loss: 0.4671042382372597 - Valid acc: 0.7860833296801709
+Epoch: 48 loss: 0.47098998217224386 - Valid acc: 0.7799303602853224
+Epoch: 49 loss: 0.468965602575699 - Valid acc: 0.7813613562209182
+Epoch: 50 loss: 0.4554741479930161 - Valid acc: 0.7894056200251754
+Epoch: 51 loss: 0.4529572236916922 - Valid acc: 0.7893523882288843
+Epoch: 52 loss: 0.45051185588616166 - Valid acc: 0.7905704569793147
+Epoch: 53 loss: 0.45232230269839996 - Valid acc: 0.7888419892409146
+Epoch: 54 loss: 0.44744179893091235 - Valid acc: 0.7899473318344932
+Epoch: 55 loss: 0.4683567233857392 - Valid acc: 0.7805065161981223
+Epoch: 56 loss: 0.4472915218400128 - Valid acc: 0.7890924918116972
+Epoch: 57 loss: 0.4483054563661531 - Valid acc: 0.7931475021762411
+Epoch: 58 loss: 0.4481860054710697 - Valid acc: 0.7889609779620365
+Epoch: 59 loss: 0.4397464847633604 - Valid acc: 0.7954834386487893
+Epoch: 60 loss: 0.45012710445878135 - Valid acc: 0.7890705728367537
+Epoch: 61 loss: 0.4532181854881992 - Valid acc: 0.7871761471452101
+Epoch: 62 loss: 0.4344655774060012 - Valid acc: 0.7941996129735283
+Epoch: 63 loss: 0.4420933077445609 - Valid acc: 0.7913031769988539
+Epoch: 64 loss: 0.43094738869997806 - Valid acc: 0.7976815987074067
+Epoch: 65 loss: 0.44468929002739793 - Valid acc: 0.7920797349682802
+Epoch: 66 loss: 0.4444802029628974 - Valid acc: 0.7908867164749277
+Epoch: 67 loss: 0.43666279453762696 - Valid acc: 0.7933479042328674
+Epoch: 68 loss: 0.4134770359607101 - Valid acc: 0.8029264962831681
+Epoch: 69 loss: 0.4104506810104227 - Valid acc: 0.8051841507023465
+Epoch: 70 loss: 0.4092272292671865 - Valid acc: 0.8044013301686509
+Epoch: 71 loss: 0.41002801818654716 - Valid acc: 0.803605984506416
+Epoch: 72 loss: 0.40875485892585245 - Valid acc: 0.8062738368852511
+Epoch: 73 loss: 0.4088023987119597 - Valid acc: 0.803605984506416
+Epoch: 74 loss: 0.40825690820037974 - Valid acc: 0.8049399106958336
+Epoch: 75 loss: 0.40671918459365825 - Valid acc: 0.8051309189060553
+Epoch: 76 loss: 0.4067116128226925 - Valid acc: 0.8039316378484332
+Epoch: 77 loss: 0.4065868633158634 - Valid acc: 0.8034650768103507
+Epoch: 78 loss: 0.40456144046576725 - Valid acc: 0.8045171876076379
+Epoch: 79 loss: 0.4053819431045841 - Valid acc: 0.8025663988376678
+Epoch: 80 loss: 0.4046826631347568 - Valid acc: 0.8049430419779684
+Epoch: 81 loss: 0.4047903102429616 - Valid acc: 0.8035057834781031
+Epoch: 82 loss: 0.40334520286562814 - Valid acc: 0.8053814214768378
+Epoch: 83 loss: 0.4019131660461426 - Valid acc: 0.8064335322741248
+Epoch: 84 loss: 0.4016520126878871 - Valid acc: 0.8050557681348205
+Epoch: 85 loss: 0.4016531669680094 - Valid acc: 0.8060828286750292
+Epoch: 86 loss: 0.40176460715387596 - Valid acc: 0.8069846379298466
+Epoch: 87 loss: 0.4016486834411676 - Valid acc: 0.8052906142949291
+Epoch: 88 loss: 0.40108933579715 - Valid acc: 0.8054346532731294
+Epoch: 89 loss: 0.40108007304585735 - Valid acc: 0.8054127342981858
+Epoch: 90 loss: 0.4010704301857535 - Valid acc: 0.805556773276386
+Epoch: 91 loss: 0.40105451514266127 - Valid acc: 0.8052373824986381
+Epoch: 92 loss: 0.4010051898012271 - Valid acc: 0.8056632368689681
+Epoch: 93 loss: 0.4010052652545058 - Valid acc: 0.8060671722643551
+Epoch: 94 loss: 0.4010064366752702 - Valid acc: 0.8054847537872856
+Epoch: 95 loss: 0.40100333818121453 - Valid acc: 0.8058542450791898
+Epoch: 96 loss: 0.400999301430807 - Valid acc: 0.8060671722643551
+Epoch: 97 loss: 0.4009990477665311 - Valid acc: 0.8060671722643551
+Epoch: 98 loss: 0.4009989697292361 - Valid acc: 0.8060671722643551
+Epoch: 99 loss: 0.40099857325498767 - Valid acc: 0.8060671722643551
+Epoch: 100 loss: 0.4009985770448784 - Valid acc: 0.8060671722643551
+Epoch: 101 loss: 0.4009985829881161 - Valid acc: 0.8060671722643551
+Epoch: 102 loss: 0.4009985760974057 - Valid acc: 0.8060671722643551
+Epoch: 103 loss: 0.40099857842302045 - Valid acc: 0.8060671722643551
+Epoch: 104 loss: 0.40099856016263796 - Valid acc: 0.8060671722643551
+Epoch: 105 loss: 0.4009985634357254 - Valid acc: 0.8060671722643551
+Epoch: 106 loss: 0.40099855878449586 - Valid acc: 0.8060671722643551
+Epoch: 107 loss: 0.4009985563727473 - Valid acc: 0.8060671722643551
+Epoch: 108 loss: 0.40099854930976914 - Valid acc: 0.8060671722643551
+Epoch: 109 loss: 0.4009985684314904 - Valid acc: 0.8060671722643551
+Epoch: 110 loss: 0.4009985545639358 - Valid acc: 0.8060671722643551
+Epoch: 111 loss: 0.4009985634357254 - Valid acc: 0.8060671722643551
+Epoch: 112 loss: 0.40099856739788386 - Valid acc: 0.8060671722643551
+Epoch: 113 loss: 0.40099856274665435 - Valid acc: 0.8060671722643551
+Epoch: 114 loss: 0.4009985506017773 - Valid acc: 0.8060671722643551
+Epoch: 115 loss: 0.40099854069638113 - Valid acc: 0.8060671722643551
+Epoch: 116 loss: 0.4009985541332664 - Valid acc: 0.8060671722643551
+Epoch: 117 loss: 0.40099854241905875 - Valid acc: 0.8060671722643551
+Epoch: 118 loss: 0.40099854526147677 - Valid acc: 0.8060671722643551
+Epoch: 119 loss: 0.40099855843996035 - Valid acc: 0.8060671722643551
+Epoch: 120 loss: 0.4009985310493866 - Valid acc: 0.8060671722643551
+Epoch: 121 loss: 0.40099851296127187 - Valid acc: 0.8060671722643551
+Epoch: 122 loss: 0.4009985285515041 - Valid acc: 0.8060671722643551
+Epoch: 123 loss: 0.4009985247616134 - Valid acc: 0.8060671722643551
+Epoch: 124 loss: 0.40099852717336204 - Valid acc: 0.8060671722643551
+Epoch: 125 loss: 0.40099852415867626 - Valid acc: 0.8060671722643551
+Epoch: 126 loss: 0.40099852682882653 - Valid acc: 0.8060671722643551
+Epoch: 127 loss: 0.40099853552834835 - Valid acc: 0.8060671722643551
+Epoch: 128 loss: 0.4009985183877063 - Valid acc: 0.8060671722643551
+Epoch: 129 loss: 0.4009985127890041 - Valid acc: 0.8060671722643551
+Epoch: 130 loss: 0.40099851597595765 - Valid acc: 0.8060671722643551
+Epoch: 131 loss: 0.4009985039172145 - Valid acc: 0.8060671722643551
+Epoch: 132 loss: 0.40099851158312977 - Valid acc: 0.8060671722643551
+Epoch: 133 loss: 0.400998513564209 - Valid acc: 0.8060671722643551
+Epoch: 134 loss: 0.4009985013331981 - Valid acc: 0.8060671722643551
+Epoch: 135 loss: 0.40099850073026094 - Valid acc: 0.8060671722643551
+Epoch: 136 loss: 0.4009984946147555 - Valid acc: 0.8060671722643551
+Epoch: 137 loss: 0.40099849564836204 - Valid acc: 0.8060671722643551
+Epoch: 138 loss: 0.4009984885853839 - Valid acc: 0.8060671722643551
+Epoch: 139 loss: 0.4009984839341544 - Valid acc: 0.8060671722643551
+Epoch: 140 loss: 0.40099849048032926 - Valid acc: 0.8060671722643551
+Epoch: 141 loss: 0.40099849599289755 - Valid acc: 0.8060671722643551
+Epoch: 142 loss: 0.40099848574296587 - Valid acc: 0.8060671722643551
+Epoch: 143 loss: 0.4009984837618866 - Valid acc: 0.8060671722643551
+Epoch: 144 loss: 0.400998483503485 - Valid acc: 0.8060671722643551
+Epoch: 145 loss: 0.4009984740287582 - Valid acc: 0.8060671722643551
+Epoch: 146 loss: 0.4009984784215861 - Valid acc: 0.8060671722643551
+Epoch: 147 loss: 0.4009984839341544 - Valid acc: 0.8060671722643551
+Epoch: 148 loss: 0.40099848496776097 - Valid acc: 0.8060671722643551
+Epoch: 149 loss: 0.400998483503485 - Valid acc: 0.8060671722643551
+Epoch: 150 loss: 0.4009984635204249 - Valid acc: 0.8060671722643551
+Epoch: 151 loss: 0.4009984663628429 - Valid acc: 0.8060671722643551
+Epoch: 152 loss: 0.40099848255601234 - Valid acc: 0.8060671722643551
+Epoch: 153 loss: 0.40099847420102597 - Valid acc: 0.8060671722643551
+Epoch: 154 loss: 0.4009984598166681 - Valid acc: 0.8060671722643551
+Epoch: 155 loss: 0.40099846041960524 - Valid acc: 0.8060671722643551
+Epoch: 156 loss: 0.4009984656737719 - Valid acc: 0.8060671722643551
+Epoch: 157 loss: 0.4009984439680342 - Valid acc: 0.8060671722643551
+Epoch: 158 loss: 0.4009984514616817 - Valid acc: 0.8060671722643551
+Epoch: 159 loss: 0.40099844379576643 - Valid acc: 0.8060671722643551
+Epoch: 160 loss: 0.40099845352889485 - Valid acc: 0.8060671722643551
+Epoch: 161 loss: 0.40099843905840304 - Valid acc: 0.8060671722643551
+Epoch: 162 loss: 0.40099843535464624 - Valid acc: 0.8060671722643551
+Epoch: 163 loss: 0.400998439833608 - Valid acc: 0.8060671722643551
+Epoch: 164 loss: 0.40099843793866263 - Valid acc: 0.8060671722643551
+Epoch: 165 loss: 0.4009984330290315 - Valid acc: 0.8060671722643551
+Epoch: 166 loss: 0.40099846222841673 - Valid acc: 0.8060671722643551
+Epoch: 167 loss: 0.40099843569918175 - Valid acc: 0.8060671722643551
+Epoch: 168 loss: 0.4009984393168047 - Valid acc: 0.8060671722643551
+Epoch: 169 loss: 0.40099842458791124 - Valid acc: 0.8060671722643551
+Epoch: 170 loss: 0.40099843354583475 - Valid acc: 0.8060671722643551
+Epoch: 171 loss: 0.40099843397650414 - Valid acc: 0.8060671722643551
+Epoch: 172 loss: 0.40099842191776097 - Valid acc: 0.8060671722643551
+Epoch: 173 loss: 0.40099842992821183 - Valid acc: 0.8060671722643551
+Epoch: 174 loss: 0.400998434062638 - Valid acc: 0.8060671722643551
+Epoch: 175 loss: 0.4009984399197419 - Valid acc: 0.8060671722643551
+Epoch: 176 loss: 0.400998404690985 - Valid acc: 0.8060671722643551
+Epoch: 177 loss: 0.40099841390731017 - Valid acc: 0.8060671722643551
+Epoch: 178 loss: 0.40099841442411344 - Valid acc: 0.8060671722643551
+Epoch: 179 loss: 0.4009984108064905 - Valid acc: 0.8060671722643551
+Epoch: 180 loss: 0.40099841063422276 - Valid acc: 0.8060671722643551
+Epoch: 181 loss: 0.40099840546619 - Valid acc: 0.8060671722643551
+Epoch: 182 loss: 0.40099842010894954 - Valid acc: 0.8060671722643551
+Epoch: 183 loss: 0.40099841494091676 - Valid acc: 0.8060671722643551
+Epoch: 184 loss: 0.40099839797254244 - Valid acc: 0.8060671722643551
+Epoch: 185 loss: 0.4009983900482255 - Valid acc: 0.8060671722643551
+Epoch: 186 loss: 0.4009983999536217 - Valid acc: 0.8060671722643551
+Epoch: 187 loss: 0.4009984024515042 - Valid acc: 0.8060671722643551
+Epoch: 188 loss: 0.4009983920293047 - Valid acc: 0.8060671722643551
+Epoch: 189 loss: 0.4009983883255479 - Valid acc: 0.8060671722643551
+Epoch: 190 loss: 0.4009983657584714 - Valid acc: 0.8060671722643551
+Epoch: 191 loss: 0.4009983738550561 - Valid acc: 0.8060671722643551
+Epoch: 192 loss: 0.40099840047042495 - Valid acc: 0.8060671722643551
+Epoch: 193 loss: 0.40099837738654515 - Valid acc: 0.8060671722643551
+Epoch: 194 loss: 0.4009984120123648 - Valid acc: 0.8060671722643551
+Epoch: 195 loss: 0.4009983665336763 - Valid acc: 0.8060671722643551
+Epoch: 196 loss: 0.40099837402732386 - Valid acc: 0.8060671722643551
+Epoch: 197 loss: 0.4009983607627064 - Valid acc: 0.8060671722643551
+Epoch: 198 loss: 0.4009983597290998 - Valid acc: 0.8060671722643551
+Epoch: 199 loss: 0.4009983601597692 - Valid acc: 0.8060671722643551
+Fitting done in 16022.952594995499s.
+
+
+
+loading model...
+Setting torch random_state to 1...
+Fitting data...
+Epoch: 0 loss: 0.6967009705615181 - Valid acc: 0.5141878393527013
+Epoch: 1 loss: 0.6911090071490734 - Valid acc: 0.5262495381358852
+Epoch: 2 loss: 0.6898660694243591 - Valid acc: 0.5304016182466073
+Epoch: 3 loss: 0.6876966880925129 - Valid acc: 0.5361256019889904
+Epoch: 4 loss: 0.6862886175943937 - Valid acc: 0.5384490133329992
+Epoch: 5 loss: 0.6847476983346001 - Valid acc: 0.5398017272152256
+Epoch: 6 loss: 0.6844175795599216 - Valid acc: 0.5427921016539432
+Epoch: 7 loss: 0.6822321201335488 - Valid acc: 0.547294885363761
+Epoch: 8 loss: 0.679923861357518 - Valid acc: 0.5511776752108919
+Epoch: 9 loss: 0.6770329554646002 - Valid acc: 0.5568045892070966
+Epoch: 10 loss: 0.6732287210536141 - Valid acc: 0.5712022244628285
+Epoch: 11 loss: 0.6666698762447159 - Valid acc: 0.587854382855604
+Epoch: 12 loss: 0.6501630461973951 - Valid acc: 0.6242492751081858
+Epoch: 13 loss: 0.6353257198554243 - Valid acc: 0.6518546584084319
+Epoch: 14 loss: 0.599637063596979 - Valid acc: 0.6962844206188665
+Epoch: 15 loss: 0.5693824880384986 - Valid acc: 0.7293382348336348
+Epoch: 16 loss: 0.5327312364054553 - Valid acc: 0.7546703073040286
+Epoch: 17 loss: 0.5170655221263797 - Valid acc: 0.7579456284170116
+Epoch: 18 loss: 0.5114695705430357 - Valid acc: 0.7605821679744988
+Epoch: 19 loss: 0.505899646378666 - Valid acc: 0.764214455250847
+Epoch: 20 loss: 0.49610788698141284 - Valid acc: 0.7662278696635125
+Epoch: 21 loss: 0.4980503665229489 - Valid acc: 0.7694624841087431
+Epoch: 22 loss: 0.4845843837095823 - Valid acc: 0.7769650361036831
+Epoch: 23 loss: 0.476816412341388 - Valid acc: 0.7830929552414534
+Epoch: 24 loss: 0.4806943770088901 - Valid acc: 0.7807257059475573
+Epoch: 25 loss: 0.4611282041996201 - Valid acc: 0.7895559215676452
+Epoch: 26 loss: 0.46435803597028547 - Valid acc: 0.788416134870584
+Epoch: 27 loss: 0.46241702785381694 - Valid acc: 0.7889014836014754
+Epoch: 28 loss: 0.46938489928755456 - Valid acc: 0.7854852547924274
+Epoch: 29 loss: 0.44680628180503845 - Valid acc: 0.7988401730972763
+Epoch: 30 loss: 0.44231860072626544 - Valid acc: 0.8001709680045591
+Epoch: 31 loss: 0.44241040876146 - Valid acc: 0.8011792408519592
+Epoch: 32 loss: 0.4413825506936608 - Valid acc: 0.7996574377344547
+Epoch: 33 loss: 0.43975138491977844 - Valid acc: 0.8005686408356766
+Epoch: 34 loss: 0.44017621909262816 - Valid acc: 0.8001772305688287
+Epoch: 35 loss: 0.4396957091857932 - Valid acc: 0.8005842972463505
+Epoch: 36 loss: 0.43846989479023596 - Valid acc: 0.7989936059218806
+Epoch: 37 loss: 0.4393015128339646 - Valid acc: 0.7997576387627675
+Epoch: 38 loss: 0.43706722445570667 - Valid acc: 0.7996323874773764
+Epoch: 39 loss: 0.43799800748769946 - Valid acc: 0.8000206664620896
+Epoch: 40 loss: 0.43723873216981834 - Valid acc: 0.8000175351799547
+Epoch: 41 loss: 0.4359640942488103 - Valid acc: 0.7996167310667025
+Epoch: 42 loss: 0.43808674769249956 - Valid acc: 0.7993568346495153
+Epoch: 43 loss: 0.43578129231585244 - Valid acc: 0.7991564325928894
+Epoch: 44 loss: 0.4362532069228288 - Valid acc: 0.7998233956875983
+Epoch: 45 loss: 0.4349702730171942 - Valid acc: 0.7989466366898591
+Epoch: 46 loss: 0.4357490956438759 - Valid acc: 0.7996981444022068
+Epoch: 47 loss: 0.43545309708297597 - Valid acc: 0.8001114736439985
+Epoch: 48 loss: 0.43602259103962454 - Valid acc: 0.7995697618346808
+Epoch: 49 loss: 0.43270061987672925 - Valid acc: 0.8004840962180375
+Epoch: 50 loss: 0.4324558854447624 - Valid acc: 0.8012042911090376
+Epoch: 51 loss: 0.43246986979694035 - Valid acc: 0.7992253207998546
+Epoch: 52 loss: 0.4323683894438551 - Valid acc: 0.8001271300546722
+Epoch: 53 loss: 0.432081833223387 - Valid acc: 0.7994131977279416
+Epoch: 54 loss: 0.4322202248724899 - Valid acc: 0.8007471239173592
+Epoch: 55 loss: 0.4322170894269998 - Valid acc: 0.7998453146625417
+Epoch: 56 loss: 0.4321512180256706 - Valid acc: 0.8003745013433197
+Epoch: 57 loss: 0.431843188628985 - Valid acc: 0.801962061385655
+Epoch: 58 loss: 0.43182605832298365 - Valid acc: 0.8021718572886855
+Epoch: 59 loss: 0.4318318050031717 - Valid acc: 0.7997701638913068
+Epoch: 60 loss: 0.4318302738011917 - Valid acc: 0.7997451136342286
+Epoch: 61 loss: 0.43178867492717127 - Valid acc: 0.8001083423618633
+Epoch: 62 loss: 0.43178921541726656 - Valid acc: 0.8001083423618633
+Epoch: 63 loss: 0.43178892686876946 - Valid acc: 0.8001083423618633
+Epoch: 64 loss: 0.43179050449691064 - Valid acc: 0.8001083423618633
+Epoch: 65 loss: 0.4317845802086626 - Valid acc: 0.8001083423618633
+Epoch: 66 loss: 0.43178441999964634 - Valid acc: 0.8001083423618633
+Epoch: 67 loss: 0.43178454136228284 - Valid acc: 0.8001083423618633
+Epoch: 68 loss: 0.431784067884346 - Valid acc: 0.8001083423618633
+Epoch: 69 loss: 0.4317840598738952 - Valid acc: 0.8001083423618633
+Epoch: 70 loss: 0.43178406082136783 - Valid acc: 0.8001083423618633
+Epoch: 71 loss: 0.43178408442205085 - Valid acc: 0.8001083423618633
+Epoch: 72 loss: 0.4317840591848241 - Valid acc: 0.8001083423618633
+Epoch: 73 loss: 0.4317840604768323 - Valid acc: 0.8001083423618633
+Epoch: 74 loss: 0.4317840732246465 - Valid acc: 0.8001083423618633
+Epoch: 75 loss: 0.43178405100210554 - Valid acc: 0.8001083423618633
+Epoch: 76 loss: 0.4317840566869416 - Valid acc: 0.8001083423618633
+Epoch: 77 loss: 0.43178408760900444 - Valid acc: 0.8001083423618633
+Epoch: 78 loss: 0.43178405935709185 - Valid acc: 0.8001083423618633
+Epoch: 79 loss: 0.43178406443899076 - Valid acc: 0.8001083423618633
+Epoch: 80 loss: 0.4317840580650837 - Valid acc: 0.8001083423618633
+Epoch: 81 loss: 0.431784067884346 - Valid acc: 0.8001083423618633
+Epoch: 82 loss: 0.4317840504853023 - Valid acc: 0.8001083423618633
+Epoch: 83 loss: 0.4317840561701383 - Valid acc: 0.8001083423618633
+Epoch: 84 loss: 0.4317840702960946 - Valid acc: 0.8001083423618633
+Epoch: 85 loss: 0.4317840537583897 - Valid acc: 0.8001083423618633
+Epoch: 86 loss: 0.431784067884346 - Valid acc: 0.8001083423618633
+Epoch: 87 loss: 0.431784061424305 - Valid acc: 0.8001083423618633
+Epoch: 88 loss: 0.43178405014076676 - Valid acc: 0.8001083423618633
+Epoch: 89 loss: 0.43178406151043885 - Valid acc: 0.8001083423618633
+Epoch: 90 loss: 0.4317840541029252 - Valid acc: 0.8001083423618633
+Epoch: 91 loss: 0.4317840553949334 - Valid acc: 0.8001083423618633
+Epoch: 92 loss: 0.43178405530879954 - Valid acc: 0.8001083423618633
+Epoch: 93 loss: 0.4317840667646055 - Valid acc: 0.8001083423618633
+Epoch: 94 loss: 0.4317840646973924 - Valid acc: 0.8001083423618633
+Epoch: 95 loss: 0.43178404118284325 - Valid acc: 0.8001083423618633
+Epoch: 96 loss: 0.43178405530879954 - Valid acc: 0.8001083423618633
+Epoch: 97 loss: 0.4317840465231438 - Valid acc: 0.8001083423618633
+Epoch: 98 loss: 0.4317840367038815 - Valid acc: 0.8001083423618633
+Epoch: 99 loss: 0.4317840515189088 - Valid acc: 0.8001083423618633
+Epoch: 100 loss: 0.43178404807355364 - Valid acc: 0.8001083423618633
+Epoch: 101 loss: 0.43178403489507 - Valid acc: 0.8001083423618633
+Epoch: 102 loss: 0.4317840348089361 - Valid acc: 0.8001083423618633
+Epoch: 103 loss: 0.4317840523802476 - Valid acc: 0.8001083423618633
+Epoch: 104 loss: 0.4317840392878979 - Valid acc: 0.8001083423618633
+Epoch: 105 loss: 0.4317840483319553 - Valid acc: 0.8001083423618633
+Epoch: 106 loss: 0.4317840553949334 - Valid acc: 0.8001083423618633
+Epoch: 107 loss: 0.4317840427332531 - Valid acc: 0.8001083423618633
+Epoch: 108 loss: 0.4317840354980072 - Valid acc: 0.8001083423618633
+Epoch: 109 loss: 0.4317840467815454 - Valid acc: 0.8001083423618633
+Epoch: 110 loss: 0.4317840435945919 - Valid acc: 0.8001083423618633
+Epoch: 111 loss: 0.4317840330001247 - Valid acc: 0.8001083423618633
+Epoch: 112 loss: 0.43178404703994705 - Valid acc: 0.8001083423618633
+Epoch: 113 loss: 0.4317840380820236 - Valid acc: 0.8001083423618633
+Epoch: 114 loss: 0.4317840359286766 - Valid acc: 0.8001083423618633
+Epoch: 115 loss: 0.4317840410105755 - Valid acc: 0.8001083423618633
+Epoch: 116 loss: 0.4317840497962312 - Valid acc: 0.8001083423618633
+Epoch: 117 loss: 0.43178404927942793 - Valid acc: 0.8001083423618633
+Epoch: 118 loss: 0.43178403859882686 - Valid acc: 0.8001083423618633
+Epoch: 119 loss: 0.43178403730681864 - Valid acc: 0.8001083423618633
+Epoch: 120 loss: 0.4317840297270372 - Valid acc: 0.8001083423618633
+Epoch: 121 loss: 0.431784037048417 - Valid acc: 0.8001083423618633
+Epoch: 122 loss: 0.4317840330001247 - Valid acc: 0.8001083423618633
+Epoch: 123 loss: 0.43178403971856727 - Valid acc: 0.8001083423618633
+Epoch: 124 loss: 0.4317840467815454 - Valid acc: 0.8001083423618633
+Epoch: 125 loss: 0.4317840286072968 - Valid acc: 0.8001083423618633
+Epoch: 126 loss: 0.43178402765982415 - Valid acc: 0.8001083423618633
+Epoch: 127 loss: 0.43178403722068476 - Valid acc: 0.8001083423618633
+Epoch: 128 loss: 0.43178401792669574 - Valid acc: 0.8001083423618633
+Epoch: 129 loss: 0.43178402516194164 - Valid acc: 0.8001083423618633
+Epoch: 130 loss: 0.4317840281766274 - Valid acc: 0.8001083423618633
+Epoch: 131 loss: 0.4317840319665181 - Valid acc: 0.8001083423618633
+Epoch: 132 loss: 0.43178402292246076 - Valid acc: 0.8001083423618633
+Epoch: 133 loss: 0.4317840315358487 - Valid acc: 0.8001083423618633
+Epoch: 134 loss: 0.4317840268846192 - Valid acc: 0.8001083423618633
+Epoch: 135 loss: 0.43178402740142247 - Valid acc: 0.8001083423618633
+Epoch: 136 loss: 0.43178402163045254 - Valid acc: 0.8001083423618633
+Epoch: 137 loss: 0.43178402593714654 - Valid acc: 0.8001083423618633
+Epoch: 138 loss: 0.4317840260232804 - Valid acc: 0.8001083423618633
+Epoch: 139 loss: 0.43178403360306183 - Valid acc: 0.8001083423618633
+Epoch: 140 loss: 0.4317840210275154 - Valid acc: 0.8001083423618633
+Epoch: 141 loss: 0.43178401103598535 - Valid acc: 0.8001083423618633
+Epoch: 142 loss: 0.43178402206112193 - Valid acc: 0.8001083423618633
+Epoch: 143 loss: 0.43178403463666837 - Valid acc: 0.8001083423618633
+Epoch: 144 loss: 0.4317840348089361 - Valid acc: 0.8001083423618633
+Epoch: 145 loss: 0.43178402843502905 - Valid acc: 0.8001083423618633
+Epoch: 146 loss: 0.431784017754428 - Valid acc: 0.8001083423618633
+Epoch: 147 loss: 0.431784029899305 - Valid acc: 0.8001083423618633
+Epoch: 148 loss: 0.43178403722068476 - Valid acc: 0.8001083423618633
+Epoch: 149 loss: 0.4317840126725291 - Valid acc: 0.8001083423618633
+Epoch: 150 loss: 0.43178400448981047 - Valid acc: 0.8001083423618633
+Epoch: 151 loss: 0.4317840289518323 - Valid acc: 0.8001083423618633
+Epoch: 152 loss: 0.4317840283488952 - Valid acc: 0.8001083423618633
+Epoch: 153 loss: 0.4317840115527886 - Valid acc: 0.8001083423618633
+Epoch: 154 loss: 0.4317840174098924 - Valid acc: 0.8001083423618633
+Epoch: 155 loss: 0.43178402593714654 - Valid acc: 0.8001083423618633
+Epoch: 156 loss: 0.4317840217165864 - Valid acc: 0.8001083423618633
+Epoch: 157 loss: 0.43178401000237876 - Valid acc: 0.8001083423618633
+Epoch: 158 loss: 0.4317840137922695 - Valid acc: 0.8001083423618633
+Epoch: 159 loss: 0.4317840124141274 - Valid acc: 0.8001083423618633
+Epoch: 160 loss: 0.43178400810743345 - Valid acc: 0.8001083423618633
+Epoch: 161 loss: 0.4317840129309307 - Valid acc: 0.8001083423618633
+Epoch: 162 loss: 0.4317840426471192 - Valid acc: 0.8001083423618633
+Epoch: 163 loss: 0.431784017754428 - Valid acc: 0.8001083423618633
+Epoch: 164 loss: 0.4317840108637176 - Valid acc: 0.8001083423618633
+Epoch: 165 loss: 0.4317840351534717 - Valid acc: 0.8001083423618633
+Epoch: 166 loss: 0.4317840111221192 - Valid acc: 0.8001083423618633
+Epoch: 167 loss: 0.4317840039730072 - Valid acc: 0.8001083423618633
+Epoch: 168 loss: 0.43178400776289794 - Valid acc: 0.8001083423618633
+Epoch: 169 loss: 0.43178402843502905 - Valid acc: 0.8001083423618633
+Epoch: 170 loss: 0.43178402076911376 - Valid acc: 0.8001083423618633
+Epoch: 171 loss: 0.4317840112082531 - Valid acc: 0.8001083423618633
+Epoch: 172 loss: 0.4317840056956848 - Valid acc: 0.8001083423618633
+Epoch: 173 loss: 0.43178401258639515 - Valid acc: 0.8001083423618633
+Epoch: 174 loss: 0.43178401275866296 - Valid acc: 0.8001083423618633
+Epoch: 175 loss: 0.4317840081935673 - Valid acc: 0.8001083423618633
+Epoch: 176 loss: 0.43178400810743345 - Valid acc: 0.8001083423618633
+Epoch: 177 loss: 0.43178400044151816 - Valid acc: 0.8001083423618633
+Epoch: 178 loss: 0.4317840019057941 - Valid acc: 0.8001083423618633
+Epoch: 179 loss: 0.43178400500661374 - Valid acc: 0.8001083423618633
+Epoch: 180 loss: 0.4317839977713679 - Valid acc: 0.8001083423618633
+Epoch: 181 loss: 0.4317840051788815 - Valid acc: 0.8001083423618633
+Epoch: 182 loss: 0.43178401947710554 - Valid acc: 0.8001083423618633
+Epoch: 183 loss: 0.43178401000237876 - Valid acc: 0.8001083423618633
+Epoch: 184 loss: 0.4317840108637176 - Valid acc: 0.8001083423618633
+Epoch: 185 loss: 0.43178401284479684 - Valid acc: 0.8001083423618633
+Epoch: 186 loss: 0.4317840175821602 - Valid acc: 0.8001083423618633
+Epoch: 187 loss: 0.43178399355080777 - Valid acc: 0.8001083423618633
+Epoch: 188 loss: 0.43178399432601267 - Valid acc: 0.8001083423618633
+Epoch: 189 loss: 0.4317839982020373 - Valid acc: 0.8001083423618633
+Epoch: 190 loss: 0.43178399579028864 - Valid acc: 0.8001083423618633
+Epoch: 191 loss: 0.4317840073322285 - Valid acc: 0.8001083423618633
+Epoch: 192 loss: 0.4317840017335263 - Valid acc: 0.8001083423618633
+Epoch: 193 loss: 0.43178400586795257 - Valid acc: 0.8001083423618633
+Epoch: 194 loss: 0.4317840000108487 - Valid acc: 0.8001083423618633
+Epoch: 195 loss: 0.4317840196493733 - Valid acc: 0.8001083423618633
+Epoch: 196 loss: 0.43178400845196896 - Valid acc: 0.8001083423618633
+Epoch: 197 loss: 0.4317839992356438 - Valid acc: 0.8001083423618633
+Epoch: 198 loss: 0.4317840000108487 - Valid acc: 0.8001083423618633
+Epoch: 199 loss: 0.4317840053511493 - Valid acc: 0.8001083423618633
+Fitting done in 13907.567444324493s.

@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{import}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\graphicspath{ {./pictures/} }
+\usepackage{minted}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}%
+
+
+\lstset{
+	backgroundcolor=\color{white},
+	tabsize=4,
+	rulecolor=,
+	language=python,
+    upquote=true,
+    aboveskip={1.5\baselineskip},
+    columns=fixed,
+    numbers=none,
+    showstringspaces=false,
+    extendedchars=true,
+    breaklines=true,
+    prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=none,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    identifierstyle=\ttfamily,
+    keywordstyle=\color[rgb]{0,0,1},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{0.627,0.126,0.941}
+}
+
+\usepackage{makeidx}
+\makeindex
+
+
+\title{UiO - V21: IN5550}
+\author{\textbf{Fábio Rodrigues Pereira} - fabior@uio.no \\
+\textbf{Per Morten Halvorsen} - pmhalvor@uio.no\\
+\textbf{Eivind Grønlie Guren} - eivindgg@ifi.uio.no\\
+\small UiO GitHub repository: \href{https://github.uio.no/fabior/IN5550/tree/master/Oblig2}{ https://github.uio.no/fabior/IN5550/tree/master/Oblig2}}
+\date{March 13th, 2021}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\bigskip \bigskip
+
+\import{./}{introduction.tex}
+
+\import{./}{discussion.tex}
+
+\import{./}{conclusion.tex}
+
+\import{./}{bibliography.tex}
+
+\import{./}{appendix.tex}
+
+\end{document}

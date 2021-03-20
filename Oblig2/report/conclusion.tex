@@ -1,0 +1,28 @@
+\section{Conclusion}
+\label{chap:Conclusion}
+
+\quad This project looked at word embeddings, through a web-app, through local experimenting, and finally as input features for a more complex model, incorporating transfer-learning. We also detailed the steps to build and tune a simplistic RNN model that could read arbitrary lengths of sequences and produce reliable binary classifications. 
+
+One of the main hurdles that needed to be overcome when representing sentences as tensors of word embedding was standardizing the models' input feature size. As shown, there are various ways to achieve this standardization, whether it be taking the mean, the sum, or focusing on a specific slice of the input.
+
+The puzzle of building a recurrent architecture requires finding the right pieces that work well together. The parameter that had the biggest impact on our scores was \texttt{bidirectional}, although the use of gated architectures also proved to be quite helpful compared to the vanilla Elman RNN. 
+
+At the beginning of this project, it was assumed that RNNs would achieve better scores than MLP, since they consider sequential information. We observed a 12.2 percentage-point increase in performance between the two models through our experimenting, confirming our hypothesis. The best score for the recurrent setup was 81.5\%. For binary classification, this is well beyond randomly guessing, especially considering the data set was more or less balanced (47\% negative and 52\% positive). To prove the model's robustness, different random seeds were set, causing different partitions of training and validation data. The results are presented in Table \ref{tab:3runs}:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c|c|c}
+        Score type & \textbf{Run 1}   &  \textbf{Run 2}    &  \textbf{Run 3}  \\
+        \hline
+        F1-score   & 79.60\% & 78.71\% & 81.72\%\\ %
+        Accuracy   & 80.08\% & 79.63\% & 80.28\%\\
+    \end{tabular}
+    \caption{Scores for three RNN builds on different splits}
+    \label{tab:3runs}
+\end{table}
+
+Table \ref{tab:3runs} shows the  stability of the optimized parameters for our final model, using 3 different train-validation splits, and measuring the performance. 
+
+We feel that accuracies and F1-scores around 80\% were sufficient for this task at hand, and expect the evaluation on the hold-out set should return similar results. 
+
+

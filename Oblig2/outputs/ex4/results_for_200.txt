@@ -1,0 +1,102 @@
+
+Almost_ADV
+=====
+Associate	Cosine
+always_PROPN	0.495
+still::believe_PROPN	0.473
+feels_NOUN	0.473
+Anyway_PROPN	0.471
+b/w_VERB	0.470
+=====
+
+all_DET
+all_DET is not present in the model
+
+current_ADJ
+=====
+Associate	Cosine
+Current_ADJ	0.631
+present_ADJ	0.551
+former_ADJ	0.503
+Former_ADJ	0.481
+future_ADJ	0.469
+=====
+
+dependency_NOUN
+=====
+Associate	Cosine
+dependence_NOUN	0.651
+Dependencies_NOUN	0.518
+Dependency_NOUN	0.500
+dependent_ADJ	0.477
+interdependency_NOUN	0.463
+=====
+
+parsers_NOUN
+parsers_NOUN is not present in the model
+
+classify_VERB
+=====
+Associate	Cosine
+classified_VERB	0.764
+classify_ADJ	0.748
+categorize_VERB	0.720
+categorise_VERB	0.688
+classified_ADJ	0.676
+=====
+
+based_VERB
+=====
+Associate	Cosine
+base_VERB	0.634
+base_ADJ	0.619
+bas_VERB	0.579
+Based_VERB	0.495
+rely_NOUN	0.440
+=====
+
+on_ADP
+on_ADP is not present in the model
+
+millions_NOUN
+=====
+Associate	Cosine
+million_NOUN	0.557
+millions_PROPN	0.553
+billion_NOUN	0.462
+million_PROPN	0.432
+7,000,000_NUM	0.410
+=====
+
+of_ADP
+of_ADP is not present in the model
+
+sparse_ADJ
+=====
+Associate	Cosine
+sparse_NOUN	0.823
+sparse_VERB	0.789
+dense_ADJ	0.655
+patchy_ADJ	0.616
+sparser_NOUN	0.597
+=====
+
+indicator_NOUN
+=====
+Associate	Cosine
+indicators_NOUN	0.664
+predictor_NOUN	0.614
+correlation_NOUN	0.569
+determinant_NOUN	0.550
+quantify_VERB	0.542
+=====
+
+features_NOUN
+=====
+Associate	Cosine
+pictures_NOUN	0.490
+Samuel::Goldwyn::Films_PROPN	0.477
+Animation_NOUN	0.441
+universal::pictures_PROPN	0.440
+Films_NOUN	0.440
+=====
