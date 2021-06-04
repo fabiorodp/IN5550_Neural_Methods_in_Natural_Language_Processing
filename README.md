@@ -20,39 +20,6 @@ E-mail: eivindgg@ifi.uio.no
 - scikit-learn  0.22.1
 - scipy         1.4.1 
 ```
+## Best Scientific paper reward:
 
-## Structure of this repository:
 
-```
-├── IN5550
-|  └── Oblig1
-|  |  └── data
-|  |  |  └── signal_20_obligatory1_train.tsv.gz
-|  |  └── packages
-|  |  |  └── ann_models.py
-|  |  |  └── preprocessing.py
-|  |  |  └── studies.py
-|  |  └── eval_on_test.py
-|  |  └── evaluation.py
-|  |  └── plot.py
-|  |  |
-|  |  └── ...
-|  └── Oblig2
-|  |  └── data
-|  |  |  └── ...
-|  |  └── packages
-|  |  |  └── ...
-|  |  └── ...
-|  └── Oblig3
-|  |  └── data
-|  |  |  └── ...
-|  |  └── packages
-|  |  |  └── ...
-|  |  └── ...
-|  └── FinalProject
-|  |  └── data
-|  |  |  └── ...
-|  |  └── packages
-|  |  |  └── ...
-|  |  └── ...
-```
