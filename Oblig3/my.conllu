@@ -1,0 +1,30 @@
+# text = I Malaysia har det nettopp vært vaktskifte:
+1	I	i	ADP	_	_	2	case	_	name=O-from-Per
+2	Malaysia	Malaysia	PROPN	_	_	7	obl	_	name=B-GPE_LOC
+3	har	ha	AUX	_	Mood=Ind|Tense=Pres|VerbForm=Fin	7	aux	_	name=O-from-Per
+4	det	det	PRON	_	Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	expl	_	name=O-from-Per
+5	nettopp	nettopp	ADV	_	_	7	advmod	_	name=O-from-Per
+6	vært	være	AUX	_	VerbForm=Part	7	cop	_	name=O-from-Per
+7	vaktskifte	vaktskifte	NOUN	_	Definite=Ind|Gender=Neut|Number=Sing	0	root	_	SpaceAfter=No|name=O-from-Per
+8	:	$:	PUNCT	_	_	7	punct	_	name=O-from-Per
+
+# text = I Malaysia har det nettopp vært vaktskifte:
+1	I	i	ADP	_	_	2	case	_	name=O-from-Per
+2	Malaysia	Malaysia	PROPN	_	_	7	obl	_	name=B-GPE_LOC
+3	har	ha	AUX	_	Mood=Ind|Tense=Pres|VerbForm=Fin	7	aux	_	name=O-from-Per
+4	det	det	PRON	_	Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	expl	_	name=O-from-Per
+5	nettopp	nettopp	ADV	_	_	7	advmod	_	name=O-from-Per
+6	vært	være	AUX	_	VerbForm=Part	7	cop	_	name=O-from-Per
+7	vaktskifte	vaktskifte	NOUN	_	Definite=Ind|Gender=Neut|Number=Sing	0	root	_	SpaceAfter=No|name=O-from-Per
+8	:	$:	PUNCT	_	_	7	punct	_	name=O-from-Per
+
+# text = I Malaysia har det nettopp vært vaktskifte:
+1	I	i	ADP	_	_	2	case	_	name=O-from-Per
+2	Malaysia	Malaysia	PROPN	_	_	7	obl	_	name=B-GPE_LOC
+3	har	ha	AUX	_	Mood=Ind|Tense=Pres|VerbForm=Fin	7	aux	_	name=O-from-Per
+4	det	det	PRON	_	Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	expl	_	name=O-from-Per
+5	nettopp	nettopp	ADV	_	_	7	advmod	_	name=O-from-Per
+6	vært	være	AUX	_	VerbForm=Part	7	cop	_	name=O-from-Per
+7	vaktskifte	vaktskifte	NOUN	_	Definite=Ind|Gender=Neut|Number=Sing	0	root	_	SpaceAfter=No|name=O-from-Per
+8	:	$:	PUNCT	_	_	7	punct	_	name=O-from-Per
+

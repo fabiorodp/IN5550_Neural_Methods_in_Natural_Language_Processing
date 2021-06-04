@@ -25,7 +25,6 @@ import numpy as np
 import torch
 import time
 
-
 DIR = "/cluster/shared/nlpl/data/vectors/latest/"
 # DIR = "saga/"
 URL = 'data/stanford_sentiment_binary.tsv.gz'
@@ -520,6 +519,7 @@ class EpochsBatchesStudy(VocabLossFunct):
             pos = False
 
         for c_idx, col in enumerate(self.par_1):
+            print(col)
             for r_idx, row in enumerate(self.par_2):
 
                 embedding, data, loader = self._load_data(

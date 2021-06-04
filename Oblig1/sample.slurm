@@ -40,4 +40,10 @@ ulimit -a
 module list
 
 # by default, pass on any remaining command-line options
+<<<<<<< HEAD:Oblig1/oblig1.slurm
+python3 studies_fix.py
+
+
+=======
 python3 eval_on_test.py ${@}
+>>>>>>> master:Oblig1/sample.slurm

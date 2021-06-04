@@ -1,0 +1,2051 @@
+model = Transformer(
+    NORBERT=NORBERT,
+    tokenizer=train_dataset.tokenizer,
+    num_labels=3,
+    IGNORE_ID=train_dataset.IGNORE_ID,
+    device="cpu",  # "cuda" if torch.cuda.is_available() else "cpu",
+    epochs=10,
+    lr_scheduler=False,
+    factor=0.1,
+    lrs_patience=2,
+    loss_funct='cross-entropy',
+    random_state=1,
+    verbose=True,
+    lr=0.0001,
+    momentum=0.9,
+    epoch_patience=1,
+    label_indexer=None,
+    optmizer='AdamW'
+)
+
+fdelta@fdelta:~/Documents/IN5550$ python3 exam/test_bert_bio.py
+Some weights of the model checkpoint at exam/saga/216 were not used when initializing BertForTokenClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.predictions.decoder.bias', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+- This IS expected if you are initializing BertForTokenClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForTokenClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForTokenClassification were not initialized from the model checkpoint at exam/saga/216 and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  0%|                                                    | 0/10 [00:00<?, ?it/s]Batch: 0  |  Train Loss: 1.1802048683166504  |
+Batch: 1  |  Train Loss: 0.46757420897483826  |
+Batch: 2  |  Train Loss: 0.26267603039741516  |
+Batch: 3  |  Train Loss: 0.17315270006656647  |
+Batch: 4  |  Train Loss: 0.43826529383659363  |
+Batch: 5  |  Train Loss: 0.1968189775943756  |
+Batch: 6  |  Train Loss: 0.20295897126197815  |
+Batch: 7  |  Train Loss: 0.3299145996570587  |
+Batch: 8  |  Train Loss: 0.33135271072387695  |
+Batch: 9  |  Train Loss: 0.3251027464866638  |
+Batch: 10  |  Train Loss: 0.31864431500434875  |
+Batch: 11  |  Train Loss: 0.3526964783668518  |
+Batch: 12  |  Train Loss: 0.31674858927726746  |
+Batch: 13  |  Train Loss: 0.2796827554702759  |
+Batch: 14  |  Train Loss: 0.23105685412883759  |
+Batch: 15  |  Train Loss: 0.21576902270317078  |
+Batch: 16  |  Train Loss: 0.2678551971912384  |
+Batch: 17  |  Train Loss: 0.18891407549381256  |
+Batch: 18  |  Train Loss: 0.23024486005306244  |
+Batch: 19  |  Train Loss: 0.2986421585083008  |
+Batch: 20  |  Train Loss: 0.35930782556533813  |
+Batch: 21  |  Train Loss: 0.2879064679145813  |
+Batch: 22  |  Train Loss: 0.23088040947914124  |
+Batch: 23  |  Train Loss: 0.3213023245334625  |
+Batch: 24  |  Train Loss: 0.19879913330078125  |
+Batch: 25  |  Train Loss: 0.2886103391647339  |
+Batch: 26  |  Train Loss: 0.21971754729747772  |
+Batch: 27  |  Train Loss: 0.34664908051490784  |
+Batch: 28  |  Train Loss: 0.2472466081380844  |
+Batch: 29  |  Train Loss: 0.2454959899187088  |
+Batch: 30  |  Train Loss: 0.295484334230423  |
+Batch: 31  |  Train Loss: 0.19403263926506042  |
+Batch: 32  |  Train Loss: 0.20792098343372345  |
+Batch: 33  |  Train Loss: 0.14965268969535828  |
+Batch: 34  |  Train Loss: 0.20331351459026337  |
+Batch: 35  |  Train Loss: 0.16871583461761475  |
+Batch: 36  |  Train Loss: 0.2219083160161972  |
+Batch: 37  |  Train Loss: 0.21116910874843597  |
+Batch: 38  |  Train Loss: 0.3121163845062256  |
+Batch: 39  |  Train Loss: 0.20652702450752258  |
+Batch: 40  |  Train Loss: 0.12716156244277954  |
+Batch: 41  |  Train Loss: 0.23914192616939545  |
+Batch: 42  |  Train Loss: 0.21522605419158936  |
+Batch: 43  |  Train Loss: 0.19000586867332458  |
+Batch: 44  |  Train Loss: 0.1388511210680008  |
+Batch: 45  |  Train Loss: 0.24367177486419678  |
+Batch: 46  |  Train Loss: 0.2948392927646637  |
+Batch: 47  |  Train Loss: 0.2569293677806854  |
+Batch: 48  |  Train Loss: 0.1375277191400528  |
+Batch: 49  |  Train Loss: 0.17904508113861084  |
+Batch: 50  |  Train Loss: 0.26658299565315247  |
+Batch: 51  |  Train Loss: 0.2571365535259247  |
+Batch: 52  |  Train Loss: 0.24211330711841583  |
+Batch: 53  |  Train Loss: 0.20161233842372894  |
+Batch: 54  |  Train Loss: 0.3013893961906433  |
+Batch: 55  |  Train Loss: 0.21033638715744019  |
+Batch: 56  |  Train Loss: 0.17372757196426392  |
+Batch: 57  |  Train Loss: 0.23714084923267365  |
+Batch: 58  |  Train Loss: 0.2755962908267975  |
+Batch: 59  |  Train Loss: 0.20148049294948578  |
+Batch: 60  |  Train Loss: 0.11706778407096863  |
+Batch: 61  |  Train Loss: 0.3063916862010956  |
+Batch: 62  |  Train Loss: 0.18745990097522736  |
+Batch: 63  |  Train Loss: 0.20285587012767792  |
+Batch: 64  |  Train Loss: 0.10533124953508377  |
+Batch: 65  |  Train Loss: 0.3777883052825928  |
+Batch: 66  |  Train Loss: 0.20579321682453156  |
+Batch: 67  |  Train Loss: 0.19882522523403168  |
+Batch: 68  |  Train Loss: 0.3018558621406555  |
+Batch: 69  |  Train Loss: 0.21199795603752136  |
+Batch: 70  |  Train Loss: 0.2046622931957245  |
+Batch: 71  |  Train Loss: 0.22202156484127045  |
+Batch: 72  |  Train Loss: 0.1870894432067871  |
+Batch: 73  |  Train Loss: 0.212824285030365  |
+Batch: 74  |  Train Loss: 0.17160816490650177  |
+Batch: 75  |  Train Loss: 0.1997717320919037  |
+Batch: 76  |  Train Loss: 0.13505995273590088  |
+Batch: 77  |  Train Loss: 0.2236555963754654  |
+Batch: 78  |  Train Loss: 0.1562359482049942  |
+Batch: 79  |  Train Loss: 0.15582789480686188  |
+Batch: 80  |  Train Loss: 0.14416106045246124  |
+Batch: 81  |  Train Loss: 0.19418741762638092  |
+Batch: 82  |  Train Loss: 0.1569654643535614  |
+Batch: 83  |  Train Loss: 0.13819698989391327  |
+Batch: 84  |  Train Loss: 0.10985875129699707  |
+Batch: 85  |  Train Loss: 0.15308503806591034  |
+Batch: 86  |  Train Loss: 0.09925590455532074  |
+Batch: 87  |  Train Loss: 0.10701597481966019  |
+Batch: 88  |  Train Loss: 0.22499920427799225  |
+Batch: 89  |  Train Loss: 0.17601458728313446  |
+Batch: 90  |  Train Loss: 0.12664513289928436  |
+Batch: 91  |  Train Loss: 0.09215820580720901  |
+Batch: 92  |  Train Loss: 0.27776381373405457  |
+Batch: 93  |  Train Loss: 0.23042957484722137  |
+Batch: 94  |  Train Loss: 0.3139805197715759  |
+Batch: 95  |  Train Loss: 0.1369139403104782  |
+Batch: 96  |  Train Loss: 0.1646907776594162  |
+Batch: 97  |  Train Loss: 0.13857702910900116  |
+Batch: 98  |  Train Loss: 0.1761196255683899  |
+Batch: 99  |  Train Loss: 0.14751562476158142  |
+Batch: 100  |  Train Loss: 0.10553601384162903  |
+Batch: 101  |  Train Loss: 0.16486665606498718  |
+Batch: 102  |  Train Loss: 0.2296917885541916  |
+Batch: 103  |  Train Loss: 0.1705617606639862  |
+Batch: 104  |  Train Loss: 0.11274191737174988  |
+Batch: 105  |  Train Loss: 0.17661280930042267  |
+Batch: 106  |  Train Loss: 0.25095516443252563  |
+Batch: 107  |  Train Loss: 0.21999262273311615  |
+Batch: 108  |  Train Loss: 0.15427599847316742  |
+Batch: 109  |  Train Loss: 0.1357826590538025  |
+Batch: 110  |  Train Loss: 0.1228603944182396  |
+Batch: 111  |  Train Loss: 0.11620517820119858  |
+Batch: 112  |  Train Loss: 0.16871953010559082  |
+Batch: 113  |  Train Loss: 0.2839808762073517  |
+Batch: 114  |  Train Loss: 0.07878613471984863  |
+Batch: 115  |  Train Loss: 0.15623441338539124  |
+Batch: 116  |  Train Loss: 0.10701914131641388  |
+Batch: 117  |  Train Loss: 0.250662237405777  |
+Batch: 118  |  Train Loss: 0.28569743037223816  |
+Batch: 119  |  Train Loss: 0.10792649537324905  |
+Batch: 120  |  Train Loss: 0.3311134874820709  |
+Batch: 121  |  Train Loss: 0.14049409329891205  |
+Batch: 122  |  Train Loss: 0.35506337881088257  |
+Batch: 123  |  Train Loss: 0.20595233142375946  |
+Batch: 124  |  Train Loss: 0.1544276922941208  |
+Batch: 125  |  Train Loss: 0.23556852340698242  |
+Batch: 126  |  Train Loss: 0.26165711879730225  |
+Batch: 127  |  Train Loss: 0.18812328577041626  |
+Batch: 128  |  Train Loss: 0.2345741242170334  |
+Batch: 129  |  Train Loss: 0.20417523384094238  |
+Batch: 130  |  Train Loss: 0.32742542028427124  |
+Batch: 131  |  Train Loss: 0.17521332204341888  |
+Batch: 132  |  Train Loss: 0.18822747468948364  |
+Batch: 133  |  Train Loss: 0.12707515060901642  |
+Batch: 134  |  Train Loss: 0.15826578438282013  |
+Batch: 135  |  Train Loss: 0.161357581615448  |
+Batch: 136  |  Train Loss: 0.2673541307449341  |
+Batch: 137  |  Train Loss: 0.11085093021392822  |
+Batch: 138  |  Train Loss: 0.11855173856019974  |
+Batch: 139  |  Train Loss: 0.16261786222457886  |
+Batch: 140  |  Train Loss: 0.25416550040245056  |
+Batch: 141  |  Train Loss: 0.36146578192710876  |
+Batch: 142  |  Train Loss: 0.2506367266178131  |
+Batch: 143  |  Train Loss: 0.21317119896411896  |
+Batch: 144  |  Train Loss: 0.22521017491817474  |
+Batch: 145  |  Train Loss: 0.24536192417144775  |
+Batch: 146  |  Train Loss: 0.23013043403625488  |
+Batch: 147  |  Train Loss: 0.21959954500198364  |
+Batch: 148  |  Train Loss: 0.24345971643924713  |
+Batch: 149  |  Train Loss: 0.2726314067840576  |
+Batch: 150  |  Train Loss: 0.24058833718299866  |
+Batch: 151  |  Train Loss: 0.12522545456886292  |
+Batch: 152  |  Train Loss: 0.12991636991500854  |
+Batch: 153  |  Train Loss: 0.2386561632156372  |
+Batch: 154  |  Train Loss: 0.28150564432144165  |
+Batch: 155  |  Train Loss: 0.16345198452472687  |
+Batch: 156  |  Train Loss: 0.2203884869813919  |
+Batch: 157  |  Train Loss: 0.34869644045829773  |
+Batch: 158  |  Train Loss: 0.15156030654907227  |
+Batch: 159  |  Train Loss: 0.3228088915348053  |
+Batch: 160  |  Train Loss: 0.11480190604925156  |
+Batch: 161  |  Train Loss: 0.18082134425640106  |
+Batch: 162  |  Train Loss: 0.1803974211215973  |
+Batch: 163  |  Train Loss: 0.16212747991085052  |
+Batch: 164  |  Train Loss: 0.4019591808319092  |
+Batch: 165  |  Train Loss: 0.19142422080039978  |
+Batch: 166  |  Train Loss: 0.1652866154909134  |
+Batch: 167  |  Train Loss: 0.15091323852539062  |
+Batch: 168  |  Train Loss: 0.22499260306358337  |
+Batch: 169  |  Train Loss: 0.1469687670469284  |
+Batch: 170  |  Train Loss: 0.15353472530841827  |
+Batch: 171  |  Train Loss: 0.2132704257965088  |
+Batch: 172  |  Train Loss: 0.16696307063102722  |
+Batch: 173  |  Train Loss: 0.10521819442510605  |
+Batch: 174  |  Train Loss: 0.17737995088100433  |
+Batch: 175  |  Train Loss: 0.12338517606258392  |
+Batch: 176  |  Train Loss: 0.1770615130662918  |
+Batch: 177  |  Train Loss: 0.12585695087909698  |
+Batch: 178  |  Train Loss: 0.24708238244056702  |
+Batch: 179  |  Train Loss: 0.27035146951675415  |
+Batch: 180  |  Train Loss: 0.1576513946056366  |
+Batch: 181  |  Train Loss: 0.2084345817565918  |
+Batch: 182  |  Train Loss: 0.24505633115768433  |
+Batch: 183  |  Train Loss: 0.18095779418945312  |
+Batch: 184  |  Train Loss: 0.16594548523426056  |
+Epoch: 0  |  Train Loss: 0.21724798425629332
+100%|███████████████████████████████████████| 1151/1151 [00:49<00:00, 23.05it/s]
+Binary results:████████████████████████████▉| 1149/1151 [00:49<00:00, 22.63it/s]
+################################################################################
+
+Target prec: 0.613
+Target recall: 0.506
+Target F1: 0.555
+
+Proportional results:
+################################################################################
+
+Target prec: 0.598
+Target recall: 0.336
+Target F1: 0.430
+
+ 10%|████                                     | 1/10 [15:47<2:22:08, 947.61s/it]Batch: 0  |  Train Loss: 0.16531731188297272  |
+Batch: 1  |  Train Loss: 0.15111398696899414  |
+Batch: 2  |  Train Loss: 0.16829684376716614  |
+Batch: 3  |  Train Loss: 0.11372072249650955  |
+Batch: 4  |  Train Loss: 0.1569848656654358  |
+Batch: 5  |  Train Loss: 0.2598399817943573  |
+Batch: 6  |  Train Loss: 0.17498549818992615  |
+Batch: 7  |  Train Loss: 0.08070161193609238  |
+Batch: 8  |  Train Loss: 0.19527573883533478  |
+Batch: 9  |  Train Loss: 0.07099639624357224  |
+Batch: 10  |  Train Loss: 0.28808706998825073  |
+Batch: 11  |  Train Loss: 0.13810624182224274  |
+Batch: 12  |  Train Loss: 0.18580041825771332  |
+Batch: 13  |  Train Loss: 0.093840092420578  |
+Batch: 14  |  Train Loss: 0.13255630433559418  |
+Batch: 15  |  Train Loss: 0.24733881652355194  |
+Batch: 16  |  Train Loss: 0.15209780633449554  |
+Batch: 17  |  Train Loss: 0.15602397918701172  |
+Batch: 18  |  Train Loss: 0.12344970554113388  |
+Batch: 19  |  Train Loss: 0.16691160202026367  |
+Batch: 20  |  Train Loss: 0.14147499203681946  |
+Batch: 21  |  Train Loss: 0.1665821671485901  |
+Batch: 22  |  Train Loss: 0.1482393741607666  |
+Batch: 23  |  Train Loss: 0.24292875826358795  |
+Batch: 24  |  Train Loss: 0.12653028964996338  |
+Batch: 25  |  Train Loss: 0.11593630164861679  |
+Batch: 26  |  Train Loss: 0.14035063982009888  |
+Batch: 27  |  Train Loss: 0.18340550363063812  |
+Batch: 28  |  Train Loss: 0.13312029838562012  |
+Batch: 29  |  Train Loss: 0.20069704949855804  |
+Batch: 30  |  Train Loss: 0.17906472086906433  |
+Batch: 31  |  Train Loss: 0.18291442096233368  |
+Batch: 32  |  Train Loss: 0.11033963412046432  |
+Batch: 33  |  Train Loss: 0.1361290067434311  |
+Batch: 34  |  Train Loss: 0.14868900179862976  |
+Batch: 35  |  Train Loss: 0.09541141986846924  |
+Batch: 36  |  Train Loss: 0.26316624879837036  |
+Batch: 37  |  Train Loss: 0.16667747497558594  |
+Batch: 38  |  Train Loss: 0.10743313282728195  |
+Batch: 39  |  Train Loss: 0.08204007148742676  |
+Batch: 40  |  Train Loss: 0.3552165925502777  |
+Batch: 41  |  Train Loss: 0.11223119497299194  |
+Batch: 42  |  Train Loss: 0.1401408314704895  |
+Batch: 43  |  Train Loss: 0.18299248814582825  |
+Batch: 44  |  Train Loss: 0.1152029037475586  |
+Batch: 45  |  Train Loss: 0.21739310026168823  |
+Batch: 46  |  Train Loss: 0.21259774267673492  |
+Batch: 47  |  Train Loss: 0.11077931523323059  |
+Batch: 48  |  Train Loss: 0.19220565259456635  |
+Batch: 49  |  Train Loss: 0.10279514640569687  |
+Batch: 50  |  Train Loss: 0.17552687227725983  |
+Batch: 51  |  Train Loss: 0.1795928180217743  |
+Batch: 52  |  Train Loss: 0.1233522966504097  |
+Batch: 53  |  Train Loss: 0.12452159076929092  |
+Batch: 54  |  Train Loss: 0.1528407335281372  |
+Batch: 55  |  Train Loss: 0.09141775220632553  |
+Batch: 56  |  Train Loss: 0.1139284148812294  |
+Batch: 57  |  Train Loss: 0.11647883802652359  |
+Batch: 58  |  Train Loss: 0.1724555790424347  |
+Batch: 59  |  Train Loss: 0.2908460795879364  |
+Batch: 60  |  Train Loss: 0.1353227198123932  |
+Batch: 61  |  Train Loss: 0.11169179528951645  |
+Batch: 62  |  Train Loss: 0.14528712630271912  |
+Batch: 63  |  Train Loss: 0.14239123463630676  |
+Batch: 64  |  Train Loss: 0.1578548103570938  |
+Batch: 65  |  Train Loss: 0.14415471255779266  |
+Batch: 66  |  Train Loss: 0.1291816234588623  |
+Batch: 67  |  Train Loss: 0.1376212239265442  |
+Batch: 68  |  Train Loss: 0.15726347267627716  |
+Batch: 69  |  Train Loss: 0.26948225498199463  |
+Batch: 70  |  Train Loss: 0.1346019059419632  |
+Batch: 71  |  Train Loss: 0.1518365889787674  |
+Batch: 72  |  Train Loss: 0.17397727072238922  |
+Batch: 73  |  Train Loss: 0.1614050567150116  |
+Batch: 74  |  Train Loss: 0.19226574897766113  |
+Batch: 75  |  Train Loss: 0.09153643995523453  |
+Batch: 76  |  Train Loss: 0.20146456360816956  |
+Batch: 77  |  Train Loss: 0.13752461969852448  |
+Batch: 78  |  Train Loss: 0.08130637556314468  |
+Batch: 79  |  Train Loss: 0.15825077891349792  |
+Batch: 80  |  Train Loss: 0.21508704125881195  |
+Batch: 81  |  Train Loss: 0.1763702630996704  |
+Batch: 82  |  Train Loss: 0.17229869961738586  |
+Batch: 83  |  Train Loss: 0.11885906010866165  |
+Batch: 84  |  Train Loss: 0.0809776559472084  |
+Batch: 85  |  Train Loss: 0.1686665415763855  |
+Batch: 86  |  Train Loss: 0.18968188762664795  |
+Batch: 87  |  Train Loss: 0.19438788294792175  |
+Batch: 88  |  Train Loss: 0.3274348974227905  |
+Batch: 89  |  Train Loss: 0.11394088715314865  |
+Batch: 90  |  Train Loss: 0.1056647002696991  |
+Batch: 91  |  Train Loss: 0.18930208683013916  |
+Batch: 92  |  Train Loss: 0.09975478798151016  |
+Batch: 93  |  Train Loss: 0.21421200037002563  |
+Batch: 94  |  Train Loss: 0.2509126365184784  |
+Batch: 95  |  Train Loss: 0.11097372323274612  |
+Batch: 96  |  Train Loss: 0.11769408732652664  |
+Batch: 97  |  Train Loss: 0.21191678941249847  |
+Batch: 98  |  Train Loss: 0.2181759923696518  |
+Batch: 99  |  Train Loss: 0.0721379816532135  |
+Batch: 100  |  Train Loss: 0.10203418880701065  |
+Batch: 101  |  Train Loss: 0.14902450144290924  |
+Batch: 102  |  Train Loss: 0.13717862963676453  |
+Batch: 103  |  Train Loss: 0.10533034056425095  |
+Batch: 104  |  Train Loss: 0.06981820613145828  |
+Batch: 105  |  Train Loss: 0.091290682554245  |
+Batch: 106  |  Train Loss: 0.23918229341506958  |
+Batch: 107  |  Train Loss: 0.1854793280363083  |
+Batch: 108  |  Train Loss: 0.15559692680835724  |
+Batch: 109  |  Train Loss: 0.1471436470746994  |
+Batch: 110  |  Train Loss: 0.14752891659736633  |
+Batch: 111  |  Train Loss: 0.18414151668548584  |
+Batch: 112  |  Train Loss: 0.09852877259254456  |
+Batch: 113  |  Train Loss: 0.1593092828989029  |
+Batch: 114  |  Train Loss: 0.09024156630039215  |
+Batch: 115  |  Train Loss: 0.12446106225252151  |
+Batch: 116  |  Train Loss: 0.27793562412261963  |
+Batch: 117  |  Train Loss: 0.13164320588111877  |
+Batch: 118  |  Train Loss: 0.11369580030441284  |
+Batch: 119  |  Train Loss: 0.10102275758981705  |
+Batch: 120  |  Train Loss: 0.18499983847141266  |
+Batch: 121  |  Train Loss: 0.219900980591774  |
+Batch: 122  |  Train Loss: 0.16449466347694397  |
+Batch: 123  |  Train Loss: 0.19283095002174377  |
+Batch: 124  |  Train Loss: 0.09374339878559113  |
+Batch: 125  |  Train Loss: 0.13463610410690308  |
+Batch: 126  |  Train Loss: 0.16353218257427216  |
+Batch: 127  |  Train Loss: 0.2563236951828003  |
+Batch: 128  |  Train Loss: 0.15869219601154327  |
+Batch: 129  |  Train Loss: 0.10597752034664154  |
+Batch: 130  |  Train Loss: 0.13066987693309784  |
+Batch: 131  |  Train Loss: 0.14930544793605804  |
+Batch: 132  |  Train Loss: 0.0842571035027504  |
+Batch: 133  |  Train Loss: 0.08674243837594986  |
+Batch: 134  |  Train Loss: 0.09335111826658249  |
+Batch: 135  |  Train Loss: 0.1716061383485794  |
+Batch: 136  |  Train Loss: 0.07512619346380234  |
+Batch: 137  |  Train Loss: 0.08668940514326096  |
+Batch: 138  |  Train Loss: 0.14449341595172882  |
+Batch: 139  |  Train Loss: 0.08217257261276245  |
+Batch: 140  |  Train Loss: 0.06982717663049698  |
+Batch: 141  |  Train Loss: 0.07156499475240707  |
+Batch: 142  |  Train Loss: 0.19331984221935272  |
+Batch: 143  |  Train Loss: 0.14647386968135834  |
+Batch: 144  |  Train Loss: 0.136140838265419  |
+Batch: 145  |  Train Loss: 0.12182828038930893  |
+Batch: 146  |  Train Loss: 0.11184544861316681  |
+Batch: 147  |  Train Loss: 0.16724124550819397  |
+Batch: 148  |  Train Loss: 0.21827459335327148  |
+Batch: 149  |  Train Loss: 0.09263959527015686  |
+Batch: 150  |  Train Loss: 0.15355682373046875  |
+Batch: 151  |  Train Loss: 0.11166876554489136  |
+Batch: 152  |  Train Loss: 0.1553305685520172  |
+Batch: 153  |  Train Loss: 0.1320120394229889  |
+Batch: 154  |  Train Loss: 0.1701773852109909  |
+Batch: 155  |  Train Loss: 0.13060209155082703  |
+Batch: 156  |  Train Loss: 0.18587371706962585  |
+Batch: 157  |  Train Loss: 0.17406171560287476  |
+Batch: 158  |  Train Loss: 0.21959750354290009  |
+Batch: 159  |  Train Loss: 0.1198502779006958  |
+Batch: 160  |  Train Loss: 0.13512511551380157  |
+Batch: 161  |  Train Loss: 0.0992836207151413  |
+Batch: 162  |  Train Loss: 0.13238847255706787  |
+Batch: 163  |  Train Loss: 0.13617703318595886  |
+Batch: 164  |  Train Loss: 0.08673691749572754  |
+Batch: 165  |  Train Loss: 0.16095413267612457  |
+Batch: 166  |  Train Loss: 0.12358767539262772  |
+Batch: 167  |  Train Loss: 0.1521940976381302  |
+Batch: 168  |  Train Loss: 0.15411463379859924  |
+Batch: 169  |  Train Loss: 0.13235971331596375  |
+Batch: 170  |  Train Loss: 0.1327684372663498  |
+Batch: 171  |  Train Loss: 0.11234419792890549  |
+Batch: 172  |  Train Loss: 0.11334943026304245  |
+Batch: 173  |  Train Loss: 0.23395660519599915  |
+Batch: 174  |  Train Loss: 0.18222112953662872  |
+Batch: 175  |  Train Loss: 0.13229022920131683  |
+Batch: 176  |  Train Loss: 0.1541752964258194  |
+Batch: 177  |  Train Loss: 0.05460212379693985  |
+Batch: 178  |  Train Loss: 0.1381848156452179  |
+Batch: 179  |  Train Loss: 0.1270568072795868  |
+Batch: 180  |  Train Loss: 0.09740115702152252  |
+Batch: 181  |  Train Loss: 0.30515792965888977  |
+Batch: 182  |  Train Loss: 0.2047727257013321  |
+Batch: 183  |  Train Loss: 0.13599073886871338  |
+Batch: 184  |  Train Loss: 0.12697523832321167  |
+Epoch: 1  |  Train Loss: 0.15121161571225605
+100%|███████████████████████████████████████| 1151/1151 [00:49<00:00, 23.05it/s]
+Binary results:█████████████████████████████| 1151/1151 [00:49<00:00, 23.08it/s]
+################################################################################
+
+Target prec: 0.536
+Target recall: 0.701
+Target F1: 0.607
+
+Proportional results:
+################################################################################
+
+Target prec: 0.509
+Target recall: 0.528
+Target F1: 0.518
+
+ 20%|████████▏                                | 2/10 [31:31<2:06:05, 945.67s/it]Batch: 0  |  Train Loss: 0.11100160330533981  |
+Batch: 1  |  Train Loss: 0.1394924819469452  |
+Batch: 2  |  Train Loss: 0.11552848666906357  |
+Batch: 3  |  Train Loss: 0.13958245515823364  |
+Batch: 4  |  Train Loss: 0.11481285095214844  |
+Batch: 5  |  Train Loss: 0.0675070583820343  |
+Batch: 6  |  Train Loss: 0.10926146805286407  |
+Batch: 7  |  Train Loss: 0.1833135187625885  |
+Batch: 8  |  Train Loss: 0.17071756720542908  |
+Batch: 9  |  Train Loss: 0.13364391028881073  |
+Batch: 10  |  Train Loss: 0.08483237028121948  |
+Batch: 11  |  Train Loss: 0.06471235305070877  |
+Batch: 12  |  Train Loss: 0.06548714637756348  |
+Batch: 13  |  Train Loss: 0.15672406554222107  |
+Batch: 14  |  Train Loss: 0.08916354179382324  |
+Batch: 15  |  Train Loss: 0.09462333470582962  |
+Batch: 16  |  Train Loss: 0.1765315681695938  |
+Batch: 17  |  Train Loss: 0.19400615990161896  |
+Batch: 18  |  Train Loss: 0.08764780312776566  |
+Batch: 19  |  Train Loss: 0.09478231519460678  |
+Batch: 20  |  Train Loss: 0.07869628816843033  |
+Batch: 21  |  Train Loss: 0.08033665269613266  |
+Batch: 22  |  Train Loss: 0.10502448678016663  |
+Batch: 23  |  Train Loss: 0.07445653527975082  |
+Batch: 24  |  Train Loss: 0.06866148114204407  |
+Batch: 25  |  Train Loss: 0.04731394723057747  |
+Batch: 26  |  Train Loss: 0.10363514721393585  |
+Batch: 27  |  Train Loss: 0.11296230554580688  |
+Batch: 28  |  Train Loss: 0.09449567645788193  |
+Batch: 29  |  Train Loss: 0.03969583660364151  |
+Batch: 30  |  Train Loss: 0.08211550116539001  |
+Batch: 31  |  Train Loss: 0.20595777034759521  |
+Batch: 32  |  Train Loss: 0.10408312827348709  |
+Batch: 33  |  Train Loss: 0.13604600727558136  |
+Batch: 34  |  Train Loss: 0.20172375440597534  |
+Batch: 35  |  Train Loss: 0.04696628451347351  |
+Batch: 36  |  Train Loss: 0.05910777300596237  |
+Batch: 37  |  Train Loss: 0.11061184853315353  |
+Batch: 38  |  Train Loss: 0.09593205153942108  |
+Batch: 39  |  Train Loss: 0.05591249838471413  |
+Batch: 40  |  Train Loss: 0.1694640964269638  |
+Batch: 41  |  Train Loss: 0.06458830833435059  |
+Batch: 42  |  Train Loss: 0.06518450379371643  |
+Batch: 43  |  Train Loss: 0.15214946866035461  |
+Batch: 44  |  Train Loss: 0.06860637664794922  |
+Batch: 45  |  Train Loss: 0.07123571634292603  |
+Batch: 46  |  Train Loss: 0.08814910799264908  |
+Batch: 47  |  Train Loss: 0.1456981748342514  |
+Batch: 48  |  Train Loss: 0.11384999752044678  |
+Batch: 49  |  Train Loss: 0.06550601869821548  |
+Batch: 50  |  Train Loss: 0.08053387701511383  |
+Batch: 51  |  Train Loss: 0.07140642404556274  |
+Batch: 52  |  Train Loss: 0.08302010595798492  |
+Batch: 53  |  Train Loss: 0.06756684184074402  |
+Batch: 54  |  Train Loss: 0.13969579339027405  |
+Batch: 55  |  Train Loss: 0.16059909760951996  |
+Batch: 56  |  Train Loss: 0.08467306196689606  |
+Batch: 57  |  Train Loss: 0.05841544643044472  |
+Batch: 58  |  Train Loss: 0.13036347925662994  |
+Batch: 59  |  Train Loss: 0.12306775152683258  |
+Batch: 60  |  Train Loss: 0.1360129714012146  |
+Batch: 61  |  Train Loss: 0.06307884305715561  |
+Batch: 62  |  Train Loss: 0.07609663158655167  |
+Batch: 63  |  Train Loss: 0.049464259296655655  |
+Batch: 64  |  Train Loss: 0.13644735515117645  |
+Batch: 65  |  Train Loss: 0.08804477751255035  |
+Batch: 66  |  Train Loss: 0.09467808157205582  |
+Batch: 67  |  Train Loss: 0.10044237971305847  |
+Batch: 68  |  Train Loss: 0.05403539910912514  |
+Batch: 69  |  Train Loss: 0.08201425522565842  |
+Batch: 70  |  Train Loss: 0.16933196783065796  |
+Batch: 71  |  Train Loss: 0.1514999270439148  |
+Batch: 72  |  Train Loss: 0.11627911776304245  |
+Batch: 73  |  Train Loss: 0.10712097585201263  |
+Batch: 74  |  Train Loss: 0.12695005536079407  |
+Batch: 75  |  Train Loss: 0.13117270171642303  |
+Batch: 76  |  Train Loss: 0.08806318044662476  |
+Batch: 77  |  Train Loss: 0.08672822266817093  |
+Batch: 78  |  Train Loss: 0.14315219223499298  |
+Batch: 79  |  Train Loss: 0.10493816435337067  |
+Batch: 80  |  Train Loss: 0.053161583840847015  |
+Batch: 81  |  Train Loss: 0.10310734063386917  |
+Batch: 82  |  Train Loss: 0.06797138601541519  |
+Batch: 83  |  Train Loss: 0.05609893426299095  |
+Batch: 84  |  Train Loss: 0.11570608615875244  |
+Batch: 85  |  Train Loss: 0.12514612078666687  |
+Batch: 86  |  Train Loss: 0.12983223795890808  |
+Batch: 87  |  Train Loss: 0.11510136723518372  |
+Batch: 88  |  Train Loss: 0.09943537414073944  |
+Batch: 89  |  Train Loss: 0.11199349164962769  |
+Batch: 90  |  Train Loss: 0.1012655645608902  |
+Batch: 91  |  Train Loss: 0.1311148852109909  |
+Batch: 92  |  Train Loss: 0.15987737476825714  |
+Batch: 93  |  Train Loss: 0.061135392636060715  |
+Batch: 94  |  Train Loss: 0.0630117878317833  |
+Batch: 95  |  Train Loss: 0.0433749295771122  |
+Batch: 96  |  Train Loss: 0.1271689087152481  |
+Batch: 97  |  Train Loss: 0.08372898399829865  |
+Batch: 98  |  Train Loss: 0.15624652802944183  |
+Batch: 99  |  Train Loss: 0.1165887862443924  |
+Batch: 100  |  Train Loss: 0.10134313255548477  |
+Batch: 101  |  Train Loss: 0.0982712134718895  |
+Batch: 102  |  Train Loss: 0.11756360530853271  |
+Batch: 103  |  Train Loss: 0.16526517271995544  |
+Batch: 104  |  Train Loss: 0.18828679621219635  |
+Batch: 105  |  Train Loss: 0.1347353756427765  |
+Batch: 106  |  Train Loss: 0.18395061790943146  |
+Batch: 107  |  Train Loss: 0.11575929075479507  |
+Batch: 108  |  Train Loss: 0.13926854729652405  |
+Batch: 109  |  Train Loss: 0.11819513887166977  |
+Batch: 110  |  Train Loss: 0.1411585807800293  |
+Batch: 111  |  Train Loss: 0.06614789366722107  |
+Batch: 112  |  Train Loss: 0.11444972455501556  |
+Batch: 113  |  Train Loss: 0.09474311769008636  |
+Batch: 114  |  Train Loss: 0.18980154395103455  |
+Batch: 115  |  Train Loss: 0.1025729551911354  |
+Batch: 116  |  Train Loss: 0.15395821630954742  |
+Batch: 117  |  Train Loss: 0.15648804605007172  |
+Batch: 118  |  Train Loss: 0.07718818634748459  |
+Batch: 119  |  Train Loss: 0.16416583955287933  |
+Batch: 120  |  Train Loss: 0.04331465810537338  |
+Batch: 121  |  Train Loss: 0.11044543981552124  |
+Batch: 122  |  Train Loss: 0.0345863401889801  |
+Batch: 123  |  Train Loss: 0.1394222229719162  |
+Batch: 124  |  Train Loss: 0.10489353537559509  |
+Batch: 125  |  Train Loss: 0.15341447293758392  |
+Batch: 126  |  Train Loss: 0.14866043627262115  |
+Batch: 127  |  Train Loss: 0.09011325985193253  |
+Batch: 128  |  Train Loss: 0.16792355477809906  |
+Batch: 129  |  Train Loss: 0.1562531590461731  |
+Batch: 130  |  Train Loss: 0.10156417638063431  |
+Batch: 131  |  Train Loss: 0.09868694096803665  |
+Batch: 132  |  Train Loss: 0.14917156100273132  |
+Batch: 133  |  Train Loss: 0.11774764955043793  |
+Batch: 134  |  Train Loss: 0.048576608300209045  |
+Batch: 135  |  Train Loss: 0.10547414422035217  |
+Batch: 136  |  Train Loss: 0.09018503874540329  |
+Batch: 137  |  Train Loss: 0.12006596475839615  |
+Batch: 138  |  Train Loss: 0.0863381028175354  |
+Batch: 139  |  Train Loss: 0.10471256822347641  |
+Batch: 140  |  Train Loss: 0.10778430849313736  |
+Batch: 141  |  Train Loss: 0.1392257809638977  |
+Batch: 142  |  Train Loss: 0.1163770779967308  |
+Batch: 143  |  Train Loss: 0.09713570028543472  |
+Batch: 144  |  Train Loss: 0.1214044988155365  |
+Batch: 145  |  Train Loss: 0.10419363528490067  |
+Batch: 146  |  Train Loss: 0.12707996368408203  |
+Batch: 147  |  Train Loss: 0.09718532115221024  |
+Batch: 148  |  Train Loss: 0.15743499994277954  |
+Batch: 149  |  Train Loss: 0.15956073999404907  |
+Batch: 150  |  Train Loss: 0.13924086093902588  |
+Batch: 151  |  Train Loss: 0.08276663720607758  |
+Batch: 152  |  Train Loss: 0.13557422161102295  |
+Batch: 153  |  Train Loss: 0.12522655725479126  |
+Batch: 154  |  Train Loss: 0.14506392180919647  |
+Batch: 155  |  Train Loss: 0.1477668732404709  |
+Batch: 156  |  Train Loss: 0.10746107995510101  |
+Batch: 157  |  Train Loss: 0.2240762710571289  |
+Batch: 158  |  Train Loss: 0.17031890153884888  |
+Batch: 159  |  Train Loss: 0.14964763820171356  |
+Batch: 160  |  Train Loss: 0.06388844549655914  |
+Batch: 161  |  Train Loss: 0.08728121966123581  |
+Batch: 162  |  Train Loss: 0.1184765100479126  |
+Batch: 163  |  Train Loss: 0.12628759443759918  |
+Batch: 164  |  Train Loss: 0.12381590902805328  |
+Batch: 165  |  Train Loss: 0.18801358342170715  |
+Batch: 166  |  Train Loss: 0.08647888153791428  |
+Batch: 167  |  Train Loss: 0.06710033118724823  |
+Batch: 168  |  Train Loss: 0.09741480648517609  |
+Batch: 169  |  Train Loss: 0.32315677404403687  |
+Batch: 170  |  Train Loss: 0.1864810734987259  |
+Batch: 171  |  Train Loss: 0.17653365433216095  |
+Batch: 172  |  Train Loss: 0.10222302377223969  |
+Batch: 173  |  Train Loss: 0.10177740454673767  |
+Batch: 174  |  Train Loss: 0.19712267816066742  |
+Batch: 175  |  Train Loss: 0.1162976548075676  |
+Batch: 176  |  Train Loss: 0.06723976135253906  |
+Batch: 177  |  Train Loss: 0.09843793511390686  |
+Batch: 178  |  Train Loss: 0.0779109075665474  |
+Batch: 179  |  Train Loss: 0.1818736344575882  |
+Batch: 180  |  Train Loss: 0.07108699530363083  |
+Batch: 181  |  Train Loss: 0.09106338769197464  |
+Batch: 182  |  Train Loss: 0.08480372279882431  |
+Batch: 183  |  Train Loss: 0.19943346083164215  |
+Batch: 184  |  Train Loss: 0.17814931273460388  |
+Epoch: 2  |  Train Loss: 0.11399586857170672
+100%|███████████████████████████████████████| 1151/1151 [00:49<00:00, 23.04it/s]
+Binary results:████████████████████████████▉| 1150/1151 [00:49<00:00, 26.88it/s]
+################################################################################
+
+Target prec: 0.551
+Target recall: 0.608
+Target F1: 0.578
+
+Proportional results:
+################################################################################
+
+Target prec: 0.473
+Target recall: 0.502
+Target F1: 0.487
+
+ 30%|████████████▎                            | 3/10 [47:30<1:51:02, 951.72s/it]Batch: 0  |  Train Loss: 0.08779910206794739  |
+Batch: 1  |  Train Loss: 0.11818144470453262  |
+Batch: 2  |  Train Loss: 0.10611353814601898  |
+Batch: 3  |  Train Loss: 0.06586101651191711  |
+Batch: 4  |  Train Loss: 0.04071918502449989  |
+Batch: 5  |  Train Loss: 0.08945563435554504  |
+Batch: 6  |  Train Loss: 0.07952743023633957  |
+Batch: 7  |  Train Loss: 0.0644274577498436  |
+Batch: 8  |  Train Loss: 0.0684809759259224  |
+Batch: 9  |  Train Loss: 0.10256943851709366  |
+Batch: 10  |  Train Loss: 0.06796254217624664  |
+Batch: 11  |  Train Loss: 0.12298636138439178  |
+Batch: 12  |  Train Loss: 0.05890525132417679  |
+Batch: 13  |  Train Loss: 0.15505357086658478  |
+Batch: 14  |  Train Loss: 0.0813651755452156  |
+Batch: 15  |  Train Loss: 0.07629147917032242  |
+Batch: 16  |  Train Loss: 0.0644688829779625  |
+Batch: 17  |  Train Loss: 0.055890023708343506  |
+Batch: 18  |  Train Loss: 0.11392842233181  |
+Batch: 19  |  Train Loss: 0.09425081312656403  |
+Batch: 20  |  Train Loss: 0.07959802448749542  |
+Batch: 21  |  Train Loss: 0.12480609863996506  |
+Batch: 22  |  Train Loss: 0.12182097136974335  |
+Batch: 23  |  Train Loss: 0.11376754194498062  |
+Batch: 24  |  Train Loss: 0.14761410653591156  |
+Batch: 25  |  Train Loss: 0.07345063984394073  |
+Batch: 26  |  Train Loss: 0.10900033265352249  |
+Batch: 27  |  Train Loss: 0.1004723533987999  |
+Batch: 28  |  Train Loss: 0.10851527005434036  |
+Batch: 29  |  Train Loss: 0.10569620132446289  |
+Batch: 30  |  Train Loss: 0.15184786915779114  |
+Batch: 31  |  Train Loss: 0.20702272653579712  |
+Batch: 32  |  Train Loss: 0.04240026697516441  |
+Batch: 33  |  Train Loss: 0.07984067499637604  |
+Batch: 34  |  Train Loss: 0.11006098240613937  |
+Batch: 35  |  Train Loss: 0.15920181572437286  |
+Batch: 36  |  Train Loss: 0.11917629092931747  |
+Batch: 37  |  Train Loss: 0.044811319559812546  |
+Batch: 38  |  Train Loss: 0.08129104971885681  |
+Batch: 39  |  Train Loss: 0.0991545096039772  |
+Batch: 40  |  Train Loss: 0.08940604329109192  |
+Batch: 41  |  Train Loss: 0.18432506918907166  |
+Batch: 42  |  Train Loss: 0.12427788972854614  |
+Batch: 43  |  Train Loss: 0.07337652146816254  |
+Batch: 44  |  Train Loss: 0.07432955503463745  |
+Batch: 45  |  Train Loss: 0.06154046580195427  |
+Batch: 46  |  Train Loss: 0.18284335732460022  |
+Batch: 47  |  Train Loss: 0.20608149468898773  |
+Batch: 48  |  Train Loss: 0.11863219738006592  |
+Batch: 49  |  Train Loss: 0.153935045003891  |
+Batch: 50  |  Train Loss: 0.17270785570144653  |
+Batch: 51  |  Train Loss: 0.10792990773916245  |
+Batch: 52  |  Train Loss: 0.11527557671070099  |
+Batch: 53  |  Train Loss: 0.18246610462665558  |
+Batch: 54  |  Train Loss: 0.1054190993309021  |
+Batch: 55  |  Train Loss: 0.1989363729953766  |
+Batch: 56  |  Train Loss: 0.21438689529895782  |
+Batch: 57  |  Train Loss: 0.35655710101127625  |
+Batch: 58  |  Train Loss: 0.08999107778072357  |
+Batch: 59  |  Train Loss: 0.12591680884361267  |
+Batch: 60  |  Train Loss: 0.17593111097812653  |
+Batch: 61  |  Train Loss: 0.07748078554868698  |
+Batch: 62  |  Train Loss: 0.15479382872581482  |
+Batch: 63  |  Train Loss: 0.1754990667104721  |
+Batch: 64  |  Train Loss: 0.17407925426959991  |
+Batch: 65  |  Train Loss: 0.16071103513240814  |
+Batch: 66  |  Train Loss: 0.13883686065673828  |
+Batch: 67  |  Train Loss: 0.14849182963371277  |
+Batch: 68  |  Train Loss: 0.17363443970680237  |
+Batch: 69  |  Train Loss: 0.3653714060783386  |
+Batch: 70  |  Train Loss: 0.15534608066082  |
+Batch: 71  |  Train Loss: 0.12784452736377716  |
+Batch: 72  |  Train Loss: 0.1443035751581192  |
+Batch: 73  |  Train Loss: 0.15776200592517853  |
+Batch: 74  |  Train Loss: 0.1493346393108368  |
+Batch: 75  |  Train Loss: 0.14282408356666565  |
+Batch: 76  |  Train Loss: 0.1357872188091278  |
+Batch: 77  |  Train Loss: 0.09411174803972244  |
+Batch: 78  |  Train Loss: 0.17697669565677643  |
+Batch: 79  |  Train Loss: 0.10613655298948288  |
+Batch: 80  |  Train Loss: 0.15122108161449432  |
+Batch: 81  |  Train Loss: 0.15816861391067505  |
+Batch: 82  |  Train Loss: 0.14969854056835175  |
+Batch: 83  |  Train Loss: 0.12044259160757065  |
+Batch: 84  |  Train Loss: 0.09623701870441437  |
+Batch: 85  |  Train Loss: 0.17586764693260193  |
+Batch: 86  |  Train Loss: 0.15723325312137604  |
+Batch: 87  |  Train Loss: 0.09392353892326355  |
+Batch: 88  |  Train Loss: 0.15434980392456055  |
+Batch: 89  |  Train Loss: 0.11328130215406418  |
+Batch: 90  |  Train Loss: 0.18539594113826752  |
+Batch: 91  |  Train Loss: 0.13329343497753143  |
+Batch: 92  |  Train Loss: 0.14280402660369873  |
+Batch: 93  |  Train Loss: 0.09249840676784515  |
+Batch: 94  |  Train Loss: 0.09231625497341156  |
+Batch: 95  |  Train Loss: 0.0989132821559906  |
+Batch: 96  |  Train Loss: 0.1036662757396698  |
+Batch: 97  |  Train Loss: 0.11257003247737885  |
+Batch: 98  |  Train Loss: 0.09287586063146591  |
+Batch: 99  |  Train Loss: 0.13745446503162384  |
+Batch: 100  |  Train Loss: 0.1261146068572998  |
+Batch: 101  |  Train Loss: 0.08843794465065002  |
+Batch: 102  |  Train Loss: 0.2652732729911804  |
+Batch: 103  |  Train Loss: 0.11355283111333847  |
+Batch: 104  |  Train Loss: 0.2339739054441452  |
+Batch: 105  |  Train Loss: 0.1714632511138916  |
+Batch: 106  |  Train Loss: 0.16917596757411957  |
+Batch: 107  |  Train Loss: 0.26751601696014404  |
+Batch: 108  |  Train Loss: 0.1168510690331459  |
+Batch: 109  |  Train Loss: 0.10678079724311829  |
+Batch: 110  |  Train Loss: 0.22111092507839203  |
+Batch: 111  |  Train Loss: 0.17379577457904816  |
+Batch: 112  |  Train Loss: 0.29842355847358704  |
+Batch: 113  |  Train Loss: 0.09145311266183853  |
+Batch: 114  |  Train Loss: 0.1299254596233368  |
+Batch: 115  |  Train Loss: 0.1545426845550537  |
+Batch: 116  |  Train Loss: 0.09963960945606232  |
+Batch: 117  |  Train Loss: 0.14376556873321533  |
+Batch: 118  |  Train Loss: 0.092432402074337  |
+Batch: 119  |  Train Loss: 0.10028403997421265  |
+Batch: 120  |  Train Loss: 0.11014494299888611  |
+Batch: 121  |  Train Loss: 0.14560237526893616  |
+Batch: 122  |  Train Loss: 0.09270810335874557  |
+Batch: 123  |  Train Loss: 0.22049573063850403  |
+Batch: 124  |  Train Loss: 0.07448547333478928  |
+Batch: 125  |  Train Loss: 0.08886536955833435  |
+Batch: 126  |  Train Loss: 0.0777648538351059  |
+Batch: 127  |  Train Loss: 0.10628275573253632  |
+Batch: 128  |  Train Loss: 0.23532035946846008  |
+Batch: 129  |  Train Loss: 0.18336786329746246  |
+Batch: 130  |  Train Loss: 0.09939658641815186  |
+Batch: 131  |  Train Loss: 0.13157296180725098  |
+Batch: 132  |  Train Loss: 0.11517535895109177  |
+Batch: 133  |  Train Loss: 0.08755311369895935  |
+Batch: 134  |  Train Loss: 0.10939256101846695  |
+Batch: 135  |  Train Loss: 0.08505309373140335  |
+Batch: 136  |  Train Loss: 0.14775292575359344  |
+Batch: 137  |  Train Loss: 0.12789034843444824  |
+Batch: 138  |  Train Loss: 0.090163953602314  |
+Batch: 139  |  Train Loss: 0.046644069254398346  |
+Batch: 140  |  Train Loss: 0.1213802918791771  |
+Batch: 141  |  Train Loss: 0.08746346831321716  |
+Batch: 142  |  Train Loss: 0.10489380359649658  |
+Batch: 143  |  Train Loss: 0.11127159744501114  |
+Batch: 144  |  Train Loss: 0.14195920526981354  |
+Batch: 145  |  Train Loss: 0.0830189511179924  |
+Batch: 146  |  Train Loss: 0.11674417555332184  |
+Batch: 147  |  Train Loss: 0.15492375195026398  |
+Batch: 148  |  Train Loss: 0.08841592818498611  |
+Batch: 149  |  Train Loss: 0.07063241302967072  |
+Batch: 150  |  Train Loss: 0.09664732217788696  |
+Batch: 151  |  Train Loss: 0.11235418170690536  |
+Batch: 152  |  Train Loss: 0.08171781152486801  |
+Batch: 153  |  Train Loss: 0.052347611635923386  |
+Batch: 154  |  Train Loss: 0.08980297297239304  |
+Batch: 155  |  Train Loss: 0.12204217165708542  |
+Batch: 156  |  Train Loss: 0.06135790795087814  |
+Batch: 157  |  Train Loss: 0.14588919281959534  |
+Batch: 158  |  Train Loss: 0.08678697794675827  |
+Batch: 159  |  Train Loss: 0.12322511523962021  |
+Batch: 160  |  Train Loss: 0.12768587470054626  |
+Batch: 161  |  Train Loss: 0.1442868858575821  |
+Batch: 162  |  Train Loss: 0.10460168123245239  |
+Batch: 163  |  Train Loss: 0.11586057394742966  |
+Batch: 164  |  Train Loss: 0.19885163009166718  |
+Batch: 165  |  Train Loss: 0.13529813289642334  |
+Batch: 166  |  Train Loss: 0.13090267777442932  |
+Batch: 167  |  Train Loss: 0.0937698557972908  |
+Batch: 168  |  Train Loss: 0.09164770692586899  |
+Batch: 169  |  Train Loss: 0.09762980043888092  |
+Batch: 170  |  Train Loss: 0.10683770477771759  |
+Batch: 171  |  Train Loss: 0.17192625999450684  |
+Batch: 172  |  Train Loss: 0.13213953375816345  |
+Batch: 173  |  Train Loss: 0.09708686918020248  |
+Batch: 174  |  Train Loss: 0.13974769413471222  |
+Batch: 175  |  Train Loss: 0.03969867154955864  |
+Batch: 176  |  Train Loss: 0.18940500915050507  |
+Batch: 177  |  Train Loss: 0.11017749458551407  |
+Batch: 178  |  Train Loss: 0.10721872001886368  |
+Batch: 179  |  Train Loss: 0.0877615436911583  |
+Batch: 180  |  Train Loss: 0.1345416009426117  |
+Batch: 181  |  Train Loss: 0.07158735394477844  |
+Batch: 182  |  Train Loss: 0.13709114491939545  |
+Batch: 183  |  Train Loss: 0.13358847796916962  |
+Batch: 184  |  Train Loss: 0.07930716872215271  |
+Epoch: 3  |  Train Loss: 0.12487167494522558
+100%|███████████████████████████████████████| 1151/1151 [00:50<00:00, 23.02it/s]
+Binary results:█████████████████████████████| 1151/1151 [00:50<00:00, 26.03it/s]
+################################################################################
+
+Target prec: 0.710
+Target recall: 0.368
+Target F1: 0.485
+
+Proportional results:
+################################################################################
+
+Target prec: 0.631
+Target recall: 0.229
+Target F1: 0.336
+
+ 40%|███████████████▌                       | 4/10 [1:03:33<1:35:37, 956.22s/it]Batch: 0  |  Train Loss: 0.11233916133642197  |
+Batch: 1  |  Train Loss: 0.10951431840658188  |
+Batch: 2  |  Train Loss: 0.19895870983600616  |
+Batch: 3  |  Train Loss: 0.2253103107213974  |
+Batch: 4  |  Train Loss: 0.0825674831867218  |
+Batch: 5  |  Train Loss: 0.08671583980321884  |
+Batch: 6  |  Train Loss: 0.09880468994379044  |
+Batch: 7  |  Train Loss: 0.1499577760696411  |
+Batch: 8  |  Train Loss: 0.06929221749305725  |
+Batch: 9  |  Train Loss: 0.07913687080144882  |
+Batch: 10  |  Train Loss: 0.08246389031410217  |
+Batch: 11  |  Train Loss: 0.0695846751332283  |
+Batch: 12  |  Train Loss: 0.21875587105751038  |
+Batch: 13  |  Train Loss: 0.29333940148353577  |
+Batch: 14  |  Train Loss: 0.041767314076423645  |
+Batch: 15  |  Train Loss: 0.11886122822761536  |
+Batch: 16  |  Train Loss: 0.058560505509376526  |
+Batch: 17  |  Train Loss: 0.12362015247344971  |
+Batch: 18  |  Train Loss: 0.10940440744161606  |
+Batch: 19  |  Train Loss: 0.12426620721817017  |
+Batch: 20  |  Train Loss: 0.10717140138149261  |
+Batch: 21  |  Train Loss: 0.11635928601026535  |
+Batch: 22  |  Train Loss: 0.055334724485874176  |
+Batch: 23  |  Train Loss: 0.20205898582935333  |
+Batch: 24  |  Train Loss: 0.11816564202308655  |
+Batch: 25  |  Train Loss: 0.12426479160785675  |
+Batch: 26  |  Train Loss: 0.10515639185905457  |
+Batch: 27  |  Train Loss: 0.0706205889582634  |
+Batch: 28  |  Train Loss: 0.10405131429433823  |
+Batch: 29  |  Train Loss: 0.1025395616889  |
+Batch: 30  |  Train Loss: 0.09495183825492859  |
+Batch: 31  |  Train Loss: 0.1356511414051056  |
+Batch: 32  |  Train Loss: 0.10668838769197464  |
+Batch: 33  |  Train Loss: 0.05758719891309738  |
+Batch: 34  |  Train Loss: 0.06455423682928085  |
+Batch: 35  |  Train Loss: 0.040415406227111816  |
+Batch: 36  |  Train Loss: 0.15558625757694244  |
+Batch: 37  |  Train Loss: 0.031610410660505295  |
+Batch: 38  |  Train Loss: 0.06081025302410126  |
+Batch: 39  |  Train Loss: 0.09613700211048126  |
+Batch: 40  |  Train Loss: 0.10485301911830902  |
+Batch: 41  |  Train Loss: 0.04979754239320755  |
+Batch: 42  |  Train Loss: 0.14343838393688202  |
+Batch: 43  |  Train Loss: 0.13915692269802094  |
+Batch: 44  |  Train Loss: 0.07205541431903839  |
+Batch: 45  |  Train Loss: 0.1480831354856491  |
+Batch: 46  |  Train Loss: 0.09485270082950592  |
+Batch: 47  |  Train Loss: 0.08428246527910233  |
+Batch: 48  |  Train Loss: 0.07564298063516617  |
+Batch: 49  |  Train Loss: 0.10367441177368164  |
+Batch: 50  |  Train Loss: 0.07527002692222595  |
+Batch: 51  |  Train Loss: 0.07831252366304398  |
+Batch: 52  |  Train Loss: 0.04781531170010567  |
+Batch: 53  |  Train Loss: 0.08332300186157227  |
+Batch: 54  |  Train Loss: 0.06290159374475479  |
+Batch: 55  |  Train Loss: 0.05582370236515999  |
+Batch: 56  |  Train Loss: 0.08716058731079102  |
+Batch: 57  |  Train Loss: 0.08740480989217758  |
+Batch: 58  |  Train Loss: 0.11023984104394913  |
+Batch: 59  |  Train Loss: 0.05651674047112465  |
+Batch: 60  |  Train Loss: 0.11324502527713776  |
+Batch: 61  |  Train Loss: 0.0687161386013031  |
+Batch: 62  |  Train Loss: 0.1490512490272522  |
+Batch: 63  |  Train Loss: 0.052034229040145874  |
+Batch: 64  |  Train Loss: 0.08332142233848572  |
+Batch: 65  |  Train Loss: 0.05931471288204193  |
+Batch: 66  |  Train Loss: 0.08883903175592422  |
+Batch: 67  |  Train Loss: 0.10697106271982193  |
+Batch: 68  |  Train Loss: 0.06956479698419571  |
+Batch: 69  |  Train Loss: 0.05917176231741905  |
+Batch: 70  |  Train Loss: 0.08195750415325165  |
+Batch: 71  |  Train Loss: 0.045315127819776535  |
+Batch: 72  |  Train Loss: 0.08376271277666092  |
+Batch: 73  |  Train Loss: 0.07353352010250092  |
+Batch: 74  |  Train Loss: 0.09942419081926346  |
+Batch: 75  |  Train Loss: 0.07661663740873337  |
+Batch: 76  |  Train Loss: 0.03952403366565704  |
+Batch: 77  |  Train Loss: 0.06649987399578094  |
+Batch: 78  |  Train Loss: 0.08927846699953079  |
+Batch: 79  |  Train Loss: 0.13756999373435974  |
+Batch: 80  |  Train Loss: 0.04793931543827057  |
+Batch: 81  |  Train Loss: 0.054850734770298004  |
+Batch: 82  |  Train Loss: 0.06816567480564117  |
+Batch: 83  |  Train Loss: 0.07589485496282578  |
+Batch: 84  |  Train Loss: 0.0858646035194397  |
+Batch: 85  |  Train Loss: 0.0695604532957077  |
+Batch: 86  |  Train Loss: 0.057362429797649384  |
+Batch: 87  |  Train Loss: 0.10785562545061111  |
+Batch: 88  |  Train Loss: 0.04037241265177727  |
+Batch: 89  |  Train Loss: 0.07246001064777374  |
+Batch: 90  |  Train Loss: 0.05782332271337509  |
+Batch: 91  |  Train Loss: 0.06729096174240112  |
+Batch: 92  |  Train Loss: 0.12373002618551254  |
+Batch: 93  |  Train Loss: 0.07478969544172287  |
+Batch: 94  |  Train Loss: 0.12791921198368073  |
+Batch: 95  |  Train Loss: 0.09597871452569962  |
+Batch: 96  |  Train Loss: 0.10255640745162964  |
+Batch: 97  |  Train Loss: 0.07297906279563904  |
+Batch: 98  |  Train Loss: 0.10695105046033859  |
+Batch: 99  |  Train Loss: 0.060520123690366745  |
+Batch: 100  |  Train Loss: 0.08286550641059875  |
+Batch: 101  |  Train Loss: 0.07652048021554947  |
+Batch: 102  |  Train Loss: 0.10919734835624695  |
+Batch: 103  |  Train Loss: 0.08832427114248276  |
+Batch: 104  |  Train Loss: 0.07591312378644943  |
+Batch: 105  |  Train Loss: 0.04646105319261551  |
+Batch: 106  |  Train Loss: 0.05921188369393349  |
+Batch: 107  |  Train Loss: 0.06558821350336075  |
+Batch: 108  |  Train Loss: 0.06265925616025925  |
+Batch: 109  |  Train Loss: 0.06737183779478073  |
+Batch: 110  |  Train Loss: 0.11692339181900024  |
+Batch: 111  |  Train Loss: 0.09966500103473663  |
+Batch: 112  |  Train Loss: 0.028664065524935722  |
+Batch: 113  |  Train Loss: 0.06403756886720657  |
+Batch: 114  |  Train Loss: 0.09743820875883102  |
+Batch: 115  |  Train Loss: 0.15436473488807678  |
+Batch: 116  |  Train Loss: 0.02403944544494152  |
+Batch: 117  |  Train Loss: 0.09512325376272202  |
+Batch: 118  |  Train Loss: 0.07015170156955719  |
+Batch: 119  |  Train Loss: 0.12780097126960754  |
+Batch: 120  |  Train Loss: 0.08857273310422897  |
+Batch: 121  |  Train Loss: 0.14923129975795746  |
+Batch: 122  |  Train Loss: 0.18555934727191925  |
+Batch: 123  |  Train Loss: 0.1226000040769577  |
+Batch: 124  |  Train Loss: 0.14128322899341583  |
+Batch: 125  |  Train Loss: 0.09135112166404724  |
+Batch: 126  |  Train Loss: 0.14054565131664276  |
+Batch: 127  |  Train Loss: 0.10134030878543854  |
+Batch: 128  |  Train Loss: 0.14608250558376312  |
+Batch: 129  |  Train Loss: 0.08773726224899292  |
+Batch: 130  |  Train Loss: 0.07852502167224884  |
+Batch: 131  |  Train Loss: 0.06234053894877434  |
+Batch: 132  |  Train Loss: 0.11264490336179733  |
+Batch: 133  |  Train Loss: 0.15146386623382568  |
+Batch: 134  |  Train Loss: 0.13814717531204224  |
+Batch: 135  |  Train Loss: 0.07773462682962418  |
+Batch: 136  |  Train Loss: 0.12159235775470734  |
+Batch: 137  |  Train Loss: 0.06122468411922455  |
+Batch: 138  |  Train Loss: 0.06064562126994133  |
+Batch: 139  |  Train Loss: 0.0926208645105362  |
+Batch: 140  |  Train Loss: 0.1188129112124443  |
+Batch: 141  |  Train Loss: 0.14529664814472198  |
+Batch: 142  |  Train Loss: 0.0488722138106823  |
+Batch: 143  |  Train Loss: 0.08216439932584763  |
+Batch: 144  |  Train Loss: 0.07098493725061417  |
+Batch: 145  |  Train Loss: 0.09874328225851059  |
+Batch: 146  |  Train Loss: 0.04639606550335884  |
+Batch: 147  |  Train Loss: 0.05196179449558258  |
+Batch: 148  |  Train Loss: 0.0969456285238266  |
+Batch: 149  |  Train Loss: 0.0809503048658371  |
+Batch: 150  |  Train Loss: 0.029721125960350037  |
+Batch: 151  |  Train Loss: 0.04254569485783577  |
+Batch: 152  |  Train Loss: 0.027976615354418755  |
+Batch: 153  |  Train Loss: 0.09223117679357529  |
+Batch: 154  |  Train Loss: 0.054467350244522095  |
+Batch: 155  |  Train Loss: 0.09391319006681442  |
+Batch: 156  |  Train Loss: 0.10304702818393707  |
+Batch: 157  |  Train Loss: 0.03408735245466232  |
+Batch: 158  |  Train Loss: 0.0857887789607048  |
+Batch: 159  |  Train Loss: 0.08579302579164505  |
+Batch: 160  |  Train Loss: 0.0609513595700264  |
+Batch: 161  |  Train Loss: 0.04457349330186844  |
+Batch: 162  |  Train Loss: 0.0513639822602272  |
+Batch: 163  |  Train Loss: 0.0880238339304924  |
+Batch: 164  |  Train Loss: 0.11276846379041672  |
+Batch: 165  |  Train Loss: 0.03661676123738289  |
+Batch: 166  |  Train Loss: 0.05554760619997978  |
+Batch: 167  |  Train Loss: 0.06879302114248276  |
+Batch: 168  |  Train Loss: 0.05251879617571831  |
+Batch: 169  |  Train Loss: 0.10828594863414764  |
+Batch: 170  |  Train Loss: 0.04917972534894943  |
+Batch: 171  |  Train Loss: 0.05752591788768768  |
+Batch: 172  |  Train Loss: 0.07554158568382263  |
+Batch: 173  |  Train Loss: 0.05315937474370003  |
+Batch: 174  |  Train Loss: 0.04336957260966301  |
+Batch: 175  |  Train Loss: 0.055929165333509445  |
+Batch: 176  |  Train Loss: 0.0613669790327549  |
+Batch: 177  |  Train Loss: 0.08829770982265472  |
+Batch: 178  |  Train Loss: 0.09896103292703629  |
+Batch: 179  |  Train Loss: 0.02894718013703823  |
+Batch: 180  |  Train Loss: 0.042341720312833786  |
+Batch: 181  |  Train Loss: 0.11021007597446442  |
+Batch: 182  |  Train Loss: 0.09217656403779984  |
+Batch: 183  |  Train Loss: 0.09139993041753769  |
+Batch: 184  |  Train Loss: 0.06307719647884369  |
+Epoch: 4  |  Train Loss: 0.08855842223038544
+100%|███████████████████████████████████████| 1151/1151 [00:49<00:00, 23.24it/s]
+Binary results:█████████████████████████████| 1151/1151 [00:49<00:00, 22.39it/s]
+################################################################################
+
+Target prec: 0.616
+Target recall: 0.583
+Target F1: 0.599
+
+Proportional results:
+################################################################################
+
+Target prec: 0.571
+Target recall: 0.438
+Target F1: 0.496
+
+ 50%|███████████████████▌                   | 5/10 [1:19:33<1:19:47, 957.52s/it]Batch: 0  |  Train Loss: 0.07031429558992386  |
+Batch: 1  |  Train Loss: 0.030458029359579086  |
+Batch: 2  |  Train Loss: 0.05367405340075493  |
+Batch: 3  |  Train Loss: 0.04058636724948883  |
+Batch: 4  |  Train Loss: 0.03693665936589241  |
+Batch: 5  |  Train Loss: 0.036068741232156754  |
+Batch: 6  |  Train Loss: 0.031408000737428665  |
+Batch: 7  |  Train Loss: 0.01979617215692997  |
+Batch: 8  |  Train Loss: 0.12222747504711151  |
+Batch: 9  |  Train Loss: 0.05665046349167824  |
+Batch: 10  |  Train Loss: 0.18503956496715546  |
+Batch: 11  |  Train Loss: 0.055418048053979874  |
+Batch: 12  |  Train Loss: 0.021156882867217064  |
+Batch: 13  |  Train Loss: 0.053981002420186996  |
+Batch: 14  |  Train Loss: 0.037100519984960556  |
+Batch: 15  |  Train Loss: 0.02815975435078144  |
+Batch: 16  |  Train Loss: 0.02992912381887436  |
+Batch: 17  |  Train Loss: 0.06389567255973816  |
+Batch: 18  |  Train Loss: 0.10277746617794037  |
+Batch: 19  |  Train Loss: 0.08175366371870041  |
+Batch: 20  |  Train Loss: 0.04132327064871788  |
+Batch: 21  |  Train Loss: 0.028242243453860283  |
+Batch: 22  |  Train Loss: 0.03186085447669029  |
+Batch: 23  |  Train Loss: 0.07337001711130142  |
+Batch: 24  |  Train Loss: 0.06539207696914673  |
+Batch: 25  |  Train Loss: 0.06820740550756454  |
+Batch: 26  |  Train Loss: 0.0534149706363678  |
+Batch: 27  |  Train Loss: 0.04662307724356651  |
+Batch: 28  |  Train Loss: 0.11498138308525085  |
+Batch: 29  |  Train Loss: 0.04360194131731987  |
+Batch: 30  |  Train Loss: 0.05783504992723465  |
+Batch: 31  |  Train Loss: 0.030833913013339043  |
+Batch: 32  |  Train Loss: 0.035006556659936905  |
+Batch: 33  |  Train Loss: 0.041377048939466476  |
+Batch: 34  |  Train Loss: 0.018171770498156548  |
+Batch: 35  |  Train Loss: 0.027103789150714874  |
+Batch: 36  |  Train Loss: 0.035190220922231674  |
+Batch: 37  |  Train Loss: 0.08293142914772034  |
+Batch: 38  |  Train Loss: 0.023797377943992615  |
+Batch: 39  |  Train Loss: 0.03717368468642235  |
+Batch: 40  |  Train Loss: 0.04273652285337448  |
+Batch: 41  |  Train Loss: 0.04148644953966141  |
+Batch: 42  |  Train Loss: 0.07353362441062927  |
+Batch: 43  |  Train Loss: 0.022323058918118477  |
+Batch: 44  |  Train Loss: 0.047735411673784256  |
+Batch: 45  |  Train Loss: 0.023471081629395485  |
+Batch: 46  |  Train Loss: 0.058765146881341934  |
+Batch: 47  |  Train Loss: 0.031147677451372147  |
+Batch: 48  |  Train Loss: 0.1119719073176384  |
+Batch: 49  |  Train Loss: 0.10244717448949814  |
+Batch: 50  |  Train Loss: 0.10613499581813812  |
+Batch: 51  |  Train Loss: 0.04345909506082535  |
+Batch: 52  |  Train Loss: 0.018025662750005722  |
+Batch: 53  |  Train Loss: 0.06491155177354813  |
+Batch: 54  |  Train Loss: 0.04698692634701729  |
+Batch: 55  |  Train Loss: 0.029030490666627884  |
+Batch: 56  |  Train Loss: 0.08739639073610306  |
+Batch: 57  |  Train Loss: 0.07707694172859192  |
+Batch: 58  |  Train Loss: 0.06212278828024864  |
+Batch: 59  |  Train Loss: 0.08464304357767105  |
+Batch: 60  |  Train Loss: 0.0698995441198349  |
+Batch: 61  |  Train Loss: 0.18251082301139832  |
+Batch: 62  |  Train Loss: 0.08517139405012131  |
+Batch: 63  |  Train Loss: 0.04905359074473381  |
+Batch: 64  |  Train Loss: 0.044615957885980606  |
+Batch: 65  |  Train Loss: 0.07058769464492798  |
+Batch: 66  |  Train Loss: 0.03329895809292793  |
+Batch: 67  |  Train Loss: 0.09937991946935654  |
+Batch: 68  |  Train Loss: 0.05803314596414566  |
+Batch: 69  |  Train Loss: 0.04011271521449089  |
+Batch: 70  |  Train Loss: 0.051083508878946304  |
+Batch: 71  |  Train Loss: 0.04988551512360573  |
+Batch: 72  |  Train Loss: 0.044735945761203766  |
+Batch: 73  |  Train Loss: 0.07299880683422089  |
+Batch: 74  |  Train Loss: 0.0616832971572876  |
+Batch: 75  |  Train Loss: 0.06561983376741409  |
+Batch: 76  |  Train Loss: 0.024863911792635918  |
+Batch: 77  |  Train Loss: 0.0505920946598053  |
+Batch: 78  |  Train Loss: 0.025442183017730713  |
+Batch: 79  |  Train Loss: 0.029058102518320084  |
+Batch: 80  |  Train Loss: 0.046851545572280884  |
+Batch: 81  |  Train Loss: 0.05682554095983505  |
+Batch: 82  |  Train Loss: 0.1694423258304596  |
+Batch: 83  |  Train Loss: 0.05528711900115013  |
+Batch: 84  |  Train Loss: 0.09819627553224564  |
+Batch: 85  |  Train Loss: 0.04682910069823265  |
+Batch: 86  |  Train Loss: 0.021487921476364136  |
+Batch: 87  |  Train Loss: 0.05761241540312767  |
+Batch: 88  |  Train Loss: 0.08533786982297897  |
+Batch: 89  |  Train Loss: 0.01822184957563877  |
+Batch: 90  |  Train Loss: 0.08311064541339874  |
+Batch: 91  |  Train Loss: 0.018774420022964478  |
+Batch: 92  |  Train Loss: 0.03419904038310051  |
+Batch: 93  |  Train Loss: 0.10365703701972961  |
+Batch: 94  |  Train Loss: 0.02853209525346756  |
+Batch: 95  |  Train Loss: 0.028246374800801277  |
+Batch: 96  |  Train Loss: 0.08905377984046936  |
+Batch: 97  |  Train Loss: 0.018892379477620125  |
+Batch: 98  |  Train Loss: 0.041749730706214905  |
+Batch: 99  |  Train Loss: 0.02509787492454052  |
+Batch: 100  |  Train Loss: 0.04744625464081764  |
+Batch: 101  |  Train Loss: 0.03709789738059044  |
+Batch: 102  |  Train Loss: 0.09201469272375107  |
+Batch: 103  |  Train Loss: 0.07472112774848938  |
+Batch: 104  |  Train Loss: 0.07632313668727875  |
+Batch: 105  |  Train Loss: 0.06916910409927368  |
+Batch: 106  |  Train Loss: 0.10223427414894104  |
+Batch: 107  |  Train Loss: 0.08728807419538498  |
+Batch: 108  |  Train Loss: 0.06730829924345016  |
+Batch: 109  |  Train Loss: 0.06477326899766922  |
+Batch: 110  |  Train Loss: 0.030855370685458183  |
+Batch: 111  |  Train Loss: 0.1161184310913086  |
+Batch: 112  |  Train Loss: 0.05552452802658081  |
+Batch: 113  |  Train Loss: 0.0607261098921299  |
+Batch: 114  |  Train Loss: 0.04613092914223671  |
+Batch: 115  |  Train Loss: 0.07725823670625687  |
+Batch: 116  |  Train Loss: 0.04693494364619255  |
+Batch: 117  |  Train Loss: 0.045801788568496704  |
+Batch: 118  |  Train Loss: 0.03395676240324974  |
+Batch: 119  |  Train Loss: 0.03776107728481293  |
+Batch: 120  |  Train Loss: 0.04960497096180916  |
+Batch: 121  |  Train Loss: 0.06746494770050049  |
+Batch: 122  |  Train Loss: 0.0646367222070694  |
+Batch: 123  |  Train Loss: 0.05911317467689514  |
+Batch: 124  |  Train Loss: 0.0440853014588356  |
+Batch: 125  |  Train Loss: 0.0517016239464283  |
+Batch: 126  |  Train Loss: 0.03515012189745903  |
+Batch: 127  |  Train Loss: 0.03558066859841347  |
+Batch: 128  |  Train Loss: 0.07333650439977646  |
+Batch: 129  |  Train Loss: 0.020084118470549583  |
+Batch: 130  |  Train Loss: 0.05353337153792381  |
+Batch: 131  |  Train Loss: 0.10364735871553421  |
+Batch: 132  |  Train Loss: 0.10055902600288391  |
+Batch: 133  |  Train Loss: 0.07962890714406967  |
+Batch: 134  |  Train Loss: 0.0558813139796257  |
+Batch: 135  |  Train Loss: 0.034255605190992355  |
+Batch: 136  |  Train Loss: 0.05197949707508087  |
+Batch: 137  |  Train Loss: 0.09616923332214355  |
+Batch: 138  |  Train Loss: 0.07091840356588364  |
+Batch: 139  |  Train Loss: 0.05495857074856758  |
+Batch: 140  |  Train Loss: 0.061631958931684494  |
+Batch: 141  |  Train Loss: 0.05457126721739769  |
+Batch: 142  |  Train Loss: 0.07583896815776825  |
+Batch: 143  |  Train Loss: 0.03124677576124668  |
+Batch: 144  |  Train Loss: 0.0366303026676178  |
+Batch: 145  |  Train Loss: 0.09861251711845398  |
+Batch: 146  |  Train Loss: 0.02546699345111847  |
+Batch: 147  |  Train Loss: 0.030546242371201515  |
+Batch: 148  |  Train Loss: 0.03572883829474449  |
+Batch: 149  |  Train Loss: 0.05068404972553253  |
+Batch: 150  |  Train Loss: 0.06090069189667702  |
+Batch: 151  |  Train Loss: 0.025258395820856094  |
+Batch: 152  |  Train Loss: 0.02479671686887741  |
+Batch: 153  |  Train Loss: 0.06409550458192825  |
+Batch: 154  |  Train Loss: 0.034258048981428146  |
+Batch: 155  |  Train Loss: 0.046937450766563416  |
+Batch: 156  |  Train Loss: 0.039222680032253265  |
+Batch: 157  |  Train Loss: 0.04515420272946358  |
+Batch: 158  |  Train Loss: 0.046386927366256714  |
+Batch: 159  |  Train Loss: 0.05827707052230835  |
+Batch: 160  |  Train Loss: 0.04630556330084801  |
+Batch: 161  |  Train Loss: 0.09205193817615509  |
+Batch: 162  |  Train Loss: 0.025707555934786797  |
+Batch: 163  |  Train Loss: 0.10123562067747116  |
+Batch: 164  |  Train Loss: 0.027637936174869537  |
+Batch: 165  |  Train Loss: 0.03151273727416992  |
+Batch: 166  |  Train Loss: 0.02650327980518341  |
+Batch: 167  |  Train Loss: 0.07856586575508118  |
+Batch: 168  |  Train Loss: 0.09522084146738052  |
+Batch: 169  |  Train Loss: 0.048555854707956314  |
+Batch: 170  |  Train Loss: 0.04755816236138344  |
+Batch: 171  |  Train Loss: 0.045285653322935104  |
+Batch: 172  |  Train Loss: 0.09641233831644058  |
+Batch: 173  |  Train Loss: 0.016375353559851646  |
+Batch: 174  |  Train Loss: 0.042188502848148346  |
+Batch: 175  |  Train Loss: 0.03509911149740219  |
+Batch: 176  |  Train Loss: 0.11736860871315002  |
+Batch: 177  |  Train Loss: 0.03911687433719635  |
+Batch: 178  |  Train Loss: 0.04533814266324043  |
+Batch: 179  |  Train Loss: 0.058987487107515335  |
+Batch: 180  |  Train Loss: 0.057321056723594666  |
+Batch: 181  |  Train Loss: 0.08353415876626968  |
+Batch: 182  |  Train Loss: 0.06923118978738785  |
+Batch: 183  |  Train Loss: 0.08510785549879074  |
+Batch: 184  |  Train Loss: 0.017524002119898796  |
+Epoch: 5  |  Train Loss: 0.05661045030967609
+100%|███████████████████████████████████████| 1151/1151 [00:49<00:00, 23.16it/s]
+Binary results:████████████████████████████▉| 1149/1151 [00:49<00:00, 24.76it/s]
+################################################################################
+
+Target prec: 0.551
+Target recall: 0.642
+Target F1: 0.593
+
+Proportional results:
+################################################################################
+
+Target prec: 0.504
+Target recall: 0.496
+Target F1: 0.500
+
+ 60%|███████████████████████▍               | 6/10 [1:35:25<1:03:42, 955.56s/it]Batch: 0  |  Train Loss: 0.08050893992185593  |
+Batch: 1  |  Train Loss: 0.027414470911026  |
+Batch: 2  |  Train Loss: 0.07899578660726547  |
+Batch: 3  |  Train Loss: 0.03274921327829361  |
+Batch: 4  |  Train Loss: 0.030318142846226692  |
+Batch: 5  |  Train Loss: 0.026155859231948853  |
+Batch: 6  |  Train Loss: 0.016454657539725304  |
+Batch: 7  |  Train Loss: 0.029284600168466568  |
+Batch: 8  |  Train Loss: 0.01983029581606388  |
+Batch: 9  |  Train Loss: 0.03199516981840134  |
+Batch: 10  |  Train Loss: 0.05436822772026062  |
+Batch: 11  |  Train Loss: 0.04488680139183998  |
+Batch: 12  |  Train Loss: 0.08550955355167389  |
+Batch: 13  |  Train Loss: 0.03932835906744003  |
+Batch: 14  |  Train Loss: 0.01254785992205143  |
+Batch: 15  |  Train Loss: 0.08391939103603363  |
+Batch: 16  |  Train Loss: 0.017425578087568283  |
+Batch: 17  |  Train Loss: 0.07297372072935104  |
+Batch: 18  |  Train Loss: 0.08435769379138947  |
+Batch: 19  |  Train Loss: 0.12523417174816132  |
+Batch: 20  |  Train Loss: 0.02508111484348774  |
+Batch: 21  |  Train Loss: 0.04274927079677582  |
+Batch: 22  |  Train Loss: 0.05477668717503548  |
+Batch: 23  |  Train Loss: 0.013272774405777454  |
+Batch: 24  |  Train Loss: 0.05719146132469177  |
+Batch: 25  |  Train Loss: 0.02934948354959488  |
+Batch: 26  |  Train Loss: 0.06002030521631241  |
+Batch: 27  |  Train Loss: 0.05505881458520889  |
+Batch: 28  |  Train Loss: 0.06501454859972  |
+Batch: 29  |  Train Loss: 0.06161462888121605  |
+Batch: 30  |  Train Loss: 0.034151457250118256  |
+Batch: 31  |  Train Loss: 0.040661901235580444  |
+Batch: 32  |  Train Loss: 0.015118172392249107  |
+Batch: 33  |  Train Loss: 0.07355184853076935  |
+Batch: 34  |  Train Loss: 0.050169169902801514  |
+Batch: 35  |  Train Loss: 0.07252250611782074  |
+Batch: 36  |  Train Loss: 0.06187253072857857  |
+Batch: 37  |  Train Loss: 0.027858184650540352  |
+Batch: 38  |  Train Loss: 0.02869953028857708  |
+Batch: 39  |  Train Loss: 0.012203669175505638  |
+Batch: 40  |  Train Loss: 0.01906358264386654  |
+Batch: 41  |  Train Loss: 0.020209671929478645  |
+Batch: 42  |  Train Loss: 0.0399431511759758  |
+Batch: 43  |  Train Loss: 0.04030616581439972  |
+Batch: 44  |  Train Loss: 0.0621967613697052  |
+Batch: 45  |  Train Loss: 0.05860568583011627  |
+Batch: 46  |  Train Loss: 0.036042310297489166  |
+Batch: 47  |  Train Loss: 0.029670804738998413  |
+Batch: 48  |  Train Loss: 0.030907021835446358  |
+Batch: 49  |  Train Loss: 0.0410144105553627  |
+Batch: 50  |  Train Loss: 0.2212194800376892  |
+Batch: 51  |  Train Loss: 0.03796611353754997  |
+Batch: 52  |  Train Loss: 0.05143401771783829  |
+Batch: 53  |  Train Loss: 0.04025404527783394  |
+Batch: 54  |  Train Loss: 0.011774921789765358  |
+Batch: 55  |  Train Loss: 0.05594686046242714  |
+Batch: 56  |  Train Loss: 0.018117280676960945  |
+Batch: 57  |  Train Loss: 0.05991273745894432  |
+Batch: 58  |  Train Loss: 0.04243769124150276  |
+Batch: 59  |  Train Loss: 0.0316905714571476  |
+Batch: 60  |  Train Loss: 0.029215550050139427  |
+Batch: 61  |  Train Loss: 0.02606884576380253  |
+Batch: 62  |  Train Loss: 0.026302965357899666  |
+Batch: 63  |  Train Loss: 0.1239464282989502  |
+Batch: 64  |  Train Loss: 0.019105400890111923  |
+Batch: 65  |  Train Loss: 0.024664869531989098  |
+Batch: 66  |  Train Loss: 0.018316881731152534  |
+Batch: 67  |  Train Loss: 0.0584401860833168  |
+Batch: 68  |  Train Loss: 0.04274214804172516  |
+Batch: 69  |  Train Loss: 0.042607612907886505  |
+Batch: 70  |  Train Loss: 0.017647679895162582  |
+Batch: 71  |  Train Loss: 0.0312104020267725  |
+Batch: 72  |  Train Loss: 0.11722537130117416  |
+Batch: 73  |  Train Loss: 0.02065846510231495  |
+Batch: 74  |  Train Loss: 0.008916939608752728  |
+Batch: 75  |  Train Loss: 0.03385092690587044  |
+Batch: 76  |  Train Loss: 0.030730759724974632  |
+Batch: 77  |  Train Loss: 0.018750125542283058  |
+Batch: 78  |  Train Loss: 0.12374576926231384  |
+Batch: 79  |  Train Loss: 0.026513926684856415  |
+Batch: 80  |  Train Loss: 0.025888295844197273  |
+Batch: 81  |  Train Loss: 0.006470950320363045  |
+Batch: 82  |  Train Loss: 0.028491782024502754  |
+Batch: 83  |  Train Loss: 0.03696267306804657  |
+Batch: 84  |  Train Loss: 0.03737439215183258  |
+Batch: 85  |  Train Loss: 0.04142430052161217  |
+Batch: 86  |  Train Loss: 0.015915676951408386  |
+Batch: 87  |  Train Loss: 0.0302575696259737  |
+Batch: 88  |  Train Loss: 0.03479680046439171  |
+Batch: 89  |  Train Loss: 0.008865066803991795  |
+Batch: 90  |  Train Loss: 0.027043543756008148  |
+Batch: 91  |  Train Loss: 0.015927067026495934  |
+Batch: 92  |  Train Loss: 0.03996826335787773  |
+Batch: 93  |  Train Loss: 0.029891081154346466  |
+Batch: 94  |  Train Loss: 0.052450451999902725  |
+Batch: 95  |  Train Loss: 0.04918229579925537  |
+Batch: 96  |  Train Loss: 0.031149283051490784  |
+Batch: 97  |  Train Loss: 0.0049740164540708065  |
+Batch: 98  |  Train Loss: 0.038029901683330536  |
+Batch: 99  |  Train Loss: 0.0126888956874609  |
+Batch: 100  |  Train Loss: 0.024122634902596474  |
+Batch: 101  |  Train Loss: 0.031122509390115738  |
+Batch: 102  |  Train Loss: 0.024711361154913902  |
+Batch: 103  |  Train Loss: 0.03419056534767151  |
+Batch: 104  |  Train Loss: 0.04134869575500488  |
+Batch: 105  |  Train Loss: 0.07905847579240799  |
+Batch: 106  |  Train Loss: 0.02123141847550869  |
+Batch: 107  |  Train Loss: 0.04435587301850319  |
+Batch: 108  |  Train Loss: 0.052195265889167786  |
+Batch: 109  |  Train Loss: 0.0336928591132164  |
+Batch: 110  |  Train Loss: 0.01819496788084507  |
+Batch: 111  |  Train Loss: 0.05474391579627991  |
+Batch: 112  |  Train Loss: 0.00611209636554122  |
+Batch: 113  |  Train Loss: 0.022755859419703484  |
+Batch: 114  |  Train Loss: 0.013578417710959911  |
+Batch: 115  |  Train Loss: 0.04849569872021675  |
+Batch: 116  |  Train Loss: 0.009690765291452408  |
+Batch: 117  |  Train Loss: 0.013627422973513603  |
+Batch: 118  |  Train Loss: 0.0650787428021431  |
+Batch: 119  |  Train Loss: 0.01663399115204811  |
+Batch: 120  |  Train Loss: 0.05750587210059166  |
+Batch: 121  |  Train Loss: 0.05989463999867439  |
+Batch: 122  |  Train Loss: 0.029583506286144257  |
+Batch: 123  |  Train Loss: 0.021784579381346703  |
+Batch: 124  |  Train Loss: 0.044717561453580856  |
+Batch: 125  |  Train Loss: 0.07972737401723862  |
+Batch: 126  |  Train Loss: 0.04536117613315582  |
+Batch: 127  |  Train Loss: 0.01853768900036812  |
+Batch: 128  |  Train Loss: 0.02794507145881653  |
+Batch: 129  |  Train Loss: 0.06785531342029572  |
+Batch: 130  |  Train Loss: 0.037911560386419296  |
+Batch: 131  |  Train Loss: 0.0171582642942667  |
+Batch: 132  |  Train Loss: 0.036163829267024994  |
+Batch: 133  |  Train Loss: 0.061769429594278336  |
+Batch: 134  |  Train Loss: 0.009825591929256916  |
+Batch: 135  |  Train Loss: 0.008467287756502628  |
+Batch: 136  |  Train Loss: 0.06498870253562927  |
+Batch: 137  |  Train Loss: 0.04540152847766876  |
+Batch: 138  |  Train Loss: 0.0175587497651577  |
+Batch: 139  |  Train Loss: 0.023083722218871117  |
+Batch: 140  |  Train Loss: 0.02501986362040043  |
+Batch: 141  |  Train Loss: 0.013976404443383217  |
+Batch: 142  |  Train Loss: 0.022554796189069748  |
+Batch: 143  |  Train Loss: 0.02356339804828167  |
+Batch: 144  |  Train Loss: 0.025006206706166267  |
+Batch: 145  |  Train Loss: 0.04426051676273346  |
+Batch: 146  |  Train Loss: 0.02101452462375164  |
+Batch: 147  |  Train Loss: 0.02352505922317505  |
+Batch: 148  |  Train Loss: 0.01985129900276661  |
+Batch: 149  |  Train Loss: 0.025401970371603966  |
+Batch: 150  |  Train Loss: 0.00920786987990141  |
+Batch: 151  |  Train Loss: 0.0627422034740448  |
+Batch: 152  |  Train Loss: 0.05650126188993454  |
+Batch: 153  |  Train Loss: 0.02264292538166046  |
+Batch: 154  |  Train Loss: 0.047820013016462326  |
+Batch: 155  |  Train Loss: 0.036494284868240356  |
+Batch: 156  |  Train Loss: 0.014714982360601425  |
+Batch: 157  |  Train Loss: 0.03244902566075325  |
+Batch: 158  |  Train Loss: 0.022389564663171768  |
+Batch: 159  |  Train Loss: 0.024127935990691185  |
+Batch: 160  |  Train Loss: 0.040618062019348145  |
+Batch: 161  |  Train Loss: 0.07303689420223236  |
+Batch: 162  |  Train Loss: 0.026132870465517044  |
+Batch: 163  |  Train Loss: 0.09611252695322037  |
+Batch: 164  |  Train Loss: 0.058365657925605774  |
+Batch: 165  |  Train Loss: 0.033113814890384674  |
+Batch: 166  |  Train Loss: 0.047234974801540375  |
+Batch: 167  |  Train Loss: 0.03727127984166145  |
+Batch: 168  |  Train Loss: 0.0529942587018013  |
+Batch: 169  |  Train Loss: 0.016803137958049774  |
+Batch: 170  |  Train Loss: 0.060194142162799835  |
+Batch: 171  |  Train Loss: 0.018858343362808228  |
+Batch: 172  |  Train Loss: 0.0129330949857831  |
+Batch: 173  |  Train Loss: 0.037008319050073624  |
+Batch: 174  |  Train Loss: 0.09684083610773087  |
+Batch: 175  |  Train Loss: 0.1489298790693283  |
+Batch: 176  |  Train Loss: 0.04146917909383774  |
+Batch: 177  |  Train Loss: 0.0364806242287159  |
+Batch: 178  |  Train Loss: 0.02908669039607048  |
+Batch: 179  |  Train Loss: 0.04840201511979103  |
+Batch: 180  |  Train Loss: 0.051063697785139084  |
+Batch: 181  |  Train Loss: 0.02897358313202858  |
+Batch: 182  |  Train Loss: 0.031928129494190216  |
+Batch: 183  |  Train Loss: 0.027136031538248062  |
+Batch: 184  |  Train Loss: 0.04407180845737457  |
+Epoch: 6  |  Train Loss: 0.04016665051615721
+100%|███████████████████████████████████████| 1151/1151 [00:49<00:00, 23.24it/s]
+Binary results:█████████████████████████████| 1151/1151 [00:49<00:00, 24.62it/s]
+################################################################################
+
+Target prec: 0.568
+Target recall: 0.572
+Target F1: 0.570
+
+Proportional results:
+################################################################################
+
+Target prec: 0.523
+Target recall: 0.458
+Target F1: 0.488
+
+ 70%|████████████████████████████▋            | 7/10 [1:51:12<47:38, 952.89s/it]Batch: 0  |  Train Loss: 0.04007755592465401  |
+Batch: 1  |  Train Loss: 0.061477504670619965  |
+Batch: 2  |  Train Loss: 0.007872444577515125  |
+Batch: 3  |  Train Loss: 0.02984117902815342  |
+Batch: 4  |  Train Loss: 0.031247273087501526  |
+Batch: 5  |  Train Loss: 0.016676118597388268  |
+Batch: 6  |  Train Loss: 0.027530234307050705  |
+Batch: 7  |  Train Loss: 0.005075880326330662  |
+Batch: 8  |  Train Loss: 0.027231326326727867  |
+Batch: 9  |  Train Loss: 0.03204064816236496  |
+Batch: 10  |  Train Loss: 0.13011720776557922  |
+Batch: 11  |  Train Loss: 0.05591809004545212  |
+Batch: 12  |  Train Loss: 0.029105976223945618  |
+Batch: 13  |  Train Loss: 0.025789612904191017  |
+Batch: 14  |  Train Loss: 0.052096959203481674  |
+Batch: 15  |  Train Loss: 0.03207268938422203  |
+Batch: 16  |  Train Loss: 0.03588150441646576  |
+Batch: 17  |  Train Loss: 0.008614843711256981  |
+Batch: 18  |  Train Loss: 0.023418523371219635  |
+Batch: 19  |  Train Loss: 0.018785078078508377  |
+Batch: 20  |  Train Loss: 0.06305966526269913  |
+Batch: 21  |  Train Loss: 0.023199543356895447  |
+Batch: 22  |  Train Loss: 0.01912907510995865  |
+Batch: 23  |  Train Loss: 0.04616134613752365  |
+Batch: 24  |  Train Loss: 0.08008357137441635  |
+Batch: 25  |  Train Loss: 0.009413700550794601  |
+Batch: 26  |  Train Loss: 0.018232624977827072  |
+Batch: 27  |  Train Loss: 0.06263409554958344  |
+Batch: 28  |  Train Loss: 0.030197596177458763  |
+Batch: 29  |  Train Loss: 0.031702060252428055  |
+Batch: 30  |  Train Loss: 0.02597709745168686  |
+Batch: 31  |  Train Loss: 0.049103353172540665  |
+Batch: 32  |  Train Loss: 0.09136352688074112  |
+Batch: 33  |  Train Loss: 0.014484851621091366  |
+Batch: 34  |  Train Loss: 0.06163353472948074  |
+Batch: 35  |  Train Loss: 0.028106695041060448  |
+Batch: 36  |  Train Loss: 0.05926049128174782  |
+Batch: 37  |  Train Loss: 0.01366889663040638  |
+Batch: 38  |  Train Loss: 0.0320332907140255  |
+Batch: 39  |  Train Loss: 0.00835469551384449  |
+Batch: 40  |  Train Loss: 0.0379091240465641  |
+Batch: 41  |  Train Loss: 0.025235261768102646  |
+Batch: 42  |  Train Loss: 0.07451306283473969  |
+Batch: 43  |  Train Loss: 0.02786678448319435  |
+Batch: 44  |  Train Loss: 0.033846836537122726  |
+Batch: 45  |  Train Loss: 0.028493540361523628  |
+Batch: 46  |  Train Loss: 0.042086903005838394  |
+Batch: 47  |  Train Loss: 0.022487051784992218  |
+Batch: 48  |  Train Loss: 0.03897751867771149  |
+Batch: 49  |  Train Loss: 0.029867731034755707  |
+Batch: 50  |  Train Loss: 0.02460884302854538  |
+Batch: 51  |  Train Loss: 0.03475464880466461  |
+Batch: 52  |  Train Loss: 0.01478811725974083  |
+Batch: 53  |  Train Loss: 0.035109102725982666  |
+Batch: 54  |  Train Loss: 0.010698659345507622  |
+Batch: 55  |  Train Loss: 0.00820842757821083  |
+Batch: 56  |  Train Loss: 0.029887139797210693  |
+Batch: 57  |  Train Loss: 0.011355125345289707  |
+Batch: 58  |  Train Loss: 0.02874855510890484  |
+Batch: 59  |  Train Loss: 0.0213415939360857  |
+Batch: 60  |  Train Loss: 0.04916977509856224  |
+Batch: 61  |  Train Loss: 0.07620375603437424  |
+Batch: 62  |  Train Loss: 0.0643949881196022  |
+Batch: 63  |  Train Loss: 0.04684971272945404  |
+Batch: 64  |  Train Loss: 0.032464779913425446  |
+Batch: 65  |  Train Loss: 0.017398804426193237  |
+Batch: 66  |  Train Loss: 0.050387125462293625  |
+Batch: 67  |  Train Loss: 0.01766764186322689  |
+Batch: 68  |  Train Loss: 0.013055416755378246  |
+Batch: 69  |  Train Loss: 0.028270088136196136  |
+Batch: 70  |  Train Loss: 0.06313168257474899  |
+Batch: 71  |  Train Loss: 0.012136627919971943  |
+Batch: 72  |  Train Loss: 0.006274071522057056  |
+Batch: 73  |  Train Loss: 0.02875463105738163  |
+Batch: 74  |  Train Loss: 0.016900986433029175  |
+Batch: 75  |  Train Loss: 0.011917724274098873  |
+Batch: 76  |  Train Loss: 0.010953068733215332  |
+Batch: 77  |  Train Loss: 0.013067526742815971  |
+Batch: 78  |  Train Loss: 0.0036890502087771893  |
+Batch: 79  |  Train Loss: 0.01432044804096222  |
+Batch: 80  |  Train Loss: 0.02551206760108471  |
+Batch: 81  |  Train Loss: 0.03302915394306183  |
+Batch: 82  |  Train Loss: 0.005959983915090561  |
+Batch: 83  |  Train Loss: 0.028182396665215492  |
+Batch: 84  |  Train Loss: 0.07023833692073822  |
+Batch: 85  |  Train Loss: 0.010086633265018463  |
+Batch: 86  |  Train Loss: 0.01652004010975361  |
+Batch: 87  |  Train Loss: 0.013259682804346085  |
+Batch: 88  |  Train Loss: 0.04142393171787262  |
+Batch: 89  |  Train Loss: 0.03047819249331951  |
+Batch: 90  |  Train Loss: 0.020508114248514175  |
+Batch: 91  |  Train Loss: 0.012023789808154106  |
+Batch: 92  |  Train Loss: 0.005932185798883438  |
+Batch: 93  |  Train Loss: 0.010897486470639706  |
+Batch: 94  |  Train Loss: 0.04853244498372078  |
+Batch: 95  |  Train Loss: 0.024896927177906036  |
+Batch: 96  |  Train Loss: 0.03687905892729759  |
+Batch: 97  |  Train Loss: 0.007472572848200798  |
+Batch: 98  |  Train Loss: 0.02261582389473915  |
+Batch: 99  |  Train Loss: 0.007972490042448044  |
+Batch: 100  |  Train Loss: 0.02947171777486801  |
+Batch: 101  |  Train Loss: 0.06237350404262543  |
+Batch: 102  |  Train Loss: 0.014522693119943142  |
+Batch: 103  |  Train Loss: 0.026820996776223183  |
+Batch: 104  |  Train Loss: 0.017062555998563766  |
+Batch: 105  |  Train Loss: 0.00892225094139576  |
+Batch: 106  |  Train Loss: 0.05299186334013939  |
+Batch: 107  |  Train Loss: 0.01881341263651848  |
+Batch: 108  |  Train Loss: 0.010855424217879772  |
+Batch: 109  |  Train Loss: 0.03221174702048302  |
+Batch: 110  |  Train Loss: 0.033336982131004333  |
+Batch: 111  |  Train Loss: 0.029057104140520096  |
+Batch: 112  |  Train Loss: 0.01832251064479351  |
+Batch: 113  |  Train Loss: 0.028835123404860497  |
+Batch: 114  |  Train Loss: 0.021063631400465965  |
+Batch: 115  |  Train Loss: 0.0025820243172347546  |
+Batch: 116  |  Train Loss: 0.013800127431750298  |
+Batch: 117  |  Train Loss: 0.019523750990629196  |
+Batch: 118  |  Train Loss: 0.013463595882058144  |
+Batch: 119  |  Train Loss: 0.03511860594153404  |
+Batch: 120  |  Train Loss: 0.006287016905844212  |
+Batch: 121  |  Train Loss: 0.020885802805423737  |
+Batch: 122  |  Train Loss: 0.008007368072867393  |
+Batch: 123  |  Train Loss: 0.013902358710765839  |
+Batch: 124  |  Train Loss: 0.0034962231293320656  |
+Batch: 125  |  Train Loss: 0.04611705243587494  |
+Batch: 126  |  Train Loss: 0.016452128067612648  |
+Batch: 127  |  Train Loss: 0.002851625671610236  |
+Batch: 128  |  Train Loss: 0.02522369846701622  |
+Batch: 129  |  Train Loss: 0.01571706123650074  |
+Batch: 130  |  Train Loss: 0.002732363296672702  |
+Batch: 131  |  Train Loss: 0.004549958743155003  |
+Batch: 132  |  Train Loss: 0.04883287474513054  |
+Batch: 133  |  Train Loss: 0.0201958566904068  |
+Batch: 134  |  Train Loss: 0.013075826689600945  |
+Batch: 135  |  Train Loss: 0.04375562071800232  |
+Batch: 136  |  Train Loss: 0.024944141507148743  |
+Batch: 137  |  Train Loss: 0.01715845800936222  |
+Batch: 138  |  Train Loss: 0.0646776556968689  |
+Batch: 139  |  Train Loss: 0.01952907256782055  |
+Batch: 140  |  Train Loss: 0.0406961515545845  |
+Batch: 141  |  Train Loss: 0.0056524258106946945  |
+Batch: 142  |  Train Loss: 0.009187337011098862  |
+Batch: 143  |  Train Loss: 0.012262395583093166  |
+Batch: 144  |  Train Loss: 0.0328199602663517  |
+Batch: 145  |  Train Loss: 0.016577359288930893  |
+Batch: 146  |  Train Loss: 0.02517932653427124  |
+Batch: 147  |  Train Loss: 0.05466756597161293  |
+Batch: 148  |  Train Loss: 0.04566490650177002  |
+Batch: 149  |  Train Loss: 0.06400110572576523  |
+Batch: 150  |  Train Loss: 0.03993063047528267  |
+Batch: 151  |  Train Loss: 0.011033307760953903  |
+Batch: 152  |  Train Loss: 0.037150684744119644  |
+Batch: 153  |  Train Loss: 0.03345591574907303  |
+Batch: 154  |  Train Loss: 0.04678935557603836  |
+Batch: 155  |  Train Loss: 0.010973826050758362  |
+Batch: 156  |  Train Loss: 0.042703792452812195  |
+Batch: 157  |  Train Loss: 0.02761368453502655  |
+Batch: 158  |  Train Loss: 0.020190231502056122  |
+Batch: 159  |  Train Loss: 0.03696375712752342  |
+Batch: 160  |  Train Loss: 0.03133731335401535  |
+Batch: 161  |  Train Loss: 0.04413292929530144  |
+Batch: 162  |  Train Loss: 0.012612431310117245  |
+Batch: 163  |  Train Loss: 0.04828329756855965  |
+Batch: 164  |  Train Loss: 0.02138596400618553  |
+Batch: 165  |  Train Loss: 0.01933760568499565  |
+Batch: 166  |  Train Loss: 0.03477611020207405  |
+Batch: 167  |  Train Loss: 0.012238387018442154  |
+Batch: 168  |  Train Loss: 0.056006498634815216  |
+Batch: 169  |  Train Loss: 0.01796037331223488  |
+Batch: 170  |  Train Loss: 0.012356064282357693  |
+Batch: 171  |  Train Loss: 0.017256099730730057  |
+Batch: 172  |  Train Loss: 0.014412096701562405  |
+Batch: 173  |  Train Loss: 0.034099362790584564  |
+Batch: 174  |  Train Loss: 0.020906789228320122  |
+Batch: 175  |  Train Loss: 0.1639532595872879  |
+Batch: 176  |  Train Loss: 0.03762005642056465  |
+Batch: 177  |  Train Loss: 0.01008728239685297  |
+Batch: 178  |  Train Loss: 0.06331129372119904  |
+Batch: 179  |  Train Loss: 0.09605363011360168  |
+Batch: 180  |  Train Loss: 0.024418730288743973  |
+Batch: 181  |  Train Loss: 0.027874967083334923  |
+Batch: 182  |  Train Loss: 0.01957947015762329  |
+Batch: 183  |  Train Loss: 0.012267546728253365  |
+Batch: 184  |  Train Loss: 0.03490221127867699  |
+Epoch: 7  |  Train Loss: 0.02971410208910301
+100%|███████████████████████████████████████| 1151/1151 [00:49<00:00, 23.11it/s]
+Binary results:████████████████████████████▉| 1149/1151 [00:49<00:00, 24.55it/s]
+################################################################################
+
+Target prec: 0.598
+Target recall: 0.580
+Target F1: 0.589
+
+Proportional results:
+################################################################################
+
+Target prec: 0.575
+Target recall: 0.459
+Target F1: 0.511
+
+ 80%|████████████████████████████████▊        | 8/10 [2:07:04<31:45, 952.51s/it]Batch: 0  |  Train Loss: 0.03253762051463127  |
+Batch: 1  |  Train Loss: 0.04145525023341179  |
+Batch: 2  |  Train Loss: 0.01731799729168415  |
+Batch: 3  |  Train Loss: 0.009264425374567509  |
+Batch: 4  |  Train Loss: 0.011200809851288795  |
+Batch: 5  |  Train Loss: 0.026416584849357605  |
+Batch: 6  |  Train Loss: 0.0685429498553276  |
+Batch: 7  |  Train Loss: 0.013846464455127716  |
+Batch: 8  |  Train Loss: 0.02774089016020298  |
+Batch: 9  |  Train Loss: 0.01300041750073433  |
+Batch: 10  |  Train Loss: 0.015200802125036716  |
+Batch: 11  |  Train Loss: 0.015116090886294842  |
+Batch: 12  |  Train Loss: 0.026361117139458656  |
+Batch: 13  |  Train Loss: 0.02494167350232601  |
+Batch: 14  |  Train Loss: 0.04045652598142624  |
+Batch: 15  |  Train Loss: 0.014833156950771809  |
+Batch: 16  |  Train Loss: 0.027141887694597244  |
+Batch: 17  |  Train Loss: 0.013068029657006264  |
+Batch: 18  |  Train Loss: 0.015549388714134693  |
+Batch: 19  |  Train Loss: 0.06060099974274635  |
+Batch: 20  |  Train Loss: 0.043734122067689896  |
+Batch: 21  |  Train Loss: 0.005255579482764006  |
+Batch: 22  |  Train Loss: 0.004500070586800575  |
+Batch: 23  |  Train Loss: 0.022749925032258034  |
+Batch: 24  |  Train Loss: 0.011716971173882484  |
+Batch: 25  |  Train Loss: 0.01019053254276514  |
+Batch: 26  |  Train Loss: 0.011005490086972713  |
+Batch: 27  |  Train Loss: 0.01140559185296297  |
+Batch: 28  |  Train Loss: 0.05598913133144379  |
+Batch: 29  |  Train Loss: 0.014118103310465813  |
+Batch: 30  |  Train Loss: 0.07661575078964233  |
+Batch: 31  |  Train Loss: 0.013927922584116459  |
+Batch: 32  |  Train Loss: 0.03887076675891876  |
+Batch: 33  |  Train Loss: 0.004250845406204462  |
+Batch: 34  |  Train Loss: 0.014114451594650745  |
+Batch: 35  |  Train Loss: 0.039412278681993484  |
+Batch: 36  |  Train Loss: 0.004273309372365475  |
+Batch: 37  |  Train Loss: 0.04818578436970711  |
+Batch: 38  |  Train Loss: 0.024056753143668175  |
+Batch: 39  |  Train Loss: 0.0028414418920874596  |
+Batch: 40  |  Train Loss: 0.0032476356718689203  |
+Batch: 41  |  Train Loss: 0.029961245134472847  |
+Batch: 42  |  Train Loss: 0.010070006363093853  |
+Batch: 43  |  Train Loss: 0.0334794707596302  |
+Batch: 44  |  Train Loss: 0.027203001081943512  |
+Batch: 45  |  Train Loss: 0.03525128960609436  |
+Batch: 46  |  Train Loss: 0.015229723416268826  |
+Batch: 47  |  Train Loss: 0.006501863244920969  |
+Batch: 48  |  Train Loss: 0.0043540289625525475  |
+Batch: 49  |  Train Loss: 0.014067471958696842  |
+Batch: 50  |  Train Loss: 0.09682415425777435  |
+Batch: 51  |  Train Loss: 0.01629837229847908  |
+Batch: 52  |  Train Loss: 0.03263697028160095  |
+Batch: 53  |  Train Loss: 0.02993842028081417  |
+Batch: 54  |  Train Loss: 0.0125399986281991  |
+Batch: 55  |  Train Loss: 0.06682547926902771  |
+Batch: 56  |  Train Loss: 0.011272300966084003  |
+Batch: 57  |  Train Loss: 0.030528195202350616  |
+Batch: 58  |  Train Loss: 0.003149052383378148  |
+Batch: 59  |  Train Loss: 0.024985307827591896  |
+Batch: 60  |  Train Loss: 0.034154459834098816  |
+Batch: 61  |  Train Loss: 0.021580040454864502  |
+Batch: 62  |  Train Loss: 0.027171853929758072  |
+Batch: 63  |  Train Loss: 0.002590503077954054  |
+Batch: 64  |  Train Loss: 0.03917355090379715  |
+Batch: 65  |  Train Loss: 0.010811129584908485  |
+Batch: 66  |  Train Loss: 0.013901205733418465  |
+Batch: 67  |  Train Loss: 0.026310479268431664  |
+Batch: 68  |  Train Loss: 0.0037227978464215994  |
+Batch: 69  |  Train Loss: 0.0176909901201725  |
+Batch: 70  |  Train Loss: 0.02487611211836338  |
+Batch: 71  |  Train Loss: 0.020634114742279053  |
+Batch: 72  |  Train Loss: 0.00892838928848505  |
+Batch: 73  |  Train Loss: 0.002834687940776348  |
+Batch: 74  |  Train Loss: 0.0030952419620007277  |
+Batch: 75  |  Train Loss: 0.040084004402160645  |
+Batch: 76  |  Train Loss: 0.02282475121319294  |
+Batch: 77  |  Train Loss: 0.018606465309858322  |
+Batch: 78  |  Train Loss: 0.0713336169719696  |
+Batch: 79  |  Train Loss: 0.044108036905527115  |
+Batch: 80  |  Train Loss: 0.03473801165819168  |
+Batch: 81  |  Train Loss: 0.03829292953014374  |
+Batch: 82  |  Train Loss: 0.02157028391957283  |
+Batch: 83  |  Train Loss: 0.03324303776025772  |
+Batch: 84  |  Train Loss: 0.02902320772409439  |
+Batch: 85  |  Train Loss: 0.06210792437195778  |
+Batch: 86  |  Train Loss: 0.032356031239032745  |
+Batch: 87  |  Train Loss: 0.05588144809007645  |
+Batch: 88  |  Train Loss: 0.03236763924360275  |
+Batch: 89  |  Train Loss: 0.009815276600420475  |
+Batch: 90  |  Train Loss: 0.04531523957848549  |
+Batch: 91  |  Train Loss: 0.023467974737286568  |
+Batch: 92  |  Train Loss: 0.0870949923992157  |
+Batch: 93  |  Train Loss: 0.04607369378209114  |
+Batch: 94  |  Train Loss: 0.0525532029569149  |
+Batch: 95  |  Train Loss: 0.04941335320472717  |
+Batch: 96  |  Train Loss: 0.048288606107234955  |
+Batch: 97  |  Train Loss: 0.009512757882475853  |
+Batch: 98  |  Train Loss: 0.04440156742930412  |
+Batch: 99  |  Train Loss: 0.02912156470119953  |
+Batch: 100  |  Train Loss: 0.031875692307949066  |
+Batch: 101  |  Train Loss: 0.017703713849186897  |
+Batch: 102  |  Train Loss: 0.03497634828090668  |
+Batch: 103  |  Train Loss: 0.0783863440155983  |
+Batch: 104  |  Train Loss: 0.029657578095793724  |
+Batch: 105  |  Train Loss: 0.01717650145292282  |
+Batch: 106  |  Train Loss: 0.014004808850586414  |
+Batch: 107  |  Train Loss: 0.0185051541775465  |
+Batch: 108  |  Train Loss: 0.05239972844719887  |
+Batch: 109  |  Train Loss: 0.03914201632142067  |
+Batch: 110  |  Train Loss: 0.025852499529719353  |
+Batch: 111  |  Train Loss: 0.05465787649154663  |
+Batch: 112  |  Train Loss: 0.041504837572574615  |
+Batch: 113  |  Train Loss: 0.03635529801249504  |
+Batch: 114  |  Train Loss: 0.007657784502953291  |
+Batch: 115  |  Train Loss: 0.018508220091462135  |
+Batch: 116  |  Train Loss: 0.14723201096057892  |
+Batch: 117  |  Train Loss: 0.009032081812620163  |
+Batch: 118  |  Train Loss: 0.023196591064333916  |
+Batch: 119  |  Train Loss: 0.045509032905101776  |
+Batch: 120  |  Train Loss: 0.07160960882902145  |
+Batch: 121  |  Train Loss: 0.029128842055797577  |
+Batch: 122  |  Train Loss: 0.16617339849472046  |
+Batch: 123  |  Train Loss: 0.1300758272409439  |
+Batch: 124  |  Train Loss: 0.07833132892847061  |
+Batch: 125  |  Train Loss: 0.06637880206108093  |
+Batch: 126  |  Train Loss: 0.024887491017580032  |
+Batch: 127  |  Train Loss: 0.03628318011760712  |
+Batch: 128  |  Train Loss: 0.07649532705545425  |
+Batch: 129  |  Train Loss: 0.03220313787460327  |
+Batch: 130  |  Train Loss: 0.10044165700674057  |
+Batch: 131  |  Train Loss: 0.04582972824573517  |
+Batch: 132  |  Train Loss: 0.05134017392992973  |
+Batch: 133  |  Train Loss: 0.07764513045549393  |
+Batch: 134  |  Train Loss: 0.051467619836330414  |
+Batch: 135  |  Train Loss: 0.03905337676405907  |
+Batch: 136  |  Train Loss: 0.05665016174316406  |
+Batch: 137  |  Train Loss: 0.06416285037994385  |
+Batch: 138  |  Train Loss: 0.0337432324886322  |
+Batch: 139  |  Train Loss: 0.1045025959610939  |
+Batch: 140  |  Train Loss: 0.053108569234609604  |
+Batch: 141  |  Train Loss: 0.05707477778196335  |
+Batch: 142  |  Train Loss: 0.04770197719335556  |
+Batch: 143  |  Train Loss: 0.02684623934328556  |
+Batch: 144  |  Train Loss: 0.022186674177646637  |
+Batch: 145  |  Train Loss: 0.028147520497441292  |
+Batch: 146  |  Train Loss: 0.092404305934906  |
+Batch: 147  |  Train Loss: 0.023546624928712845  |
+Batch: 148  |  Train Loss: 0.017300039529800415  |
+Batch: 149  |  Train Loss: 0.0217234306037426  |
+Batch: 150  |  Train Loss: 0.0522196963429451  |
+Batch: 151  |  Train Loss: 0.04682878032326698  |
+Batch: 152  |  Train Loss: 0.018618252128362656  |
+Batch: 153  |  Train Loss: 0.027631260454654694  |
+Batch: 154  |  Train Loss: 0.029929490759968758  |
+Batch: 155  |  Train Loss: 0.02703588455915451  |
+Batch: 156  |  Train Loss: 0.027325790375471115  |
+Batch: 157  |  Train Loss: 0.032318685203790665  |
+Batch: 158  |  Train Loss: 0.007974115200340748  |
+Batch: 159  |  Train Loss: 0.053785912692546844  |
+Batch: 160  |  Train Loss: 0.03604734688997269  |
+Batch: 161  |  Train Loss: 0.0635695829987526  |
+Batch: 162  |  Train Loss: 0.05715212598443031  |
+Batch: 163  |  Train Loss: 0.02057746611535549  |
+Batch: 164  |  Train Loss: 0.013268093578517437  |
+Batch: 165  |  Train Loss: 0.05139466002583504  |
+Batch: 166  |  Train Loss: 0.06542793661355972  |
+Batch: 167  |  Train Loss: 0.05088653042912483  |
+Batch: 168  |  Train Loss: 0.03763490915298462  |
+Batch: 169  |  Train Loss: 0.027044197544455528  |
+Batch: 170  |  Train Loss: 0.04048633947968483  |
+Batch: 171  |  Train Loss: 0.050493985414505005  |
+Batch: 172  |  Train Loss: 0.01753169298171997  |
+Batch: 173  |  Train Loss: 0.02794818952679634  |
+Batch: 174  |  Train Loss: 0.05554443597793579  |
+Batch: 175  |  Train Loss: 0.013943328522145748  |
+Batch: 176  |  Train Loss: 0.026669614017009735  |
+Batch: 177  |  Train Loss: 0.034661438316106796  |
+Batch: 178  |  Train Loss: 0.009237965568900108  |
+Batch: 179  |  Train Loss: 0.06701468676328659  |
+Batch: 180  |  Train Loss: 0.013013857416808605  |
+Batch: 181  |  Train Loss: 0.03650687634944916  |
+Batch: 182  |  Train Loss: 0.05271407961845398  |
+Batch: 183  |  Train Loss: 0.02135138399899006  |
+Batch: 184  |  Train Loss: 0.027043018490076065  |
+Epoch: 8  |  Train Loss: 0.034734337432058275
+100%|███████████████████████████████████████| 1151/1151 [00:49<00:00, 23.15it/s]
+Binary results:████████████████████████████▉| 1149/1151 [00:49<00:00, 23.24it/s]
+################################################################################
+
+Target prec: 0.538
+Target recall: 0.603
+Target F1: 0.568
+
+Proportional results:
+################################################################################
+
+Target prec: 0.513
+Target recall: 0.472
+Target F1: 0.492
+
+ 90%|████████████████████████████████████▉    | 9/10 [2:22:48<15:49, 949.90s/it]Batch: 0  |  Train Loss: 0.0601847842335701  |
+Batch: 1  |  Train Loss: 0.07774295657873154  |
+Batch: 2  |  Train Loss: 0.009579245932400227  |
+Batch: 3  |  Train Loss: 0.03328494727611542  |
+Batch: 4  |  Train Loss: 0.02261529117822647  |
+Batch: 5  |  Train Loss: 0.016218334436416626  |
+Batch: 6  |  Train Loss: 0.01461770012974739  |
+Batch: 7  |  Train Loss: 0.015317071229219437  |
+Batch: 8  |  Train Loss: 0.04764232411980629  |
+Batch: 9  |  Train Loss: 0.012715626507997513  |
+Batch: 10  |  Train Loss: 0.009316224604845047  |
+Batch: 11  |  Train Loss: 0.0782574787735939  |
+Batch: 12  |  Train Loss: 0.025328774005174637  |
+Batch: 13  |  Train Loss: 0.03524548187851906  |
+Batch: 14  |  Train Loss: 0.02227400615811348  |
+Batch: 15  |  Train Loss: 0.01938801445066929  |
+Batch: 16  |  Train Loss: 0.03687037155032158  |
+Batch: 17  |  Train Loss: 0.05015092343091965  |
+Batch: 18  |  Train Loss: 0.03858177363872528  |
+Batch: 19  |  Train Loss: 0.05158804729580879  |
+Batch: 20  |  Train Loss: 0.004670002032071352  |
+Batch: 21  |  Train Loss: 0.02767576090991497  |
+Batch: 22  |  Train Loss: 0.013597134500741959  |
+Batch: 23  |  Train Loss: 0.011458156630396843  |
+Batch: 24  |  Train Loss: 0.012056747451424599  |
+Batch: 25  |  Train Loss: 0.021976739168167114  |
+Batch: 26  |  Train Loss: 0.060012347996234894  |
+Batch: 27  |  Train Loss: 0.013125340454280376  |
+Batch: 28  |  Train Loss: 0.025969423353672028  |
+Batch: 29  |  Train Loss: 0.0634036585688591  |
+Batch: 30  |  Train Loss: 0.03259974718093872  |
+Batch: 31  |  Train Loss: 0.007690386846661568  |
+Batch: 32  |  Train Loss: 0.014307600446045399  |
+Batch: 33  |  Train Loss: 0.00820988230407238  |
+Batch: 34  |  Train Loss: 0.04722457751631737  |
+Batch: 35  |  Train Loss: 0.017913926392793655  |
+Batch: 36  |  Train Loss: 0.0090842479839921  |
+Batch: 37  |  Train Loss: 0.037866588681936264  |
+Batch: 38  |  Train Loss: 0.08919202536344528  |
+Batch: 39  |  Train Loss: 0.021532300859689713  |
+Batch: 40  |  Train Loss: 0.04322442039847374  |
+Batch: 41  |  Train Loss: 0.012757252901792526  |
+Batch: 42  |  Train Loss: 0.08243022114038467  |
+Batch: 43  |  Train Loss: 0.010386266745626926  |
+Batch: 44  |  Train Loss: 0.05346139147877693  |
+Batch: 45  |  Train Loss: 0.05178970471024513  |
+Batch: 46  |  Train Loss: 0.043747369199991226  |
+Batch: 47  |  Train Loss: 0.017843011766672134  |
+Batch: 48  |  Train Loss: 0.013379632495343685  |
+Batch: 49  |  Train Loss: 0.00958951748907566  |
+Batch: 50  |  Train Loss: 0.06042739748954773  |
+Batch: 51  |  Train Loss: 0.047849997878074646  |
+Batch: 52  |  Train Loss: 0.02754806913435459  |
+Batch: 53  |  Train Loss: 0.0172480009496212  |
+Batch: 54  |  Train Loss: 0.02561611868441105  |
+Batch: 55  |  Train Loss: 0.043547481298446655  |
+Batch: 56  |  Train Loss: 0.023736154660582542  |
+Batch: 57  |  Train Loss: 0.048455506563186646  |
+Batch: 58  |  Train Loss: 0.05576841160655022  |
+Batch: 59  |  Train Loss: 0.014868051744997501  |
+Batch: 60  |  Train Loss: 0.03142767772078514  |
+Batch: 61  |  Train Loss: 0.012422126717865467  |
+Batch: 62  |  Train Loss: 0.07391855120658875  |
+Batch: 63  |  Train Loss: 0.06015554070472717  |
+Batch: 64  |  Train Loss: 0.03459426015615463  |
+Batch: 65  |  Train Loss: 0.031395554542541504  |
+Batch: 66  |  Train Loss: 0.057549625635147095  |
+Batch: 67  |  Train Loss: 0.030094023793935776  |
+Batch: 68  |  Train Loss: 0.05304678529500961  |
+Batch: 69  |  Train Loss: 0.038462866097688675  |
+Batch: 70  |  Train Loss: 0.013770991005003452  |
+Batch: 71  |  Train Loss: 0.03524351492524147  |
+Batch: 72  |  Train Loss: 0.020231138914823532  |
+Batch: 73  |  Train Loss: 0.03683322295546532  |
+Batch: 74  |  Train Loss: 0.011464305222034454  |
+Batch: 75  |  Train Loss: 0.025145040825009346  |
+Batch: 76  |  Train Loss: 0.03540930151939392  |
+Batch: 77  |  Train Loss: 0.029036255553364754  |
+Batch: 78  |  Train Loss: 0.0235180351883173  |
+Batch: 79  |  Train Loss: 0.03928820416331291  |
+Batch: 80  |  Train Loss: 0.0295045655220747  |
+Batch: 81  |  Train Loss: 0.02269921451807022  |
+Batch: 82  |  Train Loss: 0.013852535746991634  |
+Batch: 83  |  Train Loss: 0.06238237023353577  |
+Batch: 84  |  Train Loss: 0.03244715556502342  |
+Batch: 85  |  Train Loss: 0.022116364911198616  |
+Batch: 86  |  Train Loss: 0.053124889731407166  |
+Batch: 87  |  Train Loss: 0.07651987671852112  |
+Batch: 88  |  Train Loss: 0.025473669171333313  |
+Batch: 89  |  Train Loss: 0.033517733216285706  |
+Batch: 90  |  Train Loss: 0.04248270019888878  |
+Batch: 91  |  Train Loss: 0.0073547810316085815  |
+Batch: 92  |  Train Loss: 0.037429068237543106  |
+Batch: 93  |  Train Loss: 0.07952244579792023  |
+Batch: 94  |  Train Loss: 0.012956138700246811  |
+Batch: 95  |  Train Loss: 0.028839711099863052  |
+Batch: 96  |  Train Loss: 0.02326539158821106  |
+Batch: 97  |  Train Loss: 0.040710218250751495  |
+Batch: 98  |  Train Loss: 0.02369341440498829  |
+Batch: 99  |  Train Loss: 0.02965848706662655  |
+Batch: 100  |  Train Loss: 0.027834029868245125  |
+Batch: 101  |  Train Loss: 0.07023804634809494  |
+Batch: 102  |  Train Loss: 0.026940181851387024  |
+Batch: 103  |  Train Loss: 0.025237927213311195  |
+Batch: 104  |  Train Loss: 0.013500039465725422  |
+Batch: 105  |  Train Loss: 0.017470097169280052  |
+Batch: 106  |  Train Loss: 0.036041419953107834  |
+Batch: 107  |  Train Loss: 0.12515000998973846  |
+Batch: 108  |  Train Loss: 0.028777770698070526  |
+Batch: 109  |  Train Loss: 0.06537751108407974  |
+Batch: 110  |  Train Loss: 0.012353536672890186  |
+Batch: 111  |  Train Loss: 0.027888892218470573  |
+Batch: 112  |  Train Loss: 0.07246113568544388  |
+Batch: 113  |  Train Loss: 0.05580649524927139  |
+Batch: 114  |  Train Loss: 0.02038484625518322  |
+Batch: 115  |  Train Loss: 0.024022230878472328  |
+Batch: 116  |  Train Loss: 0.015680119395256042  |
+Batch: 117  |  Train Loss: 0.005081995856016874  |
+Batch: 118  |  Train Loss: 0.025490419939160347  |
+Batch: 119  |  Train Loss: 0.05990433320403099  |
+Batch: 120  |  Train Loss: 0.0564776286482811  |
+Batch: 121  |  Train Loss: 0.04212129861116409  |
+Batch: 122  |  Train Loss: 0.03849636763334274  |
+Batch: 123  |  Train Loss: 0.004685577470809221  |
+Batch: 124  |  Train Loss: 0.07267432659864426  |
+Batch: 125  |  Train Loss: 0.030389374122023582  |
+Batch: 126  |  Train Loss: 0.040993090718984604  |
+Batch: 127  |  Train Loss: 0.10192152857780457  |
+Batch: 128  |  Train Loss: 0.023329958319664  |
+Batch: 129  |  Train Loss: 0.015474970452487469  |
+Batch: 130  |  Train Loss: 0.026184309273958206  |
+Batch: 131  |  Train Loss: 0.028843527659773827  |
+Batch: 132  |  Train Loss: 0.08635039627552032  |
+Batch: 133  |  Train Loss: 0.06377632915973663  |
+Batch: 134  |  Train Loss: 0.03607771918177605  |
+Batch: 135  |  Train Loss: 0.025626875460147858  |
+Batch: 136  |  Train Loss: 0.04253403842449188  |
+Batch: 137  |  Train Loss: 0.06641267240047455  |
+Batch: 138  |  Train Loss: 0.06936100125312805  |
+Batch: 139  |  Train Loss: 0.06712605059146881  |
+Batch: 140  |  Train Loss: 0.03295179083943367  |
+Batch: 141  |  Train Loss: 0.05706373602151871  |
+Batch: 142  |  Train Loss: 0.04293787479400635  |
+Batch: 143  |  Train Loss: 0.1073114424943924  |
+Batch: 144  |  Train Loss: 0.02180364355444908  |
+Batch: 145  |  Train Loss: 0.07128340750932693  |
+Batch: 146  |  Train Loss: 0.038874201476573944  |
+Batch: 147  |  Train Loss: 0.03509838879108429  |
+Batch: 148  |  Train Loss: 0.01761251501739025  |
+Batch: 149  |  Train Loss: 0.05410781130194664  |
+Batch: 150  |  Train Loss: 0.007952099665999413  |
+Batch: 151  |  Train Loss: 0.1375618875026703  |
+Batch: 152  |  Train Loss: 0.057722341269254684  |
+Batch: 153  |  Train Loss: 0.04447374865412712  |
+Batch: 154  |  Train Loss: 0.03417770937085152  |
+Batch: 155  |  Train Loss: 0.02482376992702484  |
+Batch: 156  |  Train Loss: 0.01779826357960701  |
+Batch: 157  |  Train Loss: 0.03113681823015213  |
+Batch: 158  |  Train Loss: 0.06979283690452576  |
+Batch: 159  |  Train Loss: 0.07752438634634018  |
+Batch: 160  |  Train Loss: 0.07899987697601318  |
+Batch: 161  |  Train Loss: 0.03744520619511604  |
+Batch: 162  |  Train Loss: 0.016743740066885948  |
+Batch: 163  |  Train Loss: 0.020556222647428513  |
+Batch: 164  |  Train Loss: 0.03552614152431488  |
+Batch: 165  |  Train Loss: 0.038512974977493286  |
+Batch: 166  |  Train Loss: 0.06774681061506271  |
+Batch: 167  |  Train Loss: 0.021872373297810555  |
+Batch: 168  |  Train Loss: 0.008487662300467491  |
+Batch: 169  |  Train Loss: 0.030902063474059105  |
+Batch: 170  |  Train Loss: 0.048653654754161835  |
+Batch: 171  |  Train Loss: 0.06668595969676971  |
+Batch: 172  |  Train Loss: 0.022411756217479706  |
+Batch: 173  |  Train Loss: 0.05489366501569748  |
+Batch: 174  |  Train Loss: 0.015380164608359337  |
+Batch: 175  |  Train Loss: 0.02565181441605091  |
+Batch: 176  |  Train Loss: 0.007399907335639  |
+Batch: 177  |  Train Loss: 0.01356603018939495  |
+Batch: 178  |  Train Loss: 0.022714754566550255  |
+Batch: 179  |  Train Loss: 0.008582771755754948  |
+Batch: 180  |  Train Loss: 0.01771632581949234  |
+Batch: 181  |  Train Loss: 0.02315330319106579  |
+Batch: 182  |  Train Loss: 0.01831178553402424  |
+Batch: 183  |  Train Loss: 0.014379040338099003  |
+Batch: 184  |  Train Loss: 0.03413595259189606  |
+Epoch: 9  |  Train Loss: 0.036419753596891424
+100%|███████████████████████████████████████| 1151/1151 [00:49<00:00, 23.20it/s]
+Binary results:████████████████████████████▉| 1150/1151 [00:49<00:00, 23.11it/s]
+################################################################################
+
+Target prec: 0.550
+Target recall: 0.602
+Target F1: 0.575
+
+Proportional results:
+################################################################################
+
+Target prec: 0.522
+Target recall: 0.483
+Target F1: 0.502
+
+100%|████████████████████████████████████████| 10/10 [2:38:45<00:00, 952.51s/it]
+100%|█████████████████████████████████████████| 895/895 [00:39<00:00, 22.90it/s]
+Binary results:
+################################################################################
+
+Target prec: 0.544
+Target recall: 0.538
+Target F1: 0.541
+
+Proportional results:
+################################################################################
+
+Target prec: 0.526
+Target recall: 0.474
+Target F1: 0.498

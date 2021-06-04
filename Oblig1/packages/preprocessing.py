@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import torch
-
+from scipy.sparse import coo_matrix, vstack
 
 class Signal20Dataset(Dataset):
     # NOTE: This class is never used. See line 373 for BOW preprocessor
@@ -88,16 +88,18 @@ class Signal20Dataset(Dataset):
             valid = df[~df.index.isin(train.index)]
 
             # set valid indexes for future dataset inits
-            Signal20Dataset.v_idx = valid.index
+            # v_idx = valid.index
 
             # df to return
             this = train
 
         else:
             # df to return
-            this = df[df.index.isin(Signal20Dataset.v_idx)]
+            print(self.v_idx)
+            this = df[df.index.isin(self.v_idx)]
+            v_idx = self.v_idx
 
-        return this
+        return this, v_idx
 
     @staticmethod
     def _extract(df: pd.DataFrame, verbose: bool):
@@ -118,9 +120,7 @@ class Signal20Dataset(Dataset):
             the sources from the dataframe
         """
         print("Extract text...") if verbose else None
-        text = list(df.text)
-        source = df.source.values.reshape(-1, 1)
-        return text, source
+        return df.text, df.source.values.reshape(-1, 1)
 
     @staticmethod
     def _encode(data: list, encoder: OneHotEncoder, verbose: bool):
@@ -141,6 +141,9 @@ class Signal20Dataset(Dataset):
         """
         print("OneHotEncode sources...") if verbose else None
         return encoder.transform(data)
+
+    def _onehot_idx(self, y:list):
+        return [self.source_indexer[s[0]] for s in y]
 
     @staticmethod
     def _fit_encode(data: list, verbose: bool):
@@ -295,6 +298,8 @@ class Signal20Dataset(Dataset):
             self.verbose
         )
 
+        #self.text = self._filter_pos(self.text, self.pos, self.verbose)
+
         # generate vocab with counts
         if train:
             # collect feature values
@@ -348,7 +353,7 @@ class Signal20Dataset(Dataset):
         """
         Magic method to return the number of samples.
         """
-        return len(self.text)
+        return self.df.shape[0]
 
 
 def source_dist_plot(data):

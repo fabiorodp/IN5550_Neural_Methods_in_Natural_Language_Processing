@@ -15,6 +15,7 @@ import torch
 
 
 class MLPModel(torch.nn.Module):
+    show_tqdm = False
 
     @staticmethod
     def actFunct(af_type: str):
@@ -115,7 +116,8 @@ class MLPModel(torch.nn.Module):
 
         # seeding
         if random_state is not None:
-            print(f'Setting torch random_state to {random_state}...') if verbose else None
+            print(f'Setting torch random_state to {random_state}...') \
+                if verbose else None
             torch.manual_seed(random_state)
             np.random.seed(random_state)
 
@@ -130,7 +132,7 @@ class MLPModel(torch.nn.Module):
         if n_hl == 0:
             self.model = torch.nn.Sequential(
                 torch.nn.Dropout(dropout),
-                torch.nn.Linear(num_features, units),
+                torch.nn.Linear(num_features, n_classes),
                 self.out_actfunct,
             )
 

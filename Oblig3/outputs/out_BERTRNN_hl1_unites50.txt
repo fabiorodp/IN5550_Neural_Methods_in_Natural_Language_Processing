@@ -1,0 +1,85 @@
+Some weights of the model checkpoint at Oblig3/saga/216/ were not used when initializing BertForTokenClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.predictions.decoder.bias', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+- This IS expected if you are initializing BertForTokenClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForTokenClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForTokenClassification were not initialized from the model checkpoint at Oblig3/saga/216/ and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/Users/macaira1466/.pyenv/versions/3.8.6/lib/python3.8/site-packages/torch/nn/modules/rnn.py:58: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.1 and num_layers=1
+  warnings.warn("dropout option adds dropout after all but last "
+  0%|          | 0/100 [00:00<?, ?it/s]Batch: 0  |  Train Loss: 2.981337785720825  |  Valid Loss: 2.944328546524048  |  F1 Valid: 0.04815165723588475
+Batch: 1  |  Train Loss: 2.9544923305511475  |  Valid Loss: 2.877307653427124  |  F1 Valid: 0.10522911300261074
+Batch: 2  |  Train Loss: 2.836447238922119  |  Valid Loss: 2.786893129348755  |  F1 Valid: 0.14169815721143145
+Batch: 3  |  Train Loss: 2.7358076572418213  |  Valid Loss: 2.6904587745666504  |  F1 Valid: 0.14770579754871282
+Batch: 4  |  Train Loss: 2.5779709815979004  |  Valid Loss: 2.6029248237609863  |  F1 Valid: 0.14746774624432568
+Batch: 5  |  Train Loss: 2.4768078327178955  |  Valid Loss: 2.5350899696350098  |  F1 Valid: 0.14746774624432568
+Batch: 6  |  Train Loss: 2.4228594303131104  |  Valid Loss: 2.488342523574829  |  F1 Valid: 0.14746774624432568
+Batch: 7  |  Train Loss: 2.4475345611572266  |  Valid Loss: 2.4566681385040283  |  F1 Valid: 0.14746774624432568
+Batch: 8  |  Train Loss: 2.2671866416931152  |  Valid Loss: 2.4324169158935547  |  F1 Valid: 0.14746774624432568
+Batch: 9  |  Train Loss: 2.205331563949585  |  Valid Loss: 2.4109928607940674  |  F1 Valid: 0.14746774624432568
+Batch: 10  |  Train Loss: 2.1825194358825684  |  Valid Loss: 2.392144203186035  |  F1 Valid: 0.14746774624432568
+Batch: 11  |  Train Loss: 2.18664813041687  |  Valid Loss: 2.3751256465911865  |  F1 Valid: 0.14746774624432568
+Batch: 12  |  Train Loss: 2.217165946960449  |  Valid Loss: 2.3600447177886963  |  F1 Valid: 0.14746774624432568
+Batch: 13  |  Train Loss: 2.088996648788452  |  Valid Loss: 2.3466811180114746  |  F1 Valid: 0.14746908888664575
+Batch: 14  |  Train Loss: 2.3210384845733643  |  Valid Loss: 2.336475133895874  |  F1 Valid: 0.14800662573049328
+Batch: 15  |  Train Loss: 2.2064428329467773  |  Valid Loss: 2.3284990787506104  |  F1 Valid: 0.15165667302042915
+Batch: 16  |  Train Loss: 2.206155300140381  |  Valid Loss: 2.323031425476074  |  F1 Valid: 0.15896467104133605
+Batch: 17  |  Train Loss: 1.9988824129104614  |  Valid Loss: 2.31949782371521  |  F1 Valid: 0.16962570733657645
+Batch: 18  |  Train Loss: 2.016247034072876  |  Valid Loss: 2.3171753883361816  |  F1 Valid: 0.1858118046316606
+Epoch: 0  |  Train Loss: 2.3857827500293127  |  Valid Loss: 2.4907419932516  |  F1 Valid: 0.1437646848339322
+  1%|          | 1/100 [35:08<57:59:47, 2108.97s/it]Batch: 0  |  Train Loss: 2.093665361404419  |  Valid Loss: 2.31554913520813  |  F1 Valid: 0.2006793230576871
+Batch: 1  |  Train Loss: 2.1056907176971436  |  Valid Loss: 2.3142242431640625  |  F1 Valid: 0.2170184338585506
+Batch: 2  |  Train Loss: 2.0068392753601074  |  Valid Loss: 2.312761068344116  |  F1 Valid: 0.2309095836598036
+Batch: 3  |  Train Loss: 2.117375612258911  |  Valid Loss: 2.3109965324401855  |  F1 Valid: 0.24109519702108875
+Batch: 4  |  Train Loss: 2.07256817817688  |  Valid Loss: 2.3086392879486084  |  F1 Valid: 0.2441590642387317
+Batch: 5  |  Train Loss: 2.0454936027526855  |  Valid Loss: 2.3060214519500732  |  F1 Valid: 0.24516575511901248
+Batch: 6  |  Train Loss: 2.1539947986602783  |  Valid Loss: 2.3031105995178223  |  F1 Valid: 0.24285754063499115
+Batch: 7  |  Train Loss: 2.250016927719116  |  Valid Loss: 2.300260305404663  |  F1 Valid: 0.2389154599565874
+Batch: 8  |  Train Loss: 2.037722110748291  |  Valid Loss: 2.297513484954834  |  F1 Valid: 0.23387980987665732
+Batch: 9  |  Train Loss: 1.9826397895812988  |  Valid Loss: 2.2949132919311523  |  F1 Valid: 0.22925934373564916
+Batch: 10  |  Train Loss: 2.033292055130005  |  Valid Loss: 2.2924349308013916  |  F1 Valid: 0.22180315369781042
+Batch: 11  |  Train Loss: 2.0460407733917236  |  Valid Loss: 2.2901523113250732  |  F1 Valid: 0.21691030597898714
+Batch: 12  |  Train Loss: 2.0992565155029297  |  Valid Loss: 2.2880983352661133  |  F1 Valid: 0.21344045000734096
+Batch: 13  |  Train Loss: 1.9630013704299927  |  Valid Loss: 2.2861671447753906  |  F1 Valid: 0.21222562174446571
+Batch: 14  |  Train Loss: 2.2671735286712646  |  Valid Loss: 2.2843663692474365  |  F1 Valid: 0.21128548547203072
+Batch: 15  |  Train Loss: 2.1260008811950684  |  Valid Loss: 2.2825424671173096  |  F1 Valid: 0.21329992101085643
+Batch: 16  |  Train Loss: 2.1475718021392822  |  Valid Loss: 2.2807092666625977  |  F1 Valid: 0.21552531971911576
+Batch: 17  |  Train Loss: 1.9345380067825317  |  Valid Loss: 2.2788937091827393  |  F1 Valid: 0.2175279260608233
+Batch: 18  |  Train Loss: 1.9555819034576416  |  Valid Loss: 2.2770297527313232  |  F1 Valid: 0.22219253138979078
+Epoch: 1  |  Train Loss: 2.075708590055767  |  Valid Loss: 2.296020194103843  |  F1 Valid: 0.2246394855915779
+  2%|▏         | 2/100 [1:04:12<51:33:36, 1894.04s/it]Batch: 0  |  Train Loss: 2.0430855751037598  |  Valid Loss: 2.2751448154449463  |  F1 Valid: 0.22715507475011376
+Batch: 1  |  Train Loss: 2.0555472373962402  |  Valid Loss: 2.273226737976074  |  F1 Valid: 0.23327850680452805
+Batch: 2  |  Train Loss: 1.9468679428100586  |  Valid Loss: 2.2712907791137695  |  F1 Valid: 0.24094952753843063
+Batch: 3  |  Train Loss: 2.061838388442993  |  Valid Loss: 2.269359827041626  |  F1 Valid: 0.24770983409759728
+Batch: 4  |  Train Loss: 2.0064475536346436  |  Valid Loss: 2.267495632171631  |  F1 Valid: 0.25444617573582573
+Batch: 5  |  Train Loss: 1.9812288284301758  |  Valid Loss: 2.2656466960906982  |  F1 Valid: 0.26381022642557195
+Batch: 6  |  Train Loss: 2.095872402191162  |  Valid Loss: 2.2639000415802  |  F1 Valid: 0.26986274451570125
+Batch: 7  |  Train Loss: 2.2068912982940674  |  Valid Loss: 2.26224946975708  |  F1 Valid: 0.2744579182964247
+Batch: 8  |  Train Loss: 1.9840108156204224  |  Valid Loss: 2.2606544494628906  |  F1 Valid: 0.2790180586174989
+Batch: 9  |  Train Loss: 1.9277119636535645  |  Valid Loss: 2.2590959072113037  |  F1 Valid: 0.28358087048137626
+Batch: 10  |  Train Loss: 1.9768658876419067  |  Valid Loss: 2.2575531005859375  |  F1 Valid: 0.28665364122007897
+Batch: 11  |  Train Loss: 1.9891273975372314  |  Valid Loss: 2.2560057640075684  |  F1 Valid: 0.28908819481798664
+Batch: 12  |  Train Loss: 2.049523115158081  |  Valid Loss: 2.254495620727539  |  F1 Valid: 0.29338294701651974
+Batch: 13  |  Train Loss: 1.9078084230422974  |  Valid Loss: 2.2529914379119873  |  F1 Valid: 0.296261430325593
+Batch: 14  |  Train Loss: 2.231309175491333  |  Valid Loss: 2.2515387535095215  |  F1 Valid: 0.2988904061487943
+Batch: 15  |  Train Loss: 2.076693296432495  |  Valid Loss: 2.2501463890075684  |  F1 Valid: 0.30174334961784127
+Batch: 16  |  Train Loss: 2.102234363555908  |  Valid Loss: 2.248755693435669  |  F1 Valid: 0.30404997308855397
+Batch: 17  |  Train Loss: 1.8898274898529053  |  Valid Loss: 2.2472987174987793  |  F1 Valid: 0.3047572497348234
+Batch: 18  |  Train Loss: 1.9106031656265259  |  Valid Loss: 2.24587345123291  |  F1 Valid: 0.3060554736806364
+  3%|▎         | 3/100 [1:34:35<50:09:48, 1861.74s/it]Epoch: 2  |  Train Loss: 2.023341806311356  |  Valid Loss: 2.259617014935142  |  F1 Valid: 0.2765869264691525
+Batch: 0  |  Train Loss: 2.0023674964904785  |  Valid Loss: 2.2444705963134766  |  F1 Valid: 0.30684112687562615
+Batch: 1  |  Train Loss: 2.0157971382141113  |  Valid Loss: 2.2430901527404785  |  F1 Valid: 0.3083203243131751
+Batch: 2  |  Train Loss: 1.902517557144165  |  Valid Loss: 2.241698741912842  |  F1 Valid: 0.3085708634504992
+Batch: 3  |  Train Loss: 2.0183422565460205  |  Valid Loss: 2.2403297424316406  |  F1 Valid: 0.3099986606211552
+Batch: 4  |  Train Loss: 1.9640204906463623  |  Valid Loss: 2.2389471530914307  |  F1 Valid: 0.3107961998416371
+Batch: 5  |  Train Loss: 1.9350608587265015  |  Valid Loss: 2.237582206726074  |  F1 Valid: 0.3116850490981574
+Batch: 6  |  Train Loss: 2.0585272312164307  |  Valid Loss: 2.236238718032837  |  F1 Valid: 0.3120454069706833
+Batch: 7  |  Train Loss: 2.17612624168396  |  Valid Loss: 2.234951972961426  |  F1 Valid: 0.3120987976273852
+Batch: 8  |  Train Loss: 1.9432767629623413  |  Valid Loss: 2.2336697578430176  |  F1 Valid: 0.3131180767233127
+Batch: 9  |  Train Loss: 1.885683298110962  |  Valid Loss: 2.232388734817505  |  F1 Valid: 0.3136120630255587
+Batch: 10  |  Train Loss: 1.9370644092559814  |  Valid Loss: 2.2311244010925293  |  F1 Valid: 0.3141210100296905
+Batch: 11  |  Train Loss: 1.9472906589508057  |  Valid Loss: 2.2298595905303955  |  F1 Valid: 0.3139516228958478
+Batch: 12  |  Train Loss: 2.0119097232818604  |  Valid Loss: 2.2286136150360107  |  F1 Valid: 0.31499679978895534
+Batch: 13  |  Train Loss: 1.864636778831482  |  Valid Loss: 2.227334976196289  |  F1 Valid: 0.316569312352477
+Batch: 14  |  Train Loss: 2.2037441730499268  |  Valid Loss: 2.2260921001434326  |  F1 Valid: 0.3183585239455951
+Batch: 15  |  Train Loss: 2.043081045150757  |  Valid Loss: 2.224874258041382  |  F1 Valid: 0.32063497460353635
+Batch: 16  |  Train Loss: 2.0684099197387695  |  Valid Loss: 2.2236907482147217  |  F1 Valid: 0.32236135173252883
+Batch: 17  |  Train Loss: 1.8506816625595093  |  Valid Loss: 2.2225029468536377  |  F1 Valid: 0.3236118789904831

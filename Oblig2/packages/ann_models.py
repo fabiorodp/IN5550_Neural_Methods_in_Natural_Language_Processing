@@ -14,6 +14,11 @@ from tqdm import tqdm
 import numpy as np
 import torch
 
+from torch import nn
+from tqdm import tqdm
+from sklearn.metrics import accuracy_score
+from sklearn.preprocessing import OneHotEncoder
+
 
 class MLPModel(torch.nn.Module):
 
@@ -264,6 +269,8 @@ class MLPModel(torch.nn.Module):
 
         elif self.embedding_type == "max":
             x = torch.max(self.word_embeddings(batch), dim=1)
+        
+        # TODO: Combine to tensor 3x as long for input  # NOTE: I think this can really help us
 
         return self.model(x)
 
@@ -281,7 +288,8 @@ class MLPModel(torch.nn.Module):
             tensors.
         """
         x = None
-        if self.embedding_type == "mean":
+        # TODO: Why not just send this through forward and call detatch?
+        if self.embedding_type == "mean":          # NOTE: If this is the same as above, this should be a method
             x = torch.mean(self.word_embeddings(input_tensor), dim=1)
 
         elif self.embedding_type == "sum":
@@ -311,7 +319,7 @@ class MLPModel(torch.nn.Module):
 
         if self.loss_funct_str == "bce" or \
                 self.loss_funct_str == 'binary-cross-entropy':
-            encoder = OneHotEncoder(sparse=False)
+            encoder = OneHotEncoder(sparse=False)       # NOTE: Shouldn't this encoding be outside of a function thats called for every data point?
             target = encoder.fit_transform(target)
             target = torch.FloatTensor(target)
 
@@ -325,6 +333,7 @@ class MLPModel(torch.nn.Module):
             encoder = OneHotEncoder(sparse=False)
             target = encoder.fit_transform(target)
             target = torch.FloatTensor(target)
+            # BUG output is never generated when bce-logit is called
 
         # calculating the loss
         loss = self.loss_funct(output, target)
@@ -390,6 +399,24 @@ class RNNModel(torch.nn.Module):
         """
         if lf_type == "cross-entropy":
             return torch.nn.CrossEntropyLoss()  # I:(N,C) O:(N)
+        
+        # NOTE we should definately still check everything, right? (will studies have to be changed?)
+        elif lf_type == "hinge-embedding":
+            # needs plain target (no squeeze)
+            return torch.nn.HingeEmbeddingLoss()
+
+        elif lf_type == "bce" or \
+                lf_type == 'binary-cross-entropy':
+            # needs squeezed target
+            return torch.nn.BCELoss()  # I:(N,C) O:(N, C)
+
+        elif lf_type == "bce-logit":
+            # needs squeezed target
+            return torch.nn.BCEWithLogitsLoss()  # I:(N,C) O:(N, C)
+
+        elif lf_type == "soft-margin":  # target .1 and 1
+            # check target structure
+            return torch.nn.SoftMarginLoss()
 
     @staticmethod
     def model_constructor(n_hl, units, dropout, num_features, rnn_type,
@@ -523,6 +550,7 @@ class RNNModel(torch.nn.Module):
             bidirectional=self.bidirectional
         ).to(self.device)
 
+        # TODO: a similar constr method that could check different optimizers
         self.opt = torch.optim.SGD(
             params=self.model.parameters(),
             lr=self.lr,
@@ -659,10 +687,12 @@ class RNNModel(torch.nn.Module):
 
             out, hn = self.model(packed, (h0, c0))
 
+        # print('out', out.shape)
         seq_unpacked, lens_unpacked = torch.nn.utils.rnn.pad_packed_sequence(
             sequence=out,
             batch_first=True
         )
+        
 
         # permuting to fix/reduce the tensor's dimension from 3 to 2 later
         # <- [batch:n_samples, seq_len, units:hidden_size*num_directions]
@@ -710,19 +740,19 @@ class RNNModel(torch.nn.Module):
         y_pred = y_pred_dist.max(dim=1)[1]  # subscript 0 return prob_dist
         return y_test[:, 0], y_pred
 
-    def backward(self, output, target):
+    def backward(self, output, target, verbose=False):
         """
         Performs a backpropogation step computing the loss.
-        ______________________________________________________________
-        Parameters:
-        output:
-            The output after forward with shape (batch_size, num_classes).
-        target:
-            The target it is optimizing towards
-        ______________________________________________________________
-        Returns:
-        loss: float
-            How close the estimate was to the gold standard.
+            ______________________________________________________________
+            Parameters:
+            output:
+                The output after forward with shape (batch_size, num_classes).
+            target:
+                The target it is optimizing towards
+            ______________________________________________________________
+            Returns:
+            loss: float
+                How close the estimate was to the gold standard.
         """
         loss = self.loss_funct(output, target[:, 0])
 
@@ -735,6 +765,10 @@ class RNNModel(torch.nn.Module):
 
         # updating weights from the model by calling optimizer.step()
         self.opt.step()
+
+        # resetting the gradients from the optimizer
+        # more info: https://pytorch.org/docs/stable/optim.html
+        self.opt.zero_grad()
 
         return loss
 
@@ -764,9 +798,15 @@ class RNNModel(torch.nn.Module):
             _val_loss = []
 
             for n, batch in enumerate(loader):
+                if n%5 == -1:
+                    verbose = True
+                else:
+                    verbose = False
                 text, source = batch
+                # print(source.shape)
+                # print(source[0])
                 output = self.forward(text)
-                loss = self.backward(output, source)
+                loss = self.backward(output, source, verbose)
                 _loss.append(loss.item())
 
                 if test is not None:

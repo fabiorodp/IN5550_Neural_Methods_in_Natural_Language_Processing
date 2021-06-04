@@ -1,0 +1,1796 @@
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 0, 'name': 'Gensim Continuous Skipgram', 'tool': 'Gensim', 'url': 'https://github.com/RaRe-Technologies/gensim', 'version': '3.6'}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': True, 'case preserved': True, 'description': 'British National Corpus', 'id': 6, 'language': 'eng', 'lemmatized': True, 'public': True, 'stop words removal': 'NLTK', 'tagger': 'CLAWS-4', 'tagset': 'UPoS', 'tokens': 1903181185, 'tool': None, 'url': 'http://www.natcorp.ox.ac.uk/'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/0.zip
+id 0
+iterations 5
+vocabulary size 163473
+window 10
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+1107    0
+2487    1
+540     1
+1538    0
+2892    1
+       ..
+2287    0
+1122    0
+1443    1
+3238    1
+4323    0
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+1107    [Bigelow_NOUN, handles_VERB, the_DET, nuclear_...
+2487    [Downbeat_NOUN, ,_., period-perfect_ADJ, biopi...
+540     [It_PRON, 's_VERB, fun_NOUN, ,_., splashy_ADJ,...
+1538    [Releasing_VERB, a_DET, film_NOUN, with_ADP, t...
+2892    [The_DET, Wild_NOUN, Thornberrys_NOUN, Movie_N...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6940804020517823
+Epoch: 1 loss: 0.6931451386799014
+Epoch: 2 loss: 0.6931639665124044
+Epoch: 3 loss: 0.6931416168378267
+Epoch: 4 loss: 0.6931255036006773
+Epoch: 5 loss: 0.6932342786320372
+Epoch: 6 loss: 0.6925730911982542
+Epoch: 7 loss: 0.6923303573117779
+Epoch: 8 loss: 0.6925179386414544
+Epoch: 9 loss: 0.6931703386968271
+Epoch: 10 loss: 0.6931456361891907
+Epoch: 11 loss: 0.6931210697730842
+Epoch: 12 loss: 0.693144770026896
+Epoch: 13 loss: 0.6931472110610477
+Epoch: 14 loss: 0.6931447107667867
+Epoch: 15 loss: 0.6931488538064019
+Epoch: 16 loss: 0.6931423679252581
+Epoch: 17 loss: 0.6931431448528532
+Epoch: 18 loss: 0.6931469099370041
+Epoch: 19 loss: 0.6931459504055839
+
+
+
+scoring model...
+F1-score: 0.32306563989732306
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 0, 'name': 'Gensim Continuous Skipgram', 'tool': 'Gensim', 'url': 'https://github.com/RaRe-Technologies/gensim', 'version': '3.6'}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': True, 'case preserved': True, 'description': 'English Wikipedia Dump of February 2017', 'id': 2, 'language': 'eng', 'lemmatized': True, 'public': True, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': 'UPoS', 'tokens': 2252637050, 'tool': 'Wikipedia Extractor', 'url': 'https://dumps.wikimedia.org/'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/3.zip
+id 3
+iterations 5
+vocabulary size 296630
+window 5
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+6162    0
+3046    0
+4449    0
+5778    1
+3948    1
+       ..
+5736    0
+6642    0
+5954    0
+3148    1
+868     0
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+6162    [Unfortunately_ADV, ,_., the_DET, experience_N...
+3046    [Forgettable_ADJ, ,_., if_ADP, good-hearted_AD...
+4449    [I_PRON, found_VERB, it_PRON, slow_VERB, ,_., ...
+5778    [One_NUM, of_ADP, the_DET, smarter_NOUN, offer...
+3948    [When_ADV, the_DET, movie_NOUN, mixes_VERB, th...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6948222983090174
+Epoch: 1 loss: 0.6936996909924326
+Epoch: 2 loss: 0.6930391605878841
+Epoch: 3 loss: 0.692740899634499
+Epoch: 4 loss: 0.69242734233768
+Epoch: 5 loss: 0.6923490170109479
+Epoch: 6 loss: 0.6922188263408021
+Epoch: 7 loss: 0.691666168284554
+Epoch: 8 loss: 0.6911893345717061
+Epoch: 9 loss: 0.691198968818422
+Epoch: 10 loss: 0.690337207276008
+Epoch: 11 loss: 0.6894023704390995
+Epoch: 12 loss: 0.6890234292587104
+Epoch: 13 loss: 0.6885953032212451
+Epoch: 14 loss: 0.6875129121576431
+Epoch: 15 loss: 0.687396446059894
+Epoch: 16 loss: 0.6858365852708761
+Epoch: 17 loss: 0.6862438393466045
+Epoch: 18 loss: 0.684814125816257
+Epoch: 19 loss: 0.6832941267531731
+
+
+
+scoring model...
+F1-score: 0.43599491469816265
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 0, 'name': 'Gensim Continuous Skipgram', 'tool': 'Gensim', 'url': 'https://github.com/RaRe-Technologies/gensim', 'version': '3.6'}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': True, 'case preserved': True, 'description': 'Gigaword 5th Edition', 'id': 5, 'language': 'eng', 'lemmatized': True, 'public': False, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': 'UPoS', 'tokens': 4815382730, 'tool': None, 'url': 'https://catalog.ldc.upenn.edu/LDC2011T07'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/4.zip
+id 4
+iterations 5
+vocabulary size 314815
+window 2
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+5498    1
+6530    1
+2964    1
+2315    1
+5362    1
+       ..
+1416    1
+2171    0
+1524    1
+461     0
+2185    0
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+5498    [A_DET, different_ADJ, movie_NOUN, --_., somet...
+6530    [Using_VERB, an_DET, endearing_VERB, cast_NOUN...
+2964    [And_CONJ, that_DET, makes_VERB, all_DET, the_...
+2315    [It_PRON, 's_VERB, unlikely_ADJ, we_PRON, 'll_...
+5362    [The_DET, closest_ADJ, thing_NOUN, to_PRT, the...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6939274679029608
+Epoch: 1 loss: 0.6936936657552775
+Epoch: 2 loss: 0.6929885173119561
+Epoch: 3 loss: 0.6932018681757712
+Epoch: 4 loss: 0.6923271028292661
+Epoch: 5 loss: 0.6920939611561726
+Epoch: 6 loss: 0.6916256657225548
+Epoch: 7 loss: 0.6915397172029307
+Epoch: 8 loss: 0.691081157654007
+Epoch: 9 loss: 0.691279184956082
+Epoch: 10 loss: 0.690179077531561
+Epoch: 11 loss: 0.6898130333492521
+Epoch: 12 loss: 0.6888739552801055
+Epoch: 13 loss: 0.6884487226519281
+Epoch: 14 loss: 0.6875817465644352
+Epoch: 15 loss: 0.6865263505478125
+Epoch: 16 loss: 0.6851597962351893
+Epoch: 17 loss: 0.6851833538512964
+Epoch: 18 loss: 0.6839604098672811
+Epoch: 19 loss: 0.6834275247044646
+
+
+
+scoring model...
+F1-score: 0.5925422841367524
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 0, 'name': 'Gensim Continuous Skipgram', 'tool': 'Gensim', 'url': 'https://github.com/RaRe-Technologies/gensim', 'version': '3.6'}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': False, 'case preserved': True, 'description': 'English Wikipedia Dump of February 2017', 'id': 0, 'language': 'eng', 'lemmatized': True, 'public': True, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 2252637050, 'tool': 'Wikipedia Extractor', 'url': 'https://dumps.wikimedia.org/'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/5.zip
+id 5
+iterations 5
+vocabulary size 273992
+window 5
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+7292    0
+69      1
+4598    0
+1835    1
+6490    1
+       ..
+5650    0
+6747    0
+3275    1
+5928    0
+6596    0
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+7292    [Perceptive_NOUN, in_ADP, its_PRON, vision_NOU...
+69      [A_DET, hallmark_NOUN, film_NOUN, in_ADP, an_D...
+4598    [A_DET, loud_NOUN, ,_., ugly_ADV, ,_., irritat...
+1835    [Just_ADV, like_ADP, a_DET, splendid_ADJ, meal...
+6490    [As_ADP, satisfyingly_ADV, odd_ADJ, and_CONJ, ...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6956012025044832
+Epoch: 1 loss: 0.6932308053694709
+Epoch: 2 loss: 0.6931403231069532
+Epoch: 3 loss: 0.6931489867971122
+Epoch: 4 loss: 0.6931464055370045
+Epoch: 5 loss: 0.6931486126315387
+Epoch: 6 loss: 0.6931528066624106
+Epoch: 7 loss: 0.6931504031826305
+Epoch: 8 loss: 0.6931837338932677
+Epoch: 9 loss: 0.6931575195637741
+Epoch: 10 loss: 0.6931444423736175
+Epoch: 11 loss: 0.6931579826195116
+Epoch: 12 loss: 0.6931557283236113
+Epoch: 13 loss: 0.693151212152029
+Epoch: 14 loss: 0.6931492624255274
+Epoch: 15 loss: 0.6931474804878235
+Epoch: 16 loss: 0.6931502705364558
+Epoch: 17 loss: 0.6931469946927418
+Epoch: 18 loss: 0.6931449660676063
+Epoch: 19 loss: 0.6931445395326339
+
+
+
+scoring model...
+F1-score: 0.32306563989732306
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 1, 'name': 'Global Vectors', 'tool': 'GloVe', 'url': 'https://nlp.stanford.edu/software/GloVe-1.2.zip', 'version': '1.2'}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': False, 'case preserved': True, 'description': 'English Wikipedia Dump of February 2017', 'id': 0, 'language': 'eng', 'lemmatized': True, 'public': True, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 2252637050, 'tool': 'Wikipedia Extractor', 'url': 'https://dumps.wikimedia.org/'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/7.zip
+id 7
+iterations 100
+vocabulary size 273930
+window 5
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+556     1
+7340    1
+4374    0
+7294    0
+5987    0
+       ..
+1052    0
+914     1
+3333    0
+5911    0
+6552    1
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+556     [A_DET, welcome_ADJ, relief_NOUN, from_ADP, ba...
+7340    [Nothing_NOUN, 's_PRT, at_ADP, stake_NOUN, ,_....
+4374    [Too_ADV, campy_ADJ, to_PRT, work_VERB, as_ADV...
+7294    [An_DET, overemphatic_ADJ, ,_., would-be_ADJ, ...
+5987    [No_DET, one_NOUN, can_VERB, doubt_VERB, the_D...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6930956778498744
+Epoch: 1 loss: 0.6931302985014943
+Epoch: 2 loss: 0.693180955558843
+Epoch: 3 loss: 0.6931578823596756
+Epoch: 4 loss: 0.6931608033318051
+Epoch: 5 loss: 0.6931512814036683
+Epoch: 6 loss: 0.6931514081927393
+Epoch: 7 loss: 0.6931501702766198
+Epoch: 8 loss: 0.6931432692301756
+Epoch: 9 loss: 0.6931581886517519
+Epoch: 10 loss: 0.6931504097288055
+Epoch: 11 loss: 0.6931498078252539
+Epoch: 12 loss: 0.6931449285132347
+Epoch: 13 loss: 0.6931508514233408
+Epoch: 14 loss: 0.6931470153648729
+Epoch: 15 loss: 0.6931467593749824
+Epoch: 16 loss: 0.6931498233293523
+Epoch: 17 loss: 0.6931448768329069
+Epoch: 18 loss: 0.6931504293673301
+Epoch: 19 loss: 0.6931483249443804
+
+
+
+scoring model...
+F1-score: 0.3242193492919194
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 2, 'name': 'fastText Skipgram', 'tool': 'fastText', 'url': 'https://github.com/facebookresearch/fastText', 'version': None}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'parameters.bin', 'format': 'binary'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': False, 'case preserved': True, 'description': 'English Wikipedia Dump of February 2017', 'id': 0, 'language': 'eng', 'lemmatized': True, 'public': True, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 2252637050, 'tool': 'Wikipedia Extractor', 'url': 'https://dumps.wikimedia.org/'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/9.zip
+id 9
+iterations 5
+vocabulary size 273930
+window 5
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+1883    0
+360     1
+6515    0
+5443    0
+5429    0
+       ..
+2983    1
+1168    0
+524     0
+3641    0
+4719    1
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+1883    [Every_DET, now_ADV, and_CONJ, again_ADV, ,_.,...
+360     [It_PRON, ai_VERB, n't_ADV, art_ADV, ,_., by_A...
+6515    [It_PRON, 's_VERB, a_DET, road-trip_ADJ, drama...
+5443    [Mr._NOUN, Goyer_NOUN, 's_PRT, loose_ADJ, ,_.,...
+5429    [It_PRON, almost_ADV, feels_VERB, as_ADP, if_A...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6940673923905875
+Epoch: 1 loss: 0.6931544397607704
+Epoch: 2 loss: 0.6931471872880969
+Epoch: 3 loss: 0.6931546451039396
+Epoch: 4 loss: 0.6931476276044901
+Epoch: 5 loss: 0.6931853346052886
+Epoch: 6 loss: 0.6931550750842673
+Epoch: 7 loss: 0.6931573028509328
+Epoch: 8 loss: 0.6931631892402738
+Epoch: 9 loss: 0.6931479197706101
+Epoch: 10 loss: 0.6931482939361837
+Epoch: 11 loss: 0.6931476885872769
+Epoch: 12 loss: 0.6931499649334505
+Epoch: 13 loss: 0.6931490381329046
+Epoch: 14 loss: 0.6931453822665132
+Epoch: 15 loss: 0.6931472127837253
+Epoch: 16 loss: 0.6931445729525793
+Epoch: 17 loss: 0.6931499046397347
+Epoch: 18 loss: 0.6931455531561306
+Epoch: 19 loss: 0.6931494756930137
+
+
+
+scoring model...
+F1-score: 0.3242193492919194
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 0, 'name': 'Gensim Continuous Skipgram', 'tool': 'Gensim', 'url': 'https://github.com/RaRe-Technologies/gensim', 'version': '3.6'}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': False, 'case preserved': True, 'description': 'Gigaword 5th Edition', 'id': 3, 'language': 'eng', 'lemmatized': True, 'public': False, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 4815382730, 'tool': None, 'url': 'https://catalog.ldc.upenn.edu/LDC2011T07'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/11.zip
+id 11
+iterations 5
+vocabulary size 261794
+window 5
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+3696    0
+3022    0
+4648    0
+1214    1
+5538    1
+       ..
+2662    1
+4491    1
+6331    0
+3842    1
+6439    0
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+3696    [It_PRON, 's_VERB, supposed_VERB, to_PRT, be_V...
+3022    [Take_VERB, away_PRT, the_DET, controversy_NOU...
+4648    [It_PRON, 's_VERB, an_DET, odd_ADJ, show_NOUN,...
+1214    [There_DET, 's_VERB, much_ADJ, tongue_NOUN, in...
+5538    [A_DET, movie_NOUN, of_ADP, technical_ADJ, ski...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6936150461952121
+Epoch: 1 loss: 0.6935403457266747
+Epoch: 2 loss: 0.6932937878404739
+Epoch: 3 loss: 0.6931435737995743
+Epoch: 4 loss: 0.6931565552088567
+Epoch: 5 loss: 0.693154303324705
+Epoch: 6 loss: 0.6935269608662996
+Epoch: 7 loss: 0.693231409684771
+Epoch: 8 loss: 0.6929203792114478
+Epoch: 9 loss: 0.6931742894856227
+Epoch: 10 loss: 0.6929344341934072
+Epoch: 11 loss: 0.693000999144736
+Epoch: 12 loss: 0.6926461568457543
+Epoch: 13 loss: 0.6930993995225498
+Epoch: 14 loss: 0.6932296267134606
+Epoch: 15 loss: 0.6929039700182876
+Epoch: 16 loss: 0.6926666356924641
+Epoch: 17 loss: 0.6930251607316078
+Epoch: 18 loss: 0.692612576346866
+Epoch: 19 loss: 0.6926260797274595
+
+
+
+scoring model...
+F1-score: 0.3432942013518321
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 1, 'name': 'Global Vectors', 'tool': 'GloVe', 'url': 'https://nlp.stanford.edu/software/GloVe-1.2.zip', 'version': '1.2'}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': False, 'case preserved': True, 'description': 'Gigaword 5th Edition', 'id': 3, 'language': 'eng', 'lemmatized': True, 'public': False, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 4815382730, 'tool': None, 'url': 'https://catalog.ldc.upenn.edu/LDC2011T07'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/13.zip
+id 13
+iterations 100
+vocabulary size 262269
+window 5
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+6867    1
+2204    0
+6803    0
+926     1
+7330    0
+       ..
+4418    0
+2769    1
+3990    1
+1153    1
+4133    1
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+6867    [Leigh_NOUN, 's_PRT, film_NOUN, is_VERB, full_...
+2204    [Problem_NOUN, is_VERB, ,_., we_PRON, have_VER...
+6803    [The_DET, script_NOUN, kicks_NOUN, in_ADP, ,_....
+926     [Holofcener_NOUN, rejects_VERB, patent_ADJ, so...
+7330    [A_DET, sometimes_ADV, tedious_ADJ, film_NOUN,...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6926299547184409
+Epoch: 1 loss: 0.6936790050798758
+Epoch: 2 loss: 0.693207759044074
+Epoch: 3 loss: 0.6932333697473383
+Epoch: 4 loss: 0.6927915384314652
+Epoch: 5 loss: 0.6936152522274525
+Epoch: 6 loss: 0.6931965261525501
+Epoch: 7 loss: 0.6931533176085852
+Epoch: 8 loss: 0.6931842289908083
+Epoch: 9 loss: 0.6931162011416662
+Epoch: 10 loss: 0.6931844743000979
+Epoch: 11 loss: 0.6931627503020226
+Epoch: 12 loss: 0.6931606486353571
+Epoch: 13 loss: 0.6931547822290762
+Epoch: 14 loss: 0.6931403751318166
+Epoch: 15 loss: 0.6931425808482088
+Epoch: 16 loss: 0.6931469681635068
+Epoch: 17 loss: 0.6931383850946592
+Epoch: 18 loss: 0.6931587867654128
+Epoch: 19 loss: 0.6931418614580452
+
+
+
+scoring model...
+F1-score: 0.32281731474688186
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 2, 'name': 'fastText Skipgram', 'tool': 'fastText', 'url': 'https://github.com/facebookresearch/fastText', 'version': None}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'parameters.bin', 'format': 'binary'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': False, 'case preserved': True, 'description': 'Gigaword 5th Edition', 'id': 3, 'language': 'eng', 'lemmatized': True, 'public': False, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 4815382730, 'tool': None, 'url': 'https://catalog.ldc.upenn.edu/LDC2011T07'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/15.zip
+id 15
+iterations 5
+vocabulary size 262269
+window 5
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+6525    1
+4627    0
+3602    0
+2978    1
+1833    1
+       ..
+4305    0
+7065    0
+6929    0
+1325    0
+6571    1
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+6525    [Rifkin_NOUN, 's_PRT, references_NOUN, are_VER...
+4627    [The_DET, story_NOUN, is_VERB, --_., forgive_A...
+3602    [An_DET, acceptable_ADJ, way_NOUN, to_PRT, pas...
+2978    [Lasker_NOUN, 's_PRT, canny_NOUN, ,_., meditat...
+1833    [The_DET, Lady_NOUN, and_CONJ, the_DET, Duke_N...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6951264466853501
+Epoch: 1 loss: 0.69316291120011
+Epoch: 2 loss: 0.6931398597066802
+Epoch: 3 loss: 0.6931734801716887
+Epoch: 4 loss: 0.6931511466902804
+Epoch: 5 loss: 0.6931511146484772
+Epoch: 6 loss: 0.6931497485651447
+Epoch: 7 loss: 0.6931452013853657
+Epoch: 8 loss: 0.6931423203793564
+Epoch: 9 loss: 0.693149054326074
+Epoch: 10 loss: 0.6931372712113265
+Epoch: 11 loss: 0.6931409711782643
+Epoch: 12 loss: 0.6931515342927392
+Epoch: 13 loss: 0.6931551860247044
+Epoch: 14 loss: 0.6931489943768937
+Epoch: 15 loss: 0.693155151226617
+Epoch: 16 loss: 0.6931551656971088
+Epoch: 17 loss: 0.6931483194318121
+Epoch: 18 loss: 0.6931474804878235
+Epoch: 19 loss: 0.6931474804878235
+
+
+
+scoring model...
+F1-score: 0.32306563989732306
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 0, 'name': 'Gensim Continuous Skipgram', 'tool': 'Gensim', 'url': 'https://github.com/RaRe-Technologies/gensim', 'version': '3.6'}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': False, 'case preserved': True, 'description': 'English Wikipedia Dump of February 2017', 'id': 0, 'language': 'eng', 'lemmatized': True, 'public': True, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 2252637050, 'tool': 'Wikipedia Extractor', 'url': 'https://dumps.wikimedia.org/'}, {'NER': False, 'case preserved': True, 'description': 'Gigaword 5th Edition', 'id': 3, 'language': 'eng', 'lemmatized': True, 'public': False, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 4815382730, 'tool': None, 'url': 'https://catalog.ldc.upenn.edu/LDC2011T07'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/17.zip
+id 17
+iterations 5
+vocabulary size 259882
+window 5
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+3438    1
+535     1
+1653    0
+5937    0
+5376    0
+       ..
+3918    0
+5352    0
+2459    1
+5358    1
+3572    1
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+3438    [Road_NOUN, to_PRT, Perdition_NOUN, does_VERB,...
+535     [There_DET, 's_PRT, real_ADJ, visual_ADJ, char...
+1653    [A_DET, 75-minute_ADJ, sample_NOUN, of_ADP, pu...
+5937    [Too_ADV, much_ADJ, of_ADP, Storytelling_VERB,...
+5376    [Not_ADV, counting_VERB, a_DET, few_ADJ, gross...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6932463894000632
+Epoch: 1 loss: 0.6931639816719672
+Epoch: 2 loss: 0.6931460758165128
+Epoch: 3 loss: 0.6931609714651383
+Epoch: 4 loss: 0.6931505530555814
+Epoch: 5 loss: 0.6931542275268907
+Epoch: 6 loss: 0.6931465554099552
+Epoch: 7 loss: 0.6931455721055841
+Epoch: 8 loss: 0.6931548576823549
+Epoch: 9 loss: 0.6931474804878235
+Epoch: 10 loss: 0.6931422339009412
+Epoch: 11 loss: 0.6931485147834513
+Epoch: 12 loss: 0.6931499173875489
+Epoch: 13 loss: 0.693143523841924
+Epoch: 14 loss: 0.6931474804878235
+Epoch: 15 loss: 0.6931468310383703
+Epoch: 16 loss: 0.6931447552118687
+Epoch: 17 loss: 0.6931475421596813
+Epoch: 18 loss: 0.6931495628604999
+Epoch: 19 loss: 0.6931477950487522
+
+
+
+scoring model...
+F1-score: 0.32306563989732306
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 1, 'name': 'Global Vectors', 'tool': 'GloVe', 'url': 'https://nlp.stanford.edu/software/GloVe-1.2.zip', 'version': '1.2'}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': False, 'case preserved': True, 'description': 'English Wikipedia Dump of February 2017', 'id': 0, 'language': 'eng', 'lemmatized': True, 'public': True, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 2252637050, 'tool': 'Wikipedia Extractor', 'url': 'https://dumps.wikimedia.org/'}, {'NER': False, 'case preserved': True, 'description': 'Gigaword 5th Edition', 'id': 3, 'language': 'eng', 'lemmatized': True, 'public': False, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 4815382730, 'tool': None, 'url': 'https://catalog.ldc.upenn.edu/LDC2011T07'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/19.zip
+id 19
+iterations 100
+vocabulary size 260073
+window 5
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+6425    1
+2338    0
+1698    0
+5808    0
+2600    0
+       ..
+693     0
+5778    1
+5038    1
+1528    1
+2066    1
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+6425    [He_PRON, watches_VERB, them_PRON, as_ADP, the...
+2338                 [I_PRON, wanted_VERB, more_ADV, ._.]
+1698    [Even_ADV, as_ADP, I_PRON, valiantly_ADV, stru...
+5808    [I_PRON, 've_VERB, had_VERB, more_ADV, interes...
+2600    [The_DET, problem_NOUN, with_ADP, ANTWONE_NOUN...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6929973990930988
+Epoch: 1 loss: 0.6932171624519922
+Epoch: 2 loss: 0.6935661373110865
+Epoch: 3 loss: 0.693145479770065
+Epoch: 4 loss: 0.693134660321164
+Epoch: 5 loss: 0.6933603676068301
+Epoch: 6 loss: 0.6929559824783678
+Epoch: 7 loss: 0.6935736399165467
+Epoch: 8 loss: 0.6931450101681528
+Epoch: 9 loss: 0.6931462336137805
+Epoch: 10 loss: 0.6931530602405526
+Epoch: 11 loss: 0.693151174253122
+Epoch: 12 loss: 0.6931359216656988
+Epoch: 13 loss: 0.6931482505247083
+Epoch: 14 loss: 0.6931447169684262
+Epoch: 15 loss: 0.6931512796809908
+Epoch: 16 loss: 0.6931442397867325
+Epoch: 17 loss: 0.6931458112132343
+Epoch: 18 loss: 0.6931458670279883
+Epoch: 19 loss: 0.693112749240302
+
+
+
+scoring model...
+F1-score: 0.34056973419464154
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 2, 'name': 'fastText Skipgram', 'tool': 'fastText', 'url': 'https://github.com/facebookresearch/fastText', 'version': None}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'parameters.bin', 'format': 'binary'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': False, 'case preserved': True, 'description': 'English Wikipedia Dump of February 2017', 'id': 0, 'language': 'eng', 'lemmatized': True, 'public': True, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 2252637050, 'tool': 'Wikipedia Extractor', 'url': 'https://dumps.wikimedia.org/'}, {'NER': False, 'case preserved': True, 'description': 'Gigaword 5th Edition', 'id': 3, 'language': 'eng', 'lemmatized': True, 'public': False, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 4815382730, 'tool': None, 'url': 'https://catalog.ldc.upenn.edu/LDC2011T07'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/21.zip
+id 21
+iterations 5
+vocabulary size 260073
+window 5
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+6755    0
+5997    0
+725     1
+5629    1
+7167    0
+       ..
+5843    1
+1901    1
+1060    0
+543     0
+5296    0
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+6755    [The_DET, problem_NOUN, with_ADP, this_DET, fi...
+5997    [Franco_NOUN, is_VERB, an_DET, excellent_ADJ, ...
+725     [A_DET, big-budget\/all-star_ADJ, movie_NOUN, ...
+5629    [The_DET, movie_NOUN, itself_PRON, is_VERB, fa...
+7167    [If_ADP, you_PRON, believe_VERB, any_DET, of_A...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6944355627015836
+Epoch: 1 loss: 0.692808447890199
+Epoch: 2 loss: 0.693106206855333
+Epoch: 3 loss: 0.6931397587577731
+Epoch: 4 loss: 0.6931545417432841
+Epoch: 5 loss: 0.6931648798760651
+Epoch: 6 loss: 0.6931398001020355
+Epoch: 7 loss: 0.6931406225083191
+Epoch: 8 loss: 0.6931270057755399
+Epoch: 9 loss: 0.6932157564025394
+Epoch: 10 loss: 0.6932470698577131
+Epoch: 11 loss: 0.6931129029031434
+Epoch: 12 loss: 0.6931826834044704
+Epoch: 13 loss: 0.693153978083175
+Epoch: 14 loss: 0.6931603809312589
+Epoch: 15 loss: 0.6931474804878235
+Epoch: 16 loss: 0.6931436254799022
+Epoch: 17 loss: 0.6931293379364675
+Epoch: 18 loss: 0.6931528352588587
+Epoch: 19 loss: 0.6931496775908277
+
+
+
+scoring model...
+F1-score: 0.32306563989732306
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 0, 'name': 'Gensim Continuous Skipgram', 'tool': 'Gensim', 'url': 'https://github.com/RaRe-Technologies/gensim', 'version': '3.6'}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': True, 'case preserved': False, 'description': 'English Wikipedia Dump of February 2017', 'id': 9, 'language': 'eng', 'lemmatized': True, 'public': True, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 2252637050, 'tool': 'Wikipedia Extractor', 'url': 'https://dumps.wikimedia.org/'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/23.zip
+id 23
+iterations 5
+vocabulary size 228670
+window 5
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+5662    0
+3604    1
+6089    1
+3793    0
+6541    1
+       ..
+2141    1
+1834    0
+3684    1
+5707    1
+3948    1
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+5662    [The_DET, problem_NOUN, is_VERB, that_ADP, it_...
+3604    [That_ADP, the_DET, real_ADJ, Antwone_NOUN, Fi...
+6089    [A_DET, hypnotic_ADJ, portrait_NOUN, of_ADP, t...
+3793    [Despite_ADP, an_DET, impressive_ADJ, roster_N...
+6541    [A_DET, knowing_VERB, sense_NOUN, of_ADP, humo...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6938302854582065
+Epoch: 1 loss: 0.6931309190099639
+Epoch: 2 loss: 0.6931438266886452
+Epoch: 3 loss: 0.6931664261514741
+Epoch: 4 loss: 0.6931628281670499
+Epoch: 5 loss: 0.6931513554788049
+Epoch: 6 loss: 0.6931454215435623
+Epoch: 7 loss: 0.6931474804878235
+Epoch: 8 loss: 0.6931474804878235
+Epoch: 9 loss: 0.6931479855768943
+Epoch: 10 loss: 0.6931467455935616
+Epoch: 11 loss: 0.6931468020973867
+Epoch: 12 loss: 0.6931522219856351
+Epoch: 13 loss: 0.6931521162132307
+Epoch: 14 loss: 0.6931474804878235
+Epoch: 15 loss: 0.6931483835154186
+Epoch: 16 loss: 0.693145842910502
+Epoch: 17 loss: 0.6931465560990262
+Epoch: 18 loss: 0.6931505902654174
+Epoch: 19 loss: 0.69315196634028
+
+
+
+scoring model...
+F1-score: 0.32306563989732306
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 2, 'name': 'fastText Skipgram', 'tool': 'fastText', 'url': 'https://github.com/facebookresearch/fastText', 'version': None}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'parameters.bin', 'format': 'binary'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': True, 'case preserved': False, 'description': 'English Wikipedia Dump of February 2017', 'id': 9, 'language': 'eng', 'lemmatized': True, 'public': True, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 2252637050, 'tool': 'Wikipedia Extractor', 'url': 'https://dumps.wikimedia.org/'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/24.zip
+id 24
+iterations 5
+vocabulary size 228671
+window 5
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+51      1
+6389    0
+3659    1
+82      1
+6774    0
+       ..
+1137    1
+1818    1
+1605    1
+1416    1
+1367    1
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+51      [Successfully_ADV, blended_VERB, satire_NOUN, ...
+6389    [Constantly_ADV, slips_VERB, from_ADP, the_DET...
+3659    [While_ADP, it_PRON, may_VERB, not_ADV, add_VE...
+82      [Slow_NOUN, and_CONJ, ponderous_ADJ, ,_., but_...
+6774    [Almost_ADV, gags_NOUN, on_ADP, its_PRON, own_...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6945359172848607
+Epoch: 1 loss: 0.6930684013173759
+Epoch: 2 loss: 0.6928529849631249
+Epoch: 3 loss: 0.6931526233695146
+Epoch: 4 loss: 0.6931482946252547
+Epoch: 5 loss: 0.693143304717334
+Epoch: 6 loss: 0.6931440499476614
+Epoch: 7 loss: 0.6931542585350875
+Epoch: 8 loss: 0.6931492934337241
+Epoch: 9 loss: 0.6931507928523025
+Epoch: 10 loss: 0.693148626068424
+Epoch: 11 loss: 0.6931437205717054
+Epoch: 12 loss: 0.6931405098452045
+Epoch: 13 loss: 0.6931467211315397
+Epoch: 14 loss: 0.6931504958626852
+Epoch: 15 loss: 0.6931527749651429
+Epoch: 16 loss: 0.6931487817984785
+Epoch: 17 loss: 0.6931509720107724
+Epoch: 18 loss: 0.6931474804878235
+Epoch: 19 loss: 0.6931477127047633
+
+
+
+scoring model...
+F1-score: 0.32306563989732306
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 1, 'name': 'Global Vectors', 'tool': 'GloVe', 'url': 'https://nlp.stanford.edu/software/GloVe-1.2.zip', 'version': '1.2'}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': True, 'case preserved': False, 'description': 'English Wikipedia Dump of February 2017', 'id': 9, 'language': 'eng', 'lemmatized': True, 'public': True, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 2252637050, 'tool': 'Wikipedia Extractor', 'url': 'https://dumps.wikimedia.org/'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/25.zip
+id 25
+iterations 25
+vocabulary size 228671
+window 5
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+5062    1
+3212    0
+5100    0
+1460    1
+7124    0
+       ..
+3188    0
+711     0
+3996    1
+3070    1
+6852    1
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+5062    [The_DET, movie_NOUN, is_VERB, amateurish_ADJ,...
+3212    [Is_VERB, n't_ADV, it_PRON, a_DET, bit_ADV, ea...
+5100    [Gets_NOUN, bogged_VERB, down_ADV, by_ADP, an_...
+1460    [Will_VERB, certainly_ADV, appeal_VERB, to_PRT...
+7124    [Shaky_ADJ, close-ups_NOUN, of_ADP, turkey-on-...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6967416009461949
+Epoch: 1 loss: 0.694835573951633
+Epoch: 2 loss: 0.6941279296930125
+Epoch: 3 loss: 0.693595699836753
+Epoch: 4 loss: 0.6932895707257222
+Epoch: 5 loss: 0.6929510387382066
+Epoch: 6 loss: 0.6931555260812616
+Epoch: 7 loss: 0.6931465560990262
+Epoch: 8 loss: 0.6931457833058572
+Epoch: 9 loss: 0.6931417825594114
+Epoch: 10 loss: 0.6931546991960161
+Epoch: 11 loss: 0.6931626055971046
+Epoch: 12 loss: 0.6931483056503913
+Epoch: 13 loss: 0.6931304294249915
+Epoch: 14 loss: 0.6931605435520238
+Epoch: 15 loss: 0.6931543346774371
+Epoch: 16 loss: 0.6931430215091374
+Epoch: 17 loss: 0.6931434955900115
+Epoch: 18 loss: 0.6930444385274986
+Epoch: 19 loss: 0.6931281906331894
+
+
+
+scoring model...
+F1-score: 0.34086435677591265
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 0, 'name': 'Gensim Continuous Skipgram', 'tool': 'Gensim', 'url': 'https://github.com/RaRe-Technologies/gensim', 'version': '3.6'}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': True, 'case preserved': False, 'description': 'Gigaword 5th Edition', 'id': 10, 'language': 'eng', 'lemmatized': True, 'public': False, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 4815382730, 'tool': None, 'url': 'https://catalog.ldc.upenn.edu/LDC2011T07'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/26.zip
+id 26
+iterations 5
+vocabulary size 209512
+window 5
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+5446    1
+1264    1
+7251    0
+2400    0
+6613    0
+       ..
+2945    0
+2807    0
+4198    0
+3710    1
+4504    0
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+5446    [A_DET, gracious_ADJ, ,_., eloquent_ADJ, film_...
+1264    [At_ADP, the_DET, end_NOUN, ,_., when_ADV, the...
+7251    [Excessive_ADJ, ,_., profane_NOUN, ,_., packed...
+2400    [..._., built_VERB, on_ADP, the_DET, premise_N...
+6613    [A_DET, misogynistic_ADJ, piece_NOUN, of_ADP, ...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6935554453403274
+Epoch: 1 loss: 0.693145543509136
+Epoch: 2 loss: 0.6931416716189743
+Epoch: 3 loss: 0.6931174662760916
+Epoch: 4 loss: 0.693179309023598
+Epoch: 5 loss: 0.6931691069823469
+Epoch: 6 loss: 0.6931511349760728
+Epoch: 7 loss: 0.6931085851840201
+Epoch: 8 loss: 0.6931979421935329
+Epoch: 9 loss: 0.6930563518766722
+Epoch: 10 loss: 0.6933048040191562
+Epoch: 11 loss: 0.6933219787702395
+Epoch: 12 loss: 0.6931467952066763
+Epoch: 13 loss: 0.6931795880973683
+Epoch: 14 loss: 0.6931405301728001
+Epoch: 15 loss: 0.6931530171736128
+Epoch: 16 loss: 0.6931700882195049
+Epoch: 17 loss: 0.6931594103747021
+Epoch: 18 loss: 0.6931277864930258
+Epoch: 19 loss: 0.6931644836602183
+
+
+
+scoring model...
+F1-score: 0.32281731474688186
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 1, 'name': 'Global Vectors', 'tool': 'GloVe', 'url': 'https://nlp.stanford.edu/software/GloVe-1.2.zip', 'version': '1.2'}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': True, 'case preserved': False, 'description': 'Gigaword 5th Edition', 'id': 10, 'language': 'eng', 'lemmatized': True, 'public': False, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 4815382730, 'tool': None, 'url': 'https://catalog.ldc.upenn.edu/LDC2011T07'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/27.zip
+id 27
+iterations 25
+vocabulary size 209865
+window 5
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+4488    1
+2024    1
+5579    0
+5767    0
+1774    0
+       ..
+6421    0
+2772    0
+1003    1
+1663    1
+6581    1
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+4488    [Weighty_NOUN, and_CONJ, ponderous_ADJ, but_CO...
+2024    [While_ADP, not_ADV, for_ADP, every_DET, taste...
+5579    [The_DET, trouble_NOUN, is_VERB, ,_., its_PRON...
+5767    [Even_ADV, accepting_VERB, this_DET, in_ADP, t...
+1774    [Most_ADJ, of_ADP, the_DET, storylines_NOUN, f...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6934365550906672
+Epoch: 1 loss: 0.692978915451579
+Epoch: 2 loss: 0.6925302606097535
+Epoch: 3 loss: 0.6931847926509174
+Epoch: 4 loss: 0.6925616181654737
+Epoch: 5 loss: 0.6932296539317666
+Epoch: 6 loss: 0.6931157415312839
+Epoch: 7 loss: 0.6929361179384882
+Epoch: 8 loss: 0.6927449114060815
+Epoch: 9 loss: 0.6923319208139629
+Epoch: 10 loss: 0.6924987094250717
+Epoch: 11 loss: 0.6932215111793121
+Epoch: 12 loss: 0.6931425102184273
+Epoch: 13 loss: 0.6931692740820736
+Epoch: 14 loss: 0.6929815518373699
+Epoch: 15 loss: 0.6931539405288035
+Epoch: 16 loss: 0.6930257609124818
+Epoch: 17 loss: 0.6930901325506971
+Epoch: 18 loss: 0.6929272871486024
+Epoch: 19 loss: 0.6929222080059824
+
+
+
+scoring model...
+F1-score: 0.48666635245322143
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 2, 'name': 'fastText Skipgram', 'tool': 'fastText', 'url': 'https://github.com/facebookresearch/fastText', 'version': None}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'parameters.bin', 'format': 'binary'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': True, 'case preserved': False, 'description': 'Gigaword 5th Edition', 'id': 10, 'language': 'eng', 'lemmatized': True, 'public': False, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 4815382730, 'tool': None, 'url': 'https://catalog.ldc.upenn.edu/LDC2011T07'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/28.zip
+id 28
+iterations 5
+vocabulary size 209865
+window 5
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+2122    1
+3889    1
+996     1
+3314    1
+1330    0
+       ..
+3971    1
+4174    1
+305     0
+5705    0
+4812    0
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+2122    [About_ADP, Schmidt_NOUN, belongs_NOUN, to_PRT...
+3889    [A_DET, compelling_ADJ, story_NOUN, of_ADP, mu...
+996     [Definitely_ADV, funny_ADJ, stuff_NOUN, ,_., b...
+3314    [The_DET, film_NOUN, oozes_VERB, craft_NOUN, ._.]
+1330    [Disappointing_VERB, in_ADP, comparison_NOUN, ...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6957202646773675
+Epoch: 1 loss: 0.6944776583958223
+Epoch: 2 loss: 0.6942040909921503
+Epoch: 3 loss: 0.6939212228521446
+Epoch: 4 loss: 0.6933806783202067
+Epoch: 5 loss: 0.6936303742359139
+Epoch: 6 loss: 0.693532518913291
+Epoch: 7 loss: 0.6933943208931499
+Epoch: 8 loss: 0.6934354808289191
+Epoch: 9 loss: 0.6932375117533469
+Epoch: 10 loss: 0.6932738233852938
+Epoch: 11 loss: 0.6932673278571553
+Epoch: 12 loss: 0.6928854722508117
+Epoch: 13 loss: 0.6931379895678834
+Epoch: 14 loss: 0.6931550265047591
+Epoch: 15 loss: 0.6931481940208832
+Epoch: 16 loss: 0.6931463662599553
+Epoch: 17 loss: 0.6931538275211533
+Epoch: 18 loss: 0.693148681883178
+Epoch: 19 loss: 0.6931474804878235
+
+
+
+scoring model...
+F1-score: 0.32306563989732306
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 0, 'name': 'Gensim Continuous Skipgram', 'tool': 'Gensim', 'url': 'https://github.com/RaRe-Technologies/gensim', 'version': '3.6'}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': True, 'case preserved': True, 'description': 'Gigaword 5th Edition', 'id': 5, 'language': 'eng', 'lemmatized': True, 'public': False, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': 'UPoS', 'tokens': 4815382730, 'tool': None, 'url': 'https://catalog.ldc.upenn.edu/LDC2011T07'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+handle http://vectors.nlpl.eu/repository/20/29.zip
+id 29
+iterations 5
+vocabulary size 297790
+window 2
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+5001    1
+2924    1
+376     1
+3437    1
+1528    1
+       ..
+5111    1
+201     0
+2702    0
+708     1
+288     1
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+5001    [Read_VERB, My_PRON, Lips_NOUN, is_VERB, to_PR...
+2924    [Nair_NOUN, 's_PRT, cast_NOUN, is_VERB, so_ADV...
+376     [Who_PRON, needs_VERB, mind-bending_NOUN, drug...
+3437    [A_DET, fiercely_ADV, clever_ADJ, and_CONJ, su...
+1528    [The_DET, unique_ADJ, niche_NOUN, of_ADP, self...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6935096176373476
+Epoch: 1 loss: 0.6932683008254608
+Epoch: 2 loss: 0.6931736548511969
+Epoch: 3 loss: 0.6931979942183963
+Epoch: 4 loss: 0.6931766164785176
+Epoch: 5 loss: 0.693144987084273
+Epoch: 6 loss: 0.6931537076227927
+Epoch: 7 loss: 0.6929115894212888
+Epoch: 8 loss: 0.6932582744973244
+Epoch: 9 loss: 0.6931313679397451
+Epoch: 10 loss: 0.6928701032103831
+Epoch: 11 loss: 0.693247905011811
+Epoch: 12 loss: 0.6931482698186974
+Epoch: 13 loss: 0.6931381711381019
+Epoch: 14 loss: 0.6931283804722604
+Epoch: 15 loss: 0.6931482291635062
+Epoch: 16 loss: 0.6931488682768937
+Epoch: 17 loss: 0.6931416885012147
+Epoch: 18 loss: 0.6931525072610447
+Epoch: 19 loss: 0.6931534371624103
+
+
+
+scoring model...
+F1-score: 0.32281731474688186
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 4, 'name': 'Gensim Continuous Bag-of-Words', 'tool': 'Gensim', 'url': 'https://github.com/RaRe-Technologies/gensim', 'version': '3.6'}
+contents [{'filename': 'model.txt', 'format': 'text'}, {'filename': 'model.bin', 'format': 'data'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': False, 'case preserved': False, 'description': 'Oil and Gas corpus', 'id': 75, 'language': 'eng', 'lemmatized': True, 'license': 'proprietary', 'public': False, 'stop words removal': 'NLTK', 'tagger': 'Stanford Core NLP v. 3.6.0', 'tagset': None, 'tokens': 108000000, 'tool': None, 'url': None}]
+creators [{'email': 'farhadno@ifi.uio.no', 'name': 'Farhad Nooralahzadeh'}]
+dimensions 400
+handle http://vectors.nlpl.eu/repository/20/75.zip
+id 75
+iterations 5
+vocabulary size 285055
+window 5
+============
+
+
+
+loading data set...
+processing data file data/stanford_sentiment_binary.tsv.gz
+data read with columns Index(['label', 'tokens', 'lemmatized'], dtype='object')
+Labels/Targets/Classes:
+ ['negative' 'positive' 'label'] 
+
+dropping unnecessary row
+Balance of the Classes:
+ positive    3859
+negative    3523
+Name: label, dtype: int64 
+
+train test splitting
+encoding
+3057    0
+7260    0
+4334    1
+5706    1
+483     0
+       ..
+7148    0
+3922    0
+1644    1
+1293    1
+365     0
+Name: label, Length: 5536, dtype: int64
+tokenizing...
+POS tagging...
+3057    [The_DET, script_NOUN, 's_PRT, judgment_NOUN, ...
+7260    [One_NUM, of_ADP, those_DET, pictures_NOUN, wh...
+4334    [This_DET, real-life_ADJ, Hollywood_NOUN, fair...
+5706    [It_PRON, 's_VERB, at_ADP, once_ADV, laughable...
+483     [A_DET, series_NOUN, of_ADP, immaculately_ADV,...
+Name: tokens, dtype: object
+
+
+
+loading data loader...
+
+
+
+loading model...
+
+
+
+fitting model...
+Epoch: 0 loss: 0.6945565766681826
+Epoch: 1 loss: 0.694969172767132
+Epoch: 2 loss: 0.6933960794024385
+Epoch: 3 loss: 0.6931332215408369
+Epoch: 4 loss: 0.6931602617219693
+Epoch: 5 loss: 0.6931444912976612
+Epoch: 6 loss: 0.6931772549028341
+Epoch: 7 loss: 0.6931172833277311
+Epoch: 8 loss: 0.6930799939039815
+Epoch: 9 loss: 0.6931472210525778
+Epoch: 10 loss: 0.6931512610760727
+Epoch: 11 loss: 0.6931516734850889
+Epoch: 12 loss: 0.6931474804878235
+Epoch: 13 loss: 0.6931474804878235
+Epoch: 14 loss: 0.693147316833452
+Epoch: 15 loss: 0.693145369518699
+Epoch: 16 loss: 0.6931452172339996
+Epoch: 17 loss: 0.6931481757605007
+Epoch: 18 loss: 0.6931491924848171
+Epoch: 19 loss: 0.6931474804878235
+
+
+
+scoring model...
+F1-score: 0.32306563989732306
+
+
+
+load embeddings...
+algorithm {'command': None, 'id': 4, 'name': 'Gensim Continuous Bag-of-Words', 'tool': 'Gensim', 'url': 'https://github.com/RaRe-Technologies/gensim', 'version': '3.6'}
+contents [{'filename': '1960.txt', 'format': 'text'}, {'filename': '1970.txt', 'format': 'text'}, {'filename': '1980.txt', 'format': 'text'}, {'filename': '1990.txt', 'format': 'text'}, {'filename': '2000.txt', 'format': 'text'}, {'filename': '1960.bin', 'format': 'data'}, {'filename': '1970.bin', 'format': 'data'}, {'filename': '1980.bin', 'format': 'data'}, {'filename': '1990.bin', 'format': 'data'}, {'filename': '2000.bin', 'format': 'data'}, {'filename': 'meta.json', 'format': 'json'}]
+corpus [{'NER': True, 'case preserved': False, 'description': 'Corpus of Historical American English (diachronic)', 'id': 96, 'language': 'eng', 'lemmatized': True, 'public': False, 'stop words removal': 'functional PoS', 'tagger': 'UDPipe 1.2', 'tagset': 'UPoS', 'tokens': 66500000, 'url': 'https://www.english-corpora.org/coha/'}]
+creators [{'email': 'andreku@ifi.uio.no', 'name': 'Andrey Kutuzov'}]
+dimensions 300
+documentation ['https://github.com/ltgoslo/diachronic_multiling_adjectives']
+handle http://vectors.nlpl.eu/repository/20/188.zip
+id 188
+iterations 10
+vocabulary size 100000
+window 3
+============

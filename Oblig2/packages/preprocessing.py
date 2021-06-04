@@ -163,6 +163,8 @@ def process_raw_data(data_url, train_prop=0.75, verbose=True,
     return df_train, df_test
 
 
+
+# from .zip file location
 def load_embedding(modelfile):
     # Detect the model format by its extension:
     # Binary word2vec format:
@@ -207,24 +209,20 @@ def load_embedding(modelfile):
     return emb_model
 
 
-def load_embedded_model(url):
-    logging.basicConfig(
-        format="%(asctime)s : %(levelname)s : %(message)s", level=logging.INFO
-    )
-    logger = logging.getLogger(__name__)
+# for generating new embeddings
+def make_embedding(
+    N=5,
+    path_to_LIST='data/40/LIST', 
+    save_file=None,
+    ):
+    # Our text
+    TSV_data = TSVDataset()
+    text = TSV_data.text
 
-    embeddings_file = url
-
-    logger.info("Loading the embedding model...")
-    model = load_embedding(embeddings_file)
-    logger.info("Finished loading the embedding model...")
-
-    logger.info(f"Model vocabulary size: {len(model.vocab)}")
-
-    logger.info(f"Random example of a word in the model: "
-                f"{random.choice(model.index2word)}")
-
-    return model
+    corpus_files = []
+    with open(path_to_LIST, 'r') as f:
+        corpus_files = f.readlines()
+    print(len(corpus_files))
 
 # for generating new embeddings
 # def make_embedding(filename=None):
@@ -262,6 +260,46 @@ def load_embedded_model(url):
 #     if filename:
 #         model.wv.save(filename)
 #     return model.wv
+
+def _xz_to_list(filename):
+    dirname = '/cluster/shared/nlpl/data/corpora/conll17/udpipe/English/'
+
+    text = []
+    with lzma.open(dirname+filename+'.conllu.xz', 'rt', ) as f:
+        current = []
+        for line in tqdm(f):
+            if line.startswith("#"):
+                continue
+
+            if not line.rstrip():
+                text.append(current)
+                current = []
+                continue
+
+            res = line.strip().split("\t")
+            current.append(res)
+    return text
+
+
+# for equal sentence size in batches
+def pad_batches(batch, pad_idx, get_lengths=False):
+    longest_sentence = max([X.size(0) for X, y in batch])
+
+    new_X, new_y, lengths = [], [], []
+
+    for X, y in batch:
+        new_X.append(torch.nn.functional.pad(X, (0, longest_sentence - X.size(0)), value=pad_idx))
+        new_y.append(y)
+        lengths.append(X.size(0))
+        # print(lengths)
+
+    new_X = torch.stack(new_X)
+    new_y = torch.stack(new_y)
+    lengths = torch.LongTensor(lengths)
+
+    if get_lengths:
+        return new_X, new_y, lengths
+    return new_X, new_y
 
 
 class TSVDataset(Dataset):

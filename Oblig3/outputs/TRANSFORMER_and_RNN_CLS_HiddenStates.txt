@@ -1,0 +1,48 @@
+fdelta@fdelta:~/Documents/IN5550$ python3 Oblig3/test_rnn.py
+Some weights of the model checkpoint at Oblig3/saga/216/ were not used when initializing BertForTokenClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.predictions.decoder.bias', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+- This IS expected if you are initializing BertForTokenClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForTokenClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForTokenClassification were not initialized from the model checkpoint at Oblig3/saga/216/ and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  0%|                                                                                          | 0/5 [00:00<?, ?it/s]Batch: 0  |  Train Loss: 2.8834125995635986  |  Valid Loss: 2.877803325653076  |  F1 Valid: 0.6086145686852958
+Batch: 1  |  Train Loss: 2.839120388031006  |  Valid Loss: 2.8746941089630127  |  F1 Valid: 0.6148754484986242
+Batch: 2  |  Train Loss: 2.7616238594055176  |  Valid Loss: 2.88158917427063  |  F1 Valid: 0.6337930000552292
+Batch: 3  |  Train Loss: 2.6836445331573486  |  Valid Loss: 2.9066154956817627  |  F1 Valid: 0.6338763417730279
+Batch: 4  |  Train Loss: 2.588273048400879  |  Valid Loss: 2.9564437866210938  |  F1 Valid: 0.6339104497951404
+Batch: 5  |  Train Loss: 2.503923177719116  |  Valid Loss: 3.017465114593506  |  F1 Valid: 0.6339104497951404
+Batch: 6  |  Train Loss: 2.489311695098877  |  Valid Loss: 3.0894055366516113  |  F1 Valid: 0.636255426379299
+Batch: 7  |  Train Loss: 2.447252035140991  |  Valid Loss: 3.1749703884124756  |  F1 Valid: 0.6410066296745794
+Batch: 8  |  Train Loss: 2.208970069885254  |  Valid Loss: 3.2908616065979004  |  F1 Valid: 0.6359995151034485
+Batch: 9  |  Train Loss: 2.0575788021087646  |  Valid Loss: 3.4457151889801025  |  F1 Valid: 0.6317449823225426
+Batch: 10  |  Train Loss: 2.1260292530059814  |  Valid Loss: 3.610307216644287  |  F1 Valid: 0.6300608123904498
+Batch: 11  |  Train Loss: 2.1530888080596924  |  Valid Loss: 3.732393264770508  |  F1 Valid: 0.6353255290920302
+Batch: 12  |  Train Loss: 2.1711974143981934  |  Valid Loss: 3.799156427383423  |  F1 Valid: 0.6408249178065757
+Batch: 13  |  Train Loss: 2.008984088897705  |  Valid Loss: 3.795466899871826  |  F1 Valid: 0.6415644271894038
+Batch: 14  |  Train Loss: 2.28648042678833  |  Valid Loss: 3.780794382095337  |  F1 Valid: 0.6410808645653796
+Batch: 15  |  Train Loss: 2.176934003829956  |  Valid Loss: 3.7337160110473633  |  F1 Valid: 0.6255113482378963
+Batch: 16  |  Train Loss: 2.1677422523498535  |  Valid Loss: 3.696734666824341  |  F1 Valid: 0.6377178469543734
+Batch: 17  |  Train Loss: 1.9336254596710205  |  Valid Loss: 3.695134162902832  |  F1 Valid: 0.6409639317424082
+Batch: 18  |  Train Loss: 1.9675277471542358  |  Valid Loss: 3.6991398334503174  |  F1 Valid: 0.6400070018718802
+Epoch: 0  |  Train Loss: 2.3397220875087537  |  Valid Loss: 3.3714950837587057  |  F1 Valid: 0.6335286048385644
+ 20%|████████████████▏                                                                | 1/5 [06:24<25:39, 384.88s/it]Batch: 0  |  Train Loss: 2.0401957035064697  |  Valid Loss: 3.6778457164764404  |  F1 Valid: 0.6407430360340269
+Batch: 1  |  Train Loss: 2.0554111003875732  |  Valid Loss: 3.624953269958496  |  F1 Valid: 0.6416666973288603
+Batch: 2  |  Train Loss: 1.9692342281341553  |  Valid Loss: 3.581549644470215  |  F1 Valid: 0.6417444960463153
+Batch: 3  |  Train Loss: 2.0606837272644043  |  Valid Loss: 3.564312696456909  |  F1 Valid: 0.6388039046904944
+Batch: 4  |  Train Loss: 2.0278022289276123  |  Valid Loss: 3.586259126663208  |  F1 Valid: 0.6417844181184306
+Batch: 5  |  Train Loss: 1.9965065717697144  |  Valid Loss: 3.6154093742370605  |  F1 Valid: 0.6417444960463153
+Batch: 6  |  Train Loss: 2.0639827251434326  |  Valid Loss: 3.649517774581909  |  F1 Valid: 0.6417444960463153
+Batch: 7  |  Train Loss: 2.1921777725219727  |  Valid Loss: 3.665585994720459  |  F1 Valid: 0.6417128526418271
+Batch: 8  |  Train Loss: 1.979227900505066  |  Valid Loss: 3.6531238555908203  |  F1 Valid: 0.6414006677951649
+Batch: 9  |  Train Loss: 1.9203380346298218  |  Valid Loss: 3.6283233165740967  |  F1 Valid: 0.6381159326806664
+Batch: 10  |  Train Loss: 1.9764639139175415  |  Valid Loss: 3.622180461883545  |  F1 Valid: 0.6352087043002416
+Batch: 11  |  Train Loss: 2.0201404094696045  |  Valid Loss: 3.6262612342834473  |  F1 Valid: 0.6374892612758422
+Batch: 12  |  Train Loss: 2.0474112033843994  |  Valid Loss: 3.6378743648529053  |  F1 Valid: 0.6400681173137736
+Batch: 13  |  Train Loss: 1.9222749471664429  |  Valid Loss: 3.64526104927063  |  F1 Valid: 0.6414626039369791
+Batch: 14  |  Train Loss: 2.2173354625701904  |  Valid Loss: 3.6550185680389404  |  F1 Valid: 0.6416827583665583
+Batch: 15  |  Train Loss: 2.088374137878418  |  Valid Loss: 3.6388227939605713  |  F1 Valid: 0.6416498349174483
+Batch: 16  |  Train Loss: 2.105102777481079  |  Valid Loss: 3.619319200515747  |  F1 Valid: 0.6415275603576458
+Batch: 17  |  Train Loss: 1.8967247009277344  |  Valid Loss: 3.6176369190216064  |  F1 Valid: 0.6416191577890878
+Batch: 18  |  Train Loss: 1.937709927558899  |  Valid Loss: 3.62849760055542  |  F1 Valid: 0.6417444960463153
+Epoch: 1  |  Train Loss: 2.027215656481291  |  Valid Loss: 3.628302787479601  |  F1 Valid: 0.6406270258806479
+Early stopped!
+ 20%|████████████████▏                                                                | 1/5 [12:46<51:04, 766.01s/it]

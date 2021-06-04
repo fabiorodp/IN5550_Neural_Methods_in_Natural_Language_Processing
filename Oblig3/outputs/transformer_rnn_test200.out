@@ -1,0 +1,133 @@
+Starting job 2621995 on c5-6 at Sun Apr 11 17:14:21 CEST 2021
+
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) StdEnv
+submission directory: /cluster/home/pmhalvor/IN5550/Oblig3
+core file size          (blocks, -c) unlimited
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 769718
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) 188743680
+open files                      (-n) 131072
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 769718
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+
+Currently Loaded Modules:
+  1) StdEnv                                               (S)
+  2) GCCcore/8.3.0
+  3) zlib/1.2.11-GCCcore-8.3.0                            (H)
+  4) binutils/2.32-GCCcore-8.3.0                          (H)
+  5) GCC/8.3.0
+  6) hpcx/2.4
+  7) OpenMPI/3.1.4-GCC-8.3.0
+  8) gompi/2019b
+  9) imkl/2019.1.144-gompi-2019b
+ 10) gomkl/2019b
+ 11) bzip2/1.0.8-GCCcore-8.3.0                            (H)
+ 12) ncurses/6.1-GCCcore-8.3.0                            (H)
+ 13) libreadline/8.0-GCCcore-8.3.0                        (H)
+ 14) XZ/5.2.4-GCCcore-8.3.0                               (H)
+ 15) GMP/6.1.2-GCCcore-8.3.0                              (H)
+ 16) libffi/3.2.1-GCCcore-8.3.0                           (H)
+ 17) Python/3.7.4-GCCcore-8.3.0
+ 18) NLPL-numpy/1.18.1-gomkl-2019b-Python-3.7.4
+ 19) libpng/1.6.37-GCCcore-8.3.0                          (H)
+ 20) freetype/2.10.1-GCCcore-8.3.0                        (H)
+ 21) Tcl/8.6.9-GCCcore-8.3.0                              (H)
+ 22) expat/2.2.7-GCCcore-8.3.0                            (H)
+ 23) util-linux/2.34-GCCcore-8.3.0                        (H)
+ 24) fontconfig/2.13.1-GCCcore-8.3.0                      (H)
+ 25) X11/20190717-GCCcore-8.3.0                           (H)
+ 26) Tk/8.6.9-GCCcore-8.3.0                               (H)
+ 27) Tkinter/3.7.4-GCCcore-8.3.0                          (H)
+ 28) libyaml/0.2.2-GCCcore-8.3.0                          (H)
+ 29) PyYAML/5.1.2-GCCcore-8.3.0                           (H)
+ 30) NLPL-SciPy-bundle/2021.01-gomkl-2019b-Python-3.7.4
+ 31) NLPL-transformer-deps/4.1.1-gomkl-2019b-Python-3.7.4
+ 32) libunwind/1.3.1-GCCcore-8.3.0                        (H)
+ 33) gperftools/2.7.90-GCCcore-8.3.0                      (H)
+ 34) SentencePiece/0.1.94-gomkl-2019b-Python-3.7.4
+ 35) NLPL-nlptools/2021.01-gomkl-2019b-Python-3.7.4
+ 36) Ninja/1.9.0-GCCcore-8.3.0                            (H)
+ 37) protobuf/3.10.0-GCCcore-8.3.0                        (H)
+ 38) OpenBLAS/0.3.7-GCC-8.3.0
+ 39) FFTW/3.3.8-gompi-2019b
+ 40) ScaLAPACK/2.0.2-gompi-2019b
+ 41) foss/2019b
+ 42) protobuf-python/3.10.0-foss-2019b-Python-3.7.4
+ 43) pybind11/2.4.3-GCCcore-8.3.0-Python-3.7.4            (H)
+ 44) MPFR/4.0.2-GCCcore-8.3.0                             (H)
+ 45) numactl/2.0.12-GCCcore-8.3.0                         (H)
+ 46) NASM/2.14.02-GCCcore-8.3.0                           (H)
+ 47) x264/20190925-GCCcore-8.3.0                          (H)
+ 48) LAME/3.100-GCCcore-8.3.0                             (H)
+ 49) x265/3.2-GCCcore-8.3.0                               (H)
+ 50) FriBidi/1.0.5-GCCcore-8.3.0                          (H)
+ 51) FFmpeg/4.2.1-GCCcore-8.3.0                           (H)
+ 52) libjpeg-turbo/2.0.3-GCCcore-8.3.0                    (H)
+ 53) LibTIFF/4.0.10-GCCcore-8.3.0                         (H)
+ 54) Pillow/6.2.1-GCCcore-8.3.0                           (H)
+ 55) CUDA/10.1.243
+ 56) cuDNN/7.6.4.38
+ 57) NCCL/2.6.4-CUDA-10.1
+ 58) NLPL-PyTorch/1.6.0-gomkl-2019b-Python-3.7.4
+ 59) NLPL-tokenizers/0.9.4-gomkl-2019b-Python-3.7.4
+ 60) flatbuffers/1.12.0-GCCcore-8.3.0
+ 61) Szip/2.1.1-GCCcore-8.3.0                             (H)
+ 62) HDF5/1.10.5-gompi-2019b
+ 63) NLPL-h5py/2.10.0-gomkl-2019b-Python-3.7.4
+ 64) NLPL-TensorFlow/2.3.2-gomkl-2019b-Python-3.7.4
+ 65) NLPL-transformers/4.2.2-gomkl-2019b-Python-3.7.4
+ 66) NLPL-simple_elmo/0.6.0-gomkl-2019b-Python-3.7.4
+
+  Where:
+   H:  Hidden Module
+   S:  Module is Sticky, requires --force to unload or purge
+
+ 
+
+loading data...
+2021-04-11 17:14:41.999776: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2021-04-11 17:14:42 tensorflow DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+predicting...
+The score between y_true and y_predict is 0.9908993960048882
+evaluating...
+true[0]: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+pred[0]: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+2021-04-11 17:20:54 root INFO: Imported 1809 predictions for 1809 true examples
+Their evaluaiton metric: 0.5722688580218954
+saving file in outputs/predictions.conllu...
+doutputs/predictions.conllu saved.
+
+Task and CPU usage stats:
+       JobID    JobName  AllocCPUS   NTasks     MinCPU MinCPUTask     AveCPU    Elapsed ExitCode 
+------------ ---------- ---------- -------- ---------- ---------- ---------- ---------- -------- 
+2621995          in5550          2                                             00:06:39      0:0 
+2621995.bat+      batch          2        1   00:06:23          0   00:06:23   00:06:39      0:0 
+2621995.ext+     extern          2        1   00:00:00          0   00:00:00   00:06:39      0:0 
+
+Memory usage stats:
+       JobID     MaxRSS MaxRSSTask     AveRSS MaxPages   MaxPagesTask   AvePages 
+------------ ---------- ---------- ---------- -------- -------------- ---------- 
+2621995                                                                          
+2621995.bat+ 111379996K          0 111379996K        0              0          0 
+2621995.ext+          0          0          0        0              0          0 
+
+Disk usage stats:
+       JobID  MaxDiskRead MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteTask   AveDiskWrite 
+------------ ------------ --------------- -------------- ------------ ---------------- -------------- 
+2621995                                                                                               
+2621995.bat+       21.29M               0         21.29M        0.29M                0          0.29M 
+2621995.ext+        0.00M               0          0.00M            0                0              0 
+
+Job 2621995 completed at Sun Apr 11 17:21:00 CEST 2021

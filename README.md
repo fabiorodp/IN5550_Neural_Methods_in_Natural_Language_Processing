@@ -15,7 +15,7 @@ E-mail: eivindgg@ifi.uio.no
 ```
 - Python        3.7.4
 - torch         1.6.0  
-- pandas        0.23.1
+- pandas        1.2.1
 - numpy         1.18.1
 - scikit-learn  0.22.1
 - scipy         1.4.1 
